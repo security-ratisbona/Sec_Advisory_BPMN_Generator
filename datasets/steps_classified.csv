@@ -1,0 +1,833 @@
+step_id,type,title,description,classification
+1,ACTION,"Implement CISA, FBI, and NSA Recommendations","Follow the recommendations provided by CISA, FBI, and NSA to enhance cyber resilience against the threat.",Human Task
+2,ACTION,Update Operating Systems and Software,"Ensure all operating systems and software are up to date. Regularly check for software updates and end of life (EOL) notifications, and prioritize patching known exploited vulnerabilities.",Service Task
+3,ACTION,Patch Cloud Environments,"Ensure that virtual machines, serverless applications, and third-party libraries in cloud environments are patched regularly.",Service Task
+4,ACTION,Automate Security Scanning and Testing,Automate software security scanning and testing when possible to identify vulnerabilities early.,Service Task
+5,ACTION,Upgrade Hardware and Software,Consider upgrading hardware and software to take advantage of vendor-provided virtualization and security capabilities.,Human Task
+6,ACTION,Secure and Monitor RDP,"Secure and monitor RDP and other potentially risky services. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure.",Service Task
+7,ACTION,Restrict RDP Sources and Require MFA,"If RDP is necessary, restrict the originating sources and require MFA to mitigate credential theft and reuse.",Service Task
+8,ACTION,Use VPN for External RDP,"If RDP must be available externally, use a VPN, virtual desktop infrastructure, or other means to authenticate and secure the connection before allowing RDP to connect to internal devices.",Service Task
+9,ACTION,Monitor and Log RDP Access,"Monitor remote access/RDP logs, enforce account lockouts after a specified number of attempts, log RDP login attempts, and disable unused remote access/RDP ports.",Service Task
+10,ACTION,Configure Devices and Disable Unused Ports,Ensure devices are properly configured and that security features are enabled. Disable ports and protocols that are not being used for a business purpose.,Service Task
+11,ACTION,Restrict SMB Protocol,Restrict Server Message Block (SMB) Protocol within the network to only access necessary servers and remove or disable outdated versions of SMB.,Service Task
+12,ACTION,Review Third-Party Vendor Security,Review the security posture of third-party vendors and ensure all connections are monitored and reviewed for suspicious activity.,Human Task
+13,ACTION,Implement Application Whitelisting,Implement listing policies for applications and remote access that only allow systems to execute known and permitted programs.,Service Task
+14,ACTION,Open Document Readers in Protected Mode,Open document readers in protected viewing modes to help prevent active content from running.,Service Task
+15,ACTION,Segment Networks,Segment networks to control traffic flows and restrict adversary lateral movement.,Service Task
+16,ACTION,Implement End-to-End Encryption,Deploy mutual Transport Layer Security (mTLS) to prevent eavesdropping on communications.,Service Task
+17,ACTION,Monitor Network for Abnormal Activity,"Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a network-monitoring tool.",Service Task
+18,ACTION,Document External Remote Connections,Document approved solutions for remote management and maintenance and investigate unapproved solutions immediately.,Human Task
+19,ACTION,Implement Time-Based Access for Privileged Accounts,Use just-in-time access methods to provision privileged access when needed and enforce the principle of least privilege.,Service Task
+20,ACTION,Enforce Principle of Least Privilege,Minimize unnecessary privileges for identities and regularly audit account privileges against usage patterns.,Service Task
+21,ACTION,Reduce Credential Exposure,Enforce credential protection by restricting where accounts and credentials can be used and using local device credential protection features.,Service Task
+22,ACTION,Disable Unneeded Command-Line Utilities,"Disable unneeded command-line utilities, constrain scripting activities and permissions, and monitor their usage.",Service Task
+23,ACTION,Maintain Offline Backups,Maintain offline backups of data and regularly test backup and restoration processes.,Service Task
+24,ACTION,Encrypt and Secure Cloud Backups,"Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure. Consider storing encryption keys outside the cloud.",Service Task
+25,ACTION,Collect Telemetry from Cloud Environments,Ensure that telemetry from cloud environments is retained and visible to the security team.,Service Task
+26,ACTION,Review CISA-FBI Advisory for Critical Infrastructure,Review joint CISA-FBI Cybersecurity Advisory for additional recommendations to reduce the risk of severe business or functional degradation from ransomware.,Human Task
+27,ACTION,Enable Multifactor Authentication (MFA),Enable MFA for all users without exception to enhance security.,Service Task
+28,ACTION,Reduce Lifetime of Authentication Assertions,Reduce the lifetime of authentication assertions to enforce MFA re-validation.,Service Task
+29,ACTION,Implement Group Managed Service Accounts (gMSA),Use gMSA for service accounts to automate complex password management.,Service Task
+30,ACTION,"Enforce Strong, Unique Passwords","Require accounts to have strong, unique passwords and avoid reuse across multiple accounts.",Service Task
+31,ACTION,Enable Password Management Functions,Enable functions like Local Administrator Password Solution (LAPS) for local administrative accounts.,Service Task
+32,ACTION,Implement Time-out and Lock-out Features,Configure time-out and lock-out features for repeated failed login attempts.,Service Task
+33,ACTION,Configure Time-based Access for Admin Accounts,Use Just-In-Time (JIT) access method for privileged accounts to enforce least privilege.,Service Task
+34,ACTION,Create Centralized Log Management System,Establish a centralized log management system to monitor network activity.,Service Task
+35,ACTION,Forward Logs to SIEM Tool,Forward all logs to a SIEM tool and ensure they are searchable.,Service Task
+36,ACTION,Retain Network Activity Logs,Retain critical and historic network activity logs for a minimum of 180 days.,Service Task
+37,ACTION,Enable Unified Audit Log (UAL) in M365,Enable UAL in M365 to log events from various services.,Service Task
+38,ACTION,Ensure PowerShell Logging is Enabled,Turn on PowerShell logging and update to version 5.0 or later.,Service Task
+39,ACTION,Monitor Remote Access/RDP Logs,Monitor remote access/RDP logs and disable unused ports.,Service Task
+40,ACTION,Correlate Logs from Network and Host Security Devices,Correlate logs from network and host security devices to detect anomalies.,Service Task
+41,ACTION,Implement Centralized Patch Management System,Consider using a centralized patch management system for timely software updates.,Service Task
+42,ACTION,Prioritize Patches for Known Exploited CVEs,Prioritize patches for CVEs known to be exploited or accessible to many adversaries.,Human Task
+43,ACTION,Subscribe to CISA Cybersecurity Notifications,Subscribe to CISA notifications to stay informed about vulnerabilities and threats.,Human Task
+44,ACTION,Sign Up for CISA Cyber Hygiene Services,Use CISA's vulnerability scanning service to reduce exposure to threats.,Human Task
+45,ACTION,Regularly Update VPNs and Network Devices,Update VPNs and network devices with the latest patches and configurations.,Service Task
+46,ACTION,Monitor Network Traffic for Unapproved Protocols,Monitor network traffic for unapproved and unexpected protocols.,Service Task
+47,ACTION,Install Antivirus Applications,Ensure antivirus applications are installed on all computers and configured to prevent malware.,Service Task
+48,ACTION,Keep Virus Definitions Up to Date,Regularly update virus definitions and monitor antivirus scans.,Service Task
+49,ACTION,Utilize Endpoint Detection and Response (EDR) Tools,Use EDR tools for visibility into endpoint security and to detect lateral movement.,Service Task
+50,ACTION,Audit Configuration Management Programs,Audit configuration management programs to track and mitigate emerging threats.,Human Task
+51,ACTION,Apply Principle of Least Privilege,Ensure administrator accounts have minimum permissions needed for tasks.,Service Task
+52,ACTION,Assign Administrator Roles to RBAC in M365,Use RBAC to implement least privilege in M365 and limit Global Administrator use.,Service Task
+53,ACTION,Remove Unnecessary Privileges,Remove privileges not required by an account’s function or role.,Service Task
+54,ACTION,Create Non-Privileged Accounts for Privileged Users,Ensure privileged users have non-privileged accounts for non-privileged access.,Service Task
+55,ACTION,Regularly Audit Administrative User Accounts,Audit administrative user accounts and logs to ensure legitimacy and detect anomalies.,Service Task
+56,ACTION,Review Trust Relationships with IT Service Providers,Review and remove unnecessary trust relationships with MSPs and CSPs.,Human Task
+57,ACTION,Review Contractual Relationships with Service Providers,Ensure contracts include appropriate security controls and monitoring requirements.,Human Task
+58,ACTION,Monitor Service Provider Activities,Monitor service provider activities and connections to the customer network.,Service Task
+59,ACTION,Update Remote Work Environment Devices,Regularly update VPNs and devices used for remote work with the latest patches.,Service Task
+60,ACTION,Require MFA on VPN Connections,Require MFA on all VPN connections to enhance security.,Service Task
+61,ACTION,Monitor Remote Network Traffic,Monitor remote network traffic for unapproved protocols and reduce attack surfaces.,Service Task
+62,ACTION,Provide End User Awareness and Training,"Train employees on cyber threats, social engineering, and information security principles.",Human Task
+63,ACTION,Inform Employees of Social Engineering Risks,Educate employees about the risks of social engineering and how to respond to suspicious activity.,Human Task
+64,ACTION,Establish Reporting Protocols for Suspicious Activity,Ensure employees know whom to contact when they suspect a cyber intrusion.,Human Task
+65,ACTION,Deny Atypical Inbound Activity from Anonymization Services,Block inbound activity from known anonymization services like VPNs and TOR.,Service Task
+66,ACTION,Impose Application Whitelisting Policies,Allow only known and permitted programs to execute under an established security policy.,Service Task
+67,ACTION,Create Offline Backups for Critical Assets,Identify and create offline backups for critical assets to ensure data recovery.,Human Task
+68,ACTION,Implement Network Segmentation,Segment the network to limit the spread of potential threats.,Service Task
+69,ACTION,Review Microsoft Office 365 Security Recommendations,Review CISA Alert AA20-120A for additional recommendations on hardening M365 environments.,Human Task
+70,ACTION,Deploy Application Control Software,Deploy application control software to limit the applications and executable code that can be run by users.,Service Task
+71,ACTION,Restrict Email Attachments and Downloads,Limit email attachments and files downloaded via links in emails to prevent executable code from running.,Service Task
+72,ACTION,Enable Antivirus and Anti-malware Software,Enable antivirus and anti-malware software and update signature definitions in a timely manner to prevent use of commonly deployed attacker tools.,Service Task
+73,ACTION,Implement Multifactor Authentication,"Use multifactor authentication where possible, particularly for webmail, virtual private networks, and accounts that access critical systems.",Service Task
+74,ACTION,Limit Administrator Privileges,Limit the use of administrator privileges to reduce the risk of lateral movement and access to sensitive information.,Service Task
+75,ACTION,Train Users on Phishing Protection,Train users through awareness and simulations to recognize and report phishing and social engineering attempts.,Human Task
+76,ACTION,Adopt Threat Reputation Services,"Adopt threat reputation services at the network device, operating system, application, and email service levels to detect or prevent low-reputation email addresses, files, URLs, and IP addresses used in spearphishing attacks.",Service Task
+77,ACTION,Install Updates and Patches,"Install updates/patch operating systems, software, and firmware as soon as updates/patches are released. Prioritize patching known exploited vulnerabilities.",Service Task
+78,ACTION,Evaluate Network Architecture and Security Baseline,Assess network architecture and security baseline to ensure proper segmentation and access control.,Human Task
+79,ACTION,Assess Enterprise Applications for Malware Delivery Vectors,Evaluate enterprise applications for atypical channels for malware delivery and propagation.,Human Task
+80,ACTION,Implement Network Segmentation and Access Control,Ensure network segmentation and configure network-based ACLs to permit connectivity via the minimum scope of ports and protocols.,Service Task
+81,ACTION,Enforce Multifactor Authentication and Least Privilege,Require multifactor authentication for interactive logons and ensure least privilege for enterprise systems.,Service Task
+82,ACTION,Audit and Review Security Logs,Audit and review security logs for anomalous references to administrative and service accounts.,Service Task
+83,ACTION,Stage and Monitor Patch and AV Signature Distribution,Stage patch and AV signature distribution to minimize impact and monitor integrity of updates.,Service Task
+84,ACTION,Conduct Business Impact Analysis (BIA),Perform a business impact analysis to characterize and classify system components and interdependencies.,Human Task
+85,ACTION,Prepare for Incident Response and Recovery,"Prepare resources and documentation for incident response and recovery, including contact information, secure communication channels, and system backups.",Human Task
+86,ACTION,Containment Strategies for Destructive Malware,"Implement containment strategies to reduce the scope of affected systems, such as isolating systems and disabling access for suspected accounts.",Service Task
+87,ACTION,Report Incidents to FBI and CISA,Report incidents to the FBI and CISA and preserve forensic data for investigation.,Human Task
+88,ACTION,Enforce Multi-Factor Authentication (MFA),"Enforce MFA for all users, without exception. Review configuration policies to protect against 'fail open' and re-enrollment scenarios.",Service Task
+89,ACTION,Implement Account Security Measures,Implement time-out and lock-out features for repeated failed login attempts. Ensure inactive accounts are disabled uniformly across systems.,Service Task
+90,ACTION,Update Software and Patch Vulnerabilities,"Update software, including operating systems, applications, and firmware. Prioritize patching known exploited vulnerabilities, especially critical and high vulnerabilities.",Service Task
+91,ACTION,Enforce Strong Password Policies,"Require all accounts with password logins to have strong, unique passwords. Ensure passwords are not reused across multiple accounts or stored insecurely.",Service Task
+92,ACTION,Monitor Network Logs,Continuously monitor network logs for suspicious activity and unauthorized or unusual login attempts.,Service Task
+93,ACTION,Implement Security Alerting Policies,Implement security alerting policies for changes to security-enabled accounts/groups and alert on suspicious process creation events.,Service Task
+94,ACTION,Deploy Local Administrator Password Solution (LAPS),"Deploy LAPS, enforce SMB Signing, restrict administrative privileges, and review sensitive materials on domain controller’s SYSVOL share.",Service Task
+95,ACTION,Enable Increased Logging and EDR,"Enable increased logging policies, enforce PowerShell logging, and ensure antivirus/EDR are deployed to all endpoints and enabled.",Service Task
+96,ACTION,Monitor Remote Access Logs,Monitor remote access/RDP logs and disable unused remote access/RDP ports.,Service Task
+97,ACTION,Deny Atypical Inbound Activity,"Deny atypical inbound activity from known anonymization services, including commercial VPN services and TOR.",Service Task
+98,ACTION,Implement Application Whitelisting,Implement listing policies for applications and remote access that only allow execution of known and permitted programs.,Service Task
+99,ACTION,Regularly Audit Administrative User Accounts,Regularly audit administrative user accounts and configure access control under the concept of least privilege.,Human Task
+100,ACTION,Update Remote Work Environment Devices,"Regularly update VPNs, network infrastructure devices, and devices used for remote work environments with the latest software patches and security configurations.",Service Task
+101,ACTION,Implement MFA on VPN Connections,Implement multi-factor authentication on all VPN connections. Use physical security tokens or authenticator applications when possible.,Service Task
+102,ACTION,Monitor Network Traffic for Unapproved Protocols,Monitor network traffic for unapproved and unexpected protocols. Reduce potential attack surfaces by discontinuing unused VPN servers.,Service Task
+103,ACTION,Provide End-User Awareness and Training,Provide end-user awareness and training to prevent targeted social engineering and spearphishing scams. Ensure employees are aware of potential cyber threats and delivery methods.,Human Task
+104,ACTION,Inform Employees of Risks on Networking Sites,Inform employees of the risks associated with posting detailed career information to social or professional networking sites.,Human Task
+105,ACTION,Establish Reporting Protocols for Suspicious Activity,Ensure employees know what to do and whom to contact when they see suspicious activity or suspect a cyberattack.,Human Task
+106,ACTION,Implement Additional Monitoring for SATCOM Network Providers,"Put in place additional monitoring at ingress and egress points to SATCOM equipment to look for anomalous traffic, such as insecure remote access tools, unexpected network traffic, unauthorized account usage, and brute force login attempts.",Service Task
+107,ACTION,Use Secure Authentication Methods,"Use secure methods for authentication, including multifactor authentication where possible, for all accounts used to access, manage, and/or administer SATCOM networks.",Service Task
+108,ACTION,Enforce Strong Password Policies,"Use and enforce strong, complex passwords. Review password policies to ensure they align with the latest NIST guidelines. Do not use default credentials or weak passwords.",Human Task
+109,ACTION,Audit Accounts and Credentials,Audit accounts and credentials: remove terminated or unnecessary accounts; change expired credentials.,Service Task
+110,ACTION,Enforce Principle of Least Privilege,Enforce principle of least privilege through authorization policies. Minimize unnecessary privileges for identities.,Service Task
+111,ACTION,Review Trust Relationships,Review existing trust relationships with IT service providers. Remove unnecessary trust relationships.,Human Task
+112,ACTION,Review Contractual Relationships with Service Providers,"Ensure contracts include appropriate provisions addressing security, such as monitoring and logging of provider-managed customer systems and notification of security events.",Human Task
+113,ACTION,Implement Independent Encryption,"Implement independent encryption across all communications links leased from, or provided by, your SATCOM provider.",Service Task
+114,ACTION,Strengthen Security of Systems,"Strengthen the security of operating systems, software, and firmware. Ensure robust vulnerability management and patching practices are in place.",Service Task
+115,ACTION,Implement Configuration Management Programs,Implement rigorous configuration management programs. Regularly audit system configurations for misconfigurations and security weaknesses.,Service Task
+116,ACTION,Monitor Network Logs for Suspicious Activity,Monitor network logs for suspicious activity and unauthorized or unusual login attempts. Integrate SATCOM traffic into existing network security monitoring tools.,Service Task
+117,ACTION,Review Logs of Systems Behind SATCOM Terminals,Review logs of systems behind SATCOM terminals for suspicious activity. Ingest system and network generated logs into your enterprise security information and event management (SIEM) tool.,Service Task
+118,ACTION,Implement Endpoint Detection and Response (EDR) Tools,"Implement endpoint detection and response (EDR) tools where possible on devices behind SATCOM terminals, and ingest into the SIEM.",Service Task
+119,ACTION,Expand and Enhance Monitoring of SATCOM Network Segments,Expand monitoring to include ingress and egress traffic transiting SATCOM links and monitor for suspicious or anomalous network activity.,Service Task
+120,ACTION,Baseline SATCOM Network Traffic,"Baseline SATCOM network traffic to determine what is normal and investigate deviations, such as large spikes in traffic.",Service Task
+121,ACTION,Create and Maintain Cyber Incident Response Plans,"Create, maintain, and exercise a cyber incident response plan, resilience plan, and continuity of operations plan for SATCOM networks.",Human Task
+122,ACTION,Review and Implement Security Controls,"Review and implement security controls deemed appropriate by the customer, ensuring monitoring and logging of provider-managed customer systems.",Human Task
+123,ACTION,Manage Privileged Accounts,"Manage the creation, modification, use, and permissions associated with privileged accounts, including SYSTEM and root.",Service Task
+124,ACTION,Enforce Secure Password Policies,Set and enforce secure password policies for accounts.,Service Task
+125,ACTION,Remove Unnecessary Software,Remove or deny access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.,Service Task
+126,ACTION,Perform System Audits,"Perform audits or scans of systems, permissions, insecure software, insecure configurations, etc., to identify potential weaknesses.",Service Task
+127,ACTION,Make Configuration Changes for System Hardening,Make configuration changes related to the operating system or a common feature of the operating system that result in system hardening against techniques.,Service Task
+128,ACTION,Enforce Multifactor Authentication (MFA),Enforce MFA by requiring users to provide two or more pieces of information to authenticate to a system.,Service Task
+129,ACTION,Filter Network Traffic,Use network appliances to filter ingress or egress traffic and perform protocol-based filtering. Configure software on endpoints to filter network traffic.,Service Task
+130,ACTION,Network Segmentation,"Architect sections of the network to isolate critical systems, functions, or resources. Use physical and logical segmentation to prevent access to potentially sensitive systems and information.",Human Task
+131,ACTION,Use DMZ for Internet-facing Services,Use a demilitarized zone (DMZ) to contain any internet-facing services that should not be exposed from the internal network.,Service Task
+132,ACTION,Prevent Access to Unnecessary Services,"Prevent access to file shares, remote access to systems, and unnecessary services using network concentrators, RDP gateways, etc.",Service Task
+133,ACTION,Block Code Execution,"Block execution of code on a system through application control, and/or script blocking.",Service Task
+134,ACTION,Update All Software,Update all software to the latest versions to ensure security patches are applied.,Service Task
+135,ACTION,Implement Network Segmentation,Implement robust network segmentation between IT and ICS networks to limit lateral movement.,Service Task
+136,ACTION,Design ICS Network Topology,"Implement a network topology for ICS with multiple layers, with the most critical communications in the most secure layer.",Human Task
+137,ACTION,Apply Further Segmentation,Apply further segmentation to portions of the network that are reliant on one another by functionality.,Service Task
+138,ACTION,Use One-way Communication Diodes,"Use one-way communication diodes to prevent external access, whenever possible.",Service Task
+139,ACTION,Set Up DMZs,Set up DMZs to create a physical and logical subnetwork that acts as an intermediary for connected security devices.,Service Task
+140,ACTION,Employ Reliable Network Security Protocols,Employ reliable network security protocols and services where feasible.,Service Task
+141,ACTION,Use VLANs for Additional Segmentation,"Consider using VLANs for additional network segmentation, such as placing all printers in separate VLANs.",Service Task
+142,ACTION,Implement Perimeter Security,Implement perimeter security between network segments to limit lateral movement.,Service Task
+143,ACTION,Control Traffic Between Network Segments,"Control traffic between network segments using firewalls, IDSs, and filtering rules on routers and switches.",Service Task
+144,ACTION,Implement Network Monitoring,Implement network monitoring at key chokepoints and at key assets or services.,Service Task
+145,ACTION,Configure IDS for ICS Traffic,Configure an IDS to create alarms for any ICS traffic outside normal operations.,Service Task
+146,ACTION,Configure Security Incident and Event Monitoring,Configure security incident and event monitoring to analyze and correlate event logs from across the ICS network.,Service Task
+147,ACTION,Test Patches in Out-of-band Environments,Test all patches in out-of-band testing environments before implementation into production environments.,Human Task
+148,ACTION,Implement Application Allow Listing,Implement application allow listing on human machine interfaces and engineering workstations.,Service Task
+149,ACTION,Harden Software Configuration on Field Devices,"Harden software configuration on field devices, including tablets and smartphones.",Service Task
+150,ACTION,Replace End-of-life Software and Hardware,Replace all end-of-life software and hardware devices.,Human Task
+151,ACTION,Disable Unused Ports and Services,Disable unused ports and services on ICS devices after testing to ensure this will not affect ICS operation.,Service Task
+152,ACTION,Restrict and Manage Remote Access Software,Restrict and manage remote access software.,Service Task
+153,ACTION,Enforce MFA for Remote Access,Enforce MFA for remote access to ICS networks.,Service Task
+154,ACTION,Configure Encryption for Network Protocols,Configure encryption and security for network protocols within the ICS environment.,Service Task
+155,ACTION,Disallow Vendor Device Connections,Do not allow vendors to connect their devices to the ICS network.,Human Task
+156,ACTION,Disallow Transient Device Communication,Disallow any devices that do not live solely on the ICS environment from communicating on the platform.,Service Task
+157,ACTION,Maintain ICS Asset Inventory,"Maintain an ICS asset inventory of all hardware, software, and supporting infrastructure technologies.",Human Task
+158,ACTION,Maintain Robust Host Logging,Maintain robust host logging on critical devices within the ICS environment.,Service Task
+159,ACTION,Ensure Robust Physical Security,Ensure robust physical security is in place to prevent unauthorized access to controlled spaces housing ICS equipment.,Human Task
+160,ACTION,Regularly Test Manual Controls,Regularly test manual controls to ensure critical functions can continue if ICS/OT networks are taken offline.,Human Task
+161,ACTION,Isolate ICS/SCADA Systems,"Isolate ICS/SCADA systems and networks from corporate and internet networks using strong perimeter controls, and limit any communications entering or leaving ICS/SCADA perimeters.",Service Task
+162,ACTION,Enforce Multifactor Authentication,Enforce multifactor authentication for all remote access to ICS networks and devices whenever possible.,Service Task
+163,ACTION,Develop and Exercise Cyber Incident Response Plan,"Have a cyber incident response plan, and exercise it regularly with stakeholders in IT, cybersecurity, and operations.",Human Task
+164,ACTION,Change ICS/SCADA Passwords Regularly,"Change all passwords to ICS/SCADA devices and systems on a consistent schedule, especially all default passwords, to device-unique strong passwords to mitigate password brute force attacks.",Human Task
+165,ACTION,Configure OPC UA Security,Ensure OPC UA security is correctly configured with application authentication enabled and explicit trust lists.,Service Task
+166,ACTION,Secure OPC UA Certificate Private Keys,Ensure the OPC UA certificate private keys and user passwords are stored securely.,Human Task
+167,ACTION,Maintain Offline Backups,"Maintain known-good offline backups for faster recovery upon a disruptive attack, and conduct hashing and integrity checks on firmware and controller configuration files to ensure validity of those backups.",Human Task
+168,ACTION,Limit Network Connections,Limit ICS/SCADA systems’ network connections to only specifically allowed management and engineering workstations.,Service Task
+169,ACTION,Protect Management Systems,"Robustly protect management systems by configuring Device Guard, Credential Guard, and Hypervisor Code Integrity (HVCI).",Service Task
+170,ACTION,Install EDR Solutions,Install Endpoint Detection and Response (EDR) solutions on these subnets and ensure strong anti-virus file reputation settings are configured.,Service Task
+171,ACTION,Implement Log Collection and Retention,Implement robust log collection and retention from ICS/SCADA systems and management subnets.,Service Task
+172,ACTION,Leverage Continuous OT Monitoring,"Leverage a continuous OT monitoring solution to alert on malicious indicators and behaviors, watching internal systems and communications for known hostile actions and lateral movement.",Service Task
+173,ACTION,Use ICSNPP for Enhanced Network Visibility,"For enhanced network visibility to potentially identify abnormal traffic, consider using CISA’s open-source Industrial Control Systems Network Protocol Parsers (ICSNPP).",Service Task
+174,ACTION,Enforce Principle of Least Privilege,"Ensure all applications are only installed when necessary for operation. Enforce principle of least privilege. Only use admin accounts when required for tasks, such as installing software updates.",Human Task
+175,ACTION,Investigate Denial of Service Symptoms,"Investigate symptoms of a denial of service or connection severing, which exhibit as delays in communications processing, loss of function requiring a reboot, and delayed actions to operator comments as signs of potential malicious activity.",Human Task
+176,ACTION,Monitor for Unusual Drivers,"Monitor systems for loading of unusual drivers, especially for ASRock driver if no ASRock driver is normally used on the system.",Service Task
+177,ACTION,Apply Defense-in-Depth Security Strategy,Implement a defense-in-depth security strategy by applying security principles such as least access models and defense-in-depth to user and application privileges.,Human Task
+178,ACTION,Implement Network Segmentation,Use network segmentation to separate networks into zones based on roles and requirements to prevent lateral movement and limit the attack surface.,Service Task
+179,ACTION,Implement Patch Management Program,"Establish a timely vulnerability and patch management program to mitigate exposure to critical CVEs, prioritizing patching of internet-facing devices.",Service Task
+180,ACTION,Enforce Credential Requirements and MFA,Ensure users change passwords regularly and implement multifactor authentication (MFA) to reduce the risk of credential theft.,Service Task
+181,ACTION,Educate Users on Social Engineering,Train users to identify social engineering techniques and only open links and attachments from trusted senders.,Human Task
+182,ACTION,Implement Email and Domain Mitigations,Maintain awareness of themed emails and have a robust domain security solution to monitor or block newly registered domains (NRDs).,Service Task
+183,ACTION,Disable HTML in Emails and Scan Attachments,Disable HTML in emails and scan email attachments to detect potentially malicious payloads.,Service Task
+184,ACTION,Implement Endpoint Protection,Ensure mobile devices have installed security suites to detect and mitigate malware.,Service Task
+185,ACTION,Enforce Application Security with Allowlisting,Use application allowlisting to monitor programs and only allow those on the approved allowlist to execute.,Service Task
+186,ACTION,Disable Macros in Office Products,"Configure office products to disable macros that originate from outside the organization, using Group Policy Administrative Templates.",Service Task
+187,ACTION,Verify Third-Party Downloads,Ensure file downloads are from reputable sources and not from third-party vendors to prevent trojanized applications.,Human Task
+188,ACTION,Create an Incident Response Plan,"Develop a plan to respond to cyber intrusions, including reporting incidents to the FBI and CISA.",Human Task
+189,ACTION,Scan Hyperlinks in Emails,Scan hyperlinks in emails and open them with precautionary measures to reduce the likelihood of clicking on a malicious link.,Service Task
+190,ACTION,Configure Macro Security Level in Productivity Software,Set the Macro Security Level in productivity software like LibreOffice and OpenOffice to block unauthorized macros.,Service Task
+191,ACTION,Update Software,"Update software, including operating systems, applications, and firmware on IT network assets. Prioritize patching known exploited vulnerabilities and critical and high vulnerabilities that allow for remote code execution or denial-of-service on internet-facing equipment. Consider using a centralized patch management system.",Service Task
+192,ACTION,Enforce Multi-Factor Authentication (MFA),"Enforce MFA to the greatest extent possible and require accounts with password logins, including service accounts, to have strong passwords. Review configuration policies to protect against 'fail open' and re-enrollment scenarios.",Service Task
+193,ACTION,Secure and Monitor RDP and Risky Services,"Secure and monitor RDP and other potentially risky services. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure. If RDP is necessary, restrict the originating sources and require MFA. Use a VPN for external RDP access. Monitor remote access/RDP logs and enforce account lockouts.",Service Task
+194,ACTION,Provide End-User Awareness and Training,"Provide end-user awareness and training to help prevent successful targeted social engineering and spearphishing campaigns. Ensure employees are aware of potential cyber threats and delivery methods, and know whom to contact when they receive a suspected phishing email or suspect a cyber incident.",Human Task
+195,ACTION,Update Software and Systems,"Update software, operating systems, applications, and firmware on IT network assets in a timely manner. Prioritize patching known exploited vulnerabilities, especially those CVEs identified in this CSA, and then critical and high vulnerabilities that allow for remote code execution or denial-of-service on internet-facing equipment.",Service Task
+196,ACTION,Apply Available Patches,Apply patches for known exploited or critical vulnerabilities as soon as they are available.,Service Task
+197,ACTION,Implement Vendor-Approved Workarounds,"If a patch for a known exploited or critical vulnerability cannot be quickly applied, implement vendor-approved workarounds.",Human Task
+198,ACTION,Use Centralized Patch Management System,Use a centralized patch management system to manage and automate the patching process.,Service Task
+199,ACTION,Replace End-of-Life Software,Replace end-of-life software that is no longer supported by the vendor.,Human Task
+200,ACTION,Consider Moving Services to Cloud or Managed Service Providers,"Consider moving services to mature, reputable cloud service providers (CSPs) or managed service providers (MSPs) if unable to perform rapid scanning and patching of internet-facing systems.",Human Task
+201,ACTION,Collaborate with MSPs and CSPs to Reduce Risks,Proactively collaborate with MSPs and CSPs to jointly reduce risks as they expand the organization's attack surface.,Human Task
+202,ACTION,Enforce Multifactor Authentication (MFA),"Enforce multifactor authentication (MFA) for all users, without exception, and on all VPN connections. If MFA is unavailable, require employees engaging in remote work to use strong passwords.",Service Task
+203,ACTION,Review and Manage Privileged Accounts,"Regularly review, validate, or remove privileged accounts (annually at a minimum). Configure access control under the concept of least privilege principle.",Human Task
+204,ACTION,Ensure Least Privilege for Software Service Accounts,Ensure software service accounts only provide necessary permissions (least privilege) to perform intended functions (non-administrative privileges).,Service Task
+205,ACTION,Configure and Secure Internet-Facing Network Devices,"Properly configure and secure internet-facing network devices, disable unused or unnecessary network ports and protocols, encrypt network traffic, and disable unused network services and devices.",Service Task
+206,ACTION,Harden Enterprise Network Services,"Harden commonly exploited enterprise network services, including LLMNR, RDP, CIFS, Active Directory, and OpenLDAP.",Service Task
+207,ACTION,Manage Windows KDC Accounts,"Manage Windows Key Distribution Center (KDC) accounts (e.g., KRBTGT) to minimize Golden Ticket attacks and Kerberoasting.",Service Task
+208,ACTION,Control Use of Native Scripting Applications,"Strictly control the use of native scripting applications, such as command-line, PowerShell, WinRM, WMI, and DCOM.",Service Task
+209,ACTION,Segment Networks and Monitor Attack Surface,"Segment networks to limit or block lateral movement by controlling access to applications, devices, and databases. Use private virtual local area networks. Continuously monitor the attack surface and investigate abnormal activity.",Service Task
+210,ACTION,Use Security Tools,"Use security tools, such as endpoint detection and response (EDR) and security information and event management (SIEM) tools. Consider using an IT asset management (ITAM) solution to ensure your EDR, SIEM, vulnerability scanner etc., are reporting the same number of assets.",Service Task
+211,ACTION,Monitor for Potentially Unwanted Programs,Monitor the environment for potentially unwanted programs.,Service Task
+212,ACTION,Implement Application Allowlisting,Implement application allowlisting to control which applications can run on the network.,Service Task
+213,ACTION,Upgrade F5 BIG-IP Software,Upgrade F5 BIG-IP software to supported versions to mitigate vulnerabilities.,Service Task
+214,ACTION,Upgrade F5 BIG-IP Software to Fixed Versions,Upgrade F5 BIG-IP software to fixed versions as recommended by CISA and MS-ISAC.,Service Task
+215,ACTION,Block iControl REST Access Through Self IP Address,Implement F5's temporary workaround to block iControl REST access through the self IP address.,Service Task
+216,ACTION,Block iControl REST Access Through Management Interface,Implement F5's temporary workaround to block iControl REST access through the management interface.,Service Task
+217,ACTION,Modify BIG-IP httpd Configuration,Modify the BIG-IP httpd configuration as per F5's temporary workaround guidelines.,Service Task
+218,ACTION,Maintain and Test Incident Response Plan,Ensure the organization has a maintained and tested incident response plan to reduce risk of compromise.,Human Task
+219,ACTION,Implement Vulnerability Program,Ensure the organization has a vulnerability program prioritizing patch management and vulnerability scanning.,Human Task
+220,ACTION,Configure and Secure Internet-Facing Network Devices,Properly configure and secure internet-facing network devices to reduce risk of compromise.,Service Task
+221,ACTION,Do Not Expose Management Interfaces to the Internet,Ensure management interfaces are not exposed to the internet to reduce risk of compromise.,Service Task
+222,ACTION,Disable Unused Network Ports and Protocols,Disable unused or unnecessary network ports and protocols to reduce risk of compromise.,Service Task
+223,ACTION,Remove Unused Network Services and Devices,Disable or remove unused network services and devices to reduce risk of compromise.,Service Task
+224,ACTION,Adopt Zero-Trust Principles and Architecture,"Adopt zero-trust principles and architecture, including micro-segmenting networks and functions to limit or block lateral movements.",Service Task
+225,ACTION,Enforce Multifactor Authentication (MFA),Enforce MFA for all users and VPN connections to enhance security.,Service Task
+226,ACTION,Restrict Access to Trusted Devices and Users,Restrict access to trusted devices and users on the networks to enhance security.,Service Task
+227,ACTION,Utilize CISA's Cyber Hygiene Services,"Utilize CISA’s Cyber Hygiene Services, which are free to all SLTT organizations and public and private sector critical infrastructure organizations.",Human Task
+228,ACTION,Implement Data Recovery Plan,"Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location (e.g., hard drive, storage device, the cloud).",Human Task
+229,ACTION,Implement Network Segmentation and Offline Backups,Segment the network and maintain offline backups of data to ensure limited interruption to the organization.,Service Task
+230,ACTION,Regular Data Backup,Regularly back up data and password protect backup copies offline. Ensure copies of critical data are not accessible for modification or deletion from the system where the data resides.,Service Task
+231,ACTION,Install and Update Antivirus Software,Install and regularly update antivirus software on all hosts and enable real-time detection.,Service Task
+232,ACTION,Install Updates and Patches,"Install updates/patch operating systems, software, and firmware as soon as updates/patches are released.",Service Task
+233,ACTION,Review and Audit Accounts,"Review domain controllers, servers, workstations, and active directories for new or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls with least privilege in mind.",Human Task
+234,ACTION,Disable Unused Ports,Disable unused ports to reduce potential attack vectors.,Service Task
+235,ACTION,Add Email Banner for External Emails,Consider adding an email banner to emails received from outside your organization.,Service Task
+236,ACTION,Disable Hyperlinks in Emails,Disable hyperlinks in received emails to prevent phishing attacks.,Service Task
+237,ACTION,Enforce Multi-Factor Authentication,Implement multi-factor authentication to enhance security.,Service Task
+238,ACTION,Develop and Manage Password Policies,Use the National Institute for Standards and Technology’s (NIST’s) standards for developing and managing password policies.,Human Task
+239,ACTION,Use Longer Passwords,Use longer passwords consisting of at least 8 characters and no more than 64 characters in length.,Human Task
+240,ACTION,Store Passwords in Hashed Format,Store passwords in hashed format using industry-recognized password managers.,Service Task
+241,ACTION,Add Password User Salts,Add password user “salts” to shared login credentials.,Service Task
+242,ACTION,Avoid Reusing Passwords,Avoid reusing passwords to enhance security.,Human Task
+243,ACTION,Implement Account Lockouts,Implement multiple failed login attempt account lockouts.,Service Task
+244,ACTION,Disable Password Hints,Disable password “hints” to prevent unauthorized access.,Service Task
+245,ACTION,Limit Password Change Frequency,Refrain from requiring password changes more frequently than once per year.,Service Task
+246,ACTION,Require Administrator Credentials for Software Installation,Require administrator credentials to install software.,Service Task
+247,ACTION,Use Secure Networks,Only use secure networks and avoid using public Wi-Fi networks. Consider installing and using a VPN.,Human Task
+248,ACTION,Conduct Cybersecurity Awareness and Training,"Focus on cybersecurity awareness and training. Regularly provide users with training on information security principles and techniques as well as overall emerging cybersecurity risks and vulnerabilities (e.g., ransomware and phishing scams).",Human Task
+249,ACTION,Keep Systems Updated and Patched,Ensure all systems and products are updated and patched as soon as possible after patches are released. Consider using a centralized patch management system to automate and expedite the process.,Service Task
+250,ACTION,Remove or Isolate Compromised Devices,Immediately remove or isolate suspected compromised devices from the network.,Human Task
+251,ACTION,Segment Networks,Segment networks to limit or block lateral movement.,Service Task
+252,ACTION,Disable Unused Network Services,"Disable unused or unnecessary network services, ports, protocols, and devices.",Service Task
+253,ACTION,Enforce Multifactor Authentication (MFA),"Enforce MFA for all users, without exception, and on all VPN connections. If MFA is unavailable, enforce password complexity requirements.",Service Task
+254,ACTION,Implement Strict Password Requirements,"Implement strict password requirements, enforcing password complexity, changing passwords at a defined frequency, and performing regular account reviews to ensure compliance.",Service Task
+255,ACTION,Perform Regular Data Backup,Perform regular data backup procedures and maintain up-to-date incident response and recovery procedures.,Service Task
+256,ACTION,Disable External Management Capabilities,Disable external management capabilities and set up an out-of-band management network.,Service Task
+257,ACTION,Isolate Internet-facing Services,Isolate Internet-facing services in a network Demilitarized Zone (DMZ) to reduce the exposure of the internal network.,Service Task
+258,ACTION,Enable Robust Logging for Internet-facing Services,Enable robust logging of Internet-facing services and monitor the logs for signs of compromise.,Service Task
+259,ACTION,Ensure Dedicated Management Systems,Ensure that you have dedicated management systems and accounts for system administrators. Protect these accounts with strict network policies.,Human Task
+260,ACTION,Enable Robust Logging and Review of Network Infrastructure,"Enable robust logging and review of network infrastructure accesses, configuration changes, and critical infrastructure services performing authentication, authorization, and accounting functions.",Service Task
+261,ACTION,Scrutinize Network Infrastructure Accesses,"Upon responding to a confirmed incident within any portion of a network, response teams should scrutinize network infrastructure accesses, evaluate potential lateral movement to network infrastructure and implement corrective actions commensurate with their findings.",Human Task
+262,ACTION,Enforce Password Complexity Requirements,"If MFA is unavailable, enforce password complexity requirements.",Service Task
+263,ACTION,Perform Regular Account Reviews,Perform regular account reviews to ensure compliance with password and access policies.,Human Task
+264,ACTION,Maintain Up-to-date Incident Response Procedures,Maintain up-to-date incident response and recovery procedures.,Human Task
+265,ACTION,Set Up Out-of-band Management Network,Set up an out-of-band management network to enhance security.,Service Task
+266,ACTION,Monitor Logs for Signs of Compromise,Monitor logs for signs of compromise to detect potential security incidents.,Service Task
+267,ACTION,Determine Vulnerable VMware Horizon Components,Refer to VMware Security Advisory VMSA-2021-0028.13 and VMware Knowledge Base (KB) 87073 to identify which VMware Horizon components are vulnerable.,Human Task
+268,ACTION,Apply Updates to VMware Horizon and UAG Systems,Install updated builds to ensure affected VMware Horizon and UAG systems are updated to the latest version.,Service Task
+269,ACTION,Restrict Network Perimeter Access Controls,Ensure network perimeter access controls are as restrictive as possible while installing updates.,Human Task
+270,ACTION,Treat VMware Horizon Systems as Compromised,Follow pro-active incident response procedures prior to applying updates if updates or workarounds were not promptly applied.,Human Task
+271,ACTION,Implement Temporary Workarounds,Use vendor-provided temporary workarounds from KB87073 and KB87092 if upgrading is not immediately feasible. Implement using an account with administrative privileges.,Service Task
+272,ACTION,Ensure Appropriate Backups,Ensure appropriate backups have been completed prior to implementing any temporary solution.,Human Task
+273,ACTION,Verify Successful Implementation of Mitigations,Execute the vendor supplied script Horizon_Windows_Log4j_Mitigations.zip without parameters to ensure that no vulnerabilities remain.,Service Task
+274,ACTION,Keep Software Up to Date,Keep all software up to date and prioritize patching known exploited vulnerabilities (KEVs).,Service Task
+275,ACTION,Minimize Internet-Facing Attack Surface,"Host essential services on a segregated DMZ, ensure strict network perimeter access controls, and do not host internet-facing services non-essential to business operations.",Service Task
+276,ACTION,Implement Web Application Firewalls (WAFs),Implement regularly updated WAFs in front of public-facing services to protect against web-based exploitation.,Service Task
+277,ACTION,Use Best Practices for Identity and Access Management,"Implement multifactor authentication (MFA), enforce use of strong passwords, and limit user access through the principle of least privilege.",Service Task
+278,ACTION,Implement Data Recovery Plan,"Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",Service Task
+279,ACTION,Network Segmentation and Offline Backups,Implement network segmentation and maintain offline backups of data to ensure limited interruption to the organization.,Human Task
+280,ACTION,Regular Data Backup and Protection,Regularly back up data and password protect backup copies stored offline. Ensure copies of critical data are not accessible for modification or deletion from the system where the data resides.,Service Task
+281,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+282,ACTION,Install System Updates,"Install updates for operating systems, software, and firmware as soon as possible.",Service Task
+283,ACTION,Review for Unrecognized Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts.",Service Task
+284,ACTION,Audit Administrative User Accounts,Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.,Service Task
+285,ACTION,Disable Unused Ports,Disable unused ports to reduce potential attack vectors.,Service Task
+286,ACTION,Add Email Banner for External Emails,Consider adding an email banner to emails received from outside your organization.,Service Task
+287,ACTION,Disable Hyperlinks in Emails,Disable hyperlinks in received emails to prevent phishing attacks.,Service Task
+288,ACTION,Enforce Multifactor Authentication (MFA),Enforce multifactor authentication to enhance security.,Service Task
+289,ACTION,Develop Password Policies Using NIST Standards,"Use NIST standards for developing and managing password policies, including using longer passwords, storing passwords in hashed format, adding password user 'salts', avoiding password reuse, implementing account lockouts, and disabling password hints.",Human Task
+290,ACTION,Require Administrator Credentials for Software Installation,Require administrator credentials to install software to prevent unauthorized installations.,Service Task
+291,ACTION,Use Secure Networks,Only use secure networks and avoid using public Wi-Fi networks.,Human Task
+292,ACTION,Install and Use VPN,Consider installing and using a virtual private network (VPN) to establish secure remote connections.,Human Task
+293,ACTION,Focus on Cybersecurity Awareness and Training,"Regularly provide users with training on information security principles and techniques as well as overall emerging cybersecurity risks and vulnerabilities, such as ransomware and phishing scams.",Human Task
+294,ACTION,Use Longer Passwords,Use longer passwords consisting of at least 8 characters and no more than 64 characters in length.,Human Task
+295,ACTION,Store Passwords in Hashed Format,Store passwords in hashed format using industry-recognized password managers.,Service Task
+296,ACTION,Add Password User 'Salts',Add password user 'salts' to shared login credentials to enhance security.,Service Task
+297,ACTION,Avoid Password Reuse,Avoid reusing passwords to prevent security breaches.,Human Task
+298,ACTION,Implement Account Lockouts for Failed Login Attempts,Implement multiple failed login attempt account lockouts to prevent unauthorized access.,Service Task
+299,ACTION,Disable Password Hints,Disable password hints to prevent attackers from gaining clues about passwords.,Service Task
+300,ACTION,Change Passwords,Refrain from requiring password changes unless there is evidence of password compromise.,Human Task
+301,ACTION,Deploy Public Key Infrastructure,"Deploy public key infrastructure and digital certificates to authenticate connections with the network, IoT medical devices, and the electronic health record system.",Service Task
+302,ACTION,Use Standard User Accounts,Use standard user accounts on internal systems instead of administrative accounts to ensure least privilege.,Human Task
+303,ACTION,Turn Off Network Device Management Interfaces,"Turn off network device management interfaces such as Telnet, SSH, Winbox, and HTTP for WANs and secure with strong passwords and encryption when enabled.",Service Task
+304,ACTION,Secure PII/PHI,Secure personal identifiable information (PII)/patient health information (PHI) at collection points and encrypt the data at rest and in transit using technologies such as TLS.,Service Task
+305,ACTION,Protect Stored Data,Protect stored data by masking the permanent account number (PAN) when displayed and rendering it unreadable when stored through cryptography.,Service Task
+306,ACTION,Implement HIPAA Security Measures,"Secure the collection, storage, and processing practices for PII and PHI per HIPAA regulations to prevent malware introduction.",Human Task
+307,ACTION,Use Monitoring Tools for IoT Devices,Use monitoring tools to observe whether IoT devices are behaving erratically due to a compromise.,Service Task
+308,ACTION,Create and Review Internal Policies,"Create and regularly review internal policies that regulate the collection, storage, access, and monitoring of PII/PHI.",Human Task
+309,ACTION,Maintain Offline Backups,"Maintain offline backups of data, regularly test backup and restoration, and ensure all backup data is encrypted and immutable.",Service Task
+310,ACTION,Create Cyber Incident Response Plan,"Create, maintain, and exercise a basic cyber incident response plan and associated communications plan that includes response procedures for a ransomware incident.",Human Task
+311,ACTION,Ensure Notification Procedures Adhere to Laws,Ensure notification procedures adhere to applicable state laws and refer to the National Conference of State Legislatures for information on data breach laws.,Human Task
+312,ACTION,Install Updates and Patches,"Install updates for operating systems, software, and firmware as soon as they are released to minimize exposure to cybersecurity threats.",Service Task
+313,ACTION,Secure Remote Desktop Protocol (RDP),"Secure and monitor RDP by restricting access, requiring MFA, and using VPNs for external connections.",Service Task
+314,ACTION,Restrict SMB Protocol,Restrict Server Message Block (SMB) Protocol within the network to only access necessary servers and disable outdated versions.,Service Task
+315,ACTION,Review Third-Party Vendor Security,Review the security posture of third-party vendors and monitor connections for suspicious activity.,Human Task
+316,ACTION,Implement Application Whitelisting,Implement listing policies for applications and remote access that only allow execution of known and permitted programs.,Service Task
+317,ACTION,Conduct User Training and Phishing Exercises,"Implement user training programs and phishing exercises to raise awareness about the risks of suspicious websites, links, and attachments.",Human Task
+318,ACTION,Require Multi-Factor Authentication (MFA),"Require MFA for services, especially for webmail, VPNs, and accounts accessing critical systems.",Service Task
+319,ACTION,Use Strong Passwords,Use strong passwords and avoid reusing passwords for multiple accounts.,Human Task
+320,ACTION,Install Antivirus and Antimalware Software,Install and regularly update antivirus and antimalware software on all hosts.,Service Task
+321,ACTION,Use Secure Networks,Only use secure networks and consider installing and using a VPN.,Human Task
+322,ACTION,Disable Hyperlinks in Emails,Disable hyperlinks in received emails to prevent phishing attacks.,Service Task
+323,ACTION,Respond to Ransomware Incidents,"Follow the organization's Ransomware Response Checklist, scan backups for malware, and report incidents to the FBI, CISA, or USSS.",Human Task
+324,ACTION,Update Software,"Update software, including operating systems, applications, and firmware on IT network assets. Prioritize patching known exploited vulnerabilities and critical and high vulnerabilities that allow for remote code execution or denial-of-service on internet-facing equipment.",Service Task
+325,ACTION,Enforce Multi-Factor Authentication (MFA),"Enforce MFA to the greatest extent possible and require accounts with password logins, including service accounts, to have strong passwords. Do not allow passwords to be used across multiple accounts or stored on a system to which an adversary may have access.",Service Task
+326,ACTION,Secure and Monitor RDP and Risky Services,"Secure and monitor RDP and other potentially risky services. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure. If RDP is operationally necessary, restrict the originating sources, and require MFA. Use a VPN or other means to authenticate and secure the connection before allowing RDP to connect to internal devices. Monitor remote access/RDP logs, enforce account lockouts after a specified number of attempts, log RDP login attempts, and disable unused remote access/RDP ports.",Service Task
+327,ACTION,Maintain Offline Backups,"Maintain offline backups of data. Backup procedures should be conducted on a frequent, regular basis (at a minimum every 90 days). Regularly test backup procedures and ensure that backups are isolated from network connections. Ensure backup keys are kept offline and all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Human Task
+328,ACTION,Provide End-User Awareness and Training,"Provide end-user awareness and training to help prevent successful targeted social engineering and spearphishing campaigns. Ensure that employees are aware of potential cyber threats and delivery methods, and know what to do and whom to contact when they receive a suspected phishing email or suspect a cyber incident.",Human Task
+329,ACTION,Implement Network Segmentation,Implement network segmentation to separate network segments based on role and functionality. This helps prevent the spread of ransomware and threat actor lateral movement by controlling traffic flows between and access to various subnetworks.,Service Task
+330,ACTION,Implement Recovery Plan,"Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location (i.e., hard drive, storage device, the cloud).",Human Task
+331,ACTION,Enforce NIST Password Standards,Require all accounts with password logins to comply with NIST standards for developing and managing password policies.,Service Task
+332,ACTION,Implement Password Security Measures,"Use longer passwords (8-64 characters), store passwords in hashed format, add password user 'salts', avoid reusing passwords, implement account lockouts for multiple failed login attempts, disable password hints, and refrain from frequent password changes.",Service Task
+333,ACTION,Require Administrator Credentials for Software Installation,Ensure administrator credentials are required to install software.,Service Task
+334,ACTION,Require Multifactor Authentication,"Require multifactor authentication for all services, particularly for webmail, VPNs, and accounts accessing critical systems.",Service Task
+335,ACTION,Keep Systems Updated,"Keep all operating systems, software, and firmware up to date. Prioritize patching SonicWall firewall vulnerabilities and known exploited vulnerabilities in internet-facing systems.",Service Task
+336,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting adversary lateral movement.,Service Task
+337,ACTION,Implement Network Monitoring Tools,"Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a network monitoring tool. Implement a tool that logs and reports all network traffic, including lateral movement activity.",Service Task
+338,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+339,ACTION,Review and Audit Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",Human Task
+340,ACTION,Disable Unused Ports,Disable unused ports to reduce potential attack vectors.,Service Task
+341,ACTION,Enhance Email Security,Consider adding an email banner to emails received from outside your organization and disable hyperlinks in received emails.,Service Task
+342,ACTION,Implement Time-Based Access for Admin Accounts,Implement time-based access for accounts set at the admin level and higher using methods like Just-in-Time (JIT) access.,Service Task
+343,ACTION,Disable Command-Line and Scripting Activities,Disable command-line and scripting activities and permissions to prevent privilege escalation and lateral movement.,Service Task
+344,ACTION,Maintain Offline Backups,"Maintain offline backups of data, regularly maintain backup and restoration, and ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Service Task
+345,ACTION,Upgrade to Latest ZCS Releases,Upgrade to the latest ZCS releases as noted on Zimbra Security – News & Alerts and Zimbra Security Advisories.,Service Task
+346,ACTION,Review Volexity’s Mitigation Steps,Review and apply mitigation steps from Volexity’s Mass Exploitation of (Un)authenticated Zimbra RCE: CVE-2022-27925.,Human Task
+347,ACTION,Maintain and Test Incident Response Plan,Ensure that an incident response plan is maintained and regularly tested.,Human Task
+348,ACTION,Implement Vulnerability Management Program,"Ensure a vulnerability management program is in place, prioritizing patch management and vulnerability scanning of known exploited vulnerabilities.",Human Task
+349,ACTION,Configure and Secure Internet-Facing Network Devices,Properly configure and secure internet-facing network devices. Do not expose management interfaces to the internet.,Service Task
+350,ACTION,Disable Unused Network Ports and Protocols,Disable unused or unnecessary network ports and protocols.,Service Task
+351,ACTION,Remove Unused Network Services and Devices,Disable or remove unused network services and devices.,Service Task
+352,ACTION,Adopt Zero-Trust Principles and Architecture,"Adopt zero-trust principles, including micro-segmenting networks, enforcing phishing-resistant MFA, and restricting access to trusted devices and users.",Service Task
+353,ACTION,Implement and Enforce Backup and Restoration Policies,"Maintain offline backups of data, regularly test backup and restoration, ensure all backup data is encrypted and immutable, activate BitLocker, and securely back up BitLocker keys.",Service Task
+354,ACTION,Patch and Update Systems,"Install updates/patch operating systems, software, and firmware as soon as updates/patches are released. Regularly check software updates and end-of-life notifications. Use a centralized patch management system. Immediately patch software affected by specified CVEs.",Service Task
+355,ACTION,Evaluate and Update Blocklists and Allowlists,Regularly evaluate and update blocklists and allowlists. Add key artifact files used by FortiOS to execution blocklist if FortiOS is not used.,Human Task
+356,ACTION,Implement Network Segmentation,Implement network segmentation to restrict a malicious threat actor’s lateral movement.,Service Task
+357,ACTION,Secure User Accounts,Audit user accounts with administrative privileges and configure access controls under the principles of least privilege and separation of duties. Require administrator credentials to install software.,Human Task
+358,ACTION,Implement Multifactor Authentication,"Use multifactor authentication where possible, particularly for webmail, VPNs, accounts that access critical systems, and privileged accounts that manage backups.",Service Task
+359,ACTION,Use Strong Passwords,"Require all accounts with password logins to have strong, unique passwords.",Human Task
+360,ACTION,Secure and Monitor RDP and Other Potentially Risky Services,Restrict RDP to limit access to resources over internal networks. Use a VPN for external RDP access. Disable unused remote access/RDP ports. Monitor remote access/RDP logs and enforce account lockouts.,Service Task
+361,ACTION,Use Antivirus Programs,Install and regularly update antivirus and anti-malware software on all hosts.,Service Task
+362,ACTION,Secure Remote Access,Only use secure networks. Consider installing and using a VPN for remote access.,Human Task
+363,ACTION,Implement CISA Cyber Hygiene Services,"Implement free CISA Cyber Hygiene Services Vulnerability Scanning to enable continuous scans of public, static IPs for accessible services and vulnerabilities.",Service Task
+364,ACTION,Evaluate External Connections,Determine if each external connection is truly needed and assess the necessity of publicly available information about the systems.,Human Task
+365,ACTION,Assume System Targeting,Operate under the assumption that the system is being targeted and predict the effects a malicious actor would intend to cause.,Human Task
+366,ACTION,Apply ICS Security Best Practices,Implement straightforward ICS security best practices to counter adversary TTPs.,Human Task
+367,ACTION,Update and Patch Systems,"Update and patch systems as soon as possible, prioritizing vulnerabilities identified in this CSA and other known exploited vulnerabilities.",Service Task
+368,ACTION,Apply Phishing-Resistant Multi-Factor Authentication,Utilize phishing-resistant multi-factor authentication whenever possible.,Service Task
+369,ACTION,Enforce Strong Password Policies,"Require all accounts with password logins to have strong, unique passwords, and change passwords immediately if there are indications that a password may have been compromised.",Service Task
+370,ACTION,Block Obsolete or Unused Protocols,Block obsolete or unused protocols at the network edge.,Service Task
+371,ACTION,Upgrade or Replace End-of-Life Devices,Upgrade or replace end-of-life devices to ensure security and compatibility.,Human Task
+372,ACTION,Move Toward Zero Trust Security Model,Adopt the Zero Trust security model to enhance security posture.,Human Task
+373,ACTION,Enable Robust Logging and Monitor for Anomalies,Enable robust logging of Internet-facing systems and monitor the logs for anomalous activity.,Service Task
+374,ACTION,Apply Patches for Apache Log4j2,Apply patches provided by vendor and perform required system updates for Apache Log4j2.,Service Task
+375,ACTION,Consult Vendor's Guidance for Log4j2,"See vendor’s Guidance For Preventing, Detecting, and Hunting for Exploitation of the Log4j 2 Vulnerability.",Human Task
+376,ACTION,Check Vulnerable Technologies for CVE-2021-44228,Check the full list of vulnerable technologies and versions associated with CVE-2021-44228 at https://nvd.nist.gov/vuln/detail/CVE-2021-44228.,Human Task
+377,ACTION,Apply Patches for Pulse Secure,Apply patches provided by vendor and perform required system updates for Pulse Secure.,Service Task
+378,ACTION,Use CISA’s 'Check Your Pulse' Tool,Use CISA’s 'Check Your Pulse' Tool to detect vulnerabilities in Pulse Secure.,Service Task
+379,ACTION,Check Vulnerable Technologies for CVE-2019-11510,Check the list of vulnerable technologies and versions for CVE-2019-11510.,Service Task
+380,ACTION,Update GitLab to Secure Versions,"Update GitLab to versions 12.10.3, 13.9.6, and 13.8.8 to mitigate CVE-2021-22205.",Service Task
+381,ACTION,Investigate GitLab Logfiles,Investigate logfiles and check GitLab Workhorse for signs of exploitation.,Human Task
+382,ACTION,Check Vulnerable Technologies for CVE-2021-22205,Check the list of vulnerable technologies and versions for CVE-2021-22205.,Service Task
+383,ACTION,Block Internet Traffic for Confluence,Immediately block all Internet traffic to and from affected Confluence products and apply updates per vendor instructions.,Service Task
+384,ACTION,Ensure Secure Compliance Practices for Confluence,Ensure Internet-facing servers are up-to-date and have secure compliance practices for Confluence.,Service Task
+385,ACTION,Check Vulnerable Technologies for CVE-2022-26134,Check the list of vulnerable technologies and versions for CVE-2022-26134.,Service Task
+386,ACTION,Apply Microsoft Security Update for Exchange,Apply the appropriate Microsoft Security Update for Exchange Server to mitigate CVE-2021-26855.,Service Task
+387,ACTION,Restrict Untrusted Connections to Exchange,Restrict untrusted connections to the Exchange server to prevent exploitation.,Service Task
+388,ACTION,Analyze Exchange Logs for Exploitation,Analyze Exchange product logs for evidence of exploitation and scan for known webshells.,Service Task
+389,ACTION,Apply F5 BIG-IP Update,Apply the latest F5 BIG-IP update to mitigate CVE-2020-5902.,Service Task
+390,ACTION,Restrict Access to F5 Configuration Utility,Restrict access to the F5 configuration utility to prevent unauthorized access.,Service Task
+391,ACTION,Use F5’s CVE-2020-5902 IoC Detection Tool,Use F5’s CVE-2020-5902 IoC Detection Tool to detect indicators of compromise.,Service Task
+392,ACTION,Apply Vendor Updates for VMware,Apply vendor updates to mitigate CVE-2021-22005 in VMware products.,Service Task
+393,ACTION,Check Vulnerable Technologies for CVE-2021-22005,Check the list of vulnerable technologies and versions for CVE-2021-22005.,Human Task
+394,ACTION,Apply Vendor Mitigations for Citrix,Apply vendor mitigations to address CVE-2019-19781 in Citrix products.,Service Task
+395,ACTION,Use Citrix CTX269180 Verification Tool,Use the Citrix CTX269180 - CVE-2019-19781 Verification Tool to verify mitigations.,Service Task
+396,ACTION,Check Vulnerable Technologies for CVE-2019-19781,Check the list of vulnerable technologies and versions for CVE-2019-19781.,Service Task
+397,ACTION,Apply Cisco Software Updates,Apply Cisco software updates to mitigate CVE-2021-1497.,Service Task
+398,ACTION,Use Cisco Snort Rules,Look at the Snort Rules provided by Cisco to detect exploitation attempts.,Service Task
+399,ACTION,Check Vulnerable Technologies for CVE-2021-1497,Check the list of vulnerable technologies and versions for CVE-2021-1497.,Service Task
+400,ACTION,Update Buffalo Firmware,Update firmware to the latest available version to mitigate CVE-2021-20090.,Service Task
+401,ACTION,Check Vulnerable Technologies for CVE-2021-20090,Check the list of vulnerable technologies and versions for CVE-2021-20090.,Service Task
+402,ACTION,Update Confluence to Secure Versions,"Update Confluence to versions 6.13.23, 7.4.11, 7.11.6, 7.12.5, and 7.13.0 to mitigate CVE-2021-26084.",Service Task
+403,ACTION,Use Intrusion Detection Systems for Confluence,Use Intrusion Detection Systems (IDS) to monitor for exploitation attempts on Confluence.,Service Task
+404,ACTION,Check Vulnerable Technologies for CVE-2021-26084,Check the list of vulnerable technologies and versions for CVE-2021-26084.,Service Task
+405,ACTION,Apply Latest Firmware Updates for Hikvision,Apply the latest firmware updates to mitigate CVE-2021-36260 in Hikvision products.,Service Task
+406,ACTION,Check Vulnerable Technologies for CVE-2021-36260,Check the list of vulnerable technologies and versions for CVE-2021-36260.,Human Task
+407,ACTION,Update Sitecore to Latest Version,Update Sitecore to the latest version to mitigate CVE-2021-42237.,Service Task
+408,ACTION,Delete Report.ashx File from Sitecore,Delete the Report.ashx file from /sitecore/shell/ClientBin/Reporting/Report.ashx to mitigate CVE-2021-42237.,Service Task
+409,ACTION,Check Vulnerable Technologies for CVE-2021-42237,Check the list of vulnerable technologies and versions for CVE-2021-42237.,Service Task
+410,ACTION,Block iControl REST Access for F5,Block iControl REST access through the self IP address and management interface to mitigate CVE-2022-1388.,Service Task
+411,ACTION,Modify BIG-IP httpd Configuration,Modify the BIG-IP httpd configuration to enhance security against CVE-2022-1388.,Service Task
+412,ACTION,Check Vulnerable Technologies for CVE-2022-1388,Check the list of vulnerable technologies and versions for CVE-2022-1388.,Human Task
+413,ACTION,Comment Out Batch-Requests in Apache APISIX,"In affected versions of Apache APISIX, comment out batch-requests in the conf/config.yaml and conf/config-default.yaml files and restart Apache APISIX to mitigate CVE-2022-24112.",Service Task
+414,ACTION,Update Apache APISIX to Secure Versions,Update Apache APISIX to versions 2.10.4 or 2.12.1 to mitigate CVE-2022-24112.,Service Task
+415,ACTION,Check Vulnerable Technologies for CVE-2022-24112,Check the list of vulnerable technologies and versions for CVE-2022-24112.,Service Task
+416,ACTION,Upgrade Zoho ManageEngine to Latest Version,Upgrade Zoho ManageEngine ADSelfService Plus to the latest version to mitigate CVE-2021-40539.,Service Task
+417,ACTION,Run ManageEngine Detection Tool,Run ManageEngine’s detection tool and check for specific files and logs to detect CVE-2021-40539.,Service Task
+418,ACTION,Check Vulnerable Technologies for CVE-2021-40539,Check the list of vulnerable technologies and versions for CVE-2021-40539.,Service Task
+419,ACTION,Update Microsoft Exchange to Latest Version,Update Microsoft Exchange Server to the latest version to mitigate CVE-2021-26857.,Service Task
+420,ACTION,Use Microsoft Exchange On-Premises Mitigation Tool,Use Microsoft Exchange On-Premises Mitigation Tool to mitigate CVE-2021-26857.,Service Task
+421,ACTION,Check Vulnerable Technologies for CVE-2021-26857,Check the list of vulnerable technologies and versions for CVE-2021-26857.,Service Task
+422,ACTION,Update Microsoft Exchange to Latest Version,Update Microsoft Exchange Server to the latest version to mitigate CVE-2021-26858.,Service Task
+423,ACTION,Use Microsoft Exchange On-Premises Mitigation Tool,Use Microsoft Exchange On-Premises Mitigation Tool to mitigate CVE-2021-26858.,Service Task
+424,ACTION,Check Vulnerable Technologies for CVE-2021-26858,Check the list of vulnerable technologies and versions for CVE-2021-26858.,Service Task
+425,ACTION,Update Microsoft Exchange to Latest Version,Update Microsoft Exchange Server to the latest version to mitigate CVE-2021-27065.,Service Task
+426,ACTION,Use Microsoft Exchange On-Premises Mitigation Tool,Use Microsoft Exchange On-Premises Mitigation Tool to mitigate CVE-2021-27065.,Service Task
+427,ACTION,Check Vulnerable Technologies for CVE-2021-27065,Check the list of vulnerable technologies and versions for CVE-2021-27065.,Service Task
+428,ACTION,Apply Update for Apache HTTP Server,Apply update or patch to mitigate CVE-2021-41773 in Apache HTTP Server.,Service Task
+429,ACTION,Use Commercial Scanners for CVE-2021-41773,Use commercially available scanners to detect CVE-2021-41773.,Service Task
+430,ACTION,Check Vulnerable Technologies for CVE-2021-41773,Check the list of vulnerable technologies and versions for CVE-2021-41773.,Service Task
+431,ACTION,Install Updates,"Install updates for operating systems, software, and firmware as soon as they are released. Prioritize patching VPN servers, remote access software, virtual machine software, and known exploited vulnerabilities.",Service Task
+432,ACTION,Implement Phishing-Resistant MFA,"Require phishing-resistant MFA for as many services as possible, particularly for webmail, VPNs, accounts that access critical systems, and privileged accounts that manage backups.",Service Task
+433,ACTION,Secure and Monitor RDP,"If using Remote Desktop Protocol (RDP), secure and monitor it. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure.",Service Task
+434,ACTION,Configure Devices and Disable Unused Ports,"Ensure devices are properly configured and that security features are enabled. Disable ports and protocols that are not being used for business purposes (e.g., RDP Transmission Control Protocol Port 3389).",Service Task
+435,ACTION,Implement Network Segmentation,Implement and enforce multi-layer network segmentation with the most critical communications and data resting on the most secure and reliable layer.,Service Task
+436,ACTION,Limit Internal Network Access,"Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure.",Service Task
+437,ACTION,Monitor Remote Access Logs,"Monitor remote access/RDP logs, enforce account lockouts after a specified number of attempts to block brute force campaigns, log RDP login attempts, and disable unused remote access/RDP ports.",Service Task
+438,ACTION,Secure Network Device Management Interfaces,"Turn off SSH and other network device management interfaces such as Telnet, Winbox, and HTTP for wide area networks (WANs) and secure with strong passwords and encryption when enabled.",Service Task
+439,ACTION,Deploy Public Key Infrastructure,"Limit access to data by deploying public key infrastructure and digital certificates to authenticate connections with the network, IoT medical devices, and the electronic health record system.",Service Task
+440,ACTION,Use Standard User Accounts,"Use standard user accounts on internal systems instead of administrative accounts, which allow for overarching administrative system privileges and do not ensure least privilege.",Human Task
+441,ACTION,Secure PII/PHI,Secure PII/PHI at collection points and encrypt the data at rest and in transit by using technologies such as Transport Layer Security (TLS).,Service Task
+442,ACTION,Protect Stored Data,"Protect stored data by masking the permanent account number (PAN) when it is displayed and rendering it unreadable when it is stored—through cryptography, for example.",Service Task
+443,ACTION,Implement HIPAA Security Measures,"Secure the collection, storage, and processing practices for PII and PHI, per regulations such as the Health Insurance Portability and Accountability Act of 1996 (HIPAA).",Human Task
+444,ACTION,Monitor IoT Devices,Use monitoring tools to observe whether IoT devices are behaving erratically due to a compromise.,Service Task
+445,ACTION,Review Internal Policies,"Create and regularly review internal policies that regulate the collection, storage, access, and monitoring of PII/PHI.",Human Task
+446,ACTION,Implement Recovery Plan,"Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location (i.e., hard drive, storage device, the cloud).",Service Task
+447,ACTION,Enforce NIST Password Standards,Require all accounts with password logins to comply with NIST standards for developing and managing password policies. Use longer passwords consisting of at least 8 characters and no more than 64 characters in length. Store passwords in hashed format using industry-recognized password managers. Add password user 'salts' to shared login credentials. Avoid reusing passwords. Implement multiple failed login attempt account lockouts. Disable password 'hints.' Refrain from requiring password changes more frequently than once per year.,Service Task
+448,ACTION,Require Administrator Credentials for Software Installation,Require administrator credentials to install software.,Service Task
+449,ACTION,Implement Multifactor Authentication,"Require multifactor authentication for all services to the extent possible, particularly for webmail, virtual private networks, and accounts that access critical systems.",Service Task
+450,ACTION,Keep Systems Updated,"Keep all operating systems, software, and firmware up to date. Prioritize patching SonicWall firewall vulnerabilities and known exploited vulnerabilities in internet-facing systems.",Service Task
+451,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows between subnetworks and restricting adversary lateral movement.,Service Task
+452,ACTION,Implement Network Monitoring Tools,"Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a network monitoring tool. Implement a tool that logs and reports all network traffic, including lateral movement activity.",Service Task
+453,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+454,ACTION,Review and Audit Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",Human Task
+455,ACTION,Disable Unused Ports,Disable unused ports to reduce potential attack vectors.,Service Task
+456,ACTION,Add Email Banners and Disable Hyperlinks,Consider adding an email banner to emails received from outside your organization. Disable hyperlinks in received emails.,Service Task
+457,ACTION,Implement Time-Based Access for Admin Accounts,Implement time-based access for accounts set at the admin level and higher using the Just-in-Time (JIT) access method.,Service Task
+458,ACTION,Disable Command-Line and Scripting Activities,Disable command-line and scripting activities and permissions to prevent privilege escalation and lateral movement.,Service Task
+459,ACTION,Maintain Offline Backups,"Maintain offline backups of data and regularly maintain backup and restoration. Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Human Task
+460,ACTION,Provide Regular User Training and Exercises,"Conduct regular training and exercises for users, focusing on phishing email awareness to prevent initial access intrusion events.",Human Task
+461,ACTION,Enforce Phishing-Resistant MFA,Implement phishing-resistant multi-factor authentication (MFA) to enhance security against unauthorized access.,Service Task
+462,ACTION,Place Domain Admin Accounts in Protected Users Group,"Prevent caching of password hashes locally by placing domain admin accounts in the protected users group, enforcing Kerberos AES authentication.",Service Task
+463,ACTION,Implement Credential Guard for Windows 10 and Server 2016,Enable Credential Guard to protect against credential theft. Refer to Microsoft documentation for managing Windows Defender Credential Guard.,Service Task
+464,ACTION,Enable Protected Process Light for LSA on Windows Server 2012R2,Enable Protected Process Light for Local Security Authority (LSA) to enhance security on Windows Server 2012R2.,Service Task
+465,ACTION,Refrain from Storing Plaintext Credentials in Scripts,Avoid storing plaintext credentials in scripts to prevent unauthorized access and privilege escalation.,Human Task
+466,ACTION,Upgrade to Windows Server 2019 or Greater and Windows 10 or Greater,Upgrade to Windows Server 2019 or greater and Windows 10 or greater to benefit from enhanced security features.,Service Task
+467,ACTION,Implement Zero Trust Network Architecture,"Prioritize implementing a Zero Trust network architecture that leverages secure cloud services, modern identity management, and centralized cybersecurity data access.",Service Task
+468,ACTION,Engage Executive Leadership on Security Risks,Encourage IT leadership to discuss with executive leadership the business risks of not implementing critical security controls such as MFA.,Human Task
+469,ACTION,Implement a Recovery Plan,"Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",Human Task
+470,ACTION,Enforce NIST Password Standards,Require all accounts with password logins to comply with NIST standards for developing and managing password policies.,Service Task
+471,ACTION,Require Administrator Credentials for Software Installation,Ensure that administrator credentials are required to install software.,Service Task
+472,ACTION,Keep Systems Updated,"Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",Service Task
+473,ACTION,Require Phishing-Resistant MFA,"Require phishing-resistant multifactor authentication to administrator accounts and standard MFA for all services, particularly for webmail, VPNs, and accounts accessing critical systems.",Service Task
+474,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting adversary lateral movement.,Service Task
+475,ACTION,Implement Network Monitoring Tools,"Identify, detect, and investigate abnormal activity and potential ransomware traversal with a network monitoring tool.",Service Task
+476,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+477,ACTION,Implement Secure Logging Practices,Implement secure logging collection and storage practices. Reference CISA’s Logging Made Easy resources for best practices.,Service Task
+478,ACTION,Review and Audit Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",Human Task
+479,ACTION,Disable Unused Ports and Command-Line Activities,Disable unused ports and command-line and scripting activities to prevent privilege escalation and lateral movement.,Service Task
+480,ACTION,Embed Security into Product Architecture,Embed security into product architecture throughout the entire software development lifecycle (SDLC).,Human Task
+481,ACTION,Mandate MFA for Privileged Users,"Mandate MFA, ideally phishing-resistant MFA, for privileged users and make MFA a default feature.",Service Task
+482,ACTION,Deploy Suricata Rules for HTTP Detection,Deploy Suricata rules to detect Snake client-to-server HTTP and HTTP2 traffic based on specific header field patterns.,Service Task
+483,ACTION,Deploy Suricata Rules for TCP Detection,Deploy Suricata rules to detect Snake client-to-server TCP traffic based on specific communication patterns.,Service Task
+484,ACTION,Detect Snake Covert Stores,Detect Snake covert stores by encrypting possible initial filesystem byte sequences with CAST-128 and searching for files with specific characteristics.,Service Task
+485,ACTION,Scan for Snake Queue File,Locate Snake Queue File by scanning files in the typical queue path with filenames matching a GUID-based convention and high entropy.,Service Task
+486,ACTION,Scan for Snake Comadmin File,Locate Snake Comadmin file using techniques similar to those for locating the Snake Queue File.,Service Task
+487,ACTION,Scan for Snake Werfault.exe File,Detect Snake Werfault.exe file by scanning for non-standard icon sizes in the typical path.,Service Task
+488,ACTION,Perform Memory Analysis with Volatility,Capture and analyze system memory using Volatility to detect Snake's behaviors and artifacts.,Service Task
+489,ACTION,Upgrade PaperCut,Upgrade PaperCut to the latest version to mitigate vulnerabilities.,Service Task
+490,ACTION,Implement External Network Controls,Block all inbound traffic from external IP addresses to the web management portal (port 9191 and 9192 by default).,Service Task
+491,ACTION,Implement Internal and External Network Controls,Block all traffic inbound to the web management portal. Note: The server cannot be managed remotely after this step.,Service Task
+492,ACTION,Mandate Phishing-Resistant MFA,Mandate phishing-resistant multifactor authentication (MFA) for all staff and for all services.,Human Task
+493,ACTION,Implement Comprehensive Information Security Program,"Implement a comprehensive information security program based on a recognized framework, such as the NIST Cybersecurity Framework (CSF).",Human Task
+494,ACTION,Audit Remote Access Tools,Audit remote access tools on your network to identify currently used and/or authorized software.,Service Task
+495,ACTION,Review Logs for Remote Access Software,Review logs for execution of remote access software to detect abnormal use of programs running as a portable executable.,Service Task
+496,ACTION,Use Security Software for Remote Access Detection,Use security software to detect instances of remote access software only being loaded in memory.,Service Task
+497,ACTION,Restrict Remote Access Solutions,"Require authorized remote access solutions only be used from within your network over approved remote access solutions, such as VPNs or VDIs.",Service Task
+498,ACTION,Block Remote Access Ports and Protocols,Block both inbound and outbound connections on common remote access software ports and protocols at the network perimeter.,Service Task
+499,ACTION,Implement Application Controls,"Implement application controls to manage and control execution of software, including allowlisting remote access programs.",Service Task
+500,ACTION,Limit Use of RDP and Remote Desktop Services,"Strictly limit the use of RDP and other remote desktop services. If RDP is necessary, rigorously apply best practices.",Service Task
+501,ACTION,Audit Network for RDP Systems,Audit the network for systems using RDP.,Service Task
+502,ACTION,Close Unused RDP Ports,Close unused RDP ports.,Service Task
+503,ACTION,Enforce Account Lockouts,Enforce account lockouts after a specified number of attempts.,Service Task
+504,ACTION,Apply Phishing-Resistant MFA,Apply phishing-resistant multifactor authentication (MFA).,Service Task
+505,ACTION,Log RDP Login Attempts,Log RDP login attempts.,Service Task
+506,ACTION,Disable Command-Line and Scripting Activities,Disable command-line and scripting activities and permissions.,Service Task
+507,ACTION,Restrict PowerShell Usage,"Restrict the use of PowerShell, using Group Policy, and only grant to specific users on a case-by-case basis.",Service Task
+508,ACTION,Update and Enable PowerShell Logging,Update Windows PowerShell or PowerShell Core to the latest version and uninstall all earlier versions. Enable enhanced PowerShell logging.,Service Task
+509,ACTION,Configure Windows Registry for PsExec Operations,Configure the Windows Registry to require User Account Control (UAC) approval for any PsExec operations requiring administrator privileges.,Service Task
+510,ACTION,Review Accounts for New or Unrecognized Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts.",Service Task
+511,ACTION,Audit User Accounts with Administrative Privileges,Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.,Service Task
+512,ACTION,Implement Credential Protection Measures,Place domain admin accounts in the protected users’ group to prevent caching of password hashes locally. Implement Credential Guard for Windows 10 and Server 2016.,Service Task
+513,ACTION,Implement Time-Based Access for Admin Accounts,"Implement time-based access for accounts set at the admin level and higher, such as the Just-in-Time (JIT) access method.",Service Task
+514,ACTION,Implement a Recovery Plan,"Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",Human Task
+515,ACTION,Maintain Offline Backups,"Maintain offline backups of data, and regularly maintain backup and restoration (daily or weekly at minimum).",Service Task
+516,ACTION,Require NIST-Compliant Password Policies,Require all accounts with password logins to comply with NIST standards for developing and managing password policies.,Service Task
+517,ACTION,Require Phishing-Resistant MFA for Critical Services,"Require phishing-resistant multifactor authentication for all services to the extent possible, particularly for webmail, VPNs, and accounts that access critical systems.",Service Task
+518,ACTION,Keep Systems and Software Up to Date,"Keep all operating systems, software, and firmware up to date. Patch vulnerable software and hardware systems within 24 to 48 hours from vulnerability disclosure.",Service Task
+519,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows between subnetworks.,Service Task
+520,ACTION,Implement Network Monitoring Tools,"Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a networking monitoring tool.",Service Task
+521,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+522,ACTION,Disable Unused Ports,Disable unused ports.,Service Task
+523,ACTION,Add Email Banners for External Emails,Consider adding an email banner to emails received from outside your organization.,Service Task
+524,ACTION,Ensure Backup Data is Encrypted and Immutable,"Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Service Task
+525,ACTION,Harden Domain Controllers and Monitor Event Logs,Harden domain controllers and monitor event logs for ntdsutil.exe and similar process creations.,Service Task
+526,ACTION,Audit and Validate Administrator Privileges Usage,Audit and validate any use of administrator privileges to confirm the legitimacy of executed commands.,Service Task
+527,ACTION,Limit Port Proxy Usage,Limit port proxy usage within environments and only enable them for the period of time in which they are required.,Service Task
+528,ACTION,Investigate Unusual IP Addresses and Ports,"Investigate unusual IP addresses and ports in command lines, registry entries, and firewall logs to identify other hosts potentially involved in actor actions.",Human Task
+529,ACTION,Review Perimeter Firewall Configurations,Review perimeter firewall configurations for unauthorized changes and/or entries that may permit external connections to internal hosts.,Human Task
+530,ACTION,Monitor Abnormal Account Activity,"Look for abnormal account activity, such as logons outside of normal working hours and impossible time-and-distance logons.",Service Task
+531,ACTION,Forward Log Files to Centralized Logging Server,"Forward log files to a hardened centralized logging server, preferably on a segmented network.",Service Task
+532,ACTION,Audit Remote Access Tools,Audit remote access tools on your network to identify currently used and/or authorized software.,Service Task
+533,ACTION,Review Logs for Remote Access Software,Review logs for execution of remote access software to detect abnormal use of programs running as a portable executable.,Service Task
+534,ACTION,Use Security Software for Remote Access Detection,Use security software to detect instances of remote access software only being loaded in memory.,Service Task
+535,ACTION,Restrict Remote Access Solutions,"Require authorized remote access solutions only be used from within your network over approved remote access solutions, such as VPNs or VDIs.",Service Task
+536,ACTION,Block Remote Access Software Ports,Block both inbound and outbound connections on common remote access software ports and protocols at the network perimeter.,Service Task
+537,ACTION,Implement Application Controls,"Implement application controls to manage and control execution of software, including allowlisting remote access programs.",Service Task
+538,ACTION,Limit Use of RDP and Remote Desktop Services,"Strictly limit the use of RDP and other remote desktop services. If RDP is necessary, rigorously apply best practices.",Service Task
+539,ACTION,Audit Network for RDP Usage,Audit the network for systems using RDP.,Service Task
+540,ACTION,Close Unused RDP Ports,Close unused RDP ports.,Service Task
+541,ACTION,Enforce Account Lockouts,Enforce account lockouts after a specified number of attempts.,Service Task
+542,ACTION,Apply Phishing-Resistant MFA,Apply phishing-resistant multifactor authentication (MFA).,Service Task
+543,ACTION,Log RDP Login Attempts,Log RDP login attempts.,Service Task
+544,ACTION,Disable Command-Line and Scripting Activities,Disable command-line and scripting activities and permissions.,Service Task
+545,ACTION,Restrict PowerShell Usage,"Restrict the use of PowerShell, using Group Policy, and only grant to specific users on a case-by-case basis.",Service Task
+546,ACTION,Update PowerShell,Update Windows PowerShell or PowerShell Core to the latest version and uninstall all earlier PowerShell versions.,Service Task
+547,ACTION,Review for Unrecognized Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts.",Service Task
+548,ACTION,Audit User Accounts with Administrative Privileges,Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.,Service Task
+549,ACTION,Place Domain Admin Accounts in Protected Users Group,Place domain admin accounts in the protected users’ group to prevent caching of password hashes locally.,Service Task
+550,ACTION,Refrain from Storing Plaintext Credentials,Refrain from storing plaintext credentials in scripts.,Human Task
+551,ACTION,Implement Time-Based Access for Admin Accounts,Implement time-based access for accounts set at the admin level and higher.,Service Task
+552,ACTION,Implement a Recovery Plan,"Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",Human Task
+553,ACTION,Maintain Offline Backups,Maintain offline backups of data and regularly maintain backup and restoration (daily or weekly at minimum).,Service Task
+554,ACTION,Require NIST-Compliant Password Policies,Require all accounts with password logins to comply with NIST standards for developing and managing password policies.,Service Task
+555,ACTION,Use Longer Passwords,Use longer passwords consisting of at least eight characters and no more than 64 characters in length.,Human Task
+556,ACTION,Store Passwords in Hashed Format,Store passwords in hashed format using industry-recognized password managers.,Service Task
+557,ACTION,Add Password User Salts,Add password user “salts” to shared login credentials.,Service Task
+558,ACTION,Avoid Reusing Passwords,Avoid reusing passwords.,Human Task
+559,ACTION,Implement Account Lockouts for Failed Logins,Implement multiple failed login attempt account lockouts.,Service Task
+560,ACTION,Disable Password Hints,Disable password “hints.”,Service Task
+561,ACTION,Require Admin Credentials for Software Installation,Require administrator credentials to install software.,Service Task
+562,ACTION,Require Multifactor Authentication,"Require multifactor authentication for all services to the extent possible, particularly for webmail, virtual private networks, and accounts that access critical systems.",Service Task
+563,ACTION,Keep Systems and Software Up to Date,"Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",Service Task
+564,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows between subnetworks and restricting adversary lateral movement.,Service Task
+565,ACTION,Identify and Investigate Abnormal Activity,"Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a networking monitoring tool.",Service Task
+566,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+567,ACTION,Disable Unused Ports,Disable unused ports.,Service Task
+568,ACTION,Add Email Banner for External Emails,Consider adding an email banner to emails received from outside your organization.,Service Task
+569,ACTION,Disable Hyperlinks in Emails,Disable hyperlinks in received emails.,Service Task
+570,ACTION,Ensure Backup Data is Encrypted and Immutable,"Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Service Task
+571,ACTION,Implement Sandboxed Browsers,Consider implementing sandboxed browsers to protect systems from malware originating from web browsing. Sandboxed browsers isolate the host machine from malicious code.,Service Task
+572,ACTION,Enforce Password Policies,Require all accounts with password logins to comply with NIST standards for developing and managing password policies. Enforce use of longer passwords consisting of at least 15 characters.,Service Task
+573,ACTION,Store Passwords Securely,Store passwords in a salted and hashed format using industry-recognized password hashing algorithms. Prevent use of commonly used or known-compromised passwords.,Service Task
+574,ACTION,Implement Account Lockouts,Implement multiple failed login attempt account lockouts and disable password hints.,Service Task
+575,ACTION,Require Admin Credentials for Software Installation,Require administrator credentials to install software.,Service Task
+576,ACTION,Implement Email and Firewall Filters,Implement filters at the email gateway to filter out emails with known malicious indicators and block suspicious IP addresses at the firewall.,Service Task
+577,ACTION,Install Web Application Firewall,Install a web application firewall and configure with appropriate rules to protect enterprise assets.,Service Task
+578,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting adversary lateral movement.,Service Task
+579,ACTION,Follow Least-Privilege Best Practice,Require administrators to use administrative accounts for managing systems and use simple user accounts for non-administrative tasks. Enforce the management of and audit user accounts with administrative privileges.,Human Task
+580,ACTION,Implement Time-Based Access for Admin Accounts,"Implement time-based access for accounts set at the admin level and higher, such as the Just-in-Time (JIT) access method.",Service Task
+581,ACTION,Keep Systems Updated,"Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",Service Task
+582,ACTION,Restrict Service Account Access,Restrict service accounts from remotely accessing other systems. Configure group policy to deny log on locally and through Terminal Services for all service accounts.,Service Task
+583,ACTION,Block Direct Internet Access for Admin Interfaces,Block direct internet access for administration interfaces and for remote access.,Service Task
+584,ACTION,Require Phishing-Resistant MFA,"Require phishing-resistant multifactor authentication for all services, particularly for webmail, VPNs, and privileged accounts.",Service Task
+585,ACTION,Consolidate and Monitor Internet Gateways,"Consolidate, monitor, and defend internet gateways.",Service Task
+586,ACTION,Enable Real-Time Antivirus Detection,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+587,ACTION,Raise Phishing Awareness,Raise awareness for phishing threats in your organization and provide practical training on the risks associated with email use.,Human Task
+588,ACTION,Add External Email Warning Banner,Consider adding an external email warning banner for emails sent to or received from outside of your organization.,Service Task
+589,ACTION,Review Internet-Facing Services,Review internet-facing services and disable any services that are no longer a business requirement to be exposed or restrict access to only those users with an explicit requirement.,Human Task
+590,ACTION,Review Domain Controllers and Active Directories,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Regularly verify the security level of the Active Directory domain by checking for misconfigurations.",Human Task
+591,ACTION,Develop and Update Network Diagrams,Develop and regularly update comprehensive network diagrams that describe systems and data flows within your organization’s networks.,Human Task
+592,ACTION,Control and Restrict Network Connections,Control and restrict network connections accordingly with a network flow matrix.,Service Task
+593,ACTION,Enable Enhanced PowerShell Logging,"Enable enhanced PowerShell logging, including module, script block, and transcription logging. Ensure PowerShell instances are configured to use the latest version.",Service Task
+594,ACTION,Configure Windows Registry for UAC Approval,Configure the Windows Registry to require UAC approval for any PsExec operations requiring administrator privileges.,Service Task
+595,ACTION,Disable Command-Line and Scripting Activities,Disable command-line and scripting activities and permissions to prevent privilege escalation and lateral movement.,Service Task
+596,ACTION,Enable Credential Guard,Enable Credential Guard to protect Windows system credentials. Be aware of the limitations when enabling this security control.,Service Task
+597,ACTION,Implement Local Administrator Password Solution (LAPS),Implement Local Administrator Password Solution (LAPS) where possible if your OS is older than Windows Server 2019 and Windows 10.,Service Task
+598,ACTION,Apply Local Security Policies for Application Execution,Apply local security policies to control application execution with a strict allowlist.,Service Task
+599,ACTION,Establish Application Allowlist,Establish an application allowlist of approved software applications and binaries that are allowed to be executed on a system.,Service Task
+600,ACTION,Restrict NTLM Uses,Restrict NTLM uses with security policies and firewalling.,Service Task
+601,ACTION,Disable Unused Ports,"Disable ports that are not being used for business purposes, such as RDP-TCP Port 3389.",Service Task
+602,ACTION,Identify and Eliminate Critical Active Directory Control Paths,Identify Active Directory control paths and eliminate the most critical among them according to the business needs and assets.,Service Task
+603,ACTION,Detect and Investigate Abnormal Activity,"Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a networking monitoring tool.",Service Task
+604,ACTION,Implement Tiering Model for Trust Zones,Implement a tiering model by creating trust zones dedicated to an organization’s most sensitive assets.,Service Task
+605,ACTION,Block Connections to Known Malicious Systems,Block connections to known malicious systems by using a Transport Layer Security (TLS) Proxy.,Service Task
+606,ACTION,Use Web Filtering or CASB,Use web filtering or a Cloud Access Security Broker (CASB) to restrict or monitor access to public-file sharing services.,Service Task
+607,ACTION,Implement a Recovery Plan,"Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",Human Task
+608,ACTION,Maintain Offline Backups,"Maintain offline backups of data, and regularly maintain backup and restoration. Follow the 3-2-1 backup strategy.",Service Task
+609,ACTION,Ensure Backup Data is Encrypted and Immutable,"Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Service Task
+610,ACTION,Mandate Phishing-Resistant MFA,Implement phishing-resistant multifactor authentication (MFA) for all staff and services.,Service Task
+611,ACTION,Apply Patches for CVE-2022-31199,Update Netwrix Auditor to version 10.5 to mitigate CVE-2022-31199.,Service Task
+612,ACTION,Restrict Netwrix Auditor to Internal Networks,Ensure Netwrix Auditor is used only on internally facing networks to reduce risk of exploitation.,Service Task
+613,ACTION,Implement Application Controls,"Implement application controls to manage and control execution of software, including allowlisting remote access programs.",Service Task
+614,ACTION,Limit Use of RDP and Remote Desktop Services,"Strictly limit the use of RDP and other remote desktop services. Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts, apply MFA, log RDP login attempts, and disable command-line activities.",Service Task
+615,ACTION,Restrict PowerShell Usage,"Restrict the use of PowerShell by using Group Policy, update to the latest version, enable enhanced logging, and ensure logs are retained for at least 180 days.",Service Task
+616,ACTION,Configure Windows Registry for UAC Approval,Configure the Windows Registry to require User Account Control (UAC) approval for any PsExec operations requiring administrator privileges.,Service Task
+617,ACTION,Review and Audit User Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",Human Task
+618,ACTION,Reduce Threat of Credential Compromise,"Implement measures such as placing domain admin accounts in the protected users’ group, implementing Credential Guard, and refraining from storing plaintext credentials in scripts.",Service Task
+619,ACTION,Implement Time-Based Access for Admin Accounts,Implement time-based access for accounts set at the admin level and higher using methods like Just-in-Time (JIT) access.,Service Task
+620,ACTION,Disable File and Printer Sharing Services,Disable File and Printer sharing services or use strong passwords or Active Directory authentication if required.,Service Task
+621,ACTION,Implement a Recovery Plan,Implement a recovery plan to maintain and retain multiple copies of sensitive data in a secure location and maintain offline backups.,Human Task
+622,ACTION,Enforce Strong Password Policies,"Require all accounts with password logins to comply with NIST standards, use longer passwords, store passwords in hashed format, and avoid reusing passwords.",Service Task
+623,ACTION,Require Administrator Credentials for Software Installation,Require administrator credentials to install software and ensure MFA is applied for all services.,Service Task
+624,ACTION,Keep Systems Up to Date,"Keep all operating systems, software, and firmware up to date, and prioritize patching known exploited vulnerabilities.",Service Task
+625,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting lateral movement.,Service Task
+626,ACTION,Identify and Detect Abnormal Activity,"Use network monitoring tools to identify, detect, and investigate abnormal activity and potential ransomware traversal.",Service Task
+627,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+628,ACTION,Apply CISA’s Recommended Baseline Security Configurations,"Implement CISA’s recommended baseline security configurations for Microsoft Defender for Office 365, Azure Active Directory, Exchange Online, OneDrive for Business, Power BI, Power Platform, SharePoint Online, and Teams as per SCuBA TRA Section 6.6.",Service Task
+629,ACTION,Separate Administrator Accounts from User Accounts,"Separate administrator accounts from user accounts according to NIST’s guidance, AC-5: Separation of Duties. Only allow designated administrator accounts to be used for administration purposes. Use a separate account without administrative access to other hosts if an individual user requires administrative rights over their workstation.",Service Task
+630,ACTION,Collect and Store Access and Security Logs,"Collect and store access and security logs for secure cloud access solutions, endpoint solutions, cloud applications/platforms, and security services, such as firewalls, data loss prevention systems, and intrusion detection systems as per SCuBA TRA Section 6.8.1.",Service Task
+631,ACTION,Use a Telemetry Hosting Solution,"Use a telemetry hosting solution (e.g., SIEM solution) that aggregates logs and telemetry data to facilitate internal organization monitoring, auditing, alerting, and threat detection activities as per SCuBA TRA Section 6.8.1.",Service Task
+632,ACTION,Review Contractual Relationships with Cloud Service Providers,"Review contractual relationships with all Cloud Service Providers (CSPs) and ensure contracts include security controls deemed appropriate by the customer, appropriate monitoring and logging of provider-managed customer systems, monitoring of the service provider’s presence, activities, and connections to the customer network, and notification of confirmed or suspected activity.",Human Task
+633,ACTION,Install Updated Version of NetScaler ADC and Gateway,"Install the relevant updated version of NetScaler ADC and NetScaler Gateway as soon as possible to address vulnerabilities CVE-2023-3519, CVE-2023-3466, and CVE-2023-3467.",Service Task
+634,ACTION,Implement Phishing-Resistant MFA,Mandate phishing-resistant multifactor authentication (MFA) for all staff and services in production and enterprise environments.,Service Task
+635,ACTION,Apply Cross-Sector Cybersecurity Performance Goals (CPGs),Follow CISA's Cross-Sector Cybersecurity Performance Goals (CPGs) to reduce the likelihood and impact of known cyber risks and common TTPs.,Human Task
+636,ACTION,Implement Comprehensive Information Security Program,"Implement a comprehensive information security program based on a recognized framework, such as the NIST Cybersecurity Framework (CSF).",Human Task
+637,ACTION,Apply Network-Segmentation Controls,Apply robust network-segmentation controls on NetScaler appliances and other internet-facing devices as a longer-term effort.,Service Task
+638,ACTION,Implement Secure Software Development Framework (SSDF),"Implement secure-by-design and -default principles and best practices into each stage of the software development life cycle (SDLC) as defined in NIST's SSDF, SP 800-218.",Human Task
+639,ACTION,Conduct Code Reviews,"Conduct code reviews against peer coding standards, checking for backdoors, malicious content, or logic flaws.",Human Task
+640,ACTION,Use Automated Code Analysis Tools,Use automated code analysis tools for all supported releases to identify and remediate vulnerabilities.,Service Task
+641,ACTION,Follow Secure Coding Practices,Follow secure coding practices for web and mobile applications to ensure proper validation of user input and generation of strong user IDs.,Human Task
+642,ACTION,Use Indirect Reference Maps,"Use indirect reference maps to replace IDs, names, and keys in URLs with cryptographically strong, random values such as UUID or GUID.",Service Task
+643,ACTION,Configure Applications to Deny Access by Default,"Configure applications to deny access by default and ensure authentication and authorization checks for every request to modify, delete, or access sensitive data.",Service Task
+644,ACTION,Implement Parameter Verification,Implement parameter verification leveraging syntactic and logical validation to ensure web applications validate all inputs received with every HTTP/S request.,Service Task
+645,ACTION,Use Memory-Safe Programming Languages,Use memory-safe programming languages where possible.,Human Task
+646,ACTION,Conduct Role-Based Training,Conduct role-based training for personnel responsible for secure software development.,Human Task
+647,ACTION,Exercise Due Diligence When Selecting Web Applications,Exercise due diligence when selecting web applications and source from reputable vendors that demonstrate commitment to secure-by-design and -default principles.,Human Task
+648,ACTION,Apply Software Patches for Web Applications,Apply software patches for web applications as soon as possible.,Service Task
+649,ACTION,Configure Application Logging and Alerts,Configure the application to log and generate alerts from tamper attempts to facilitate investigation and appropriate follow-on actions.,Service Task
+650,ACTION,Establish a Baseline for Abnormal Behavior,Establish a baseline to efficiently identify abnormal behavior in web applications.,Service Task
+651,ACTION,Aggregate Logs into a Centralized Solution,"Aggregate logs into a centralized solution (e.g., a SIEM tool) to facilitate active monitoring and threat hunting.",Service Task
+652,ACTION,Create and Maintain a Cyber Incident Response Plan,"Create, maintain, and exercise a basic cyber incident response plan (IRP) and associated communications plan.",Human Task
+653,ACTION,Conduct Regular Penetration Testing,"Conduct regular, proactive penetration testing to ensure network boundaries and web applications are secure.",Human Task
+654,ACTION,Use Web Application Penetration Testing Tools,Use web application penetration testing tools to capture user identifiers and map locations where user input is used to reference objects directly.,Service Task
+655,ACTION,Use DAST and Vulnerability Scanners,Use DAST and other vulnerability scanners to detect IDOR vulnerabilities in web applications.,Service Task
+656,ACTION,Use a Web Application Firewall (WAF),"Use a web application firewall (WAF) to filter, monitor, and block malicious HTTP/S traffic traveling to the web application.",Service Task
+657,ACTION,Use a Data Loss Prevention (DLP) Tool,Use a data loss prevention (DLP) tool to prevent unauthorized data from leaving the application.,Service Task
+658,ACTION,Upgrade Ivanti EPMM to Latest Version,Upgrade Ivanti EPMM versions to the latest version to protect against CVE-2023-35078 and CVE-2023-35081.,Service Task
+659,ACTION,Apply Ivanti RPM Fix for CVE-2023-35078,Apply the Ivanti-provided RPM fix for CVE-35078 if you cannot immediately upgrade.,Service Task
+660,ACTION,Treat MDM Systems as High-Value Assets,Implement additional restrictions and monitoring for MDM systems as they provide elevated access to thousands of hosts.,Service Task
+661,ACTION,Mandate Phishing-Resistant MFA,Mandate phishing-resistant multifactor authentication (MFA) for all staff and services.,Service Task
+662,ACTION,Identify Repeatedly Exploited Vulnerabilities,Perform an analysis of both CVEs and known exploited vulnerabilities to understand which classes of vulnerability are identified more than others.,Service Task
+663,ACTION,Implement Mitigations for Vulnerability Classes,"Implement appropriate mitigations to eliminate identified classes of vulnerabilities, such as using parameterized queries for SQL injection.",Service Task
+664,ACTION,Ensure Business Leaders are Responsible for Security,Business leaders should ensure proactive steps to eliminate entire classes of security vulnerabilities.,Human Task
+665,ACTION,Follow SSDF and Implement Secure Design Practices,"Implement secure design practices into each stage of the SDLC, including prioritizing memory safe languages and exercising due diligence when selecting software components.",Human Task
+666,ACTION,Set Up Secure Development Team Practices,"Conduct peer code reviews, work to a common organization secure coding standard, and maintain awareness of language-specific security concerns.",Human Task
+667,ACTION,Establish a Vulnerability Disclosure Program,Verify and resolve security vulnerabilities disclosed by internal or external parties and establish processes to determine root causes.,Human Task
+668,ACTION,Use SAST/DAST Tools,Use static and dynamic application security testing tools to analyze product source code and application behavior to detect error-prone practices.,Service Task
+669,ACTION,Configure Production-Ready Products Securely,Ensure products have the most secure settings as default and provide guidance on the risks of changing each setting.,Human Task
+670,ACTION,Prioritize Secure-by-Default Configurations,"Eliminate default passwords, implement SSO technology, and provide high-quality audit logs to customers with no additional configuration.",Service Task
+671,ACTION,Ensure Published CVEs Include Proper CWE Field,Include the proper CWE field in published CVEs to enable industry-wide analysis of software security and design flaws.,Service Task
+672,ACTION,Document Secure Baseline Configurations,"Document secure baseline configurations for all IT/OT components, including cloud infrastructure, and monitor deviations.",Human Task
+673,ACTION,Perform Regular Secure System Backups,"Create known good copies of all device configurations for repairs and/or restoration, store copies off-network, and test regularly.",Service Task
+674,ACTION,Update Software and Systems,"Update software, operating systems, applications, and firmware on IT network assets in a timely manner.",Service Task
+675,ACTION,Prioritize Patching of Known Exploited Vulnerabilities,"Prioritize patching known exploited vulnerabilities, especially those CVEs identified in this CSA.",Human Task
+676,ACTION,Implement Vendor-Approved Workarounds,"If a patch for a known exploited or critical vulnerability cannot be quickly applied, implement vendor-approved workarounds.",Human Task
+677,ACTION,Replace End-of-Life Software,Replace software that is no longer supported by the vendor.,Human Task
+678,ACTION,Perform Automated Asset Discovery,"Routinely perform automated asset discovery across the entire estate to identify and catalogue all systems, services, hardware, and software.",Service Task
+679,ACTION,Implement Robust Patch Management Process,Establish a centralized patch management system that prioritizes patch applications.,Service Task
+680,ACTION,Consider Moving Services to Reputable CSPs or MSPs,Organizations unable to perform rapid scanning and patching should consider moving services to reputable cloud or managed service providers.,Human Task
+681,ACTION,Maintain Updated Cybersecurity Incident Response Plan,Ensure the incident response plan is tested at least annually and updated within a risk-informed time frame.,Human Task
+682,ACTION,Enforce Phishing-Resistant MFA,"Enforce phishing-resistant multifactor authentication for all users, without exception.",Service Task
+683,ACTION,Enforce MFA on VPN Connections,"Enforce MFA on all VPN connections. If unavailable, require strong passwords for remote work.",Service Task
+684,ACTION,Review and Validate Privileged Accounts,"Regularly review, validate, or remove privileged accounts, at least annually.",Human Task
+685,ACTION,Configure Access Control Under Least Privilege,Ensure software service accounts only provide necessary permissions to perform intended functions.,Service Task
+686,ACTION,Properly Configure and Secure Internet-Facing Devices,"Disable unused network ports and protocols, encrypt network traffic, and disable unused network services and devices.",Service Task
+687,ACTION,Harden Commonly Exploited Network Services,"Harden services like LLMNR, RDP, CIFS, Active Directory, and OpenLDAP.",Service Task
+688,ACTION,Manage Windows KDC Accounts,Manage accounts like KRBTGT to minimize Golden Ticket attacks and Kerberoasting.,Service Task
+689,ACTION,Control Use of Native Scripting Applications,"Strictly control the use of applications like command-line, PowerShell, WinRM, WMI, and DCOM.",Service Task
+690,ACTION,Implement Zero Trust Network Architecture,"Limit or block lateral movement by controlling access to applications, devices, and databases.",Service Task
+691,ACTION,Continuously Monitor Attack Surface,Investigate abnormal activity that may indicate cyber actor or malware lateral movement.,Service Task
+692,ACTION,Use Security Tools,"Use tools like EDR, SIEM, and ITAM to ensure consistent asset reporting.",Service Task
+693,ACTION,Use Web Application Firewalls,Monitor and filter web traffic to detect and mitigate exploitation attempts.,Service Task
+694,ACTION,Monitor Unwanted Hardware and Software,Implement a policy or process to monitor against an allowlist with specified approved versions.,Service Task
+695,ACTION,Use a Network Protocol Analyzer,"Examine captured data, including packet-level data, to identify potential threats.",Service Task
+696,ACTION,Reduce Third-Party Applications,Provide exceptions only if required to support business-critical functions.,Human Task
+697,ACTION,Implement a Recovery Plan,"Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location (i.e., hard drive, storage device, the cloud).",Service Task
+698,ACTION,Enforce NIST Password Standards,"Require all accounts with password logins to comply with NIST’s standards when developing and managing password policies, including using longer passwords, storing passwords in hashed format, adding password user 'salts', avoiding password reuse, implementing account lockouts, disabling password hints, and refraining from frequent password changes.",Service Task
+699,ACTION,Require Administrator Credentials for Software Installation,Ensure that administrator credentials are required to install software.,Service Task
+700,ACTION,Implement Phishing-Resistant Multi-Factor Authentication (MFA),"Use phishing-resistant MFA for remote access and access to any sensitive data repositories. Implement MFA for as many services as possible, particularly for webmail and VPNs.",Service Task
+701,ACTION,Keep Systems Up to Date,"Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities of internet-facing systems.",Service Task
+702,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows between subnetworks to restrict adversary lateral movement.,Service Task
+703,ACTION,Implement Network Monitoring Tools,"Identify, detect, and investigate abnormal activity and potential traversal of malware with a network monitoring tool. Implement a tool that logs and reports all network traffic, including lateral movement activity.",Service Task
+704,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+705,ACTION,Review and Audit Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",Human Task
+706,ACTION,Disable Unused Ports,Disable unused ports to reduce attack surfaces.,Service Task
+707,ACTION,Add Email Banners and Disable Hyperlinks,Consider adding an email banner to emails received from outside your organization and disable hyperlinks in received emails.,Service Task
+708,ACTION,Implement Time-Based Access for Admin Accounts,"Implement time-based access for accounts set at the admin level and higher, using methods like Just-in-Time access to enforce the principle of least privilege.",Service Task
+709,ACTION,Disable Command-Line and Scripting Activities,Disable command-line and scripting activities and permissions to prevent privilege escalation and lateral movement.,Service Task
+710,ACTION,Perform Regular Secure System Backups,Perform regular secure system backups and create known good copies of all device configurations for repairs and/or restoration. Store copies off-network in physically secure locations and test regularly.,Service Task
+711,ACTION,Ensure Backup Data is Encrypted and Immutable,"Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Service Task
+712,ACTION,Document Device Configurations,Maintain updated documentation describing the current configuration details of all critical IT assets to facilitate effective vulnerability and response activities.,Human Task
+713,ACTION,Patch Systems for Known Exploited Vulnerabilities,Keep all software up to date and patch systems for known exploited vulnerabilities. Conduct investigation prior to patching in places with known exploited vulnerabilities on an endpoint device.,Service Task
+714,ACTION,Follow Routine Patching Cycle,"Implement a routine patching cycle for all operating systems, applications, and software to mitigate potential exploitation.",Service Task
+715,ACTION,Conduct Vulnerability Scans,Prioritize remediation of vulnerabilities on internet-facing systems by conducting continuous automated and/or routine vulnerability scans.,Service Task
+716,ACTION,Deploy Security.txt Files,Ensure all public-facing web domains have a security.txt file conforming to RFC 9116 recommendations.,Service Task
+717,ACTION,Employ Proper Network Segmentation,"Implement network segmentation, such as a DMZ, to protect internal LAN from untrusted traffic and reduce threat actor lateral movement.",Service Task
+718,ACTION,Limit Internet-Facing Port Exposure,Limit exposed ports to only required IP addresses and avoid placing wildcards in destination port or host entries.,Service Task
+719,ACTION,Restrict Unsecured Protocols,Ensure unsecured protocols like FTP and HTTP are limited in use and restricted to specific IP ranges.,Service Task
+720,ACTION,Use Secure Protocols for Data Flow,Ensure data flows from untrusted zone to trusted zone over secure protocols like HTTPS with mandatory multi-factor authentication.,Service Task
+721,ACTION,Use Firewall and Enable Logging,Use a firewall or web-application firewall (WAF) and enable logging to prevent/detect potential exploitation attempts.,Service Task
+722,ACTION,Review Firewall Rules,Review ingress and egress firewall rules and block all unapproved protocols. Limit risky protocols through rules.,Human Task
+723,ACTION,Implement Network Segmentation by Role,Implement network segmentation to separate network segments based on role and functionality.,Service Task
+724,ACTION,Use Phishing-Resistant Multi-Factor Authentication,"Implement phishing-resistant MFA for remote access and access to sensitive data repositories, particularly for webmail and VPNs.",Service Task
+725,ACTION,Employ Strong Password Management,Set a password policy to require complex passwords for all users and enforce this requirement as passwords expire.,Service Task
+726,ACTION,Implement Principle of Least Privilege,Limit the ability of local administrator accounts to log in from a local interactive session and prevent access via RDP session.,Service Task
+727,ACTION,Remove Unnecessary Accounts,"Establish policy and procedure for the prompt removal of unnecessary accounts and groups, especially privileged accounts.",Human Task
+728,ACTION,Enforce Local Administrator Password Solution (LAPS),Implement and enforce the use of LAPS to control and limit local administration.,Service Task
+729,ACTION,Create Change Control Process for Privilege Escalations,Create a change control process for all privilege escalations and role changes on user accounts.,Human Task
+730,ACTION,Deploy Secure System Baseline Image,Create and deploy a secure system baseline image to all workstations.,Service Task
+731,ACTION,Block Workstation-to-Workstation RDP Connections,Implement policies to block workstation-to-workstation RDP connections through a Group Policy Object on Windows.,Service Task
+732,ACTION,Establish Software Behavior Baseline,Establish a software behavior baseline to detect anomalies in behavior.,Service Task
+733,ACTION,Monitor for Unauthorized Use of Remote Access Software,Monitor for unauthorized use of remote access software using endpoint detection tools.,Service Task
+734,ACTION,Use Application Allowlists,"Use application allowlists on domain controllers, administrative hosts, and other sensitive systems to prevent unauthorized software execution.",Service Task
+735,ACTION,Audit Scheduled Tasks,Audit scheduled tasks and validate all findings via a Group Policy Object or endpoint detection and response solution.,Service Task
+736,ACTION,Audit Remote Access Tools,Audit remote access tools on your network to identify currently used and/or authorized software.,Service Task
+737,ACTION,Review Logs for Remote Access Software Execution,Review logs for execution of remote access software to detect abnormal use of programs running as a portable executable.,Service Task
+738,ACTION,Use Security Software for Remote Access Detection,Use security software to detect instances of remote access software being loaded only in memory.,Service Task
+739,ACTION,Restrict Remote Access Solutions,"Require authorized remote access solutions to be used only from within your network over approved remote access solutions, such as VPNs or VDIs.",Service Task
+740,ACTION,Block Remote Access Software Ports and Protocols,Block both inbound and outbound connections on common remote access software ports and protocols at the network perimeter.,Service Task
+741,ACTION,Implement Application Controls,"Implement application controls to manage and control execution of software, including allowlisting remote access programs.",Service Task
+742,ACTION,Limit Use of RDP and Remote Desktop Services,"Strictly limit the use of RDP and other remote desktop services. If RDP is necessary, rigorously apply best practices.",Service Task
+743,ACTION,Audit Network for RDP Usage,Audit the network for systems using RDP.,Service Task
+744,ACTION,Close Unused RDP Ports,Close unused RDP ports.,Service Task
+745,ACTION,Enforce Account Lockouts,Enforce account lockouts after a specified number of attempts.,Service Task
+746,ACTION,Apply Phishing-Resistant MFA,Apply phishing-resistant multifactor authentication (MFA).,Service Task
+747,ACTION,Log RDP Login Attempts,Log RDP login attempts.,Service Task
+748,ACTION,Disable Command-Line and Scripting Activities,Disable command-line and scripting activities and permissions.,Service Task
+749,ACTION,Review for New or Unrecognized Accounts,"Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts.",Service Task
+750,ACTION,Audit User Accounts with Administrative Privileges,Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege (PoLP).,Service Task
+751,ACTION,Place Domain Admin Accounts in Protected Users Group,Place domain admin accounts in the protected users’ group to prevent caching of password hashes locally.,Service Task
+752,ACTION,Avoid Storing Plaintext Credentials in Scripts,Refrain from storing plaintext credentials in scripts.,Human Task
+753,ACTION,Implement Time-Based Access for Admin Accounts,Implement time-based access for accounts set at the admin level and higher.,Service Task
+754,ACTION,Implement a Recovery Plan,"Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",Human Task
+755,ACTION,Maintain Offline Backups,Maintain offline backups of data and regularly maintain backup and restoration (daily or weekly at minimum).,Service Task
+756,ACTION,Require Compliance with NIST Password Standards,Require all accounts with password logins to comply with NIST's standards for developing and managing password policies.,Service Task
+757,ACTION,Use Longer Passwords,Use longer passwords consisting of at least eight characters and no more than 64 characters in length.,Human Task
+758,ACTION,Store Passwords in Hashed Format,Store passwords in hashed format using industry-recognized password managers.,Service Task
+759,ACTION,Add Password User Salts,Add password user “salts” to shared login credentials.,Service Task
+760,ACTION,Avoid Reusing Passwords,Avoid reusing passwords.,Human Task
+761,ACTION,Implement Account Lockouts for Failed Login Attempts,Implement multiple failed login attempt account lockouts.,Service Task
+762,ACTION,Disable Password Hints,Disable password “hints.”,Service Task
+763,ACTION,Require Administrator Credentials for Software Installation,Require administrator credentials to install software.,Service Task
+764,ACTION,Require Phishing-Resistant MFA for Critical Services,"Require phishing-resistant multifactor authentication (MFA) for all services to the extent possible, particularly for webmail, VPNs, and accounts that access critical systems.",Service Task
+765,ACTION,Keep Systems and Software Up to Date,"Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",Service Task
+766,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows between subnetworks and restricting adversary lateral movement.,Service Task
+767,ACTION,Identify and Investigate Abnormal Activity,"Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a network monitoring tool.",Service Task
+768,ACTION,Install and Update Antivirus Software,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+769,ACTION,Disable Unused Ports and Protocols,Disable unused ports and protocols.,Service Task
+770,ACTION,Add Email Banner for External Emails,Consider adding an email banner to emails received from outside your organization.,Service Task
+771,ACTION,Disable Hyperlinks in Emails,Disable hyperlinks in received emails.,Service Task
+772,ACTION,Ensure Backup Data is Encrypted and Immutable,"Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Service Task
+773,ACTION,Implement CISA and NIST Recommendations,Implement the Cross-Sector Cybersecurity Performance Goals (CPGs) developed by CISA and NIST to mitigate the issues identified in this advisory.,Human Task
+774,ACTION,Implement Security-by-Design and -Default Recommendations,Apply the recommendations from the joint guide 'Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Security-by-Design and -Default' to reduce the prevalence of misconfigurations.,Human Task
+775,ACTION,Secure Remote Access Tools,"Implement application controls to manage and control execution of software, including allowlisting remote access programs. Apply recommendations in CISA's joint Guide to Securing Remote Access Software.",Service Task
+776,ACTION,Limit Use of RDP and Remote Desktop Services,"Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts, apply phishing-resistant MFA, log RDP login attempts, and disable command-line and scripting activities.",Service Task
+777,ACTION,Restrict and Update PowerShell Usage,"Restrict the use of PowerShell using Group Policy, update to the latest version, enable enhanced logging, and ensure logs have a retention period of at least 180 days.",Service Task
+778,ACTION,Configure Windows Registry for PsExec Operations,Require User Account Control (UAC) approval for any PsExec operations requiring administrator privileges to reduce the risk of lateral movement.,Service Task
+779,ACTION,Disable File and Printer Sharing Services,"Disable File and Printer sharing services. If required, use strong passwords or Active Directory authentication.",Service Task
+780,ACTION,Implement a Recovery Plan,"Maintain and retain multiple copies of sensitive data in a physically separate, segmented, and secure location. Follow the 3-2-1 backup strategy.",Human Task
+781,ACTION,Require Strong Password Policies,"Require all accounts with password logins to comply with NIST's standards, use longer passwords, store passwords in hashed format, and avoid reusing passwords.",Service Task
+782,ACTION,Require Administrator Credentials for Software Installation,Require administrator credentials to install software and implement phishing-resistant multifactor authentication for all services.,Service Task
+783,ACTION,Keep Systems Up to Date,"Keep all operating systems, software, and firmware up to date. Patch vulnerable systems within 24 to 48 hours of vulnerability disclosure.",Service Task
+784,ACTION,Segment Networks,Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting lateral movement.,Service Task
+785,ACTION,Detect and Investigate Abnormal Activity,"Identify, detect, and investigate abnormal activity with a network monitoring tool. Implement EDR tools for detecting lateral connections.",Service Task
+786,ACTION,Enable Real-Time Antivirus Detection,"Install, regularly update, and enable real-time detection for antivirus software on all hosts.",Service Task
+787,ACTION,Disable Unused Ports,Disable unused ports to reduce potential attack vectors.,Service Task
+788,ACTION,Add Email Banners for External Emails,Consider adding an email banner to emails received from outside your organization.,Service Task
+789,ACTION,Ensure Backup Data is Secure,"Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",Service Task
+790,ACTION,Regularly Maintain Backup and Restoration,"Maintain offline backups of data, and regularly maintain backup and restoration (daily or weekly at minimum).",Service Task
+791,ACTION,Upgrade to Fixed Versions,Immediately upgrade to the fixed versions of Atlassian Confluence Data Center and Server software to mitigate CVE-2023-22515.,Service Task
+792,ACTION,Restrict Untrusted Network Access,"If unable to immediately apply upgrades, restrict untrusted network access to mitigate risks until upgrades can be applied.",Service Task
+793,ACTION,Implement Phishing-Resistant MFA,Mandate phishing-resistant multifactor authentication (MFA) for all staff and services to enhance security against unauthorized access.,Service Task
+794,ACTION,Follow Best Cybersecurity Practices,Follow best cybersecurity practices in production and enterprise environments to strengthen security posture.,Human Task
+795,ACTION,Isolate NetScaler ADC and Gateway appliances,Isolate NetScaler ADC and Gateway appliances for testing until patching is ready and deployable.,Human Task
+796,ACTION,Implement Application Controls,"Implement application controls to manage and control the execution of software, including allowlisting remote access programs.",Service Task
+797,ACTION,Limit RDP and Remote Desktop Services,"Strictly limit the use of RDP and other remote desktop services. Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts, apply phishing-resistant MFA, and log RDP login attempts.",Service Task
+798,ACTION,Restrict PowerShell Usage,"Restrict the use of PowerShell using Group Policy, granting access only to specific users on a case-by-case basis.",Service Task
+799,ACTION,Update PowerShell,Update Windows PowerShell or PowerShell Core to the latest version and uninstall all earlier versions.,Service Task
+800,ACTION,Enable Enhanced PowerShell Logging,"Enable enhanced PowerShell logging, including module, script block, and transcription logging. Ensure logs have a retention period of at least 180 days.",Service Task
+801,ACTION,Configure Windows Registry for PsExec Operations,Configure the Windows Registry to require User Account Control (UAC) approval for any PsExec operations requiring administrator privileges.,Service Task
+802,ACTION,Implement a Recovery Plan,"Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data in a physically separate, segmented, and secure location.",Human Task
+803,ACTION,Enforce Password Policies,"Require all accounts with password logins to comply with NIST's standards for developing and managing password policies. Use longer passwords, store passwords in hashed format, add password user 'salts', avoid reusing passwords, and implement account lockouts.",Service Task
+804,ACTION,Disable Password Hints,Disable password 'hints' to enhance security.,Service Task
+805,ACTION,Require Administrator Credentials for Software Installation,Require administrator credentials to install software to prevent unauthorized installations.,Service Task
+806,ACTION,Keep Systems Updated,"Keep all operating systems, software, and firmware up to date. Patch vulnerable systems within 24 to 48 hours of vulnerability disclosure.",Service Task
+807,ACTION,Prioritize Patching of Known Exploited Vulnerabilities,Prioritize patching known exploited vulnerabilities in internet-facing systems.,Human Task
+808,ACTION,Upgrade NetScaler ADC and Gateway Appliances,Upgrade vulnerable NetScaler ADC and Gateway appliances to the latest version available to lower the risk of compromise.,Service Task
+809,ACTION,Secure Remote Access Tools,"Secure remote access tools by implementing application controls to manage and control the execution of software, including allowlisting remote access programs.",Service Task
+810,ACTION,Incorporate Secure-by-Design Principles,Incorporate secure-by-design and -default principles and tactics into software development practices to limit the impact of exploitation.,Human Task
+811,ACTION,Upgrade Software and Firmware,"Upgrade engineering workstations to 9.9.00 VisiLogic software and upgrade the firmware of all Vision series PLC/HMI devices to the newest firmware for that model, ensuring a strong password is used.",Service Task
+812,ACTION,Replace Default Passwords,Replace all default passwords on PLCs and HMIs with a strong password. Ensure the Unitronics PLC default password is not in use.,Human Task
+813,ACTION,Apply Security-related Ladder Logic Elements,"Apply new security-related ladder logic elements to the project files on these devices, including TCP/IP passwords, upload project files passwords, INFO mode passwords, and SD card passwords.",Service Task
+814,ACTION,Disconnect PLC from Public Internet,"Disconnect the PLC from the public-facing internet. Either disable the capability for remotely programming PLCs or require a strong password for remotely programming the PLC. Change the default port, default PLC device name, and place behind a firewall that can detect attempted remote brute-forcing for the device password.",Service Task
+815,ACTION,Implement Multifactor Authentication,"Implement multifactor authentication for access to the OT network whenever applicable. If remote access is required, implement a network proxy, gateway, firewall, and/or VPN in front of the PLC to control network access.",Service Task
+816,ACTION,Implement Network Segmentation,"Implement network segmentation through the use of network proxies, gateways, and firewalls and/or through the use of the Purdue Model to establish multiple levels and zones.",Service Task
+817,ACTION,Adopt Asset Management Processes,"Adopt mature asset management processes and understand which assets are being exposed, why they are being exposed, and their support and patch status.",Human Task
+818,ACTION,Inventory Internet Accessible Devices,Periodically inventory internet accessible devices to identify any unexpected devices connected to the network.,Service Task
+819,ACTION,Configure Firewalls,Configure external and internal firewalls to block traffic using common ports associated with network protocols that are unnecessary for the particular network segment.,Service Task
+820,ACTION,Authenticate Access to Field Controllers,"Authenticate all access to field controllers before authorizing access to, or modification of, a device’s state, logic, or programs. Disable any unused authentication methods, logic, or features, such as default authentication keys.",Service Task
+821,ACTION,Implement Device Management Systems,Implement device management systems that can authenticate all network messages to prevent unauthorized system changes.,Service Task
+822,ACTION,Use Host-based Allowlists,Use host-based allowlists to prevent devices from accepting connections from unauthorized systems and ensure they can only connect with known workstations.,Service Task
+823,ACTION,Implement Network Intrusion Detection and Prevention Systems,Implement network intrusion detection and prevention systems whenever possible to identify malicious activity.,Service Task
+824,ACTION,Retain Cold-standby or Replacement Hardware,Retain cold-standby or replacement hardware of similar models to ensure continued operations of critical functions if the primary system is compromised or unavailable.,Human Task
+825,ACTION,Create and Test Strong Backups,Create and test strong backups of the logic and configurations of PLCs to enable fast recovery.,Service Task
+826,ACTION,Monitor Network Traffic and Asset Management Systems,Monitor the content of network traffic for unusual logins to internet-connected devices or unexpected protocols to/from the internet. Monitor asset management systems for device configuration changes.,Service Task
+827,ACTION,Manage Vulnerabilities and Configurations,"Upgrade all versions affected by this vulnerability. Keep all software up to date and prioritize patching according to CISA’s Known Exploited Vulnerabilities Catalog. Prioritize remediation of vulnerabilities on internet-facing systems by conducting continuous automated and/or routine vulnerability scans. Prioritize secure-by-default configurations such as eliminating default passwords, implementing single sign-on (SSO) technology via modern open standards, and disabling default credentials.",Service Task
+828,ACTION,Segment Networks,"Employ proper network segmentation, such as a demilitarized zone (DMZ). Use a firewall or web-application firewall (WAF) and enable logging to prevent/detect potential exploitation attempts. Review ingress and egress firewall rules and block all unapproved protocols. Limit risky (but approved) protocols through rules. Implement network segmentation to separate network segments based on role and functionality. Deploy application-aware network defenses to block improperly formed traffic and restrict content according to policy and legal authorizations.",Service Task
+829,ACTION,Application Control,"Enforce signed software execution policies. Use a modern operating system that enforces signed software execution policies for scripts, executables, device drivers, and system firmware. Maintain a list of trusted certificates to prevent and detect the use and injection of illegitimate executables. Application control should be used with signed software execution policies to provide greater control.",Service Task
+830,ACTION,"Manage Accounts, Permissions, and Workstations","Require phishing-resistant multifactor authentication (MFA) for all services to the extent possible, particularly for webmail, VPN, and accounts that access critical systems. Implement the principle of least privilege to decrease threat actors’ abilities to access key network resources. Restrict file and directory permissions. Use file system access controls to protect folders such as C:\Windows\System32. Restrict NTLM authentication policy settings, including incoming NTLM traffic from client computers, other member servers, or a domain controller.",Service Task
+831,ACTION,Implement Strong Password Policies,"Use strong, unique passwords for different accounts, especially for email. Avoid password reuse across multiple services.",Human Task
+832,ACTION,Enable Multi-Factor Authentication,Use multi-factor authentication (2FA/2SV) to reduce the impact of password compromises.,Service Task
