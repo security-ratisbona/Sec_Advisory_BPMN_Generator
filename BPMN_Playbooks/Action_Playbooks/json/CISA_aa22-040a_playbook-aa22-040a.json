@@ -1,0 +1,299 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Operating Systems and Software",
+            "description": "Ensure all operating systems and software are up to date. Regularly check for software updates and end of life (EOL) notifications, and prioritize patching known exploited vulnerabilities.",
+            "commands": null,
+            "next_step": 2,
+            "step_id": 2,
+            "classification": "Service Task",
+            "OpenC2": "Update"
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Patch Cloud Environments",
+            "description": "Ensure that virtual machines, serverless applications, and third-party libraries in cloud environments are patched regularly.",
+            "commands": null,
+            "next_step": 3,
+            "step_id": 3,
+            "classification": "Service Task",
+            "OpenC2": "Update"
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Automate Security Scanning and Testing",
+            "description": "Automate software security scanning and testing when possible to identify vulnerabilities early.",
+            "commands": null,
+            "next_step": 4,
+            "step_id": 4,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Start"
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Hardware and Software",
+            "description": "Consider upgrading hardware and software to take advantage of vendor-provided virtualization and security capabilities.",
+            "commands": null,
+            "next_step": 5,
+            "step_id": 5,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Secure and Monitor RDP",
+            "description": "Secure and monitor RDP and other potentially risky services. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure.",
+            "commands": null,
+            "next_step": 6,
+            "step_id": 6,
+            "classification": "Service Task",
+            "OpenC2": "Deny, Contain, Scan"
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is RDP operationally necessary?",
+            "next_step": 7,
+            "else_step": 10
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict RDP Sources and Require MFA",
+            "description": "If RDP is necessary, restrict the originating sources and require MFA to mitigate credential theft and reuse.",
+            "commands": null,
+            "next_step": 8,
+            "step_id": 7,
+            "classification": "Service Task",
+            "OpenC2": "Deny, Contain"
+        },
+        {
+            "step_number": 8,
+            "type": "CONDITION",
+            "condition": "Is RDP available externally?",
+            "next_step": 9,
+            "else_step": 10
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use VPN for External RDP",
+            "description": "If RDP must be available externally, use a VPN, virtual desktop infrastructure, or other means to authenticate and secure the connection before allowing RDP to connect to internal devices.",
+            "commands": null,
+            "next_step": 10,
+            "step_id": 8,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Contain"
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Monitor and Log RDP Access",
+            "description": "Monitor remote access/RDP logs, enforce account lockouts after a specified number of attempts, log RDP login attempts, and disable unused remote access/RDP ports.",
+            "commands": null,
+            "next_step": 11,
+            "step_id": 9,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Deny, Contain"
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Configure Devices and Disable Unused Ports",
+            "description": "Ensure devices are properly configured and that security features are enabled. Disable ports and protocols that are not being used for a business purpose.",
+            "commands": null,
+            "next_step": 12,
+            "step_id": 10,
+            "classification": "Service Task",
+            "OpenC2": "Deny, Update"
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Restrict SMB Protocol",
+            "description": "Restrict Server Message Block (SMB) Protocol within the network to only access necessary servers and remove or disable outdated versions of SMB.",
+            "commands": null,
+            "next_step": 13,
+            "step_id": 11,
+            "classification": "Service Task",
+            "OpenC2": "Deny, Update"
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Review Third-Party Vendor Security",
+            "description": "Review the security posture of third-party vendors and ensure all connections are monitored and reviewed for suspicious activity.",
+            "commands": null,
+            "next_step": 14,
+            "step_id": 12,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Implement Application Whitelisting",
+            "description": "Implement listing policies for applications and remote access that only allow systems to execute known and permitted programs.",
+            "commands": null,
+            "next_step": 15,
+            "step_id": 13,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Contain"
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Open Document Readers in Protected Mode",
+            "description": "Open document readers in protected viewing modes to help prevent active content from running.",
+            "commands": null,
+            "next_step": 16,
+            "step_id": 14,
+            "classification": "Service Task",
+            "OpenC2": "Detonate, Contain"
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to control traffic flows and restrict adversary lateral movement.",
+            "commands": null,
+            "next_step": 17,
+            "step_id": 15,
+            "classification": "Service Task",
+            "OpenC2": "Contain, Deny"
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Implement End-to-End Encryption",
+            "description": "Deploy mutual Transport Layer Security (mTLS) to prevent eavesdropping on communications.",
+            "commands": null,
+            "next_step": 18,
+            "step_id": 16,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Update"
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Monitor Network for Abnormal Activity",
+            "description": "Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a network-monitoring tool.",
+            "commands": null,
+            "next_step": 19,
+            "step_id": 17,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Query"
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Document External Remote Connections",
+            "description": "Document approved solutions for remote management and maintenance and investigate unapproved solutions immediately.",
+            "commands": null,
+            "next_step": 20,
+            "step_id": 18,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Implement Time-Based Access for Privileged Accounts",
+            "description": "Use just-in-time access methods to provision privileged access when needed and enforce the principle of least privilege.",
+            "commands": null,
+            "next_step": 21,
+            "step_id": 19,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Contain"
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Enforce Principle of Least Privilege",
+            "description": "Minimize unnecessary privileges for identities and regularly audit account privileges against usage patterns.",
+            "commands": null,
+            "next_step": 22,
+            "step_id": 20,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Contain, Query"
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Reduce Credential Exposure",
+            "description": "Enforce credential protection by restricting where accounts and credentials can be used and using local device credential protection features.",
+            "commands": null,
+            "next_step": 23,
+            "step_id": 21,
+            "classification": "Service Task",
+            "OpenC2": "Contain, Deny"
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Disable Unneeded Command-Line Utilities",
+            "description": "Disable unneeded command-line utilities, constrain scripting activities and permissions, and monitor their usage.",
+            "commands": null,
+            "next_step": 24,
+            "step_id": 22,
+            "classification": "Service Task",
+            "OpenC2": "Stop, Contain"
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Maintain offline backups of data and regularly test backup and restoration processes.",
+            "commands": null,
+            "next_step": 25,
+            "step_id": 23,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Start"
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Encrypt and Secure Cloud Backups",
+            "description": "Ensure all backup data is encrypted, immutable, and covers the entire organization\u2019s data infrastructure. Consider storing encryption keys outside the cloud.",
+            "commands": null,
+            "next_step": 26,
+            "step_id": 24,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Update"
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Collect Telemetry from Cloud Environments",
+            "description": "Ensure that telemetry from cloud environments is retained and visible to the security team.",
+            "commands": null,
+            "next_step": 27,
+            "step_id": 25,
+            "classification": "Service Task",
+            "OpenC2": "Query, Locate"
+        },
+        {
+            "step_number": 27,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure entity with industrial control systems/operational technology networks?",
+            "next_step": 28,
+            "else_step": null
+        },
+        {
+            "step_number": 28,
+            "type": "ACTION",
+            "title": "Review CISA-FBI Advisory for Critical Infrastructure",
+            "description": "Review joint CISA-FBI Cybersecurity Advisory for additional recommendations to reduce the risk of severe business or functional degradation from ransomware.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 26,
+            "classification": "Human Task"
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Ransomware Mitigations",
+    "affected_products": null
+}

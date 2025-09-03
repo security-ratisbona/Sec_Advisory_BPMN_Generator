@@ -1,0 +1,219 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a SATCOM network provider?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement Additional Monitoring for SATCOM Network Providers",
+            "description": "Put in place additional monitoring at ingress and egress points to SATCOM equipment to look for anomalous traffic, such as insecure remote access tools, unexpected network traffic, unauthorized account usage, and brute force login attempts.",
+            "commands": null,
+            "next_step": 3,
+            "step_id": 106,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Locate, Contain"
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Use Secure Authentication Methods",
+            "description": "Use secure methods for authentication, including multifactor authentication where possible, for all accounts used to access, manage, and/or administer SATCOM networks.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 107,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Update"
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enforce Strong Password Policies",
+            "description": "Use and enforce strong, complex passwords. Review password policies to ensure they align with the latest NIST guidelines. Do not use default credentials or weak passwords.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 108,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Audit Accounts and Credentials",
+            "description": "Audit accounts and credentials: remove terminated or unnecessary accounts; change expired credentials.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 109,
+            "classification": "Service Task",
+            "OpenC2": "Delete, Update"
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Enforce Principle of Least Privilege",
+            "description": "Enforce principle of least privilege through authorization policies. Minimize unnecessary privileges for identities.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 110,
+            "classification": "Service Task",
+            "OpenC2": "Deny, Allow"
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Review Trust Relationships",
+            "description": "Review existing trust relationships with IT service providers. Remove unnecessary trust relationships.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 111,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Review Contractual Relationships with Service Providers",
+            "description": "Ensure contracts include appropriate provisions addressing security, such as monitoring and logging of provider-managed customer systems and notification of security events.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 112,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Independent Encryption",
+            "description": "Implement independent encryption across all communications links leased from, or provided by, your SATCOM provider.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 113,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Update"
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Strengthen Security of Systems",
+            "description": "Strengthen the security of operating systems, software, and firmware. Ensure robust vulnerability management and patching practices are in place.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 114,
+            "classification": "Service Task",
+            "OpenC2": "Update, Allow"
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Configuration Management Programs",
+            "description": "Implement rigorous configuration management programs. Regularly audit system configurations for misconfigurations and security weaknesses.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 115,
+            "classification": "Service Task",
+            "OpenC2": "Update, Scan"
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Monitor Network Logs for Suspicious Activity",
+            "description": "Monitor network logs for suspicious activity and unauthorized or unusual login attempts. Integrate SATCOM traffic into existing network security monitoring tools.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 116,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Query"
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Review Logs of Systems Behind SATCOM Terminals",
+            "description": "Review logs of systems behind SATCOM terminals for suspicious activity. Ingest system and network generated logs into your enterprise security information and event management (SIEM) tool.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 117,
+            "classification": "Service Task",
+            "OpenC2": "Query, Scan"
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Implement Endpoint Detection and Response (EDR) Tools",
+            "description": "Implement endpoint detection and response (EDR) tools where possible on devices behind SATCOM terminals, and ingest into the SIEM.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 118,
+            "classification": "Service Task",
+            "OpenC2": "Start, Scan"
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Expand and Enhance Monitoring of SATCOM Network Segments",
+            "description": "Expand monitoring to include ingress and egress traffic transiting SATCOM links and monitor for suspicious or anomalous network activity.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 119,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Locate"
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Baseline SATCOM Network Traffic",
+            "description": "Baseline SATCOM network traffic to determine what is normal and investigate deviations, such as large spikes in traffic.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 120,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Query"
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Create and Maintain Cyber Incident Response Plans",
+            "description": "Create, maintain, and exercise a cyber incident response plan, resilience plan, and continuity of operations plan for SATCOM networks.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 121,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Review and Implement Security Controls",
+            "description": "Review and implement security controls deemed appropriate by the customer, ensuring monitoring and logging of provider-managed customer systems.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 122,
+            "classification": "Human Task"
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for SATCOM Networks",
+    "affected_products": null
+}

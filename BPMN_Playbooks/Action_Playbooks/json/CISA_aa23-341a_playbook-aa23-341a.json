@@ -1,0 +1,59 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Implement Strong Password Policies",
+            "description": "Use strong, unique passwords for different accounts, especially for email. Avoid password reuse across multiple services.",
+            "commands": null,
+            "next_step": 2,
+            "step_id": 831,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Enable Multi-Factor Authentication",
+            "description": "Use multi-factor authentication (2FA/2SV) to reduce the impact of password compromises.",
+            "commands": null,
+            "next_step": 3,
+            "step_id": 832,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Keep Devices and Networks Updated",
+            "description": "Ensure devices and networks are protected by using the latest supported versions, applying security updates promptly, and using anti-virus software to scan regularly for malware threats.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Exercise Vigilance Against Spearphishing",
+            "description": "Be cautious of spearphishing emails. Verify the legitimacy of suspicious emails through other means and be wary of emails from unexpected addresses.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enable Automated Email Scanning",
+            "description": "Ensure that your email provider's automated email scanning features are enabled to detect malicious content.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable or Monitor Mail-Forwarding",
+            "description": "Disable mail-forwarding to prevent attackers from maintaining visibility of target emails. If disabling is not possible, regularly monitor settings to ensure no unauthorized forwarding rules are set.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "General Cybersecurity Advisory",
+    "affected_products": null
+}

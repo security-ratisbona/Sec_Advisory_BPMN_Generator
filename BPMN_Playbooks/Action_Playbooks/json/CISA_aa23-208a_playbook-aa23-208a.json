@@ -1,0 +1,255 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Are you a vendor, designer, or implementor of web applications?",
+            "next_step": 2,
+            "else_step": 12
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Secure Software Development Framework (SSDF)",
+            "description": "Implement secure-by-design and -default principles and best practices into each stage of the software development life cycle (SDLC) as defined in NIST's SSDF, SP 800-218.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 638,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Conduct Code Reviews",
+            "description": "Conduct code reviews against peer coding standards, checking for backdoors, malicious content, or logic flaws.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 639,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Use Automated Code Analysis Tools",
+            "description": "Use automated code analysis tools for all supported releases to identify and remediate vulnerabilities.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 640,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Follow Secure Coding Practices",
+            "description": "Follow secure coding practices for web and mobile applications to ensure proper validation of user input and generation of strong user IDs.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 641,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Indirect Reference Maps",
+            "description": "Use indirect reference maps to replace IDs, names, and keys in URLs with cryptographically strong, random values such as UUID or GUID.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 642,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Configure Applications to Deny Access by Default",
+            "description": "Configure applications to deny access by default and ensure authentication and authorization checks for every request to modify, delete, or access sensitive data.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 643,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Parameter Verification",
+            "description": "Implement parameter verification leveraging syntactic and logical validation to ensure web applications validate all inputs received with every HTTP/S request.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 644,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Memory-Safe Programming Languages",
+            "description": "Use memory-safe programming languages where possible.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 645,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Conduct Role-Based Training",
+            "description": "Conduct role-based training for personnel responsible for secure software development.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 646,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 12,
+            "type": "CONDITION",
+            "condition": "Are you an end-user organization with on-premises software, SaaS, IaaS, or private cloud models?",
+            "next_step": 13,
+            "else_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Exercise Due Diligence When Selecting Web Applications",
+            "description": "Exercise due diligence when selecting web applications and source from reputable vendors that demonstrate commitment to secure-by-design and -default principles.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 647,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Apply Software Patches for Web Applications",
+            "description": "Apply software patches for web applications as soon as possible.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 648,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Configure Application Logging and Alerts",
+            "description": "Configure the application to log and generate alerts from tamper attempts to facilitate investigation and appropriate follow-on actions.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 649,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Establish a Baseline for Abnormal Behavior",
+            "description": "Establish a baseline to efficiently identify abnormal behavior in web applications.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 650,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Aggregate Logs into a Centralized Solution",
+            "description": "Aggregate logs into a centralized solution (e.g., a SIEM tool) to facilitate active monitoring and threat hunting.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 651,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Create and Maintain a Cyber Incident Response Plan",
+            "description": "Create, maintain, and exercise a basic cyber incident response plan (IRP) and associated communications plan.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 652,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Conduct Regular Penetration Testing",
+            "description": "Conduct regular, proactive penetration testing to ensure network boundaries and web applications are secure.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 653,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Use Web Application Penetration Testing Tools",
+            "description": "Use web application penetration testing tools to capture user identifiers and map locations where user input is used to reference objects directly.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 654,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Use DAST and Vulnerability Scanners",
+            "description": "Use DAST and other vulnerability scanners to detect IDOR vulnerabilities in web applications.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 655,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Use a Web Application Firewall (WAF)",
+            "description": "Use a web application firewall (WAF) to filter, monitor, and block malicious HTTP/S traffic traveling to the web application.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 656,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Use a Data Loss Prevention (DLP) Tool",
+            "description": "Use a data loss prevention (DLP) tool to prevent unauthorized data from leaving the application.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 657,
+            "classification": "Service Task"
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "IDOR Vulnerability Mitigations",
+    "affected_products": null
+}

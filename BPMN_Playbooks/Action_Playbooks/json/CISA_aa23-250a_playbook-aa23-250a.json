@@ -1,0 +1,249 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Document Device Configurations",
+            "description": "Maintain updated documentation describing the current configuration details of all critical IT assets to facilitate effective vulnerability and response activities.",
+            "commands": null,
+            "next_step": 2,
+            "step_id": 712,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Patch Systems for Known Exploited Vulnerabilities",
+            "description": "Keep all software up to date and patch systems for known exploited vulnerabilities. Conduct investigation prior to patching in places with known exploited vulnerabilities on an endpoint device.",
+            "commands": null,
+            "next_step": 3,
+            "step_id": 713,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Follow Routine Patching Cycle",
+            "description": "Implement a routine patching cycle for all operating systems, applications, and software to mitigate potential exploitation.",
+            "commands": null,
+            "next_step": 4,
+            "step_id": 714,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Conduct Vulnerability Scans",
+            "description": "Prioritize remediation of vulnerabilities on internet-facing systems by conducting continuous automated and/or routine vulnerability scans.",
+            "commands": null,
+            "next_step": 5,
+            "step_id": 715,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Deploy Security.txt Files",
+            "description": "Ensure all public-facing web domains have a security.txt file conforming to RFC 9116 recommendations.",
+            "commands": null,
+            "next_step": 6,
+            "step_id": 716,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Employ Proper Network Segmentation",
+            "description": "Implement network segmentation, such as a DMZ, to protect internal LAN from untrusted traffic and reduce threat actor lateral movement.",
+            "commands": null,
+            "next_step": 7,
+            "step_id": 717,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Limit Internet-Facing Port Exposure",
+            "description": "Limit exposed ports to only required IP addresses and avoid placing wildcards in destination port or host entries.",
+            "commands": null,
+            "next_step": 8,
+            "step_id": 718,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Restrict Unsecured Protocols",
+            "description": "Ensure unsecured protocols like FTP and HTTP are limited in use and restricted to specific IP ranges.",
+            "commands": null,
+            "next_step": 9,
+            "step_id": 719,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Secure Protocols for Data Flow",
+            "description": "Ensure data flows from untrusted zone to trusted zone over secure protocols like HTTPS with mandatory multi-factor authentication.",
+            "commands": null,
+            "next_step": 10,
+            "step_id": 720,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Firewall and Enable Logging",
+            "description": "Use a firewall or web-application firewall (WAF) and enable logging to prevent/detect potential exploitation attempts.",
+            "commands": null,
+            "next_step": 11,
+            "step_id": 721,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Review Firewall Rules",
+            "description": "Review ingress and egress firewall rules and block all unapproved protocols. Limit risky protocols through rules.",
+            "commands": null,
+            "next_step": 12,
+            "step_id": 722,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation by Role",
+            "description": "Implement network segmentation to separate network segments based on role and functionality.",
+            "commands": null,
+            "next_step": 13,
+            "step_id": 723,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Use Phishing-Resistant Multi-Factor Authentication",
+            "description": "Implement phishing-resistant MFA for remote access and access to sensitive data repositories, particularly for webmail and VPNs.",
+            "commands": null,
+            "next_step": 14,
+            "step_id": 724,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Employ Strong Password Management",
+            "description": "Set a password policy to require complex passwords for all users and enforce this requirement as passwords expire.",
+            "commands": null,
+            "next_step": 15,
+            "step_id": 725,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Implement Principle of Least Privilege",
+            "description": "Limit the ability of local administrator accounts to log in from a local interactive session and prevent access via RDP session.",
+            "commands": null,
+            "next_step": 16,
+            "step_id": 726,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Remove Unnecessary Accounts",
+            "description": "Establish policy and procedure for the prompt removal of unnecessary accounts and groups, especially privileged accounts.",
+            "commands": null,
+            "next_step": 17,
+            "step_id": 727,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Enforce Local Administrator Password Solution (LAPS)",
+            "description": "Implement and enforce the use of LAPS to control and limit local administration.",
+            "commands": null,
+            "next_step": 18,
+            "step_id": 728,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Create Change Control Process for Privilege Escalations",
+            "description": "Create a change control process for all privilege escalations and role changes on user accounts.",
+            "commands": null,
+            "next_step": 19,
+            "step_id": 729,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Deploy Secure System Baseline Image",
+            "description": "Create and deploy a secure system baseline image to all workstations.",
+            "commands": null,
+            "next_step": 20,
+            "step_id": 730,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Block Workstation-to-Workstation RDP Connections",
+            "description": "Implement policies to block workstation-to-workstation RDP connections through a Group Policy Object on Windows.",
+            "commands": null,
+            "next_step": 21,
+            "step_id": 731,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Establish Software Behavior Baseline",
+            "description": "Establish a software behavior baseline to detect anomalies in behavior.",
+            "commands": null,
+            "next_step": 22,
+            "step_id": 732,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Monitor for Unauthorized Use of Remote Access Software",
+            "description": "Monitor for unauthorized use of remote access software using endpoint detection tools.",
+            "commands": null,
+            "next_step": 23,
+            "step_id": 733,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Use Application Allowlists",
+            "description": "Use application allowlists on domain controllers, administrative hosts, and other sensitive systems to prevent unauthorized software execution.",
+            "commands": null,
+            "next_step": 24,
+            "step_id": 734,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Audit Scheduled Tasks",
+            "description": "Audit scheduled tasks and validate all findings via a Group Policy Object or endpoint detection and response solution.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 735,
+            "classification": "Service Task"
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-47966",
+    "affected_products": [
+        "Zoho ManageEngine ServiceDesk Plus through 14003"
+    ]
+}

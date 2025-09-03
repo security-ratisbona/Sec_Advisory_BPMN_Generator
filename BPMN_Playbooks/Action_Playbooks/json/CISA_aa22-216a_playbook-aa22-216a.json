@@ -1,0 +1,83 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Software",
+            "description": "Update software, including operating systems, applications, and firmware on IT network assets. Prioritize patching known exploited vulnerabilities and critical and high vulnerabilities that allow for remote code execution or denial-of-service on internet-facing equipment.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 324,
+            "classification": "Service Task",
+            "OpenC2": "Update"
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Enforce Multi-Factor Authentication (MFA)",
+            "description": "Enforce MFA to the greatest extent possible and require accounts with password logins, including service accounts, to have strong passwords. Do not allow passwords to be used across multiple accounts or stored on a system to which an adversary may have access.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 325,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Update"
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Secure and Monitor RDP and Risky Services",
+            "description": "Secure and monitor RDP and other potentially risky services. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure. If RDP is operationally necessary, restrict the originating sources, and require MFA. Use a VPN or other means to authenticate and secure the connection before allowing RDP to connect to internal devices. Monitor remote access/RDP logs, enforce account lockouts after a specified number of attempts, log RDP login attempts, and disable unused remote access/RDP ports.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 326,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Contain"
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Maintain offline backups of data. Backup procedures should be conducted on a frequent, regular basis (at a minimum every 90 days). Regularly test backup procedures and ensure that backups are isolated from network connections. Ensure backup keys are kept offline and all backup data is encrypted, immutable, and covers the entire organization\u2019s data infrastructure.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 327,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Provide End-User Awareness and Training",
+            "description": "Provide end-user awareness and training to help prevent successful targeted social engineering and spearphishing campaigns. Ensure that employees are aware of potential cyber threats and delivery methods, and know what to do and whom to contact when they receive a suspected phishing email or suspect a cyber incident.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 328,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement network segmentation to separate network segments based on role and functionality. This helps prevent the spread of ransomware and threat actor lateral movement by controlling traffic flows between and access to various subnetworks.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 329,
+            "classification": "Service Task",
+            "OpenC2": "Contain, Deny"
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CISA and ACSC Cybersecurity Recommendations",
+    "affected_products": null
+}

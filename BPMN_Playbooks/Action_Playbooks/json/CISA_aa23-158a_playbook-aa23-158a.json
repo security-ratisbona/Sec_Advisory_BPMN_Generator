@@ -1,0 +1,418 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Audit Remote Access Tools",
+            "description": "Audit remote access tools on your network to identify currently used and/or authorized software.",
+            "commands": null,
+            "next_step": 2,
+            "step_id": 532,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Query"
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review Logs for Remote Access Software",
+            "description": "Review logs for execution of remote access software to detect abnormal use of programs running as a portable executable.",
+            "commands": null,
+            "next_step": 3,
+            "step_id": 533,
+            "classification": "Service Task",
+            "OpenC2": "Query, Scan"
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Use Security Software for Remote Access Detection",
+            "description": "Use security software to detect instances of remote access software only being loaded in memory.",
+            "commands": null,
+            "next_step": 4,
+            "step_id": 534,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Locate"
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict Remote Access Solutions",
+            "description": "Require authorized remote access solutions only be used from within your network over approved remote access solutions, such as VPNs or VDIs.",
+            "commands": null,
+            "next_step": 5,
+            "step_id": 535,
+            "classification": "Service Task",
+            "OpenC2": "Deny, Contain"
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Block Remote Access Software Ports",
+            "description": "Block both inbound and outbound connections on common remote access software ports and protocols at the network perimeter.",
+            "commands": null,
+            "next_step": 6,
+            "step_id": 536,
+            "classification": "Service Task",
+            "OpenC2": "Deny"
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Application Controls",
+            "description": "Implement application controls to manage and control execution of software, including allowlisting remote access programs.",
+            "commands": null,
+            "next_step": 7,
+            "step_id": 537,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Contain"
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Limit Use of RDP and Remote Desktop Services",
+            "description": "Strictly limit the use of RDP and other remote desktop services. If RDP is necessary, rigorously apply best practices.",
+            "commands": null,
+            "next_step": 8,
+            "step_id": 538,
+            "classification": "Service Task",
+            "OpenC2": "Deny, Contain"
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": 15
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Audit Network for RDP Usage",
+            "description": "Audit the network for systems using RDP.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 539,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Query"
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Close Unused RDP Ports",
+            "description": "Close unused RDP ports.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 540,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Enforce Account Lockouts",
+            "description": "Enforce account lockouts after a specified number of attempts.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 541,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Apply Phishing-Resistant MFA",
+            "description": "Apply phishing-resistant multifactor authentication (MFA).",
+            "commands": null,
+            "next_step": null,
+            "step_id": 542,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Log RDP Login Attempts",
+            "description": "Log RDP login attempts.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 543,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Disable Command-Line and Scripting Activities",
+            "description": "Disable command-line and scripting activities and permissions.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 544,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Restrict PowerShell Usage",
+            "description": "Restrict the use of PowerShell, using Group Policy, and only grant to specific users on a case-by-case basis.",
+            "commands": null,
+            "next_step": 16,
+            "step_id": 545,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Update PowerShell",
+            "description": "Update Windows PowerShell or PowerShell Core to the latest version and uninstall all earlier PowerShell versions.",
+            "commands": null,
+            "next_step": 17,
+            "step_id": 546,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Review for Unrecognized Accounts",
+            "description": "Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts.",
+            "commands": null,
+            "next_step": 18,
+            "step_id": 547,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Audit User Accounts with Administrative Privileges",
+            "description": "Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",
+            "commands": null,
+            "next_step": 19,
+            "step_id": 548,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Place Domain Admin Accounts in Protected Users Group",
+            "description": "Place domain admin accounts in the protected users\u2019 group to prevent caching of password hashes locally.",
+            "commands": null,
+            "next_step": 20,
+            "step_id": 549,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Refrain from Storing Plaintext Credentials",
+            "description": "Refrain from storing plaintext credentials in scripts.",
+            "commands": null,
+            "next_step": 21,
+            "step_id": 550,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Implement Time-Based Access for Admin Accounts",
+            "description": "Implement time-based access for accounts set at the admin level and higher.",
+            "commands": null,
+            "next_step": 22,
+            "step_id": 551,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",
+            "commands": null,
+            "next_step": 23,
+            "step_id": 552,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Maintain offline backups of data and regularly maintain backup and restoration (daily or weekly at minimum).",
+            "commands": null,
+            "next_step": 24,
+            "step_id": 553,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Require NIST-Compliant Password Policies",
+            "description": "Require all accounts with password logins to comply with NIST standards for developing and managing password policies.",
+            "commands": null,
+            "next_step": 25,
+            "step_id": 554,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Use Longer Passwords",
+            "description": "Use longer passwords consisting of at least eight characters and no more than 64 characters in length.",
+            "commands": null,
+            "next_step": 26,
+            "step_id": 555,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Store Passwords in Hashed Format",
+            "description": "Store passwords in hashed format using industry-recognized password managers.",
+            "commands": null,
+            "next_step": 27,
+            "step_id": 556,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Add Password User Salts",
+            "description": "Add password user \u201csalts\u201d to shared login credentials.",
+            "commands": null,
+            "next_step": 28,
+            "step_id": 557,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 28,
+            "type": "ACTION",
+            "title": "Avoid Reusing Passwords",
+            "description": "Avoid reusing passwords.",
+            "commands": null,
+            "next_step": 29,
+            "step_id": 558,
+            "classification": "Human Task"
+        },
+        {
+            "step_number": 29,
+            "type": "ACTION",
+            "title": "Implement Account Lockouts for Failed Logins",
+            "description": "Implement multiple failed login attempt account lockouts.",
+            "commands": null,
+            "next_step": 30,
+            "step_id": 559,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 30,
+            "type": "ACTION",
+            "title": "Disable Password Hints",
+            "description": "Disable password \u201chints.\u201d",
+            "commands": null,
+            "next_step": 31,
+            "step_id": 560,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 31,
+            "type": "ACTION",
+            "title": "Require Admin Credentials for Software Installation",
+            "description": "Require administrator credentials to install software.",
+            "commands": null,
+            "next_step": 32,
+            "step_id": 561,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 32,
+            "type": "ACTION",
+            "title": "Require Multifactor Authentication",
+            "description": "Require multifactor authentication for all services to the extent possible, particularly for webmail, virtual private networks, and accounts that access critical systems.",
+            "commands": null,
+            "next_step": 33,
+            "step_id": 562,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 33,
+            "type": "ACTION",
+            "title": "Keep Systems and Software Up to Date",
+            "description": "Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",
+            "commands": null,
+            "next_step": 34,
+            "step_id": 563,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 34,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to prevent the spread of ransomware by controlling traffic flows between subnetworks and restricting adversary lateral movement.",
+            "commands": null,
+            "next_step": 35,
+            "step_id": 564,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 35,
+            "type": "ACTION",
+            "title": "Identify and Investigate Abnormal Activity",
+            "description": "Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a networking monitoring tool.",
+            "commands": null,
+            "next_step": 36,
+            "step_id": 565,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 36,
+            "type": "ACTION",
+            "title": "Install and Update Antivirus Software",
+            "description": "Install, regularly update, and enable real-time detection for antivirus software on all hosts.",
+            "commands": null,
+            "next_step": 37,
+            "step_id": 566,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 37,
+            "type": "ACTION",
+            "title": "Disable Unused Ports",
+            "description": "Disable unused ports.",
+            "commands": null,
+            "next_step": 38,
+            "step_id": 567,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 38,
+            "type": "ACTION",
+            "title": "Add Email Banner for External Emails",
+            "description": "Consider adding an email banner to emails received from outside your organization.",
+            "commands": null,
+            "next_step": 39,
+            "step_id": 568,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 39,
+            "type": "ACTION",
+            "title": "Disable Hyperlinks in Emails",
+            "description": "Disable hyperlinks in received emails.",
+            "commands": null,
+            "next_step": 40,
+            "step_id": 569,
+            "classification": "Service Task"
+        },
+        {
+            "step_number": 40,
+            "type": "ACTION",
+            "title": "Ensure Backup Data is Encrypted and Immutable",
+            "description": "Ensure all backup data is encrypted, immutable, and covers the entire organization\u2019s data infrastructure.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 570,
+            "classification": "Service Task"
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cross-Sector Cybersecurity Performance Goals",
+    "affected_products": null
+}

@@ -1,0 +1,123 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is network-based detection applicable?",
+            "next_step": 2,
+            "else_step": 9
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Deploy Suricata Rules for HTTP Detection",
+            "description": "Deploy Suricata rules to detect Snake client-to-server HTTP and HTTP2 traffic based on specific header field patterns.",
+            "commands": [
+                "alert http any any -> any any (msg: \"http rule (Cookie)\"; pcre:\"/[0-9A-Za-z]{10}[0-9A-Za-z/\\+]{11}=/C\"; flow: established, to_server; sid: 7; rev: 1;)",
+                "alert http any any -> any any (msg: \"http rule (Other Header)\"; pcre:\"/[0-9A-Za-z]{10}[0-9A-Za-z/\\+]{11}=/H\"; flow: established, to_server; sid: 8; rev: 1;)",
+                "alert http any any -> any any (msg: \"http2 rule (Cookie)\"; pcre:\"/[0-9A-Za-z]{22}[0-9A-Za-z/_=\\;]{11}/C\"; flow: established, to_server; sid: 9; rev: 1;)",
+                "alert http any any -> any any (msg: \"http2 rule (Other Header)\"; pcre:\"/[0-9A-Za-z]{22}[0-9A-Za-z/_=\\;]{11}/H\"; flow: established, to_server; sid: 10; rev: 1;)"
+            ],
+            "next_step": 3,
+            "step_id": 482,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Scan"
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Deploy Suricata Rules for TCP Detection",
+            "description": "Deploy Suricata rules to detect Snake client-to-server TCP traffic based on specific communication patterns.",
+            "commands": [
+                "alert tcp any any -> any any (msg: \"tcp rule\"; content: \"|00 00 00 08|\"; startswith; dsize: 12; flow: established, to_server; flowbits: set, a8; flowbits: noalert; sid: 1; rev: 1;)",
+                "alert tcp any any -> any any (msg: \"tcp rule\"; content: \"|00 00 00 04|\"; startswith; dsize:8; flow: established, to_server; flowbits: isset, a8; flowbits: unset, a8; flowbits: set, a4; flowbits: noalert; sid: 2; rev: 1;)",
+                "alert tcp any any -> any any (msg: \"tcp rule\"; content: \"|00 00 00 08|\"; startswith; dsize: 4; flow: established, to_client; flowbits: isset, a4; flowbits: unset, a4; flowbits: set, b81; flowbits: noalert; sid: 3; rev: 1;)",
+                "alert tcp any any -> any any (msg: \"tcp rule\"; dsize: 8; flow: established, to_client; flowbits: isset, b81; flowbits: unset, b81; flowbits: set, b8; flowbits: noalert; sid: 4; rev: 1;)",
+                "alert tcp any any -> any any (msg: \"tcp rule\"; content: \"|00 00 00 04|\"; startswith; dsize: 4; flow: established, to_client; flowbits: isset, b8; flowbits: unset, b8; flowbits: set, b41; flowbits: noalert; sid: 5; rev: 1;)",
+                "alert tcp any any -> any any (msg: \"tcp rule\"; dsize: 4; flow: established, to_client; flowbits: isset, b41; flowbits: unset, b41; sid: 6; rev: 1;)"
+            ],
+            "next_step": 4,
+            "step_id": 483,
+            "classification": "Service Task",
+            "OpenC2": "Allow, Scan"
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is host-based detection applicable?",
+            "next_step": 5,
+            "else_step": 9
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Detect Snake Covert Stores",
+            "description": "Detect Snake covert stores by encrypting possible initial filesystem byte sequences with CAST-128 and searching for files with specific characteristics.",
+            "commands": null,
+            "next_step": 6,
+            "step_id": 484,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Locate"
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Scan for Snake Queue File",
+            "description": "Locate Snake Queue File by scanning files in the typical queue path with filenames matching a GUID-based convention and high entropy.",
+            "commands": [
+                "find /PATH/TO/WINDOWS_DIR -type f -regextype posix-egrep -iregex '.*\\/registration/(\\{[0-9A-F]{8}\\-([0-9A-F]{4}\\-){3}[0-9A-F]{12}\\}\\.){2}crmlog' -exec yara 1.yar {} \\;",
+                "Get-ChildItem -Recurse -File -Path %WINDOWS% | Where-Object { $_.FullName -match '(?i)/registration/(\\{[0-9A-F]{8}\\-([0-9A-F]{4}\\-){3}[0-9A-F]{12}\\}\\.){2}crmlog$' } | ForEach-Object { yara 1.yar $_.FullName }"
+            ],
+            "next_step": 7,
+            "step_id": 485,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Locate"
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Scan for Snake Comadmin File",
+            "description": "Locate Snake Comadmin file using techniques similar to those for locating the Snake Queue File.",
+            "commands": [
+                "find /PATH/TO/WINDOWS -type f -regextype posix-egrep -iregex '.*\\/system32/Com/comadmin\\.dat' -exec yara 1.yar {} \\;",
+                "Get-ChildItem -Recurse -File -Path %WINDOWS% | Where-Object { $_.FullName -match '(?i)/system32/Com/comadmin\\.dat$' } | ForEach-Object { yara 1.yar $_.FullName }"
+            ],
+            "next_step": 8,
+            "step_id": 486,
+            "classification": "Service Task",
+            "OpenC2": "Locate, Scan"
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Scan for Snake Werfault.exe File",
+            "description": "Detect Snake Werfault.exe file by scanning for non-standard icon sizes in the typical path.",
+            "commands": null,
+            "next_step": 9,
+            "step_id": 487,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Locate"
+        },
+        {
+            "step_number": 9,
+            "type": "CONDITION",
+            "condition": "Is memory analysis applicable?",
+            "next_step": 10,
+            "else_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Perform Memory Analysis with Volatility",
+            "description": "Capture and analyze system memory using Volatility to detect Snake's behaviors and artifacts.",
+            "commands": null,
+            "next_step": null,
+            "step_id": 488,
+            "classification": "Service Task",
+            "OpenC2": "Scan, Query"
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Snake Malware Detection Techniques",
+    "affected_products": null
+}

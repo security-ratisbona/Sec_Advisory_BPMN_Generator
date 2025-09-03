@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_CISA_aa23-129a_playbook-aa23-129a" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_CISA_aa23-129a_playbook-aa23-129a" isExecutable="true">
+    <bpmn:startEvent id="StartEvent" name="Start"/>
+    <bpmn:endEvent id="EndEvent" name="End"/>
+    <bpmn:exclusiveGateway id="GW_split_excl_1" name="Is network-based detection applicable?"/>
+    <bpmn:exclusiveGateway id="GW_join_excl_1"/>
+    <bpmn:scriptTask id="Task_1" name="Deploy Suricata Rules for HTTP Detection">
+      <bpmn:script>console.log(&quot;['alert http any any -&gt; any any (msg: &quot;http rule (Cookie)&quot;; pcre:&quot;/[0-9A-Za-z]{10}[0-9A-Za-z/\\+]{11}=/C&quot;; flow: established, to_server; sid: 7; rev: 1;)', 'alert http any any -&gt; any any (msg: &quot;http rule (Other Header)&quot;; pcre:&quot;/[0-9A-Za-z]{10}[0-9A-Za-z/\\+]{11}=/H&quot;; flow: established, to_server; sid: 8; rev: 1;)', 'alert http any any -&gt; any any (msg: &quot;http2 rule (Cookie)&quot;; pcre:&quot;/[0-9A-Za-z]{22}[0-9A-Za-z/_=\\;]{11}/C&quot;; flow: established, to_server; sid: 9; rev: 1;)', 'alert http any any -&gt; any any (msg: &quot;http2 rule (Other Header)&quot;; pcre:&quot;/[0-9A-Za-z]{22}[0-9A-Za-z/_=\\;]{11}/H&quot;; flow: established, to_server; sid: 10; rev: 1;)']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_2" name="Deploy Suricata Rules for TCP Detection">
+      <bpmn:script>console.log(&quot;['alert tcp any any -&gt; any any (msg: &quot;tcp rule&quot;; content: &quot;|00 00 00 08|&quot;; startswith; dsize: 12; flow: established, to_server; flowbits: set, a8; flowbits: noalert; sid: 1; rev: 1;)', 'alert tcp any any -&gt; any any (msg: &quot;tcp rule&quot;; content: &quot;|00 00 00 04|&quot;; startswith; dsize:8; flow: established, to_server; flowbits: isset, a8; flowbits: unset, a8; flowbits: set, a4; flowbits: noalert; sid: 2; rev: 1;)', 'alert tcp any any -&gt; any any (msg: &quot;tcp rule&quot;; content: &quot;|00 00 00 08|&quot;; startswith; dsize: 4; flow: established, to_client; flowbits: isset, a4; flowbits: unset, a4; flowbits: set, b81; flowbits: noalert; sid: 3; rev: 1;)', 'alert tcp any any -&gt; any any (msg: &quot;tcp rule&quot;; dsize: 8; flow: established, to_client; flowbits: isset, b81; flowbits: unset, b81; flowbits: set, b8; flowbits: noalert; sid: 4; rev: 1;)', 'alert tcp any any -&gt; any any (msg: &quot;tcp rule&quot;; content: &quot;|00 00 00 04|&quot;; startswith; dsize: 4; flow: established, to_client; flowbits: isset, b8; flowbits: unset, b8; flowbits: set, b41; flowbits: noalert; sid: 5; rev: 1;)', 'alert tcp any any -&gt; any any (msg: &quot;tcp rule&quot;; dsize: 4; flow: established, to_client; flowbits: isset, b41; flowbits: unset, b41; sid: 6; rev: 1;)']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:exclusiveGateway id="GW_split_excl_2" name="Is host-based detection applicable?"/>
+    <bpmn:exclusiveGateway id="GW_join_excl_2"/>
+    <bpmn:serviceTask id="Task_3" name="Detect Snake Covert Stores"/>
+    <bpmn:textAnnotation id="Task_3_annotation">
+      <bpmn:text>Scan, Locate</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Task_3_association" sourceRef="Task_3" targetRef="Task_3_annotation"/>
+    <bpmn:scriptTask id="Task_4" name="Scan for Snake Queue File">
+      <bpmn:script>console.log(&quot;[&quot;find /PATH/TO/WINDOWS_DIR -type f -regextype posix-egrep -iregex '.*\\/registration/(\\{[0-9A-F]{8}\\-([0-9A-F]{4}\\-){3}[0-9A-F]{12}\\}\\.){2}crmlog' -exec yara 1.yar {} \\;&quot;, &quot;Get-ChildItem -Recurse -File -Path %WINDOWS% | Where-Object { $_.FullName -match '(?i)/registration/(\\{[0-9A-F]{8}\\-([0-9A-F]{4}\\-){3}[0-9A-F]{12}\\}\\.){2}crmlog$' } | ForEach-Object { yara 1.yar $_.FullName }&quot;]&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_5" name="Scan for Snake Comadmin File">
+      <bpmn:script>console.log(&quot;[&quot;find /PATH/TO/WINDOWS -type f -regextype posix-egrep -iregex '.*\\/system32/Com/comadmin\\.dat' -exec yara 1.yar {} \\;&quot;, &quot;Get-ChildItem -Recurse -File -Path %WINDOWS% | Where-Object { $_.FullName -match '(?i)/system32/Com/comadmin\\.dat$' } | ForEach-Object { yara 1.yar $_.FullName }&quot;]&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Task_6" name="Scan for Snake Werfault.exe File"/>
+    <bpmn:textAnnotation id="Task_6_annotation">
+      <bpmn:text>Scan, Locate</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Task_6_association" sourceRef="Task_6" targetRef="Task_6_annotation"/>
+    <bpmn:exclusiveGateway id="GW_split_excl_3" name="Is memory analysis applicable?"/>
+    <bpmn:exclusiveGateway id="GW_join_excl_3"/>
+    <bpmn:serviceTask id="Task_7" name="Perform Memory Analysis with Volatility"/>
+    <bpmn:textAnnotation id="Task_7_annotation">
+      <bpmn:text>Scan, Query</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Task_7_association" sourceRef="Task_7" targetRef="Task_7_annotation"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0" sourceRef="StartEvent" targetRef="GW_split_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1" sourceRef="GW_split_excl_1" targetRef="Task_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_2" sourceRef="GW_split_excl_1" targetRef="GW_join_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_3" sourceRef="Task_1" targetRef="Task_2"/>
+    <bpmn:sequenceFlow id="SequenceFlow_4" sourceRef="Task_2" targetRef="GW_split_excl_2"/>
+    <bpmn:sequenceFlow id="SequenceFlow_5" sourceRef="GW_split_excl_2" targetRef="Task_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_6" sourceRef="GW_split_excl_2" targetRef="GW_join_excl_2"/>
+    <bpmn:sequenceFlow id="SequenceFlow_7" sourceRef="Task_3" targetRef="Task_4"/>
+    <bpmn:sequenceFlow id="SequenceFlow_8" sourceRef="Task_4" targetRef="Task_5"/>
+    <bpmn:sequenceFlow id="SequenceFlow_9" sourceRef="Task_5" targetRef="Task_6"/>
+    <bpmn:sequenceFlow id="SequenceFlow_10" sourceRef="Task_6" targetRef="GW_split_excl_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_11" sourceRef="GW_join_excl_1" targetRef="GW_split_excl_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_12" sourceRef="GW_join_excl_2" targetRef="GW_split_excl_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_13" sourceRef="GW_split_excl_3" targetRef="Task_7"/>
+    <bpmn:sequenceFlow id="SequenceFlow_14" sourceRef="GW_split_excl_3" targetRef="GW_join_excl_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_15" sourceRef="Task_7" targetRef="GW_join_excl_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_16" sourceRef="GW_join_excl_3" targetRef="EndEvent"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_CISA_aa23-129a_playbook-aa23-129a">
+    <bpmndi:BPMNPlane id="Plane_CISA_aa23-129a_playbook-aa23-129a" bpmnElement="Process_CISA_aa23-129a_playbook-aa23-129a">
+      <bpmndi:BPMNShape id="StartEvent_di" bpmnElement="StartEvent">
+        <dc:Bounds x="80" y="609" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_excl_1_di" bpmnElement="GW_split_excl_1">
+        <dc:Bounds x="150" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1_di" bpmnElement="Task_1">
+        <dc:Bounds x="220" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_2_di" bpmnElement="Task_2">
+        <dc:Bounds x="370" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_excl_2_di" bpmnElement="GW_split_excl_2">
+        <dc:Bounds x="520" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_3_di" bpmnElement="Task_3">
+        <dc:Bounds x="590" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_3_annotation_di" bpmnElement="Task_3_annotation">
+        <dc:Bounds x="575" y="550" width="100" height="30"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Task_3_association_di" bpmnElement="Task_3_association">
+        <di:waypoint x="590" y="600"/>
+        <di:waypoint x="575" y="580"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Task_4_di" bpmnElement="Task_4">
+        <dc:Bounds x="740" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_4_annotation_di" bpmnElement="Task_4_annotation">
+        <dc:Bounds x="725" y="550" width="100" height="30"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Task_4_association_di" bpmnElement="Task_4_association">
+        <di:waypoint x="740" y="600"/>
+        <di:waypoint x="725" y="580"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Task_5_di" bpmnElement="Task_5">
+        <dc:Bounds x="890" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_5_annotation_di" bpmnElement="Task_5_annotation">
+        <dc:Bounds x="875" y="550" width="100" height="30"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Task_5_association_di" bpmnElement="Task_5_association">
+        <di:waypoint x="890" y="600"/>
+        <di:waypoint x="875" y="580"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Task_6_di" bpmnElement="Task_6">
+        <dc:Bounds x="1040" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_6_annotation_di" bpmnElement="Task_6_annotation">
+        <dc:Bounds x="1025" y="550" width="100" height="30"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Task_6_association_di" bpmnElement="Task_6_association">
+        <di:waypoint x="1040" y="600"/>
+        <di:waypoint x="1025" y="580"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="GW_join_excl_1_di" bpmnElement="GW_join_excl_1">
+        <dc:Bounds x="1190" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_join_excl_2_di" bpmnElement="GW_join_excl_2">
+        <dc:Bounds x="1190" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_excl_3_di" bpmnElement="GW_split_excl_3">
+        <dc:Bounds x="1260" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_7_di" bpmnElement="Task_7">
+        <dc:Bounds x="1330" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_7_annotation_di" bpmnElement="Task_7_annotation">
+        <dc:Bounds x="1315" y="550" width="100" height="30"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Task_7_association_di" bpmnElement="Task_7_association">
+        <di:waypoint x="1330" y="600"/>
+        <di:waypoint x="1315" y="580"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="GW_join_excl_3_di" bpmnElement="GW_join_excl_3">
+        <dc:Bounds x="1480" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_di" bpmnElement="EndEvent">
+        <dc:Bounds x="1630" y="609" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0_di" bpmnElement="SequenceFlow_0">
+        <di:waypoint x="116" y="627"/>
+        <di:waypoint x="150" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1_di" bpmnElement="SequenceFlow_1">
+        <di:waypoint x="186" y="627.0"/>
+        <di:waypoint x="186" y="628"/>
+        <di:waypoint x="220" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_2_di" bpmnElement="SequenceFlow_2">
+        <di:waypoint x="168" y="645.0"/>
+        <di:waypoint x="168" y="882.0"/>
+        <di:waypoint x="1208" y="882.0"/>
+        <di:waypoint x="1208" y="645.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_3_di" bpmnElement="SequenceFlow_3">
+        <di:waypoint x="320" y="628"/>
+        <di:waypoint x="370" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_4_di" bpmnElement="SequenceFlow_4">
+        <di:waypoint x="470" y="628"/>
+        <di:waypoint x="520" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_5_di" bpmnElement="SequenceFlow_5">
+        <di:waypoint x="556" y="627.0"/>
+        <di:waypoint x="556" y="628"/>
+        <di:waypoint x="590" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_6_di" bpmnElement="SequenceFlow_6">
+        <di:waypoint x="538" y="645.0"/>
+        <di:waypoint x="538" y="864.0"/>
+        <di:waypoint x="1208" y="864.0"/>
+        <di:waypoint x="1208" y="645.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_7_di" bpmnElement="SequenceFlow_7">
+        <di:waypoint x="690" y="628"/>
+        <di:waypoint x="740" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_8_di" bpmnElement="SequenceFlow_8">
+        <di:waypoint x="840" y="628"/>
+        <di:waypoint x="890" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_9_di" bpmnElement="SequenceFlow_9">
+        <di:waypoint x="990" y="628"/>
+        <di:waypoint x="1040" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10_di" bpmnElement="SequenceFlow_10">
+        <di:waypoint x="1140" y="628"/>
+        <di:waypoint x="1260" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11_di" bpmnElement="SequenceFlow_11">
+        <di:waypoint x="1226" y="627.0"/>
+        <di:waypoint x="1260" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_12_di" bpmnElement="SequenceFlow_12">
+        <di:waypoint x="1226" y="627.0"/>
+        <di:waypoint x="1260" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_13_di" bpmnElement="SequenceFlow_13">
+        <di:waypoint x="1296" y="627.0"/>
+        <di:waypoint x="1296" y="628"/>
+        <di:waypoint x="1330" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_14_di" bpmnElement="SequenceFlow_14">
+        <di:waypoint x="1278" y="645.0"/>
+        <di:waypoint x="1278" y="846.0"/>
+        <di:waypoint x="1498" y="846.0"/>
+        <di:waypoint x="1498" y="645.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_15_di" bpmnElement="SequenceFlow_15">
+        <di:waypoint x="1430" y="628"/>
+        <di:waypoint x="1480" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_16_di" bpmnElement="SequenceFlow_16">
+        <di:waypoint x="1516" y="627.0"/>
+        <di:waypoint x="1630" y="627"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
