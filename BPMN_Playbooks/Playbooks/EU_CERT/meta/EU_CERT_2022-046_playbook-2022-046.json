@@ -1,0 +1,36 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is running one of the affected QNAP operating system versions: QTS 5.0.x and later, QTS 4.5.x and later, QuTS hero h5.0.x and later, QuTS hero h4.5.x and later, QuTScloud c5.0.x and later.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Affected QNAP Products",
+            "description": "Follow QNAP's provided advice to update the affected products to the latest version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "QTS 5.0.x and later",
+        "QTS 4.5.x and later",
+        "QuTS hero h5.0.x and later",
+        "QuTS hero h4.5.x and later",
+        "QuTScloud c5.0.x and later"
+    ]
+}

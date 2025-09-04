@@ -1,0 +1,78 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Linux Distributions",
+            "description": "Update all running Linux distributions that provided a backport of the fix for the Polkit vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Ubuntu Systems",
+            "description": "Update Ubuntu 14.04, 16.04 ESM, 18.04, 20.04, and 21.04 to include the backported fix.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update RedHat Systems",
+            "description": "Update RedHat Workstation and Enterprise products for supported architectures, including extended life cycle support, TUS, and AUS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Debian Systems",
+            "description": "Update Debian Stretch, Buster, Bellseye, and unstable versions to include the backported fix.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Reboot Systems",
+            "description": "Reboot the systems if necessary after applying updates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply Temporary Mitigation",
+            "description": "Apply a temporary mitigation to prevent the privilege escalation vulnerability by changing the permissions of pkexec.",
+            "commands": [
+                "chmod 0755 /usr/bin/pkexec"
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Search for Exploitation Attempts",
+            "description": "Search for exploitation attempts by checking logs for specific suspicious strings.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Polkit since version 0.113"
+    ]
+}

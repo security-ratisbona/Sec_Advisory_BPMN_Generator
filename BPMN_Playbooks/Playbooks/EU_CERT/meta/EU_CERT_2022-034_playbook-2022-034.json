@@ -1,0 +1,94 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Install Security Updates on Client Windows Devices and Non-Domain Controller Windows Servers",
+            "description": "Apply the latest security updates provided by Microsoft to client Windows devices and non-Domain Controller Windows Servers to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system a Windows Server Domain Controller?",
+            "next_step": 3,
+            "else_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Manually Map Certificates to Machine Account in Active Directory",
+            "description": "If the patch has been applied to Windows Server Domain Controllers, manually map the certificates to a machine account in Active Directory to address authentication issues until an official update is released.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Install Out-of-Band Updates on Domain Controllers",
+            "description": "Apply the out-of-band updates released by Microsoft on May 19 to resolve authentication issues on Domain Controllers.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Remove Workarounds or Mitigations for Authentication Issues",
+            "description": "If any workarounds or mitigations were applied to address authentication issues on Domain Controllers, remove them as they are no longer needed after the out-of-band updates.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Review PetitPotam NTLM Relay Advisory for CVE-2022-26925",
+            "description": "Read the PetitPotam NTLM relay advisory to understand and implement mitigations for CVE-2022-26925.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        ".NET and Visual Studio",
+        ".NET Framework",
+        "Azure SHIR",
+        "Microsoft Exchange Server",
+        "Microsoft Graphics Component",
+        "Microsoft Local Security Authority Server (lsasrv)",
+        "Microsoft Office",
+        "Microsoft Office Excel",
+        "Microsoft Office SharePoint",
+        "Microsoft Windows ALPC",
+        "Remote Desktop Client",
+        "Role: Windows Fax Service",
+        "Role: Windows Hyper-V",
+        "Self-hosted Integration Runtime",
+        "Tablet Windows User Interface",
+        "Visual Studio",
+        "Visual Studio Code",
+        "Windows Active Directory",
+        "Windows Address Book",
+        "Windows Authentication Methods",
+        "Windows BitLocker",
+        "Windows Cluster Shared Volume (CSV)",
+        "Windows Failover Cluster Automation Server",
+        "Windows Kerberos",
+        "Windows Kernel",
+        "Windows LDAP",
+        "Lightweight Directory Access Protocol",
+        "Windows Media",
+        "Windows Network File System",
+        "Windows NTFS",
+        "Windows Point-to-Point Tunnelling Protocol",
+        "Windows Print Spooler Components",
+        "Windows Push Notifications",
+        "Windows Remote Access Connection Manager",
+        "Windows Remote Desktop",
+        "Windows Remote Procedure Call Runtime",
+        "Windows Server Service",
+        "Windows Storage Spaces Controller",
+        "Windows WLAN Auto Config Service"
+    ]
+}

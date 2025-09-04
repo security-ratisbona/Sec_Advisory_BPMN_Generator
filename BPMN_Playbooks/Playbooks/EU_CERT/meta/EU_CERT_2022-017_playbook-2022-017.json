@@ -1,0 +1,83 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Installed OpenSSL and LibreSSL Versions",
+            "description": "Determine the installed versions of OpenSSL and LibreSSL to assess if they are affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version of OpenSSL or LibreSSL affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version of OpenSSL or LibreSSL is installed?",
+            "cases": {
+                "OpenSSL 1.0.2": 4,
+                "OpenSSL 1.1.1": 5,
+                "OpenSSL 3.0": 6,
+                "OpenSSL 1.1.0": 7,
+                "LibreSSL": 8
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade OpenSSL 1.0.2",
+            "description": "Upgrade OpenSSL 1.0.2 to version 1.0.2zd for premium support customers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade OpenSSL 1.1.1",
+            "description": "Upgrade OpenSSL 1.1.1 to version 1.1.1n to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade OpenSSL 3.0",
+            "description": "Upgrade OpenSSL 3.0 to version 3.0.2 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Upgrade OpenSSL 1.1.0",
+            "description": "OpenSSL 1.1.0 is out of support. Upgrade to OpenSSL 3.0 or 1.1.1.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Upgrade LibreSSL",
+            "description": "Upgrade LibreSSL to the patched versions 3.3.6, 3.4.3, or 3.5.1 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "OpenSSL 1.0.2",
+        "OpenSSL 1.1.0",
+        "OpenSSL 1.1.1",
+        "OpenSSL 3.0",
+        "LibreSSL < 3.3.6",
+        "LibreSSL < 3.4.3",
+        "LibreSSL < 3.5.1"
+    ]
+}

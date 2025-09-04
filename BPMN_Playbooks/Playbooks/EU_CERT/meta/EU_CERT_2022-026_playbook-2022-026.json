@@ -1,0 +1,50 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by referring to the provided links to identify the exact versions of each affected system.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Security Patch",
+            "description": "Apply the recommended security patch for the identified CVE to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Configure Firewall Rules",
+            "description": "Configure firewall rules to block TCP port 445 at the network perimeter to prevent exploitation of CVE-2022-26809.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-26809",
+    "affected_products": [
+        "Microsoft Windows 7",
+        "Microsoft Windows Server 2022"
+    ]
+}
