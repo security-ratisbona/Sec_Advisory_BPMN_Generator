@@ -1,0 +1,39 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is running an affected version of FortiSIEM.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running an affected version of FortiSIEM?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update FortiSIEM",
+            "description": "Update FortiSIEM to the latest version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FortiSIEM Vulnerability",
+    "affected_products": [
+        "FortiSIEM 5.4 all versions",
+        "FortiSIEM 5.3 all versions",
+        "FortiSIEM 5.2 all versions",
+        "FortiSIEM 5.1 all versions",
+        "FortiSIEM 5.0 all versions",
+        "FortiSIEM 4.10 all versions",
+        "FortiSIEM 4.9 all versions",
+        "FortiSIEM 4.7 all versions"
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Microsoft Products",
+            "description": "Determine which Microsoft products and versions are affected by the vulnerabilities by consulting the Microsoft advisory.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are there affected Microsoft products in use?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Affected Microsoft Products",
+            "description": "Apply the latest updates to all affected Microsoft products, including Windows Server, Windows Client, Azure, Microsoft Office, Microsoft Edge, and Microsoft 365.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Microsoft Windows Vulnerabilities",
+    "affected_products": [
+        "Windows Server",
+        "Windows Client",
+        "Azure",
+        "Microsoft Office",
+        "Microsoft Edge",
+        "Microsoft 365"
+    ]
+}

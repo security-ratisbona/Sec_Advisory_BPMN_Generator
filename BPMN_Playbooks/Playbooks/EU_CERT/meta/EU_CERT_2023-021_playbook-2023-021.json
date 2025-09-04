@@ -1,0 +1,44 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Systems and Versions",
+            "description": "Determine if the systems are running any of the affected SAP products and versions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are the systems affected by any of the listed CVEs?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Security Fixes for Critical Vulnerabilities",
+            "description": "Apply the security fixes for the critical vulnerabilities CVE-2023-27497, CVE-2023-27267, CVE-2022-41272, CVE-2023-28765, and CVE-2023-27269.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Additional Security Patches",
+            "description": "Apply the other 19 security patches recommended by CERT-EU.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-27497, CVE-2023-27267, CVE-2022-41272, CVE-2023-28765, CVE-2023-27269",
+    "affected_products": [
+        "SAP Diagnostics Agent (OSCommand Bridge and EventLogServiceCollector) version 720",
+        "SAP Business Client versions 6.5, 7.0, 7.70",
+        "SAP NetWeaver Process Integration version 7.50",
+        "SAP BusinessObjects Business Intelligence Platform (Promotion Management) versions 420, 430",
+        "SAP NetWeaver Application Server for ABAP and ABAP Platform versions 700, 701, 702, 731, 740, 750, 751, 752, 753, 754, 755, 756, 757, 791"
+    ]
+}

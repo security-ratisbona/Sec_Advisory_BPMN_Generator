@@ -1,0 +1,54 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Veeam Backup & Replication Version",
+            "description": "Determine if the Veeam Backup & Replication version is vulnerable by checking the installed version and build date.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Veeam Backup & Replication version vulnerable?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is patching possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Fixed Version",
+            "description": "Update Veeam Backup & Replication to a supported and fixed version: Version 12 (build 12.0.0.1420 P20230223) or Version 11a (build 11.0.1.1261 P20230227).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is the deployment an all-in-one Veeam appliance with no remote backup infrastructure components?",
+            "next_step": 6,
+            "else_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Block External Connections to Port TCP 9401",
+            "description": "As a temporary remediation, block external connections to port TCP 9401 in the backup server firewall until the patch is installed.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Veeam Backup & Replication Vulnerability",
+    "affected_products": [
+        "Veeam Backup & Replication versions prior to 12.0.0.1420 P20230223 and 11.0.1.1261 P20230227"
+    ]
+}

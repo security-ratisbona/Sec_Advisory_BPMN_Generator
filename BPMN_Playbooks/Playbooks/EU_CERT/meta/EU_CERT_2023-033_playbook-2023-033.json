@@ -1,0 +1,60 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by verifying the installed version of MOVEit Transfer.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Deny HTTP and HTTPS Traffic",
+            "description": "Before applying patches, deny HTTP (TCP/80) and HTTPS (TCP/443) traffic to the MOVEit environment to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade MOVEit Transfer",
+            "description": "Upgrade MOVEit Transfer to the recommended versions: 2023.0.1, 2022.1.5, 2022.0.4, 2021.1.4, or 2021.0.6 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Activate HTTP and HTTPS Traffic",
+            "description": "After applying the patches, activate HTTP (TCP/80) and HTTPS (TCP/443) traffic to the MOVEit environment.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Clean Unauthorized Files and User Accounts",
+            "description": "Remove any potential unauthorized files or user accounts from the system to ensure security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "MOVEit Transfer Vulnerability",
+    "affected_products": [
+        "MOVEit Transfer before 2023.0.0",
+        "2022.1.x",
+        "2022.0.x",
+        "2021.1.x",
+        "2021.0.x"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is running Cisco AnyConnect Secure Mobility Client for Windows Software versions 4.10 and earlier or Cisco Secure Client for Windows Software version 5.0.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Fixed Version",
+            "description": "Update the affected products to the fixed version 4.10MR7 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cisco AnyConnect Secure Mobility Client and Cisco Secure Client Vulnerability",
+    "affected_products": [
+        "Cisco AnyConnect Secure Mobility Client for Windows Software versions 4.10 and earlier",
+        "Cisco Secure Client for Windows Software version 5.0"
+    ]
+}

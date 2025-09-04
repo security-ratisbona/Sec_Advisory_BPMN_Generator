@@ -1,0 +1,51 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Browser and Version",
+            "description": "Check if the browser is affected by CVE-2023-2033 by retrieving the installed version of Google Chrome or other Chromium-based browsers.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the browser affected by CVE-2023-2033?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which browser is in use?",
+            "cases": {
+                "Google Chrome": 4,
+                "Other Chromium-based browsers": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Google Chrome",
+            "description": "Update Google Chrome to version 112.0.5615.121 for Windows, macOS, and Linux to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Chromium-based Browsers",
+            "description": "Update other Chromium-based browsers such as Microsoft Edge, Brave, and Opera as soon as fixes become available to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-2033",
+    "affected_products": [
+        "Google Chrome prior to version 112.0.5615.121",
+        "Chromium-based browsers such as Microsoft Edge, Brave and Opera that have not yet applied the relevant fixes"
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected FortiNAC Version",
+            "description": "Determine if the FortiNAC system is running a vulnerable version by checking the installed version number.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the FortiNAC version vulnerable?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which FortiNAC version is installed?",
+            "cases": {
+                "Version 9.4.0 through 9.4.2": 4,
+                "Version 9.2.0 through 9.2.7": 5,
+                "Version 9.1.0 through 9.1.9": 6,
+                "Version 7.2.0 through 7.2.1": 7,
+                "Version 8.8 all versions": 8,
+                "Version 8.7 all versions": 8,
+                "Version 8.6 all versions": 8,
+                "Version 8.5 all versions": 8,
+                "Version 8.3 all versions": 8
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade FortiNAC to Version 9.4.3 or above",
+            "description": "Upgrade the FortiNAC system to version 9.4.3 or a later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade FortiNAC to Version 9.2.8 or above",
+            "description": "Upgrade the FortiNAC system to version 9.2.8 or a later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade FortiNAC to Version 9.1.10 or above",
+            "description": "Upgrade the FortiNAC system to version 9.1.10 or a later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Upgrade FortiNAC to Version 7.2.2 or above",
+            "description": "Upgrade the FortiNAC system to version 7.2.2 or a later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Upgrade FortiNAC to the latest available version",
+            "description": "Upgrade the FortiNAC system to the latest available version to ensure all vulnerabilities are mitigated.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FortiNAC Vulnerability",
+    "affected_products": [
+        "Version 9.4.0 through 9.4.2",
+        "Version 9.2.0 through 9.2.7",
+        "Version 9.1.0 through 9.1.9",
+        "Version 7.2.0 through 7.2.1",
+        "8.8 all versions",
+        "8.7 all versions",
+        "8.6 all versions",
+        "8.5 all versions",
+        "8.3 all versions"
+    ]
+}

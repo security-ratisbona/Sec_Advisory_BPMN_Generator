@@ -1,0 +1,34 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is affected by checking the installed version of Veeam ONE.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2023-38547 or CVE-2023-38548?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Veeam ONE Hotfixes",
+            "description": "Apply the recommended hotfixes for Veeam ONE as per Veeam's guidance to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-38547, CVE-2023-38548",
+    "affected_products": [
+        "Veeam ONE 11",
+        "Veeam ONE 11a",
+        "Veeam ONE 12"
+    ]
+}

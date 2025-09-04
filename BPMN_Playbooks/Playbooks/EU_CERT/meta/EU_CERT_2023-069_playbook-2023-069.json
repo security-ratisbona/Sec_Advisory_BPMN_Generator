@@ -1,0 +1,35 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Devices and Versions",
+            "description": "Determine if the device is running a vulnerable version of iOS, iPadOS, macOS, or watchOS.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the device running a vulnerable version?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade to Latest OS Version",
+            "description": "Upgrade the device to the latest OS version to fix the vulnerabilities CVE-2023-42824 and CVE-2023-5217. For iOS and iPadOS, upgrade to 17.0.3; for macOS, upgrade to Ventura 13.6; for watchOS, upgrade to 10.0.1.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-42824 and CVE-2023-5217",
+    "affected_products": [
+        "iPhone 8 and later",
+        "iPad mini 5th generation and later",
+        "Macs running macOS Monterey and newer",
+        "Apple Watch Series 4 and later"
+    ]
+}
