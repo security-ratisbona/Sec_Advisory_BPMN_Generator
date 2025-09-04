@@ -1,0 +1,71 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected GitLab Version",
+            "description": "Determine if the GitLab instance is running a version affected by CVE-2023-7028, CVE-2023-5356, or CVE-2023-4812.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the GitLab instance affected by any of the CVEs?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade GitLab to Latest Version",
+            "description": "Upgrade GitLab to the latest version to mitigate vulnerabilities CVE-2023-7028, CVE-2023-5356, and CVE-2023-4812.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enable Two-Factor Authentication (2FA)",
+            "description": "Enable Two-Factor Authentication (2FA) for additional security on GitLab accounts.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Review Logs for Exploitation Attempts (CVE-2023-7028)",
+            "description": "Check 'gitlab-rails/production_json.log' for HTTP requests to the '/users/password' path with 'params.value.email' consisting of a JSON array with multiple email addresses.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Audit Logs for Exploitation Attempts (CVE-2023-7028)",
+            "description": "Check 'gitlab-rails/audit_json.log' for entries with 'meta.caller.id' of 'PasswordsController#create' and 'target_details' consisting of a JSON array with multiple email addresses.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-7028",
+    "affected_products": [
+        "GitLab CE and EE 16.1 prior to 16.1.6",
+        "GitLab CE and EE 16.2 prior to 16.2.9",
+        "GitLab CE and EE 16.3 prior to 16.3.7",
+        "GitLab CE and EE 16.4 prior to 16.4.5",
+        "GitLab CE and EE 16.5 prior to 16.5.6",
+        "GitLab CE and EE 16.6 prior to 16.6.4",
+        "GitLab CE and EE 16.7 prior to 16.7.2"
+    ]
+}
