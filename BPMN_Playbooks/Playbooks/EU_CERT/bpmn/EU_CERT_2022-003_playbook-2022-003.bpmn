@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_EU_CERT_2022-003_playbook-2022-003" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_EU_CERT_2022-003_playbook-2022-003" isExecutable="true">
+    <bpmn:startEvent id="StartEvent" name="Start"/>
+    <bpmn:endEvent id="EndEvent" name="End"/>
+    <bpmn:task id="Task_1" name="Identify Affected System and Version"/>
+    <bpmn:exclusiveGateway id="GW_split_switch_1"/>
+    <bpmn:exclusiveGateway id="GW_join_switch_1"/>
+    <bpmn:scriptTask id="Task_2" name="Uninstall Problematic Patch on Windows Server 2012 R2">
+      <bpmn:script>console.log(&quot;['wusa /uninstall /kb:KB5009624']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_3" name="Uninstall Problematic Patch on Windows Server 2019">
+      <bpmn:script>console.log(&quot;['wusa /uninstall /kb:KB5009557']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_4" name="Uninstall Problematic Patch on Windows Server 2022">
+      <bpmn:script>console.log(&quot;['wusa /uninstall /kb:KB5009555']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_5" name="Uninstall Problematic Patch on Windows 10">
+      <bpmn:script>console.log(&quot;['wusa /uninstall /kb:5009543']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_6" name="Uninstall Problematic Patch on Windows 11">
+      <bpmn:script>console.log(&quot;['wusa /uninstall /kb:5009566']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:task id="Task_7" name="Install Emergency Out-of-Band Updates"/>
+    <bpmn:exclusiveGateway id="GW_split_excl_1" name="Is the system Windows Server 2019 or Windows 10 version 1809?"/>
+    <bpmn:exclusiveGateway id="GW_join_excl_1"/>
+    <bpmn:task id="Task_8" name="Apply Mitigation for CVE-2022-21907 on Windows Server 2019 and Windows 10 version 1809"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0" sourceRef="StartEvent" targetRef="Task_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1" sourceRef="Task_1" targetRef="GW_split_switch_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_2" sourceRef="GW_split_switch_1" targetRef="Task_2"/>
+    <bpmn:sequenceFlow id="SequenceFlow_3" sourceRef="GW_split_switch_1" targetRef="Task_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_4" sourceRef="GW_split_switch_1" targetRef="Task_4"/>
+    <bpmn:sequenceFlow id="SequenceFlow_5" sourceRef="GW_split_switch_1" targetRef="Task_5"/>
+    <bpmn:sequenceFlow id="SequenceFlow_6" sourceRef="GW_split_switch_1" targetRef="Task_6"/>
+    <bpmn:sequenceFlow id="SequenceFlow_7" sourceRef="Task_2" targetRef="GW_join_switch_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_8" sourceRef="Task_3" targetRef="GW_join_switch_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_9" sourceRef="Task_4" targetRef="GW_join_switch_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_10" sourceRef="Task_5" targetRef="GW_join_switch_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_11" sourceRef="Task_6" targetRef="GW_join_switch_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_12" sourceRef="GW_join_switch_1" targetRef="Task_7"/>
+    <bpmn:sequenceFlow id="SequenceFlow_13" sourceRef="Task_7" targetRef="GW_split_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_14" sourceRef="GW_split_excl_1" targetRef="Task_8"/>
+    <bpmn:sequenceFlow id="SequenceFlow_15" sourceRef="GW_split_excl_1" targetRef="GW_join_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_16" sourceRef="Task_8" targetRef="GW_join_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_17" sourceRef="GW_join_excl_1" targetRef="EndEvent"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_EU_CERT_2022-003_playbook-2022-003">
+    <bpmndi:BPMNPlane id="Plane_EU_CERT_2022-003_playbook-2022-003" bpmnElement="Process_EU_CERT_2022-003_playbook-2022-003">
+      <bpmndi:BPMNShape id="StartEvent_di" bpmnElement="StartEvent">
+        <dc:Bounds x="80" y="609" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1_di" bpmnElement="Task_1">
+        <dc:Bounds x="150" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_switch_1_di" bpmnElement="GW_split_switch_1">
+        <dc:Bounds x="300" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_2_di" bpmnElement="Task_2">
+        <dc:Bounds x="370" y="236" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_3_di" bpmnElement="Task_3">
+        <dc:Bounds x="370" y="327" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_4_di" bpmnElement="Task_4">
+        <dc:Bounds x="370" y="418" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_5_di" bpmnElement="Task_5">
+        <dc:Bounds x="370" y="509" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_6_di" bpmnElement="Task_6">
+        <dc:Bounds x="370" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_join_switch_1_di" bpmnElement="GW_join_switch_1">
+        <dc:Bounds x="520" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_7_di" bpmnElement="Task_7">
+        <dc:Bounds x="590" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_excl_1_di" bpmnElement="GW_split_excl_1">
+        <dc:Bounds x="740" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_8_di" bpmnElement="Task_8">
+        <dc:Bounds x="810" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_join_excl_1_di" bpmnElement="GW_join_excl_1">
+        <dc:Bounds x="960" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_di" bpmnElement="EndEvent">
+        <dc:Bounds x="1110" y="609" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0_di" bpmnElement="SequenceFlow_0">
+        <di:waypoint x="116" y="627"/>
+        <di:waypoint x="116" y="628"/>
+        <di:waypoint x="150" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1_di" bpmnElement="SequenceFlow_1">
+        <di:waypoint x="250" y="628"/>
+        <di:waypoint x="300" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_2_di" bpmnElement="SequenceFlow_2">
+        <di:waypoint x="318" y="609.0"/>
+        <di:waypoint x="318" y="264"/>
+        <di:waypoint x="370" y="264"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_3_di" bpmnElement="SequenceFlow_3">
+        <di:waypoint x="318" y="609.0"/>
+        <di:waypoint x="318" y="355"/>
+        <di:waypoint x="370" y="355"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_4_di" bpmnElement="SequenceFlow_4">
+        <di:waypoint x="318" y="609.0"/>
+        <di:waypoint x="318" y="446"/>
+        <di:waypoint x="370" y="446"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_5_di" bpmnElement="SequenceFlow_5">
+        <di:waypoint x="318" y="609.0"/>
+        <di:waypoint x="318" y="537"/>
+        <di:waypoint x="370" y="537"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_6_di" bpmnElement="SequenceFlow_6">
+        <di:waypoint x="336" y="627.0"/>
+        <di:waypoint x="336" y="628"/>
+        <di:waypoint x="370" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_7_di" bpmnElement="SequenceFlow_7">
+        <di:waypoint x="470" y="264"/>
+        <di:waypoint x="538" y="264"/>
+        <di:waypoint x="538" y="609.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_8_di" bpmnElement="SequenceFlow_8">
+        <di:waypoint x="470" y="355"/>
+        <di:waypoint x="538" y="355"/>
+        <di:waypoint x="538" y="609.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_9_di" bpmnElement="SequenceFlow_9">
+        <di:waypoint x="470" y="446"/>
+        <di:waypoint x="538" y="446"/>
+        <di:waypoint x="538" y="609.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10_di" bpmnElement="SequenceFlow_10">
+        <di:waypoint x="470" y="537"/>
+        <di:waypoint x="538" y="537"/>
+        <di:waypoint x="538" y="609.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11_di" bpmnElement="SequenceFlow_11">
+        <di:waypoint x="470" y="628"/>
+        <di:waypoint x="520" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_12_di" bpmnElement="SequenceFlow_12">
+        <di:waypoint x="556" y="627.0"/>
+        <di:waypoint x="556" y="628"/>
+        <di:waypoint x="590" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_13_di" bpmnElement="SequenceFlow_13">
+        <di:waypoint x="690" y="628"/>
+        <di:waypoint x="740" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_14_di" bpmnElement="SequenceFlow_14">
+        <di:waypoint x="776" y="627.0"/>
+        <di:waypoint x="776" y="628"/>
+        <di:waypoint x="810" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_15_di" bpmnElement="SequenceFlow_15">
+        <di:waypoint x="758" y="645.0"/>
+        <di:waypoint x="758" y="882.0"/>
+        <di:waypoint x="978" y="882.0"/>
+        <di:waypoint x="978" y="645.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_16_di" bpmnElement="SequenceFlow_16">
+        <di:waypoint x="910" y="628"/>
+        <di:waypoint x="960" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_17_di" bpmnElement="SequenceFlow_17">
+        <di:waypoint x="996" y="627.0"/>
+        <di:waypoint x="1110" y="627"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
