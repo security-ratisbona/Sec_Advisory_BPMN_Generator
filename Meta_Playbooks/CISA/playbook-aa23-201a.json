@@ -1,0 +1,57 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Install Updated Version of NetScaler ADC and Gateway",
+            "description": "Install the relevant updated version of NetScaler ADC and NetScaler Gateway as soon as possible to address vulnerabilities CVE-2023-3519, CVE-2023-3466, and CVE-2023-3467.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement Phishing-Resistant MFA",
+            "description": "Mandate phishing-resistant multifactor authentication (MFA) for all staff and services in production and enterprise environments.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Cross-Sector Cybersecurity Performance Goals (CPGs)",
+            "description": "Follow CISA's Cross-Sector Cybersecurity Performance Goals (CPGs) to reduce the likelihood and impact of known cyber risks and common TTPs.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the organization a software manufacturer?",
+            "next_step": 5,
+            "else_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Comprehensive Information Security Program",
+            "description": "Implement a comprehensive information security program based on a recognized framework, such as the NIST Cybersecurity Framework (CSF).",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Network-Segmentation Controls",
+            "description": "Apply robust network-segmentation controls on NetScaler appliances and other internet-facing devices as a longer-term effort.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-3519, CVE-2023-3466, CVE-2023-3467",
+    "affected_products": [
+        "NetScaler ADC",
+        "NetScaler Gateway"
+    ]
+}

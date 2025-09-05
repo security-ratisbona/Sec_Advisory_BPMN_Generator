@@ -1,0 +1,88 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure with on-premises or hybrid environments?",
+            "next_step": 2,
+            "else_step": 5
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement CISA and NIST Recommendations",
+            "description": "Implement the recommendations in Table 1 to mitigate findings from Lessons Learned and Key Findings section, aligning with Cross-Sector Cybersecurity Performance Goals (CPGs).",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Conduct Penetration Tests or Red Team Assessments",
+            "description": "Implement recommendations in Table 2 to mitigate issues identified through penetration tests or red team assessments.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Prioritize Secure by Design Products",
+            "description": "Prioritize purchasing products from manufacturers who demonstrate secure by design principles.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is the organization a software manufacturer?",
+            "next_step": 6,
+            "else_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Eliminate Default Passwords",
+            "description": "Remove default passwords and determine secure password practices, such as minimum length and disallowing known breached passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Configure Secure Authentication Schemes",
+            "description": "Configure software to use more secure authentication schemes by default.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Provide Logging at No Additional Charge",
+            "description": "Ensure cloud services and on-premises products generate and store security-related logs at no additional cost.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Remove Unnecessary Software Dependencies",
+            "description": "Remove unnecessary software dependencies to reduce the attack surface and potential vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Critical Infrastructure and Software Manufacturers",
+    "affected_products": null
+}

@@ -1,0 +1,57 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Software",
+            "description": "Update software, including operating systems, applications, and firmware on IT network assets. Prioritize patching known exploited vulnerabilities and critical and high vulnerabilities that allow for remote code execution or denial-of-service on internet-facing equipment. Consider using a centralized patch management system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enforce Multi-Factor Authentication (MFA)",
+            "description": "Enforce MFA to the greatest extent possible and require accounts with password logins, including service accounts, to have strong passwords. Review configuration policies to protect against 'fail open' and re-enrollment scenarios.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Secure and Monitor RDP and Risky Services",
+            "description": "Secure and monitor RDP and other potentially risky services. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure. If RDP is necessary, restrict the originating sources and require MFA. Use a VPN for external RDP access. Monitor remote access/RDP logs and enforce account lockouts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Provide End-User Awareness and Training",
+            "description": "Provide end-user awareness and training to help prevent successful targeted social engineering and spearphishing campaigns. Ensure employees are aware of potential cyber threats and delivery methods, and know whom to contact when they receive a suspected phishing email or suspect a cyber incident.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Critical Infrastructure Organizations",
+    "affected_products": null
+}

@@ -1,0 +1,350 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Are you a vendor or developer?",
+            "next_step": 2,
+            "else_step": 15
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Identify Repeatedly Exploited Vulnerabilities",
+            "description": "Perform an analysis of both CVEs and known exploited vulnerabilities to understand which classes of vulnerability are identified more than others.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Mitigations for Vulnerability Classes",
+            "description": "Implement appropriate mitigations to eliminate identified classes of vulnerabilities, such as using parameterized queries for SQL injection.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Ensure Business Leaders are Responsible for Security",
+            "description": "Business leaders should ensure proactive steps to eliminate entire classes of security vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Follow SSDF and Implement Secure Design Practices",
+            "description": "Implement secure design practices into each stage of the SDLC, including prioritizing memory safe languages and exercising due diligence when selecting software components.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Set Up Secure Development Team Practices",
+            "description": "Conduct peer code reviews, work to a common organization secure coding standard, and maintain awareness of language-specific security concerns.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Establish a Vulnerability Disclosure Program",
+            "description": "Verify and resolve security vulnerabilities disclosed by internal or external parties and establish processes to determine root causes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use SAST/DAST Tools",
+            "description": "Use static and dynamic application security testing tools to analyze product source code and application behavior to detect error-prone practices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Configure Production-Ready Products Securely",
+            "description": "Ensure products have the most secure settings as default and provide guidance on the risks of changing each setting.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Prioritize Secure-by-Default Configurations",
+            "description": "Eliminate default passwords, implement SSO technology, and provide high-quality audit logs to customers with no additional configuration.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Ensure Published CVEs Include Proper CWE Field",
+            "description": "Include the proper CWE field in published CVEs to enable industry-wide analysis of software security and design flaws.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Document Secure Baseline Configurations",
+            "description": "Document secure baseline configurations for all IT/OT components, including cloud infrastructure, and monitor deviations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Perform Regular Secure System Backups",
+            "description": "Create known good copies of all device configurations for repairs and/or restoration, store copies off-network, and test regularly.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "CONDITION",
+            "condition": "Are you an end-user organization?",
+            "next_step": 16,
+            "else_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Update Software and Systems",
+            "description": "Update software, operating systems, applications, and firmware on IT network assets in a timely manner.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Prioritize Patching of Known Exploited Vulnerabilities",
+            "description": "Prioritize patching known exploited vulnerabilities, especially those CVEs identified in this CSA.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Implement Vendor-Approved Workarounds",
+            "description": "If a patch for a known exploited or critical vulnerability cannot be quickly applied, implement vendor-approved workarounds.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Replace End-of-Life Software",
+            "description": "Replace software that is no longer supported by the vendor.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Perform Automated Asset Discovery",
+            "description": "Routinely perform automated asset discovery across the entire estate to identify and catalogue all systems, services, hardware, and software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Implement Robust Patch Management Process",
+            "description": "Establish a centralized patch management system that prioritizes patch applications.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Consider Moving Services to Reputable CSPs or MSPs",
+            "description": "Organizations unable to perform rapid scanning and patching should consider moving services to reputable cloud or managed service providers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Maintain Updated Cybersecurity Incident Response Plan",
+            "description": "Ensure the incident response plan is tested at least annually and updated within a risk-informed time frame.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Enforce Phishing-Resistant MFA",
+            "description": "Enforce phishing-resistant multifactor authentication for all users, without exception.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Enforce MFA on VPN Connections",
+            "description": "Enforce MFA on all VPN connections. If unavailable, require strong passwords for remote work.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Review and Validate Privileged Accounts",
+            "description": "Regularly review, validate, or remove privileged accounts, at least annually.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 28,
+            "type": "ACTION",
+            "title": "Configure Access Control Under Least Privilege",
+            "description": "Ensure software service accounts only provide necessary permissions to perform intended functions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 29,
+            "type": "ACTION",
+            "title": "Properly Configure and Secure Internet-Facing Devices",
+            "description": "Disable unused network ports and protocols, encrypt network traffic, and disable unused network services and devices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 30,
+            "type": "ACTION",
+            "title": "Harden Commonly Exploited Network Services",
+            "description": "Harden services like LLMNR, RDP, CIFS, Active Directory, and OpenLDAP.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 31,
+            "type": "ACTION",
+            "title": "Manage Windows KDC Accounts",
+            "description": "Manage accounts like KRBTGT to minimize Golden Ticket attacks and Kerberoasting.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 32,
+            "type": "ACTION",
+            "title": "Control Use of Native Scripting Applications",
+            "description": "Strictly control the use of applications like command-line, PowerShell, WinRM, WMI, and DCOM.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 33,
+            "type": "ACTION",
+            "title": "Implement Zero Trust Network Architecture",
+            "description": "Limit or block lateral movement by controlling access to applications, devices, and databases.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 34,
+            "type": "ACTION",
+            "title": "Continuously Monitor Attack Surface",
+            "description": "Investigate abnormal activity that may indicate cyber actor or malware lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 35,
+            "type": "ACTION",
+            "title": "Use Security Tools",
+            "description": "Use tools like EDR, SIEM, and ITAM to ensure consistent asset reporting.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 36,
+            "type": "ACTION",
+            "title": "Use Web Application Firewalls",
+            "description": "Monitor and filter web traffic to detect and mitigate exploitation attempts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 37,
+            "type": "ACTION",
+            "title": "Monitor Unwanted Hardware and Software",
+            "description": "Implement a policy or process to monitor against an allowlist with specified approved versions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 38,
+            "type": "ACTION",
+            "title": "Use a Network Protocol Analyzer",
+            "description": "Examine captured data, including packet-level data, to identify potential threats.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 39,
+            "type": "ACTION",
+            "title": "Reduce Third-Party Applications",
+            "description": "Provide exceptions only if required to support business-critical functions.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Security-by-Design and -Default Recommendations",
+    "affected_products": null
+}

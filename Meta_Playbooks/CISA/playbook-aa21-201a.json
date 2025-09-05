@@ -1,0 +1,161 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of the Energy Sector or other Critical Infrastructure?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Harden IT/Corporate Network",
+            "description": "Reduce the risk of initial compromise by hardening the IT/corporate network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Software and Firmware",
+            "description": "Update all software, including operating systems, applications, and firmware, in a timely manner. Consider using a centralized patch management system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Replace End-of-Life Software and Hardware",
+            "description": "Replace all end-of-life software and hardware devices to ensure security and support.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict and Manage Remote Access",
+            "description": "Restrict and manage remote access software. Require multi-factor authentication (MFA) for remote access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Unauthorized Execution Prevention",
+            "description": "Disable macro scripts from Microsoft Office files transmitted via email and implement application allowlisting.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "next_step": 14
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Filter Network Traffic",
+            "description": "Prohibit ingress and egress communications with known malicious IP addresses. Implement URL blocklists and/or allow lists.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Set Antivirus/Antimalware Programs",
+            "description": "Regularly scan IT network assets using up-to-date signatures.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Implement Robust Network Segmentation",
+            "description": "Ensure robust network segmentation between IT and ICS networks to limit lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Network Monitoring",
+            "description": "Monitor network at key chokepoints and configure IDS to create alarms for any ICS traffic outside normal operations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Implement ICS Environment Best Practices",
+            "description": "Update all software, implement application allowlisting on HMIs, harden field devices, and disable unused ports and services on ICS devices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                15,
+                16,
+                17,
+                18
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Implement Data Backup Procedures",
+            "description": "Implement regular, frequent data backup procedures on both the IT and ICS networks. Ensure backups are regularly tested and stored separately.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Maintain ICS Asset Inventory",
+            "description": "Maintain an inventory of all hardware, software, and supporting infrastructure technologies in the ICS environment.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Ensure Robust Physical Security",
+            "description": "Ensure robust physical security to prevent unauthorized access to controlled spaces housing ICS equipment.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Implement User Training Program",
+            "description": "Train employees to recognize spearphishing attempts and reinforce appropriate user response to spearphishing emails.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Layered Defense-in-Depth Cyber Posture for Energy Sector and CI",
+    "affected_products": null
+}

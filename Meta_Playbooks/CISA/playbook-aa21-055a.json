@@ -1,0 +1,99 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is Accellion FTA in use?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Temporarily isolate or block internet access",
+            "description": "Temporarily isolate or block internet access to and from systems hosting Accellion FTA.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Assess system for malicious activity",
+            "description": "Assess the system for evidence of malicious activity including the IOCs, and obtain a snapshot or forensic disk image of the system for subsequent investigation.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Accellion FTA",
+            "description": "Update Accellion FTA to version FTA_9_12_432 or later.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Evaluate migration solutions",
+            "description": "Evaluate potential solutions for migration to a supported file-sharing platform after completing appropriate testing.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Is malicious activity identified?",
+            "next_step": 8,
+            "else_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Conduct audit of user accounts",
+            "description": "Conduct an audit of Accellion FTA user accounts for any unauthorized changes, and consider resetting user passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Reset security tokens",
+            "description": "Reset any security tokens on the system, including the 'W1' encryption token, which may have been exposed through SQL injection.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Deploy automated software update tools",
+            "description": "Deploy automated software update tools to ensure that third-party software on all systems is running the most recent security updates provided by the software vendor.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Accellion FTA Advisory",
+    "affected_products": [
+        "Accellion FTA"
+    ]
+}

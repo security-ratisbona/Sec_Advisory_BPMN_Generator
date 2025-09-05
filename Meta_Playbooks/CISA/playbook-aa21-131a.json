@@ -1,0 +1,187 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Require Multi-Factor Authentication",
+            "description": "Require multi-factor authentication for remote access to OT and IT networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Enable Strong Spam Filters",
+            "description": "Enable strong spam filters to prevent phishing emails from reaching end users and filter emails containing executable files.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement User Training Program",
+            "description": "Implement a user training program and simulated attacks for spearphishing to discourage users from visiting malicious websites or opening malicious attachments.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Filter Network Traffic",
+            "description": "Filter network traffic to prohibit ingress and egress communications with known malicious IP addresses and prevent users from accessing malicious websites by implementing URL blocklists and/or allowlists.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update Software and Firmware",
+            "description": "Update software, including operating systems, applications, and firmware on IT network assets, in a timely manner. Consider using a centralized patch management system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10,
+                11,
+                12
+            ],
+            "next_step": 13
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Limit Network Access",
+            "description": "Limit access to resources over networks, especially by restricting RDP. If RDP is necessary, restrict the originating sources and require multi-factor authentication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Set Antivirus/Antimalware Programs",
+            "description": "Set antivirus/antimalware programs to conduct regular scans of IT network assets using up-to-date signatures.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Unauthorized Execution Prevention",
+            "description": "Disable macro scripts from Microsoft Office files transmitted via email and consider using Office Viewer software. Implement application allowlisting and software restriction policies to prevent unauthorized execution.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Monitor and Block Inbound Connections",
+            "description": "Monitor and/or block inbound connections from Tor exit nodes and other anonymization services. Deploy signatures to detect and/or block inbound connections from Cobalt Strike servers and other post-exploitation tools.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement robust network segmentation between IT and OT networks to limit adversaries' ability to pivot to the OT network. Define a demilitarized zone and organize OT assets into logical zones.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                14,
+                15,
+                16,
+                17
+            ],
+            "next_step": 18
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Identify Network Inter-dependencies",
+            "description": "Identify OT and IT network inter-dependencies and develop workarounds or manual controls to ensure ICS networks can be isolated if necessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Test Contingency Plans",
+            "description": "Regularly test contingency plans such as manual controls to ensure safety-critical functions can be maintained during a cyber incident.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Implement Regular Data Backup Procedures",
+            "description": "Implement regular data backup procedures on both IT and OT networks. Ensure backups are regularly tested, stored separately, and maintained offline.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Maintain Gold Images and Backup Hardware",
+            "description": "Maintain regularly updated 'gold images' of critical systems and retain backup hardware to rebuild systems if necessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                19,
+                20
+            ],
+            "next_step": 21
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Isolate Infected Systems",
+            "description": "Isolate the infected system by removing it from all networks and disabling networking capabilities. Ensure all shared and networked drives are disconnected.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Secure Backups",
+            "description": "Ensure that backup data is offline and secure. Scan backup data with an antivirus program to check for malware.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Report Ransomware Incidents",
+            "description": "Report ransomware incidents to your local FBI field office and consider using CISA's no-cost cyber hygiene services to assess and reduce exposure to threats.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Ransomware Mitigation Advisory",
+    "affected_products": null
+}

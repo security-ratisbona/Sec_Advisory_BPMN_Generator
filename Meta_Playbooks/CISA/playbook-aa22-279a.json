@@ -1,0 +1,547 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update and Patch Systems",
+            "description": "Update and patch systems as soon as possible, prioritizing vulnerabilities identified in this CSA and other known exploited vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Phishing-Resistant Multi-Factor Authentication",
+            "description": "Utilize phishing-resistant multi-factor authentication whenever possible.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Enforce Strong Password Policies",
+            "description": "Require all accounts with password logins to have strong, unique passwords, and change passwords immediately if there are indications that a password may have been compromised.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Block Obsolete or Unused Protocols",
+            "description": "Block obsolete or unused protocols at the network edge.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade or Replace End-of-Life Devices",
+            "description": "Upgrade or replace end-of-life devices to ensure security and compatibility.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Move Toward Zero Trust Security Model",
+            "description": "Adopt the Zero Trust security model to enhance security posture.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Enable Robust Logging and Monitor for Anomalies",
+            "description": "Enable robust logging of Internet-facing systems and monitor the logs for anomalous activity.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is being addressed?",
+            "cases": {
+                "CVE-2021-44228": 9,
+                "CVE-2019-11510": 12,
+                "CVE-2021-22205": 15,
+                "CVE-2022-26134": 18,
+                "CVE-2021-26855": 21,
+                "CVE-2020-5902": 24,
+                "CVE-2021-22005": 27,
+                "CVE-2019-19781": 30,
+                "CVE-2021-1497": 33,
+                "CVE-2021-20090": 36,
+                "CVE-2021-26084": 39,
+                "CVE-2021-36260": 42,
+                "CVE-2021-42237": 45,
+                "CVE-2022-1388": 48,
+                "CVE-2022-24112": 51,
+                "CVE-2021-40539": 54,
+                "CVE-2021-26857": 57,
+                "CVE-2021-26858": 60,
+                "CVE-2021-27065": 63,
+                "CVE-2021-41773": 66
+            },
+            "default": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Apply Patches for Apache Log4j2",
+            "description": "Apply patches provided by vendor and perform required system updates for Apache Log4j2.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Consult Vendor's Guidance for Log4j2",
+            "description": "See vendor’s Guidance For Preventing, Detecting, and Hunting for Exploitation of the Log4j 2 Vulnerability.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-44228",
+            "description": "Check the full list of vulnerable technologies and versions associated with CVE-2021-44228 at https://nvd.nist.gov/vuln/detail/CVE-2021-44228.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Apply Patches for Pulse Secure",
+            "description": "Apply patches provided by vendor and perform required system updates for Pulse Secure.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Use CISA’s 'Check Your Pulse' Tool",
+            "description": "Use CISA’s 'Check Your Pulse' Tool to detect vulnerabilities in Pulse Secure.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2019-11510",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2019-11510.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Update GitLab to Secure Versions",
+            "description": "Update GitLab to versions 12.10.3, 13.9.6, and 13.8.8 to mitigate CVE-2021-22205.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Investigate GitLab Logfiles",
+            "description": "Investigate logfiles and check GitLab Workhorse for signs of exploitation.",
+            "commands": null,
+            "next_step": 17
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-22205",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-22205.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Block Internet Traffic for Confluence",
+            "description": "Immediately block all Internet traffic to and from affected Confluence products and apply updates per vendor instructions.",
+            "commands": null,
+            "next_step": 19
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Ensure Secure Compliance Practices for Confluence",
+            "description": "Ensure Internet-facing servers are up-to-date and have secure compliance practices for Confluence.",
+            "commands": null,
+            "next_step": 20
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2022-26134",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2022-26134.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Apply Microsoft Security Update for Exchange",
+            "description": "Apply the appropriate Microsoft Security Update for Exchange Server to mitigate CVE-2021-26855.",
+            "commands": null,
+            "next_step": 22
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Restrict Untrusted Connections to Exchange",
+            "description": "Restrict untrusted connections to the Exchange server to prevent exploitation.",
+            "commands": null,
+            "next_step": 23
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Analyze Exchange Logs for Exploitation",
+            "description": "Analyze Exchange product logs for evidence of exploitation and scan for known webshells.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Apply F5 BIG-IP Update",
+            "description": "Apply the latest F5 BIG-IP update to mitigate CVE-2020-5902.",
+            "commands": null,
+            "next_step": 25
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Restrict Access to F5 Configuration Utility",
+            "description": "Restrict access to the F5 configuration utility to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 26
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Use F5’s CVE-2020-5902 IoC Detection Tool",
+            "description": "Use F5’s CVE-2020-5902 IoC Detection Tool to detect indicators of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Apply Vendor Updates for VMware",
+            "description": "Apply vendor updates to mitigate CVE-2021-22005 in VMware products.",
+            "commands": null,
+            "next_step": 28
+        },
+        {
+            "step_number": 28,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-22005",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-22005.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 30,
+            "type": "ACTION",
+            "title": "Apply Vendor Mitigations for Citrix",
+            "description": "Apply vendor mitigations to address CVE-2019-19781 in Citrix products.",
+            "commands": null,
+            "next_step": 31
+        },
+        {
+            "step_number": 31,
+            "type": "ACTION",
+            "title": "Use Citrix CTX269180 Verification Tool",
+            "description": "Use the Citrix CTX269180 - CVE-2019-19781 Verification Tool to verify mitigations.",
+            "commands": null,
+            "next_step": 32
+        },
+        {
+            "step_number": 32,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2019-19781",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2019-19781.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 33,
+            "type": "ACTION",
+            "title": "Apply Cisco Software Updates",
+            "description": "Apply Cisco software updates to mitigate CVE-2021-1497.",
+            "commands": null,
+            "next_step": 34
+        },
+        {
+            "step_number": 34,
+            "type": "ACTION",
+            "title": "Use Cisco Snort Rules",
+            "description": "Look at the Snort Rules provided by Cisco to detect exploitation attempts.",
+            "commands": null,
+            "next_step": 35
+        },
+        {
+            "step_number": 35,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-1497",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-1497.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 36,
+            "type": "ACTION",
+            "title": "Update Buffalo Firmware",
+            "description": "Update firmware to the latest available version to mitigate CVE-2021-20090.",
+            "commands": null,
+            "next_step": 37
+        },
+        {
+            "step_number": 37,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-20090",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-20090.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 39,
+            "type": "ACTION",
+            "title": "Update Confluence to Secure Versions",
+            "description": "Update Confluence to versions 6.13.23, 7.4.11, 7.11.6, 7.12.5, and 7.13.0 to mitigate CVE-2021-26084.",
+            "commands": null,
+            "next_step": 40
+        },
+        {
+            "step_number": 40,
+            "type": "ACTION",
+            "title": "Use Intrusion Detection Systems for Confluence",
+            "description": "Use Intrusion Detection Systems (IDS) to monitor for exploitation attempts on Confluence.",
+            "commands": null,
+            "next_step": 41
+        },
+        {
+            "step_number": 41,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-26084",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-26084.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 42,
+            "type": "ACTION",
+            "title": "Apply Latest Firmware Updates for Hikvision",
+            "description": "Apply the latest firmware updates to mitigate CVE-2021-36260 in Hikvision products.",
+            "commands": null,
+            "next_step": 43
+        },
+        {
+            "step_number": 43,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-36260",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-36260.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 45,
+            "type": "ACTION",
+            "title": "Update Sitecore to Latest Version",
+            "description": "Update Sitecore to the latest version to mitigate CVE-2021-42237.",
+            "commands": null,
+            "next_step": 46
+        },
+        {
+            "step_number": 46,
+            "type": "ACTION",
+            "title": "Delete Report.ashx File from Sitecore",
+            "description": "Delete the Report.ashx file from /sitecore/shell/ClientBin/Reporting/Report.ashx to mitigate CVE-2021-42237.",
+            "commands": null,
+            "next_step": 47
+        },
+        {
+            "step_number": 47,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-42237",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-42237.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 48,
+            "type": "ACTION",
+            "title": "Block iControl REST Access for F5",
+            "description": "Block iControl REST access through the self IP address and management interface to mitigate CVE-2022-1388.",
+            "commands": null,
+            "next_step": 49
+        },
+        {
+            "step_number": 49,
+            "type": "ACTION",
+            "title": "Modify BIG-IP httpd Configuration",
+            "description": "Modify the BIG-IP httpd configuration to enhance security against CVE-2022-1388.",
+            "commands": null,
+            "next_step": 50
+        },
+        {
+            "step_number": 50,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2022-1388",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2022-1388.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 51,
+            "type": "ACTION",
+            "title": "Comment Out Batch-Requests in Apache APISIX",
+            "description": "In affected versions of Apache APISIX, comment out batch-requests in the conf/config.yaml and conf/config-default.yaml files and restart Apache APISIX to mitigate CVE-2022-24112.",
+            "commands": null,
+            "next_step": 52
+        },
+        {
+            "step_number": 52,
+            "type": "ACTION",
+            "title": "Update Apache APISIX to Secure Versions",
+            "description": "Update Apache APISIX to versions 2.10.4 or 2.12.1 to mitigate CVE-2022-24112.",
+            "commands": null,
+            "next_step": 53
+        },
+        {
+            "step_number": 53,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2022-24112",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2022-24112.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 54,
+            "type": "ACTION",
+            "title": "Upgrade Zoho ManageEngine to Latest Version",
+            "description": "Upgrade Zoho ManageEngine ADSelfService Plus to the latest version to mitigate CVE-2021-40539.",
+            "commands": null,
+            "next_step": 55
+        },
+        {
+            "step_number": 55,
+            "type": "ACTION",
+            "title": "Run ManageEngine Detection Tool",
+            "description": "Run ManageEngine’s detection tool and check for specific files and logs to detect CVE-2021-40539.",
+            "commands": null,
+            "next_step": 56
+        },
+        {
+            "step_number": 56,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-40539",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-40539.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 57,
+            "type": "ACTION",
+            "title": "Update Microsoft Exchange to Latest Version",
+            "description": "Update Microsoft Exchange Server to the latest version to mitigate CVE-2021-26857.",
+            "commands": null,
+            "next_step": 58
+        },
+        {
+            "step_number": 58,
+            "type": "ACTION",
+            "title": "Use Microsoft Exchange On-Premises Mitigation Tool",
+            "description": "Use Microsoft Exchange On-Premises Mitigation Tool to mitigate CVE-2021-26857.",
+            "commands": null,
+            "next_step": 59
+        },
+        {
+            "step_number": 59,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-26857",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-26857.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 60,
+            "type": "ACTION",
+            "title": "Update Microsoft Exchange to Latest Version",
+            "description": "Update Microsoft Exchange Server to the latest version to mitigate CVE-2021-26858.",
+            "commands": null,
+            "next_step": 61
+        },
+        {
+            "step_number": 61,
+            "type": "ACTION",
+            "title": "Use Microsoft Exchange On-Premises Mitigation Tool",
+            "description": "Use Microsoft Exchange On-Premises Mitigation Tool to mitigate CVE-2021-26858.",
+            "commands": null,
+            "next_step": 62
+        },
+        {
+            "step_number": 62,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-26858",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-26858.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 63,
+            "type": "ACTION",
+            "title": "Update Microsoft Exchange to Latest Version",
+            "description": "Update Microsoft Exchange Server to the latest version to mitigate CVE-2021-27065.",
+            "commands": null,
+            "next_step": 64
+        },
+        {
+            "step_number": 64,
+            "type": "ACTION",
+            "title": "Use Microsoft Exchange On-Premises Mitigation Tool",
+            "description": "Use Microsoft Exchange On-Premises Mitigation Tool to mitigate CVE-2021-27065.",
+            "commands": null,
+            "next_step": 65
+        },
+        {
+            "step_number": 65,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-27065",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-27065.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 66,
+            "type": "ACTION",
+            "title": "Apply Update for Apache HTTP Server",
+            "description": "Apply update or patch to mitigate CVE-2021-41773 in Apache HTTP Server.",
+            "commands": null,
+            "next_step": 67
+        },
+        {
+            "step_number": 67,
+            "type": "ACTION",
+            "title": "Use Commercial Scanners for CVE-2021-41773",
+            "description": "Use commercially available scanners to detect CVE-2021-41773.",
+            "commands": null,
+            "next_step": 68
+        },
+        {
+            "step_number": 68,
+            "type": "ACTION",
+            "title": "Check Vulnerable Technologies for CVE-2021-41773",
+            "description": "Check the list of vulnerable technologies and versions for CVE-2021-41773.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "General Cybersecurity Advisory",
+    "affected_products": null
+}

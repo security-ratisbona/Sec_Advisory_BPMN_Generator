@@ -1,0 +1,173 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization or a network defender?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Secure Remote Access Tools",
+            "description": "Implement application controls to manage and control execution of software, including allowlisting remote access programs. Apply recommendations in CISA's joint Guide to Securing Remote Access Software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Limit Use of RDP and Remote Desktop Services",
+            "description": "Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts, apply phishing-resistant MFA, log RDP login attempts, and disable command-line and scripting activities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict and Update PowerShell Usage",
+            "description": "Restrict the use of PowerShell using Group Policy, update to the latest version, enable enhanced logging, and ensure logs have a retention period of at least 180 days.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Configure Windows Registry for PsExec Operations",
+            "description": "Require User Account Control (UAC) approval for any PsExec operations requiring administrator privileges to reduce the risk of lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Disable File and Printer Sharing Services",
+            "description": "Disable File and Printer sharing services. If required, use strong passwords or Active Directory authentication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Maintain and retain multiple copies of sensitive data in a physically separate, segmented, and secure location. Follow the 3-2-1 backup strategy.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Require Strong Password Policies",
+            "description": "Require all accounts with password logins to comply with NIST's standards, use longer passwords, store passwords in hashed format, and avoid reusing passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Require Administrator Credentials for Software Installation",
+            "description": "Require administrator credentials to install software and implement phishing-resistant multifactor authentication for all services.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Keep Systems Up to Date",
+            "description": "Keep all operating systems, software, and firmware up to date. Patch vulnerable systems within 24 to 48 hours of vulnerability disclosure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Detect and Investigate Abnormal Activity",
+            "description": "Identify, detect, and investigate abnormal activity with a network monitoring tool. Implement EDR tools for detecting lateral connections.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Enable Real-Time Antivirus Detection",
+            "description": "Install, regularly update, and enable real-time detection for antivirus software on all hosts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Disable Unused Ports",
+            "description": "Disable unused ports to reduce potential attack vectors.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Add Email Banners for External Emails",
+            "description": "Consider adding an email banner to emails received from outside your organization.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Ensure Backup Data is Secure",
+            "description": "Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Regularly Maintain Backup and Restoration",
+            "description": "Maintain offline backups of data, and regularly maintain backup and restoration (daily or weekly at minimum).",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "AvosLocker Ransomware Mitigation",
+    "affected_products": null
+}

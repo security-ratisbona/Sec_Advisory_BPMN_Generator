@@ -1,0 +1,147 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of critical infrastructure or financial sector in blockchain and cryptocurrency?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Defense-in-Depth Security Strategy",
+            "description": "Implement a defense-in-depth security strategy by applying security principles such as least access models and defense-in-depth to user and application privileges.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Use network segmentation to separate networks into zones based on roles and requirements to prevent lateral movement and limit the attack surface.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Patch Management Program",
+            "description": "Establish a timely vulnerability and patch management program to mitigate exposure to critical CVEs, prioritizing patching of internet-facing devices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Enforce Credential Requirements and MFA",
+            "description": "Ensure users change passwords regularly and implement multifactor authentication (MFA) to reduce the risk of credential theft.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Educate Users on Social Engineering",
+            "description": "Train users to identify social engineering techniques and only open links and attachments from trusted senders.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Email and Domain Mitigations",
+            "description": "Maintain awareness of themed emails and have a robust domain security solution to monitor or block newly registered domains (NRDs).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Disable HTML in Emails and Scan Attachments",
+            "description": "Disable HTML in emails and scan email attachments to detect potentially malicious payloads.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Endpoint Protection",
+            "description": "Ensure mobile devices have installed security suites to detect and mitigate malware.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Enforce Application Security with Allowlisting",
+            "description": "Use application allowlisting to monitor programs and only allow those on the approved allowlist to execute.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Disable Macros in Office Products",
+            "description": "Configure office products to disable macros that originate from outside the organization, using Group Policy Administrative Templates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Verify Third-Party Downloads",
+            "description": "Ensure file downloads are from reputable sources and not from third-party vendors to prevent trojanized applications.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Create an Incident Response Plan",
+            "description": "Develop a plan to respond to cyber intrusions, including reporting incidents to the FBI and CISA.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Scan Hyperlinks in Emails",
+            "description": "Scan hyperlinks in emails and open them with precautionary measures to reduce the likelihood of clicking on a malicious link.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Configure Macro Security Level in Productivity Software",
+            "description": "Set the Macro Security Level in productivity software like LibreOffice and OpenOffice to block unauthorized macros.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for North Korean State-Sponsored Cyber Threats",
+    "affected_products": null
+}

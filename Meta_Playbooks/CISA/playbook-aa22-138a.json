@@ -1,0 +1,171 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization using F5 BIG-IP versions 12.1.x or 11.6.x?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade F5 BIG-IP Software",
+            "description": "Upgrade F5 BIG-IP software to supported versions to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade F5 BIG-IP Software to Fixed Versions",
+            "description": "Upgrade F5 BIG-IP software to fixed versions as recommended by CISA and MS-ISAC.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the organization unable to immediately patch?",
+            "next_step": 5,
+            "else_step": 9
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Block iControl REST Access Through Self IP Address",
+            "description": "Implement F5's temporary workaround to block iControl REST access through the self IP address.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Block iControl REST Access Through Management Interface",
+            "description": "Implement F5's temporary workaround to block iControl REST access through the management interface.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Modify BIG-IP httpd Configuration",
+            "description": "Modify the BIG-IP httpd configuration as per F5's temporary workaround guidelines.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Maintain and Test Incident Response Plan",
+            "description": "Ensure the organization has a maintained and tested incident response plan to reduce risk of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Implement Vulnerability Program",
+            "description": "Ensure the organization has a vulnerability program prioritizing patch management and vulnerability scanning.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Configure and Secure Internet-Facing Network Devices",
+            "description": "Properly configure and secure internet-facing network devices to reduce risk of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Do Not Expose Management Interfaces to the Internet",
+            "description": "Ensure management interfaces are not exposed to the internet to reduce risk of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Disable Unused Network Ports and Protocols",
+            "description": "Disable unused or unnecessary network ports and protocols to reduce risk of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Remove Unused Network Services and Devices",
+            "description": "Disable or remove unused network services and devices to reduce risk of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Adopt Zero-Trust Principles and Architecture",
+            "description": "Adopt zero-trust principles and architecture, including micro-segmenting networks and functions to limit or block lateral movements.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Enforce Multifactor Authentication (MFA)",
+            "description": "Enforce MFA for all users and VPN connections to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Restrict Access to Trusted Devices and Users",
+            "description": "Restrict access to trusted devices and users on the networks to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Utilize CISA's Cyber Hygiene Services",
+            "description": "Utilize CISA’s Cyber Hygiene Services, which are free to all SLTT organizations and public and private sector critical infrastructure organizations.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "F5 BIG-IP Vulnerability Mitigation",
+    "affected_products": [
+        "F5 BIG-IP versions 12.1.x",
+        "F5 BIG-IP versions 11.6.x"
+    ]
+}

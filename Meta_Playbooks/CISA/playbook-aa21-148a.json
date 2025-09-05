@@ -1,0 +1,86 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Implement Multi-Factor Authentication (MFA)",
+            "description": "Enable MFA for every account, including privileged accounts, remote access systems, SaaS solutions, and corporate communications platforms.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Keep Software Up to Date",
+            "description": "Update all software as soon as patches are available. Prioritize patches for CVEs known to be exploited if immediate updates are not possible.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Endpoint Detection and Response (EDR) Tools",
+            "description": "Deploy EDR tools to gain visibility into the security status of endpoints and defend against threat actors.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is Microsoft Defender for Endpoint or Microsoft 365 Defense in use?",
+            "next_step": 5,
+            "else_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Use Attack Surface Reduction Rules",
+            "description": "Refer to Microsoft guidelines to use attack surface reduction rules to prevent malware infection.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Centralized Log Management",
+            "description": "Forward logs from local hosts to a centralized log management server (SIEM tool) and ensure logs are searchable and correlated from multiple sources.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Deploy Signatures to Detect/Block Cobalt Strike",
+            "description": "Deploy signatures to detect and/or block inbound connections from Cobalt Strike servers and other post-exploitation tools.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Prevent Unauthorized Execution of Macro Scripts",
+            "description": "Disable macro scripts from Microsoft Office files transmitted via email and consider using Office Viewer software.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Configure and Maintain User and Administrative Accounts",
+            "description": "Use strong account management policies, dedicated workstations for administrative accounts, limit access, use strong passwords, and manage default and unused accounts.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement User Training Program for Spearphishing",
+            "description": "Conduct user training and simulated attacks to discourage users from visiting malicious websites or opening malicious attachments.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Critical Infrastructure",
+    "affected_products": null
+}

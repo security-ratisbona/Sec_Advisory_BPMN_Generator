@@ -1,0 +1,174 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization with internet-facing PLCs?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade Software and Firmware",
+            "description": "Upgrade engineering workstations to 9.9.00 VisiLogic software and upgrade the firmware of all Vision series PLC/HMI devices to the newest firmware for that model, ensuring a strong password is used.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Replace Default Passwords",
+            "description": "Replace all default passwords on PLCs and HMIs with a strong password. Ensure the Unitronics PLC default password is not in use.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Security-related Ladder Logic Elements",
+            "description": "Apply new security-related ladder logic elements to the project files on these devices, including TCP/IP passwords, upload project files passwords, INFO mode passwords, and SD card passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disconnect PLC from Public Internet",
+            "description": "Disconnect the PLC from the public-facing internet. Either disable the capability for remotely programming PLCs or require a strong password for remotely programming the PLC. Change the default port, default PLC device name, and place behind a firewall that can detect attempted remote brute-forcing for the device password.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Multifactor Authentication",
+            "description": "Implement multifactor authentication for access to the OT network whenever applicable. If remote access is required, implement a network proxy, gateway, firewall, and/or VPN in front of the PLC to control network access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement network segmentation through the use of network proxies, gateways, and firewalls and/or through the use of the Purdue Model to establish multiple levels and zones.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Adopt Asset Management Processes",
+            "description": "Adopt mature asset management processes and understand which assets are being exposed, why they are being exposed, and their support and patch status.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Inventory Internet Accessible Devices",
+            "description": "Periodically inventory internet accessible devices to identify any unexpected devices connected to the network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Configure Firewalls",
+            "description": "Configure external and internal firewalls to block traffic using common ports associated with network protocols that are unnecessary for the particular network segment.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Authenticate Access to Field Controllers",
+            "description": "Authenticate all access to field controllers before authorizing access to, or modification of, a device’s state, logic, or programs. Disable any unused authentication methods, logic, or features, such as default authentication keys.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Implement Device Management Systems",
+            "description": "Implement device management systems that can authenticate all network messages to prevent unauthorized system changes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Use Host-based Allowlists",
+            "description": "Use host-based allowlists to prevent devices from accepting connections from unauthorized systems and ensure they can only connect with known workstations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Implement Network Intrusion Detection and Prevention Systems",
+            "description": "Implement network intrusion detection and prevention systems whenever possible to identify malicious activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Retain Cold-standby or Replacement Hardware",
+            "description": "Retain cold-standby or replacement hardware of similar models to ensure continued operations of critical functions if the primary system is compromised or unavailable.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Create and Test Strong Backups",
+            "description": "Create and test strong backups of the logic and configurations of PLCs to enable fast recovery.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Monitor Network Traffic and Asset Management Systems",
+            "description": "Monitor the content of network traffic for unusual logins to internet-connected devices or unexpected protocols to/from the internet. Monitor asset management systems for device configuration changes.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "IRGC-affiliated activity against Unitronics PLCs",
+    "affected_products": [
+        "Unitronics Vision Series PLCs"
+    ]
+}

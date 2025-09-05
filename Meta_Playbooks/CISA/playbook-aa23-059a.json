@@ -1,0 +1,90 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Provide Regular User Training and Exercises",
+            "description": "Conduct regular training and exercises for users, focusing on phishing email awareness to prevent initial access intrusion events.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Enforce Phishing-Resistant MFA",
+            "description": "Implement phishing-resistant multi-factor authentication (MFA) to enhance security against unauthorized access.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Place Domain Admin Accounts in Protected Users Group",
+            "description": "Prevent caching of password hashes locally by placing domain admin accounts in the protected users group, enforcing Kerberos AES authentication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Credential Guard for Windows 10 and Server 2016",
+            "description": "Enable Credential Guard to protect against credential theft. Refer to Microsoft documentation for managing Windows Defender Credential Guard.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Enable Protected Process Light for LSA on Windows Server 2012R2",
+            "description": "Enable Protected Process Light for Local Security Authority (LSA) to enhance security on Windows Server 2012R2.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Refrain from Storing Plaintext Credentials in Scripts",
+            "description": "Avoid storing plaintext credentials in scripts to prevent unauthorized access and privilege escalation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Upgrade to Windows Server 2019 or Greater and Windows 10 or Greater",
+            "description": "Upgrade to Windows Server 2019 or greater and Windows 10 or greater to benefit from enhanced security features.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Zero Trust Network Architecture",
+            "description": "Prioritize implementing a Zero Trust network architecture that leverages secure cloud services, modern identity management, and centralized cybersecurity data access.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Engage Executive Leadership on Security Risks",
+            "description": "Encourage IT leadership to discuss with executive leadership the business risks of not implementing critical security controls such as MFA.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cross-Sector Cybersecurity Performance Goals",
+    "affected_products": null
+}

@@ -1,0 +1,64 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade PaperCut",
+            "description": "Upgrade PaperCut to the latest version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is it possible to immediately patch PaperCut?",
+            "next_step": 5,
+            "else_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which network control option to implement?",
+            "cases": {
+                "External controls": 4,
+                "Internal and external controls": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement External Network Controls",
+            "description": "Block all inbound traffic from external IP addresses to the web management portal (port 9191 and 9192 by default).",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Internal and External Network Controls",
+            "description": "Block all traffic inbound to the web management portal. Note: The server cannot be managed remotely after this step.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Mandate Phishing-Resistant MFA",
+            "description": "Mandate phishing-resistant multifactor authentication (MFA) for all staff and for all services.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Comprehensive Information Security Program",
+            "description": "Implement a comprehensive information security program based on a recognized framework, such as the NIST Cybersecurity Framework (CSF).",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "PaperCut MF/NG vulnerability bulletin (March 2023)",
+    "affected_products": null
+}

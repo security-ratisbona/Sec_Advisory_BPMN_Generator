@@ -1,0 +1,48 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a federal, SLTT government, CI, DIB, or private industry organization?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Patch Systems and Equipment",
+            "description": "Patch systems and equipment promptly and diligently, focusing on critical and high vulnerabilities that allow for remote code execution or denial-of-service on externally facing equipment and CVEs known to be exploited by Chinese state-sponsored cyber actors. Consider implementing a patch management program for timely and thorough patching.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enhance Monitoring",
+            "description": "Enhance monitoring of network traffic, email, and endpoint systems. Review network signatures and indicators for focused activities, monitor for new phishing themes, and adjust email rules accordingly. Ensure log information is aggregated and correlated to enable maximum detection capabilities, focusing on monitoring for account misuse. Monitor common ports and protocols for C2 activity. Use SSL/TLS inspection to see contents of encrypted sessions for network-based indicators of malware communication protocols.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Protection Capabilities",
+            "description": "Implement anti-virus software and other endpoint protection capabilities to automatically detect and prevent malicious files from executing. Use a network intrusion detection and prevention system to identify and prevent adversarial malware and limit nefarious data transfers. Use a domain reputation service to detect suspicious or malicious domains. Use strong credentials for service accounts and multi-factor authentication (MFA) for remote access, being aware of MFA interception techniques.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Federal and SLTT Government, CI, DIB, and Private Industry Organizations",
+    "affected_products": null
+}

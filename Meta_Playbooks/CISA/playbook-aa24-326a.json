@@ -1,0 +1,124 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Are you a Network Defender?",
+            "next_step": 2,
+            "else_step": 8
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Provide Regular Training on Phishing",
+            "description": "Conduct regular training and exercises for users, specifically related to phishing emails, as phishing accounts for the majority of initial access intrusion events.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enforce Phishing-Resistant MFA",
+            "description": "Implement phishing-resistant multi-factor authentication (MFA) to the greatest extent possible to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Reduce Risk of Credential Compromise",
+            "description": "Place domain admin accounts in the protected users group to prevent caching of password hashes locally and force Kerberos AES authentication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade Operating Systems",
+            "description": "Upgrade to Windows Server 2019 or greater and Windows 10 or greater to benefit from enhanced security features not included in older operating systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Zero Trust Network Architecture",
+            "description": "Prioritize implementing a modern Zero Trust network architecture that leverages secure cloud services, upgrades applications and infrastructure, centralizes cybersecurity data, and invests in technology and personnel.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "CONDITION",
+            "condition": "Are you a Software Manufacturer?",
+            "next_step": 9,
+            "else_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Embed Security into Product Architecture",
+            "description": "Integrate security throughout the entire software development lifecycle (SDLC) to enhance product security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Eliminate Default Passwords",
+            "description": "Ensure software does not come with default passwords and require administrators to set a strong password during installation and configuration.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Design for Compromise Resilience",
+            "description": "Design products so that the compromise of a single security control does not result in the compromise of the entire system by narrowly provisioning user privileges and employing ACLs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Mandate MFA for Privileged Users",
+            "description": "Mandate phishing-resistant MFA for privileged users and make it a default feature rather than opt-in.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Reduce Hardening Guide Size",
+            "description": "Focus on making systems secure by default and implement routine nudges built into the product to guide administrators.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cross-Sector Cybersecurity Performance Goals",
+    "affected_products": null
+}

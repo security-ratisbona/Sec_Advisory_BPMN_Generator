@@ -1,0 +1,106 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Compromise via SolarWinds Orion Products",
+            "description": "Check if the organization has been compromised through SolarWinds Orion products or other threat actor TTPs.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is there a compromise identified via SolarWinds Orion products?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Use Sparrow for Azure/M365 Environment Investigation",
+            "description": "Use Sparrow to detect possible compromised accounts and applications in the Azure/M365 environment, focusing on user and application activity endemic to identity- and authentication-based attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Use Hawk for O365 and Azure Data Gathering",
+            "description": "Use Hawk to gather data from O365 and Azure for security investigations, including IP addresses and sign-in data.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use CrowdStrike's Azure Reporting Tool",
+            "description": "Use CrowdStrike's Azure Reporting Tool to analyze permissions in Azure AD and M365 environment, focusing on tenant's Azure AD permissions and Exchange Online configuration settings.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Review Microsoft Graph API Permissions",
+            "description": "Check Microsoft Graph API permissions granted to service principals and applications in M365/Azure AD using Sparrow.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Enable PowerShell Logging",
+            "description": "Enable PowerShell logging and evaluate PowerShell activity in the environment not used for traditional or expected purposes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Investigate High-Value Administrative Accounts",
+            "description": "Investigate high-value administrative accounts to detect anomalous or unusual activity, focusing on Global Admins.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Audit Service Principal and Application Credentials",
+            "description": "Audit the creation and use of service principal and application credentials. Look for unusual application usage and unexpected trust relationships added to Azure AD.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Review New Token Validation Time Periods",
+            "description": "Review new token validation time periods with high values and investigate whether it was a legitimate change or an attempt to gain persistence by a threat actor.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Monitor Changes in Application Credentials",
+            "description": "Monitor changes in application and service principal credentials, focusing on excessive permissions granted, including Exchange Online, Microsoft Graph, and Azure AD Graph.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SolarWinds Orion Compromise",
+    "affected_products": null
+}

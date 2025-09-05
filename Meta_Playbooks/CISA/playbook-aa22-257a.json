@@ -1,0 +1,163 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are backup and restoration policies needed?",
+            "next_step": 7,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is patching and updating systems needed?",
+            "next_step": 8,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is blocklist and allowlist evaluation needed?",
+            "next_step": 9,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is network segmentation needed?",
+            "next_step": 10,
+            "else_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is securing user accounts needed?",
+            "next_step": 11,
+            "else_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement and Enforce Backup and Restoration Policies",
+            "description": "Maintain offline backups of data, regularly test backup and restoration, ensure all backup data is encrypted and immutable, activate BitLocker, and securely back up BitLocker keys.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Patch and Update Systems",
+            "description": "Install updates/patch operating systems, software, and firmware as soon as updates/patches are released. Regularly check software updates and end-of-life notifications. Use a centralized patch management system. Immediately patch software affected by specified CVEs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Evaluate and Update Blocklists and Allowlists",
+            "description": "Regularly evaluate and update blocklists and allowlists. Add key artifact files used by FortiOS to execution blocklist if FortiOS is not used.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement network segmentation to restrict a malicious threat actor’s lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Secure User Accounts",
+            "description": "Audit user accounts with administrative privileges and configure access controls under the principles of least privilege and separation of duties. Require administrator credentials to install software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Implement Multifactor Authentication",
+            "description": "Use multifactor authentication where possible, particularly for webmail, VPNs, accounts that access critical systems, and privileged accounts that manage backups.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Use Strong Passwords",
+            "description": "Require all accounts with password logins to have strong, unique passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Secure and Monitor RDP and Other Potentially Risky Services",
+            "description": "Restrict RDP to limit access to resources over internal networks. Use a VPN for external RDP access. Disable unused remote access/RDP ports. Monitor remote access/RDP logs and enforce account lockouts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Use Antivirus Programs",
+            "description": "Install and regularly update antivirus and anti-malware software on all hosts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Secure Remote Access",
+            "description": "Only use secure networks. Consider installing and using a VPN for remote access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "CONDITION",
+            "condition": "Are you a U.S. federal, state, local, tribal, or territorial government or critical infrastructure organization?",
+            "next_step": 19,
+            "else_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Implement CISA Cyber Hygiene Services",
+            "description": "Implement free CISA Cyber Hygiene Services Vulnerability Scanning to enable continuous scans of public, static IPs for accessible services and vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cyber Threat Mitigations",
+    "affected_products": null
+}

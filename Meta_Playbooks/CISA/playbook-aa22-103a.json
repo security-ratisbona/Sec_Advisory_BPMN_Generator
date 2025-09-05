@@ -1,0 +1,165 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Does the organization have ICS/SCADA devices?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Isolate ICS/SCADA Systems",
+            "description": "Isolate ICS/SCADA systems and networks from corporate and internet networks using strong perimeter controls, and limit any communications entering or leaving ICS/SCADA perimeters.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enforce Multifactor Authentication",
+            "description": "Enforce multifactor authentication for all remote access to ICS networks and devices whenever possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Develop and Exercise Cyber Incident Response Plan",
+            "description": "Have a cyber incident response plan, and exercise it regularly with stakeholders in IT, cybersecurity, and operations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Change ICS/SCADA Passwords Regularly",
+            "description": "Change all passwords to ICS/SCADA devices and systems on a consistent schedule, especially all default passwords, to device-unique strong passwords to mitigate password brute force attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Configure OPC UA Security",
+            "description": "Ensure OPC UA security is correctly configured with application authentication enabled and explicit trust lists.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Secure OPC UA Certificate Private Keys",
+            "description": "Ensure the OPC UA certificate private keys and user passwords are stored securely.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Maintain known-good offline backups for faster recovery upon a disruptive attack, and conduct hashing and integrity checks on firmware and controller configuration files to ensure validity of those backups.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Limit Network Connections",
+            "description": "Limit ICS/SCADA systems’ network connections to only specifically allowed management and engineering workstations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Protect Management Systems",
+            "description": "Robustly protect management systems by configuring Device Guard, Credential Guard, and Hypervisor Code Integrity (HVCI).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Install EDR Solutions",
+            "description": "Install Endpoint Detection and Response (EDR) solutions on these subnets and ensure strong anti-virus file reputation settings are configured.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Implement Log Collection and Retention",
+            "description": "Implement robust log collection and retention from ICS/SCADA systems and management subnets.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Leverage Continuous OT Monitoring",
+            "description": "Leverage a continuous OT monitoring solution to alert on malicious indicators and behaviors, watching internal systems and communications for known hostile actions and lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Use ICSNPP for Enhanced Network Visibility",
+            "description": "For enhanced network visibility to potentially identify abnormal traffic, consider using CISA’s open-source Industrial Control Systems Network Protocol Parsers (ICSNPP).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Enforce Principle of Least Privilege",
+            "description": "Ensure all applications are only installed when necessary for operation. Enforce principle of least privilege. Only use admin accounts when required for tasks, such as installing software updates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Investigate Denial of Service Symptoms",
+            "description": "Investigate symptoms of a denial of service or connection severing, which exhibit as delays in communications processing, loss of function requiring a reboot, and delayed actions to operator comments as signs of potential malicious activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Monitor for Unusual Drivers",
+            "description": "Monitor systems for loading of unusual drivers, especially for ASRock driver if no ASRock driver is normally used on the system.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "ICS/SCADA Device Mitigations",
+    "affected_products": null
+}

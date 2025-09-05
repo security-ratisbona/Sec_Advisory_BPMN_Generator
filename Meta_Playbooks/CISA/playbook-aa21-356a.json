@@ -1,0 +1,285 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Are you a vendor?",
+            "next_step": 2,
+            "else_step": 10
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Identify and Update Affected Products",
+            "description": "Immediately identify, mitigate, and update affected products that use Log4j to the latest patched version.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Java version is in use?",
+            "cases": {
+                "Java 8 or later": 4,
+                "Java 7": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Log4j for Java 8 or Later",
+            "description": "Upgrade to Log4j version 2.17.0 or newer for environments using Java 8 or later.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade Log4j for Java 7",
+            "description": "Upgrade to Log4j version 2.12.3 for environments using Java 7. Note: Java 7 is end of life, consider upgrading to Java 8.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Inform End Users",
+            "description": "Inform end users of products that contain these vulnerabilities and strongly urge them to prioritize software updates.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Ensure Wide Messaging on Software Updates",
+            "description": "Take steps to ensure messaging on software updates reaches the widest possible audience, avoiding paywalls.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Consult CISA's GitHub for Patch Information",
+            "description": "Consult CISA's GitHub page and repository for patch information for products known to be affected by Log4Shell.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Notify ICS Vendors",
+            "description": "Notify ICS vendors that may be affected and ask them to confirm any assets affected by Log4Shell and to apply available mitigations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "CONDITION",
+            "condition": "Do you have IT and Cloud Assets?",
+            "next_step": 11,
+            "else_step": 36
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Identify Vulnerable Assets",
+            "description": "Inventory all assets that make use of the Log4j Java library, including cloud assets, and ensure the inventory includes software versions, timestamps, user accounts, and asset location.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Use Tools to Identify Vulnerable Assets",
+            "description": "Use CISA's GitHub repository and CERT/CC's CVE-2021-44228_scanner to identify assets vulnerable to Log4Shell.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Isolate Known and Suspected Vulnerable Assets",
+            "description": "Treat known and suspected vulnerable assets as compromised and isolate them using methods like network removal, jail VLAN, or firewall restrictions.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Patch Log4j and Affected Products",
+            "description": "Patch Log4j and other affected products to the latest version. If unable to patch immediately, apply appropriate workarounds.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Remove JndiLookup Class",
+            "description": "Remove the JndiLookup.class from the class path as a mitigation measure.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Apply Hot Patch",
+            "description": "Apply a hot patch using tools like NCC Group's log4j-jndi-be-gone or Amazon AWS's hotpatch-for-apache-log4j2.",
+            "commands": null,
+            "next_step": 17
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Keep Inventory of Vulnerable Assets",
+            "description": "Maintain an inventory of known and suspected vulnerable assets and track patching activities.",
+            "commands": null,
+            "next_step": 18
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Verify Mitigation Success",
+            "description": "Verify that mitigation has worked by scanning the patched/mitigated asset with multiple tools and methods.",
+            "commands": null,
+            "next_step": 19
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Initiate Hunt and Incident Response Procedures",
+            "description": "Assume assets using Log4j may have been compromised and initiate hunt procedures to detect signs of exploitation and compromise.",
+            "commands": null,
+            "next_step": 20
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Inspect and Monitor Accounts",
+            "description": "Inspect and monitor accounts across your enterprise that exist on or connect to assets that use Log4j.",
+            "commands": null,
+            "next_step": 21
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Inspect Configuration Changes",
+            "description": "Inspect changes to configurations made since December 1, 2021, and verify they were intended, especially on assets that use Log4j.",
+            "commands": null,
+            "next_step": 22
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Use Detection Resources",
+            "description": "Use resources like Cisco Talos blog, Curated Intelligence GitHub page, and EmergingThreat.net signatures to detect possible exploitation or compromise.",
+            "commands": null,
+            "next_step": 23
+        },
+        {
+            "step_number": 23,
+            "type": "CONDITION",
+            "condition": "Is compromise detected?",
+            "next_step": 24,
+            "else_step": 28
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Initiate Incident Response Procedures",
+            "description": "Initiate incident response procedures and consider reporting compromises to applicable cybersecurity authorities.",
+            "commands": null,
+            "next_step": 25
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Report Compromises",
+            "description": "Report compromises to CISA, FBI, or other relevant cybersecurity authorities based on your location.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 28,
+            "type": "ACTION",
+            "title": "Evaluate and Apply Other Mitigations",
+            "description": "Remain alert to changes from vendors and apply updates to assets when notified by a vendor that their product has a patch for this vulnerability.",
+            "commands": null,
+            "next_step": 29
+        },
+        {
+            "step_number": 29,
+            "type": "ACTION",
+            "title": "Monitor Log4J Assets Closely",
+            "description": "Continually use signatures and indicators of compromise to monitor Log4J assets closely.",
+            "commands": null,
+            "next_step": 30
+        },
+        {
+            "step_number": 30,
+            "type": "ACTION",
+            "title": "Monitor Apache Log4j Security Vulnerabilities Page",
+            "description": "Continue to monitor the Apache Log4j Security Vulnerabilities webpage for new updates.",
+            "commands": null,
+            "next_step": 31
+        },
+        {
+            "step_number": 31,
+            "type": "ACTION",
+            "title": "Block Specific Outbound Network Traffic",
+            "description": "Block specific outbound TCP and UDP network traffic, such as LDAP, RMI, and DNS, to mitigate risks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 36,
+            "type": "CONDITION",
+            "condition": "Do you have OT/ICS Assets?",
+            "next_step": 37,
+            "else_step": null
+        },
+        {
+            "step_number": 37,
+            "type": "ACTION",
+            "title": "Review Operational Architecture",
+            "description": "Review operational architecture and enumerate the vulnerability status against current product alerts and advisories.",
+            "commands": null,
+            "next_step": 38
+        },
+        {
+            "step_number": 38,
+            "type": "ACTION",
+            "title": "Implement Steps to Identify and Isolate Vulnerable Assets",
+            "description": "Implement steps to identify and isolate vulnerable assets in the OT/ICS environment.",
+            "commands": null,
+            "next_step": 39
+        },
+        {
+            "step_number": 39,
+            "type": "ACTION",
+            "title": "Apply Hotfixes or Patches",
+            "description": "Use a risk-informed decision-making process to apply the latest version of hotfixes or patches to affected devices as soon as operationally feasible.",
+            "commands": null,
+            "next_step": 40
+        },
+        {
+            "step_number": 40,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and ensure they are not accessible from the internet.",
+            "commands": null,
+            "next_step": 41
+        },
+        {
+            "step_number": 41,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from the business network.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Log4j Vulnerability",
+    "affected_products": null
+}

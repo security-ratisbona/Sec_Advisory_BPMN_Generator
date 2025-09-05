@@ -1,0 +1,212 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Monitor for Ransomware Threats",
+            "description": "Continuously and actively monitor for ransomware threats over holidays and weekends.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Subscribe to CISA Cybersecurity Publications",
+            "description": "Subscribe to CISA cybersecurity publications for the latest alerts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Identify On-Call IT Security Employees",
+            "description": "Identify IT security employees to be available and 'on call' during holidays and weekends in the event of a ransomware attack.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Make Offline Backup of Data",
+            "description": "Make and maintain offline, encrypted backups of data and regularly test your backups.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement User Training Program",
+            "description": "Implement a user training program and phishing exercises to raise awareness about the risks of visiting malicious websites or opening malicious attachments.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Is RDP or other potentially risky services in use?",
+            "next_step": 8,
+            "else_step": 12
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Secure and Monitor RDP",
+            "description": "Limit access to resources over internal networks, restrict RDP, use virtual desktop infrastructure, require MFA, and monitor RDP logs.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Disable Unused Ports and Protocols",
+            "description": "Disable ports and protocols that are not being used for a business purpose, such as RDP Transmission Control Protocol Port 3389.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Disable or Block SMB Protocol",
+            "description": "Disable or block Server Message Block (SMB) protocol outbound and remove or disable outdated versions of SMB.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Review Security Posture of Third-Party Vendors",
+            "description": "Review the security posture of third-party vendors and ensure all connections are monitored and reviewed for suspicious activity.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "next_step": 24
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Update OS and Software",
+            "description": "Upgrade software and operating systems to currently supported versions and regularly patch and update software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Conduct Regular Vulnerability Scanning",
+            "description": "Conduct regular vulnerability scanning to identify and address vulnerabilities, especially on internet-facing devices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Use Strong Passwords",
+            "description": "Ensure strong passwords and challenge responses. Passwords should not be reused across multiple accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Use Multi-Factor Authentication",
+            "description": "Require multi-factor authentication (MFA) for all services, particularly for remote access, VPNs, and accounts accessing critical systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement network segmentation with multiple layers, with critical communications in the most secure layer.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Filter Network Traffic",
+            "description": "Filter network traffic to prohibit communications with known malicious IP addresses and implement URL blocklists/allowlists.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Scan Network for Open Ports",
+            "description": "Scan network for open and listening ports and close those that are unnecessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Secure Home Networks for Remote Workers",
+            "description": "Secure home networks for remote workers, use separate devices for separate activities, and do not exchange home and work content.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Secure User Accounts",
+            "description": "Regularly audit administrative user accounts and configure access controls under the principles of least privilege and separation of duties.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Have an Incident Response Plan",
+            "description": "Create, maintain, and exercise a basic cyber incident response plan with procedures for response and notification in a ransomware incident.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Use Ransomware Response Checklist",
+            "description": "Follow the Ransomware Response Checklist in case of infection and scan backups with an antivirus program.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Regularly Audit Logs",
+            "description": "Regularly audit logs to ensure new accounts are legitimate users.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Ransomware Threat Mitigation",
+    "affected_products": null
+}

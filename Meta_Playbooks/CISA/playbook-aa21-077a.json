@@ -1,0 +1,46 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Run CHIRP on Relevant Systems",
+            "description": "Execute CHIRP on systems running SolarWinds Orion or believed to be involved in any resulting lateral movement.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Ingest CHIRP Results",
+            "description": "Upload the JSON results from CHIRP into a SIEM system, or view them in a compatible web browser or text editor if no SIEM is available.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Did CHIRP detect any post-compromise threat activity?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Review and Confirm Detections",
+            "description": "Review and confirm any detections of post-compromise threat activity identified by CHIRP.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Collect Forensic Image",
+            "description": "For confirmed positive hits, collect a forensic image of the relevant system(s) and conduct a forensic analysis.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CHIRP Mitigation and Response",
+    "affected_products": null
+}

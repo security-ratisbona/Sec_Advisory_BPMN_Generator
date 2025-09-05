@@ -1,0 +1,220 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Consult Log4j Vulnerability Guidance",
+            "description": "Consult the joint Cybersecurity Advisory titled 'Mitigating Log4Shell and Other Log4j-Related Vulnerabilities' and CISA’s 'Apache Log4j Vulnerability' guidance.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Identify and Upgrade Log4j Assets",
+            "description": "Identify assets affected by Log4Shell and other Log4j-related vulnerabilities and upgrade Log4j assets and affected products to the latest version.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Monitor Vendor Software Updates",
+            "description": "Remain alert to vendor software updates and initiate hunt and incident response procedures to detect possible Log4Shell exploitation.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Consult Web Shell Malware Guidance",
+            "description": "Consult the NSA and Australian Signals Directorate’s report titled 'Detect and Prevent Web Shell Malware' for mitigating actions to identify and recover from web shells.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Maintain Inventory and Apply Patches",
+            "description": "Maintain an inventory of systems and applications, and rapidly apply patches as they are released.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Reverse Proxies",
+            "description": "Put vulnerable or potentially risky systems behind reverse proxies that require authentication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Deploy and Configure WAFs",
+            "description": "Deploy and configure Web Application Firewalls (WAFs) to protect web-facing servers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Deploy Endpoint Monitoring",
+            "description": "Deploy endpoint agents or other monitoring mechanisms to detect adversary activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": 15
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Block Unnecessary Outbound Connections",
+            "description": "Block unnecessary outbound connections to prevent adversary activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Restrict Access to Admin Panels",
+            "description": "Block external access to administrator panels and services or turn them off entirely.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Segment Network",
+            "description": "Segment the network to prevent lateral movement from a compromised web server to critical assets.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Monitor Command-Line Activity",
+            "description": "Monitor for suspicious command-line activity to detect malicious actions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                16,
+                17,
+                18,
+                19,
+                20
+            ],
+            "next_step": 21
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Implement Multi-Factor Authentication",
+            "description": "Implement multi-factor authentication for remote access services to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Use Allow-Listing Tools",
+            "description": "Properly segment and use allow-listing tools for critical assets to protect against malicious activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Check for Security Vulnerabilities",
+            "description": "Check for security vulnerabilities, apply patches, and update to the latest version of software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Encrypt Sensitive Data",
+            "description": "Encrypt all sensitive data including personal information to protect against unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Block Access to Unused Ports",
+            "description": "Block access to unused ports to reduce attack surface.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                22,
+                23,
+                24,
+                25
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Change Compromised Passwords",
+            "description": "Change passwords when they are suspected of being compromised to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Alert on Dual-Use Applications",
+            "description": "Alert on unexpected use of dual-use applications to detect potential malicious activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Strengthen Subscriber Identity Authentication",
+            "description": "Strengthen the subscriber identity authentication process for leased servers to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Report Suspicious DPRK Activities",
+            "description": "Report suspicious activities related to suspected DPRK cyber activities to relevant authorities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Log4Shell and Other Log4j-Related Vulnerabilities",
+    "affected_products": null
+}

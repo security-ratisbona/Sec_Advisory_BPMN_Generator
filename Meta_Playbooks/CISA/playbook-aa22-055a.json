@@ -1,0 +1,85 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is application control software needed?",
+            "next_step": 2,
+            "else_step": 5
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Deploy Application Control Software",
+            "description": "Deploy application control software to limit the applications and executable code that can be run by users.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Restrict Email Attachments and Downloads",
+            "description": "Limit email attachments and files downloaded via links in emails to prevent executable code from running.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enable Antivirus and Anti-malware Software",
+            "description": "Enable antivirus and anti-malware software and update signature definitions in a timely manner to prevent use of commonly deployed attacker tools.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is multifactor authentication needed?",
+            "next_step": 6,
+            "else_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Multifactor Authentication",
+            "description": "Use multifactor authentication where possible, particularly for webmail, virtual private networks, and accounts that access critical systems.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Limit Administrator Privileges",
+            "description": "Limit the use of administrator privileges to reduce the risk of lateral movement and access to sensitive information.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Train Users on Phishing Protection",
+            "description": "Train users through awareness and simulations to recognize and report phishing and social engineering attempts.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Adopt Threat Reputation Services",
+            "description": "Adopt threat reputation services at the network device, operating system, application, and email service levels to detect or prevent low-reputation email addresses, files, URLs, and IP addresses used in spearphishing attacks.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Install Updates and Patches",
+            "description": "Install updates/patch operating systems, software, and firmware as soon as updates/patches are released. Prioritize patching known exploited vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Protective Controls and Architecture",
+    "affected_products": null
+}

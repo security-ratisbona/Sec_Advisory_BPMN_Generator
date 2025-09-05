@@ -1,0 +1,63 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Harden Domain Controllers and Monitor Event Logs",
+            "description": "Harden domain controllers and monitor event logs for ntdsutil.exe and similar process creations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Audit and Validate Administrator Privileges Usage",
+            "description": "Audit and validate any use of administrator privileges to confirm the legitimacy of executed commands.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Limit Port Proxy Usage",
+            "description": "Limit port proxy usage within environments and only enable them for the period of time in which they are required.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Investigate Unusual IP Addresses and Ports",
+            "description": "Investigate unusual IP addresses and ports in command lines, registry entries, and firewall logs to identify other hosts potentially involved in actor actions.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review Perimeter Firewall Configurations",
+            "description": "Review perimeter firewall configurations for unauthorized changes and/or entries that may permit external connections to internal hosts.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Monitor Abnormal Account Activity",
+            "description": "Look for abnormal account activity, such as logons outside of normal working hours and impossible time-and-distance logons.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Forward Log Files to Centralized Logging Server",
+            "description": "Forward log files to a hardened centralized logging server, preferably on a segmented network.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cross-Sector Cybersecurity Performance Goals",
+    "affected_products": null
+}

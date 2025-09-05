@@ -1,0 +1,126 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Determine Vulnerable VMware Horizon Components",
+            "description": "Refer to VMware Security Advisory VMSA-2021-0028.13 and VMware Knowledge Base (KB) 87073 to identify which VMware Horizon components are vulnerable.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Were updates or workarounds promptly applied following VMware’s release of updates for Log4Shell in December 2021?",
+            "next_step": 3,
+            "else_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Updates to VMware Horizon and UAG Systems",
+            "description": "Install updated builds to ensure affected VMware Horizon and UAG systems are updated to the latest version.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict Network Perimeter Access Controls",
+            "description": "Ensure network perimeter access controls are as restrictive as possible while installing updates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Treat VMware Horizon Systems as Compromised",
+            "description": "Follow pro-active incident response procedures prior to applying updates if updates or workarounds were not promptly applied.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is compromise detected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Is upgrading immediately feasible?",
+            "next_step": 3,
+            "else_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Temporary Workarounds",
+            "description": "Use vendor-provided temporary workarounds from KB87073 and KB87092 if upgrading is not immediately feasible. Implement using an account with administrative privileges.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Ensure Appropriate Backups",
+            "description": "Ensure appropriate backups have been completed prior to implementing any temporary solution.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Verify Successful Implementation of Mitigations",
+            "description": "Execute the vendor supplied script Horizon_Windows_Log4j_Mitigations.zip without parameters to ensure that no vulnerabilities remain.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                12,
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Keep Software Up to Date",
+            "description": "Keep all software up to date and prioritize patching known exploited vulnerabilities (KEVs).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Minimize Internet-Facing Attack Surface",
+            "description": "Host essential services on a segregated DMZ, ensure strict network perimeter access controls, and do not host internet-facing services non-essential to business operations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Implement Web Application Firewalls (WAFs)",
+            "description": "Implement regularly updated WAFs in front of public-facing services to protect against web-based exploitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Use Best Practices for Identity and Access Management",
+            "description": "Implement multifactor authentication (MFA), enforce use of strong passwords, and limit user access through the principle of least privilege.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "VMware Horizon Log4Shell Vulnerability",
+    "affected_products": null
+}

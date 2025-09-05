@@ -1,0 +1,38 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Top Exploited Vulnerabilities",
+            "description": "Review the list of top exploited vulnerabilities to determine which ones are applicable to your systems.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is there a patch available for the identified vulnerabilities?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Available Patches",
+            "description": "Download and install patches for the identified vulnerabilities to mitigate security risks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Consult Additional Resources",
+            "description": "Refer to additional resources and guidance for mitigating vulnerabilities without available patches.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Top Exploited Vulnerabilities",
+    "affected_products": null
+}

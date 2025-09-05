@@ -1,0 +1,229 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of the HPH Sector?",
+            "next_step": 2,
+            "else_step": 16
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Deploy Public Key Infrastructure",
+            "description": "Deploy public key infrastructure and digital certificates to authenticate connections with the network, IoT medical devices, and the electronic health record system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Use Standard User Accounts",
+            "description": "Use standard user accounts on internal systems instead of administrative accounts to ensure least privilege.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Turn Off Network Device Management Interfaces",
+            "description": "Turn off network device management interfaces such as Telnet, SSH, Winbox, and HTTP for WANs and secure with strong passwords and encryption when enabled.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Secure PII/PHI",
+            "description": "Secure personal identifiable information (PII)/patient health information (PHI) at collection points and encrypt the data at rest and in transit using technologies such as TLS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Protect Stored Data",
+            "description": "Protect stored data by masking the permanent account number (PAN) when displayed and rendering it unreadable when stored through cryptography.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement HIPAA Security Measures",
+            "description": "Secure the collection, storage, and processing practices for PII and PHI per HIPAA regulations to prevent malware introduction.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Monitoring Tools for IoT Devices",
+            "description": "Use monitoring tools to observe whether IoT devices are behaving erratically due to a compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Create and Review Internal Policies",
+            "description": "Create and regularly review internal policies that regulate the collection, storage, access, and monitoring of PII/PHI.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "CONDITION",
+            "condition": "Is the organization preparing for ransomware?",
+            "next_step": 12,
+            "else_step": 16
+        },
+        {
+            "step_number": 12,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                13,
+                14,
+                15
+            ],
+            "next_step": 16
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Maintain offline backups of data, regularly test backup and restoration, and ensure all backup data is encrypted and immutable.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Create Cyber Incident Response Plan",
+            "description": "Create, maintain, and exercise a basic cyber incident response plan and associated communications plan that includes response procedures for a ransomware incident.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Ensure Notification Procedures Adhere to Laws",
+            "description": "Ensure notification procedures adhere to applicable state laws and refer to the National Conference of State Legislatures for information on data breach laws.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Install Updates and Patches",
+            "description": "Install updates for operating systems, software, and firmware as soon as they are released to minimize exposure to cybersecurity threats.",
+            "commands": null,
+            "next_step": 17
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Secure Remote Desktop Protocol (RDP)",
+            "description": "Secure and monitor RDP by restricting access, requiring MFA, and using VPNs for external connections.",
+            "commands": null,
+            "next_step": 18
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Restrict SMB Protocol",
+            "description": "Restrict Server Message Block (SMB) Protocol within the network to only access necessary servers and disable outdated versions.",
+            "commands": null,
+            "next_step": 19
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Review Third-Party Vendor Security",
+            "description": "Review the security posture of third-party vendors and monitor connections for suspicious activity.",
+            "commands": null,
+            "next_step": 20
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Implement Application Whitelisting",
+            "description": "Implement listing policies for applications and remote access that only allow execution of known and permitted programs.",
+            "commands": null,
+            "next_step": 21
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Conduct User Training and Phishing Exercises",
+            "description": "Implement user training programs and phishing exercises to raise awareness about the risks of suspicious websites, links, and attachments.",
+            "commands": null,
+            "next_step": 22
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Require Multi-Factor Authentication (MFA)",
+            "description": "Require MFA for services, especially for webmail, VPNs, and accounts accessing critical systems.",
+            "commands": null,
+            "next_step": 23
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Use Strong Passwords",
+            "description": "Use strong passwords and avoid reusing passwords for multiple accounts.",
+            "commands": null,
+            "next_step": 24
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Install Antivirus and Antimalware Software",
+            "description": "Install and regularly update antivirus and antimalware software on all hosts.",
+            "commands": null,
+            "next_step": 25
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Use Secure Networks",
+            "description": "Only use secure networks and consider installing and using a VPN.",
+            "commands": null,
+            "next_step": 26
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Disable Hyperlinks in Emails",
+            "description": "Disable hyperlinks in received emails to prevent phishing attacks.",
+            "commands": null,
+            "next_step": 27
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Respond to Ransomware Incidents",
+            "description": "Follow the organization's Ransomware Response Checklist, scan backups for malware, and report incidents to the FBI, CISA, or USSS.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "HPH Sector Cybersecurity Advisory",
+    "affected_products": null
+}

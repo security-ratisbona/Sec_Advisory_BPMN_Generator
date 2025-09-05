@@ -1,0 +1,93 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization or network defender?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Application Controls",
+            "description": "Manage and control execution of software, including allowlisting remote access programs to prevent unauthorized software execution.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Recommendations for Securing Remote Access",
+            "description": "Follow CISA's joint Guide to Securing Remote Access Software to enhance remote access security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Phishing-Resistant MFA",
+            "description": "Use FIDO/WebAuthn authentication or PKI-based MFA to resist phishing and prevent push bombing or SIM swap attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Network Monitoring Tool",
+            "description": "Identify, detect, and investigate abnormal activity and potential ransomware traversal using a network monitoring tool.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement User Training on Social Engineering",
+            "description": "Educate users on identifying and reporting suspicious emails and links to prevent phishing attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Monitor Internal Mail and Messaging",
+            "description": "Monitor internal mail and messaging traffic to identify suspicious activity and establish a baseline of normal network traffic.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Free Security Tools",
+            "description": "Use free security tools to prevent redirection to malicious websites and credential theft.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Install and Maintain Antivirus Software",
+            "description": "Install antivirus software from a reputable vendor and keep it up to date to prevent and detect malware infections.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "ALPHV Blackcat Threat Mitigation",
+    "affected_products": null
+}

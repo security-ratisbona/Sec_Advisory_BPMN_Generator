@@ -1,0 +1,66 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of critical infrastructure?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Patches for Internet-Facing Systems",
+            "description": "Apply patches for internet-facing systems within a risk-informed span of time. Prioritize patching critical assets, known exploited vulnerabilities, and vulnerabilities in appliances known to be frequently exploited by Volt Typhoon.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Limit Internet Exposure of Systems",
+            "description": "Decrease the attack surface by not exposing systems or management interfaces to the internet when not necessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement and Enforce Password Policies",
+            "description": "Change default passwords and ensure they meet the policy requirements for complexity. Implement a policy that requires passwords to be at least 15 characters and does not allow reuse.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Phishing-Resistant MFA",
+            "description": "Implement phishing-resistant multi-factor authentication for access to assets.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Conduct Regular Security Assessments",
+            "description": "Use third-party assessments to validate current system and network security compliance via security architecture reviews, penetration tests, bug bounties, attack surface management services, incident simulations, or table-top exercises.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Volt Typhoon Activity Mitigations",
+    "affected_products": null
+}

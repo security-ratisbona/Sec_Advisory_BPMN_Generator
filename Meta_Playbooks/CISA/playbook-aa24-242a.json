@@ -1,0 +1,132 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a NETWORK DEFENDER?",
+            "next_step": 2,
+            "else_step": 12
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 11
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enforce NIST Password Standards",
+            "description": "Require all accounts with password logins to comply with NIST standards for developing and managing password policies.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Require Administrator Credentials for Software Installation",
+            "description": "Ensure that administrator credentials are required to install software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Keep Systems Updated",
+            "description": "Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Require Phishing-Resistant MFA",
+            "description": "Require phishing-resistant multifactor authentication to administrator accounts and standard MFA for all services to the extent possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting adversary lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Network Monitoring Tools",
+            "description": "Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a networking monitoring tool.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Install and Update Antivirus Software",
+            "description": "Install, regularly update, and enable real-time detection for antivirus software on all hosts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "CONDITION",
+            "condition": "Is the organization a SOFTWARE MANUFACTURER?",
+            "next_step": 13,
+            "else_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                14,
+                15
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Embed Security into Product Architecture",
+            "description": "Embed security into product architecture throughout the entire software development lifecycle (SDLC).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Mandate MFA for Privileged Users",
+            "description": "Mandate MFA, ideally phishing-resistant MFA, for privileged users and make MFA a default feature.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "RansomHub Activity Mitigation",
+    "affected_products": null
+}

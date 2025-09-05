@@ -1,0 +1,37 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Are you a Network Defender?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement CISA and NIST Recommendations",
+            "description": "Implement the Cross-Sector Cybersecurity Performance Goals (CPGs) developed by CISA and NIST to mitigate the issues identified in this advisory.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Are you a Software Manufacturer?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Security-by-Design and -Default Recommendations",
+            "description": "Apply the recommendations from the joint guide 'Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Security-by-Design and -Default' to reduce the prevalence of misconfigurations.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Network Defenders and Software Manufacturers",
+    "affected_products": null
+}

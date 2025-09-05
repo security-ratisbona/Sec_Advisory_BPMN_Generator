@@ -1,0 +1,198 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the facility a WWS facility, including DoD water treatment facilities?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                9,
+                15,
+                21,
+                27
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Monitor SCADA System for Suspicious Activities",
+            "description": "Check for inability to access SCADA system controls, unfamiliar data windows, abnormal operating parameters, unauthorized access, unusual access times, unexplained restarts, and unchanging parameter values.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Require Multi-Factor Authentication for Remote Access",
+            "description": "Implement multi-factor authentication for all remote access to the OT network, including from IT and external networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Utilize Blocklisting and Allowlisting for Remote Access",
+            "description": "Limit remote access to users with a verified business and/or operational need using blocklisting and allowlisting.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Enable Logging for Remote Access Technologies",
+            "description": "Ensure all remote access technologies have logging enabled and regularly audit these logs for unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Utilize Manual Start and Stop Features for Remote Access",
+            "description": "Replace always activated unattended access with manual start and stop features to reduce remote access service runtime.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Audit Networks for Remote Access Services",
+            "description": "Audit networks for systems using remote access services and close unneeded network ports (e.g., RDP – TCP Port 3389).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                16,
+                17,
+                18,
+                19,
+                20
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Ensure robust network segmentation between IT and OT networks to limit malicious cyber actor movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Implement DMZs, Firewalls, Jump Servers, and One-Way Communication Diodes",
+            "description": "Prevent unregulated communication between IT and OT networks using DMZs, firewalls, jump servers, and one-way communication diodes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Develop/Update Network Maps",
+            "description": "Ensure a full accounting of all equipment connected to the network by developing or updating network maps.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Remove Unnecessary Equipment from Networks",
+            "description": "Reduce the attack surface by removing equipment from networks that is not required for operations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Implement DMZs, Firewalls, Jump Servers, and One-Way Communication Diodes",
+            "description": "Prevent unregulated communication between IT and OT networks using DMZs, firewalls, jump servers, and one-way communication diodes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                22,
+                23,
+                24,
+                25,
+                26
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Ensure Emergency Response Plan Considers Cyberattack Impacts",
+            "description": "Ensure the emergency response plan considers potential impacts of cyberattacks, including loss or manipulation of view, control, and safety threats.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Review, Test, and Update Emergency Response Plan Annually",
+            "description": "Review, test, and update the emergency response plan annually to ensure accuracy.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Exercise Failover to Alternate Control Systems",
+            "description": "Exercise the ability to fail over to alternate control systems, including manual operation with degraded electronic communications.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Conduct Tabletop Exercises for Decision-Making Experience",
+            "description": "Allow employees to gain decision-making experience via tabletop exercises that incorporate loss of visibility and control scenarios.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Utilize Cybersecurity Incident Action Checklists",
+            "description": "Utilize resources such as the EPA’s Cybersecurity Incident Action Checklist and the Ransomware Response Checklist from CISA-MS-ISAC.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Install Independent Cyber-Physical Safety Systems",
+            "description": "Install systems that physically prevent dangerous conditions if the control system is compromised, such as chemical feed pump size, valve gearing, and pressure switches.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cybersecurity Recommendations for WWS Facilities",
+    "affected_products": null
+}

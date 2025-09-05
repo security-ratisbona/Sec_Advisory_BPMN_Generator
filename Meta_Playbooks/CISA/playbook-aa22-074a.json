@@ -1,0 +1,204 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                2,
+                3,
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Enforce Multi-Factor Authentication (MFA)",
+            "description": "Enforce MFA for all users, without exception. Review configuration policies to protect against 'fail open' and re-enrollment scenarios.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Account Security Measures",
+            "description": "Implement time-out and lock-out features for repeated failed login attempts. Ensure inactive accounts are disabled uniformly across systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Software and Patch Vulnerabilities",
+            "description": "Update software, including operating systems, applications, and firmware. Prioritize patching known exploited vulnerabilities, especially critical and high vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enforce Strong Password Policies",
+            "description": "Require all accounts with password logins to have strong, unique passwords. Ensure passwords are not reused across multiple accounts or stored insecurely.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": 11
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Monitor Network Logs",
+            "description": "Continuously monitor network logs for suspicious activity and unauthorized or unusual login attempts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Security Alerting Policies",
+            "description": "Implement security alerting policies for changes to security-enabled accounts/groups and alert on suspicious process creation events.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Deploy Local Administrator Password Solution (LAPS)",
+            "description": "Deploy LAPS, enforce SMB Signing, restrict administrative privileges, and review sensitive materials on domain controller’s SYSVOL share.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Enable Increased Logging and EDR",
+            "description": "Enable increased logging policies, enforce PowerShell logging, and ensure antivirus/EDR are deployed to all endpoints and enabled.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                12,
+                13,
+                14,
+                15
+            ],
+            "next_step": 16
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Monitor Remote Access Logs",
+            "description": "Monitor remote access/RDP logs and disable unused remote access/RDP ports.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Deny Atypical Inbound Activity",
+            "description": "Deny atypical inbound activity from known anonymization services, including commercial VPN services and TOR.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Implement Application Whitelisting",
+            "description": "Implement listing policies for applications and remote access that only allow execution of known and permitted programs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Regularly Audit Administrative User Accounts",
+            "description": "Regularly audit administrative user accounts and configure access control under the concept of least privilege.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                17,
+                18,
+                19
+            ],
+            "next_step": 20
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Update Remote Work Environment Devices",
+            "description": "Regularly update VPNs, network infrastructure devices, and devices used for remote work environments with the latest software patches and security configurations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Implement MFA on VPN Connections",
+            "description": "Implement multi-factor authentication on all VPN connections. Use physical security tokens or authenticator applications when possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Monitor Network Traffic for Unapproved Protocols",
+            "description": "Monitor network traffic for unapproved and unexpected protocols. Reduce potential attack surfaces by discontinuing unused VPN servers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                21,
+                22,
+                23
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Provide End-User Awareness and Training",
+            "description": "Provide end-user awareness and training to prevent targeted social engineering and spearphishing scams. Ensure employees are aware of potential cyber threats and delivery methods.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Inform Employees of Risks on Networking Sites",
+            "description": "Inform employees of the risks associated with posting detailed career information to social or professional networking sites.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Establish Reporting Protocols for Suspicious Activity",
+            "description": "Ensure employees know what to do and whom to contact when they see suspicious activity or suspect a cyberattack.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "State-Sponsored Cyber Actor Threat Mitigation",
+    "affected_products": null
+}

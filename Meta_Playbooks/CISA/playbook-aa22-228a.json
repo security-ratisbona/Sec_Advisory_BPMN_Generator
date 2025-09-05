@@ -1,0 +1,84 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade to Latest ZCS Releases",
+            "description": "Upgrade to the latest ZCS releases as noted on Zimbra Security – News & Alerts and Zimbra Security Advisories.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review Volexity’s Mitigation Steps",
+            "description": "Review and apply mitigation steps from Volexity’s Mass Exploitation of (Un)authenticated Zimbra RCE: CVE-2022-27925.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Maintain and Test Incident Response Plan",
+            "description": "Ensure that an incident response plan is maintained and regularly tested.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Vulnerability Management Program",
+            "description": "Ensure a vulnerability management program is in place, prioritizing patch management and vulnerability scanning of known exploited vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Configure and Secure Internet-Facing Network Devices",
+            "description": "Properly configure and secure internet-facing network devices. Do not expose management interfaces to the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Disable Unused Network Ports and Protocols",
+            "description": "Disable unused or unnecessary network ports and protocols.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Remove Unused Network Services and Devices",
+            "description": "Disable or remove unused network services and devices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Adopt Zero-Trust Principles and Architecture",
+            "description": "Adopt zero-trust principles, including micro-segmenting networks, enforcing phishing-resistant MFA, and restricting access to trusted devices and users.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-27925",
+    "affected_products": null
+}

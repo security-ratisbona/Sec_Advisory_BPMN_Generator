@@ -1,0 +1,163 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of the HPH Sector?",
+            "next_step": 2,
+            "else_step": 14
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 14
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install Updates",
+            "description": "Install updates for operating systems, software, and firmware as soon as they are released. Prioritize patching VPN servers, remote access software, virtual machine software, and known exploited vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Phishing-Resistant MFA",
+            "description": "Require phishing-resistant MFA for as many services as possible, particularly for webmail, VPNs, accounts that access critical systems, and privileged accounts that manage backups.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Secure and Monitor RDP",
+            "description": "If using Remote Desktop Protocol (RDP), secure and monitor it. Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Configure Devices and Disable Unused Ports",
+            "description": "Ensure devices are properly configured and that security features are enabled. Disable ports and protocols that are not being used for business purposes (e.g., RDP Transmission Control Protocol Port 3389).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement and enforce multi-layer network segmentation with the most critical communications and data resting on the most secure and reliable layer.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Limit Internal Network Access",
+            "description": "Limit access to resources over internal networks, especially by restricting RDP and using virtual desktop infrastructure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Monitor Remote Access Logs",
+            "description": "Monitor remote access/RDP logs, enforce account lockouts after a specified number of attempts to block brute force campaigns, log RDP login attempts, and disable unused remote access/RDP ports.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Secure Network Device Management Interfaces",
+            "description": "Turn off SSH and other network device management interfaces such as Telnet, Winbox, and HTTP for wide area networks (WANs) and secure with strong passwords and encryption when enabled.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Deploy Public Key Infrastructure",
+            "description": "Limit access to data by deploying public key infrastructure and digital certificates to authenticate connections with the network, IoT medical devices, and the electronic health record system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Use Standard User Accounts",
+            "description": "Use standard user accounts on internal systems instead of administrative accounts, which allow for overarching administrative system privileges and do not ensure least privilege.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Secure PII/PHI",
+            "description": "Secure PII/PHI at collection points and encrypt the data at rest and in transit by using technologies such as Transport Layer Security (TLS).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Protect Stored Data",
+            "description": "Protect stored data by masking the permanent account number (PAN) when it is displayed and rendering it unreadable when it is stored—through cryptography, for example.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Implement HIPAA Security Measures",
+            "description": "Secure the collection, storage, and processing practices for PII and PHI, per regulations such as the Health Insurance Portability and Accountability Act of 1996 (HIPAA).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Monitor IoT Devices",
+            "description": "Use monitoring tools to observe whether IoT devices are behaving erratically due to a compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Review Internal Policies",
+            "description": "Create and regularly review internal policies that regulate the collection, storage, access, and monitoring of PII/PHI.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Daixin and related malicious activity",
+    "affected_products": null
+}

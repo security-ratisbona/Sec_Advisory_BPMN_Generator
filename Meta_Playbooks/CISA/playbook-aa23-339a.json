@@ -1,0 +1,57 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization or a network defender?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                8,
+                12,
+                16
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Manage Vulnerabilities and Configurations",
+            "description": "Upgrade all versions affected by this vulnerability. Keep all software up to date and prioritize patching according to CISA’s Known Exploited Vulnerabilities Catalog. Prioritize remediation of vulnerabilities on internet-facing systems by conducting continuous automated and/or routine vulnerability scans. Prioritize secure-by-default configurations such as eliminating default passwords, implementing single sign-on (SSO) technology via modern open standards, and disabling default credentials.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Employ proper network segmentation, such as a demilitarized zone (DMZ). Use a firewall or web-application firewall (WAF) and enable logging to prevent/detect potential exploitation attempts. Review ingress and egress firewall rules and block all unapproved protocols. Limit risky (but approved) protocols through rules. Implement network segmentation to separate network segments based on role and functionality. Deploy application-aware network defenses to block improperly formed traffic and restrict content according to policy and legal authorizations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Application Control",
+            "description": "Enforce signed software execution policies. Use a modern operating system that enforces signed software execution policies for scripts, executables, device drivers, and system firmware. Maintain a list of trusted certificates to prevent and detect the use and injection of illegitimate executables. Application control should be used with signed software execution policies to provide greater control.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Manage Accounts, Permissions, and Workstations",
+            "description": "Require phishing-resistant multifactor authentication (MFA) for all services to the extent possible, particularly for webmail, VPN, and accounts that access critical systems. Implement the principle of least privilege to decrease threat actors’ abilities to access key network resources. Restrict file and directory permissions. Use file system access controls to protect folders such as C:\\Windows\\System32. Restrict NTLM authentication policy settings, including incoming NTLM traffic from client computers, other member servers, or a domain controller.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cross-Sector Cybersecurity Performance Goals",
+    "affected_products": null
+}

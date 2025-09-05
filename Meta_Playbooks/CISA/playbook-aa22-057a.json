@@ -1,0 +1,107 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization prepared for destructive malware threats?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Evaluate Network Architecture and Security Baseline",
+            "description": "Assess network architecture and security baseline to ensure proper segmentation and access control.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Assess Enterprise Applications for Malware Delivery Vectors",
+            "description": "Evaluate enterprise applications for atypical channels for malware delivery and propagation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation and Access Control",
+            "description": "Ensure network segmentation and configure network-based ACLs to permit connectivity via the minimum scope of ports and protocols.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Enforce Multifactor Authentication and Least Privilege",
+            "description": "Require multifactor authentication for interactive logons and ensure least privilege for enterprise systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Audit and Review Security Logs",
+            "description": "Audit and review security logs for anomalous references to administrative and service accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Stage and Monitor Patch and AV Signature Distribution",
+            "description": "Stage patch and AV signature distribution to minimize impact and monitor integrity of updates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Conduct Business Impact Analysis (BIA)",
+            "description": "Perform a business impact analysis to characterize and classify system components and interdependencies.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Prepare for Incident Response and Recovery",
+            "description": "Prepare resources and documentation for incident response and recovery, including contact information, secure communication channels, and system backups.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Containment Strategies for Destructive Malware",
+            "description": "Implement containment strategies to reduce the scope of affected systems, such as isolating systems and disabling access for suspected accounts.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Report Incidents to FBI and CISA",
+            "description": "Report incidents to the FBI and CISA and preserve forensic data for investigation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "BEST PRACTICES FOR HANDLING DESTRUCTIVE MALWARE",
+    "affected_products": null
+}

@@ -1,0 +1,219 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Are you a Network Defender?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location (e.g., hard drive, storage device, the cloud).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enforce NIST Password Standards",
+            "description": "Require all accounts with password logins to comply with NIST’s standards, using long passwords and considering not requiring recurring password changes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Require Multifactor Authentication",
+            "description": "Implement multifactor authentication for all services, particularly for webmail, virtual private networks, and accounts that access critical systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Keep Systems Updated",
+            "description": "Ensure all operating systems, software, and firmware are up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting adversary lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Network Monitoring Tool",
+            "description": "Identify, detect, and investigate abnormal activity and potential ransomware traversal with a network monitoring tool that logs and reports all network traffic.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Filter Network Traffic",
+            "description": "Prevent unknown or untrusted origins from accessing remote services on internal systems to block threat actors from connecting to remote access services.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Install and Update Antivirus Software",
+            "description": "Install, regularly update, and enable real-time detection for antivirus software on all hosts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Review for Unrecognized Accounts",
+            "description": "Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Audit User Accounts with Administrative Privileges",
+            "description": "Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Disable Unused Ports",
+            "description": "Disable unused ports to reduce potential attack vectors.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Add Email Banner for External Emails",
+            "description": "Consider adding an email banner to emails received from outside of your organization.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Disable Hyperlinks in Emails",
+            "description": "Disable hyperlinks in received emails to prevent phishing attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Implement Time-Based Access for Admin Accounts",
+            "description": "Implement time-based access for accounts set at the admin level and higher, using methods like Just-in-Time (JIT) access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Disable Command-Line and Scripting Activities",
+            "description": "Disable command-line and scripting activities and permissions to prevent privilege escalation and lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Maintain offline backups of data and regularly maintain backup and restoration processes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Encrypt and Secure Backup Data",
+            "description": "Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Regularly Update Backup and Restoration Processes",
+            "description": "Regularly update and maintain backup and restoration processes to ensure data integrity and availability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Ensure Backup Data is Immutable",
+            "description": "Ensure backup data cannot be altered or deleted to protect against data loss.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Ensure Backup Data Covers Entire Infrastructure",
+            "description": "Ensure backup data covers the entire organization’s data infrastructure to prevent data loss.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Implement Zero Trust Model",
+            "description": "Implement a Zero Trust model to enhance security by verifying every request as though it originates from an open network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Implement Principle of Least Privilege",
+            "description": "Configure access controls according to the principle of least privilege to minimize potential attack vectors.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Akira Ransomware Mitigations",
+    "affected_products": null
+}

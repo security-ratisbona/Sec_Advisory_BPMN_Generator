@@ -1,0 +1,101 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Implement ASD Essential Eight Controls",
+            "description": "Implement the ASD Essential Eight Controls and associated Strategies to Mitigate Cyber Security Incidents.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review and Implement Windows Event Logging and Forwarding",
+            "description": "Review and implement guidance on Windows Event Logging and Forwarding, including configuration files and scripts in the Windows Event Logging Repository and the Information Security Manual’s Guidelines for System Monitoring.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Patch Internet Exposed Devices and Services",
+            "description": "Promptly patch all internet exposed devices and services, including web servers, web applications, and remote access gateways. Consider implementing a centralized patch management system to automate and expedite the process.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Network Segmentation",
+            "description": "Segment networks to limit or block lateral movement by denying traffic between computers unless required. Important servers such as Active Directory should only be administered from a limited number of intermediary servers or 'jump servers'.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Unused Network Services and Enforce Least Privilege",
+            "description": "Disable unused or unnecessary network services, ports, and protocols. Enforce least privilege to limit access to servers, file shares, and other resources.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Use Web Application Firewalls (WAFs)",
+            "description": "Use well-tuned Web Application Firewalls (WAFs) to protect web servers and applications.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Multi-Factor Authentication (MFA)",
+            "description": "Use multi-factor authentication (MFA) and managed service accounts to make credentials harder to crack and reuse. Apply MFA to all internet accessible remote access services, including web and cloud-based email, collaboration platforms, VPN connections, and remote desktop services.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Replace End-of-Life Equipment",
+            "description": "Replace end-of-life equipment to ensure security and compatibility with current security standards.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Consult MITRE ATT&CK for Additional Mitigations",
+            "description": "Consult the Mitigations and Detection sections on the MITRE ATT&CK technique web page for each of the techniques identified in the MITRE ATT&CK summary at the end of this advisory.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "APT40 Detection and Mitigation Recommendations",
+    "affected_products": null
+}

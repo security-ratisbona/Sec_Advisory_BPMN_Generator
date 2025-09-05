@@ -1,0 +1,243 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization or network defender?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Incorporate Secure by Design and Default Principles",
+            "description": "Software manufacturers should incorporate secure by design and default principles into their software development practices to limit the impact of ransomware techniques.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Secure Remote Access Software",
+            "description": "Apply recommendations from the joint Guide to Securing Remote Access Software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Application Controls",
+            "description": "Manage and control execution of software, including allowlisting remote access programs to prevent installation and execution of unauthorized software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Log Collection Best Practices",
+            "description": "Use intrusion detection systems to defend against threat actors manipulating firewall configurations through early detection.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement EDR Solutions",
+            "description": "Deploy Endpoint Detection and Response (EDR) solutions to disrupt threat actor memory allocation techniques.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Limit Use of RDP and Remote Desktop Services",
+            "description": "Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts, apply phishing-resistant MFA, log RDP login attempts, and disable command-line activities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Review Domain Controllers and Active Directories",
+            "description": "Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Audit User Accounts with Administrative Privileges",
+            "description": "Configure access controls according to the principle of least privilege (PoLP).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Reduce Threat of Credential Compromise",
+            "description": "Place domain admin accounts in the protected users’ group, refrain from storing plaintext credentials in scripts, and implement time-based access for admin accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Maintain and retain multiple copies of sensitive data and servers in a physically separate, segmented, and secure location.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Regularly maintain backup and restoration (daily or weekly at minimum) to limit disruption severity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Require Password Compliance with NIST Standards",
+            "description": "Ensure all accounts with password logins comply with NIST's standards for password policies, including using longer passwords and storing passwords in hashed format.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Implement Multiple Failed Login Attempt Account Lockouts",
+            "description": "Lock accounts after multiple failed login attempts to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Disable Password Hints",
+            "description": "Disable password hints to prevent attackers from gaining insights into user passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Require Administrator Credentials for Software Installation",
+            "description": "Ensure administrator credentials are required to install software to prevent unauthorized installations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Require Phishing-Resistant MFA",
+            "description": "Implement phishing-resistant multifactor authentication for all services, especially for critical systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to prevent the spread of ransomware and restrict adversary lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Identify and Investigate Abnormal Activity",
+            "description": "Use network monitoring tools to detect and investigate abnormal activity and potential ransomware traversal.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Install and Update Antivirus Software",
+            "description": "Install, regularly update, and enable real-time detection for antivirus software on all hosts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Disable Unused Ports and Protocols",
+            "description": "Disable unused ports and protocols to reduce attack surfaces.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Add Email Banners for External Emails",
+            "description": "Consider adding an email banner to emails received from outside your organization.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Disable Hyperlinks in Emails",
+            "description": "Disable hyperlinks in received emails to prevent phishing attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Ensure Backup Data is Encrypted and Immutable",
+            "description": "Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Implement Password User Salts",
+            "description": "Add password user “salts” to shared login credentials to enhance security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Secure by Design and Default Mitigations",
+    "affected_products": null
+}

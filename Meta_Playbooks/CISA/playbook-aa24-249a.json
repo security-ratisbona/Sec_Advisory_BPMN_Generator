@@ -1,0 +1,127 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Prioritize Patching",
+            "description": "Prioritize patching to CISA’s Known Exploited Vulnerabilities Catalog, especially for CVEs identified in this advisory, and then critical and high vulnerabilities that allow for remote code execution on internet-facing devices.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Conduct Regular Automated Vulnerability Scans",
+            "description": "Perform vulnerability assessments on all network resources based on threat actor behaviors and known exploitable vulnerabilities.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Limit Exploitable Services on Internet-Facing Assets",
+            "description": "Limit exploitable services on internet-facing assets, such as email and remote management protocols. Implement compensatory controls for necessary services hosted in a DMZ.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Disable Unnecessary OS Applications and Network Protocols",
+            "description": "Disable all unnecessary operating system applications and network protocols to combat adversary enumeration.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Request CISA Cyber Hygiene Services",
+            "description": "Utilize CISA services, including vulnerability scanning and testing, to help reduce exposure to threats. Email vulnerability@cisa.dhs.gov with the subject line, 'Requesting Cyber Hygiene Services,' to get started.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Review Software Supply Chain Risks",
+            "description": "Review CISA and NIST’s Defending Against Supply Chain Attacks publication to identify, assess, and mitigate software supply chain risks.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement network segmentation to prevent lateral movement by controlling traffic flows between subnetworks.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update Identity and Access Management (IAM)",
+            "description": "Update IAM and employ phishing-resistant MFA for all devices and accounts identified as organizational assets.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Secure Credential Storage",
+            "description": "Ensure that sensitive data, including credentials, are not stored in plaintext and can only be accessed by authenticated and authorized users. Use a credential/password manager.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Disable/Restrict Command Line and PowerShell Activity",
+            "description": "Disable and/or restrict use of command line and PowerShell activity. Update to the latest version and uninstall all earlier PowerShell versions.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Implement Continuous System Monitoring",
+            "description": "Implement a continuous system monitoring program, such as SIEM or EDR solutions, to comprehensively log and review all authorized external access connections.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Monitor for Unauthorized Access Attempts",
+            "description": "Monitor for unauthorized access attempts and programming anomalies through comprehensive logging that is secured from modification.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Detect and Block Malicious Framework Indicators",
+            "description": "Set security appliances to detect and/or block Impacket framework indicators, PSExec or WMI commands, and suspicious PowerShell commands.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Update Weak Encryption",
+            "description": "Identify any use of outdated or weak encryption, update these to sufficiently strong algorithms, and consider the implications of post-quantum cryptography.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Use Up-to-Date SSL/TLS",
+            "description": "Use properly configured and up-to-date Secure Socket Layer (SSL)/Transport Layer Security (TLS) to protect data in transit.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Threat Actor Activity",
+    "affected_products": null
+}

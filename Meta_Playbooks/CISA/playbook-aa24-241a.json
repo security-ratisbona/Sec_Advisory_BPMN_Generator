@@ -1,0 +1,62 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Logs for IP Addresses",
+            "description": "Review available logs for IP addresses in Table 10 for indications of traffic with your organization’s network in the provided timeframes.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review Indicators for Historical Activity",
+            "description": "Review the indicators in Table 11 to identify historical activity or incidents which may have previously been identified by your organization.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Patches for Specific CVEs",
+            "description": "Apply patches and/or mitigations for CVE-2024-3400, CVE-2022-1388, CVE-2019-19781, and CVE-2023-3519.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Has the network already been compromised?",
+            "next_step": 5,
+            "else_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Investigate Use of Stolen Credentials",
+            "description": "Conduct additional investigation into the use of stolen credentials (e.g., via the webshell on Netscaler devices) to identify threat actor attempts to establish footholds on other parts of the network.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Check Systems for Unique Identifiers and TTPs",
+            "description": "Check your systems for the unique identifiers and TTPs used by the actors when operating on compromised networks, including creation of specific usernames, use of NGROK and Ligolo, and deployment of webshells in specific directories.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Check Systems for Outbound Web Requests",
+            "description": "Check your systems for outbound web requests to files.catbox[.]moe and ***.ngrok[.]io.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Iranian Cyber Group Activity Mitigations",
+    "affected_products": null
+}

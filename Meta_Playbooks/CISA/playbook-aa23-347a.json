@@ -1,0 +1,110 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Apply Available Patches for CVE-2023-42793",
+            "description": "Apply available patches for CVE-2023-42793 issued by JetBrains TeamCity in mid-September 2023, if not already completed.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Monitor Network for Encoded Commands and Network Scanning Tools",
+            "description": "Monitor the network for evidence of encoded commands and execution of network scanning tools.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enable Host-Based Anti-Virus/Endpoint Monitoring Solutions",
+            "description": "Ensure host-based anti-virus/endpoint monitoring solutions are enabled and set to alert if monitoring or reporting is disabled, or if communication is lost with a host agent for more than a reasonable amount of time.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Require Use of Multi-Factor Authentication",
+            "description": "Require use of multi-factor authentication for all services to the extent possible, particularly for email, virtual private networks, and accounts that access critical systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Keep Systems Updated",
+            "description": "Keep all operating systems, software, and firmware up to date.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Configure Newly-Added Systems",
+            "description": "Immediately configure newly-added systems to the network, including those used for testing or development work, to follow the organization’s security baseline and incorporate into enterprise monitoring tools.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11,
+                12
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Audit Log Files",
+            "description": "Audit log files to identify attempts to access privileged certificates and creation of fake identity providers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Deploy Software to Identify Suspicious Behavior",
+            "description": "Deploy software to identify suspicious behavior on systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Deploy Endpoint Protection Systems",
+            "description": "Deploy endpoint protection systems with the ability to monitor for behavioral indicators of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Configure Authentication Mechanisms",
+            "description": "Configure authentication mechanisms to confirm certain user activities on systems, including registering new devices.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-42793",
+    "affected_products": null
+}

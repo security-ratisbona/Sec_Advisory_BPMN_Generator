@@ -1,0 +1,187 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Software and Systems",
+            "description": "Update software, operating systems, applications, and firmware on IT network assets in a timely manner. Prioritize patching known exploited vulnerabilities, especially those CVEs identified in this CSA, and then critical and high vulnerabilities that allow for remote code execution or denial-of-service on internet-facing equipment.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is a patch for a known exploited or critical vulnerability available?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Available Patches",
+            "description": "Apply patches for known exploited or critical vulnerabilities as soon as they are available.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Vendor-Approved Workarounds",
+            "description": "If a patch for a known exploited or critical vulnerability cannot be quickly applied, implement vendor-approved workarounds.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Use Centralized Patch Management System",
+            "description": "Use a centralized patch management system to manage and automate the patching process.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Replace End-of-Life Software",
+            "description": "Replace end-of-life software that is no longer supported by the vendor.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Is the organization unable to perform rapid scanning and patching of internet-facing systems?",
+            "next_step": 8,
+            "else_step": 10
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Consider Moving Services to Cloud or Managed Service Providers",
+            "description": "Consider moving services to mature, reputable cloud service providers (CSPs) or managed service providers (MSPs) if unable to perform rapid scanning and patching of internet-facing systems.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Collaborate with MSPs and CSPs to Reduce Risks",
+            "description": "Proactively collaborate with MSPs and CSPs to jointly reduce risks as they expand the organization's attack surface.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Enforce Multifactor Authentication (MFA)",
+            "description": "Enforce multifactor authentication (MFA) for all users, without exception, and on all VPN connections. If MFA is unavailable, require employees engaging in remote work to use strong passwords.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Review and Manage Privileged Accounts",
+            "description": "Regularly review, validate, or remove privileged accounts (annually at a minimum). Configure access control under the concept of least privilege principle.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Ensure Least Privilege for Software Service Accounts",
+            "description": "Ensure software service accounts only provide necessary permissions (least privilege) to perform intended functions (non-administrative privileges).",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                14,
+                15,
+                16,
+                17,
+                18
+            ],
+            "next_step": 19
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Configure and Secure Internet-Facing Network Devices",
+            "description": "Properly configure and secure internet-facing network devices, disable unused or unnecessary network ports and protocols, encrypt network traffic, and disable unused network services and devices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Harden Enterprise Network Services",
+            "description": "Harden commonly exploited enterprise network services, including LLMNR, RDP, CIFS, Active Directory, and OpenLDAP.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Manage Windows KDC Accounts",
+            "description": "Manage Windows Key Distribution Center (KDC) accounts (e.g., KRBTGT) to minimize Golden Ticket attacks and Kerberoasting.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Control Use of Native Scripting Applications",
+            "description": "Strictly control the use of native scripting applications, such as command-line, PowerShell, WinRM, WMI, and DCOM.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Segment Networks and Monitor Attack Surface",
+            "description": "Segment networks to limit or block lateral movement by controlling access to applications, devices, and databases. Use private virtual local area networks. Continuously monitor the attack surface and investigate abnormal activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                20,
+                21,
+                22
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Use Security Tools",
+            "description": "Use security tools, such as endpoint detection and response (EDR) and security information and event management (SIEM) tools. Consider using an IT asset management (ITAM) solution to ensure your EDR, SIEM, vulnerability scanner etc., are reporting the same number of assets.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Monitor for Potentially Unwanted Programs",
+            "description": "Monitor the environment for potentially unwanted programs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Implement Application Allowlisting",
+            "description": "Implement application allowlisting to control which applications can run on the network.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "VULNERABILITY AND CONFIGURATION MANAGEMENT",
+    "affected_products": null
+}

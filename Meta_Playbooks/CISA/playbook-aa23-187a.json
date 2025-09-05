@@ -1,0 +1,194 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Mandate Phishing-Resistant MFA",
+            "description": "Implement phishing-resistant multifactor authentication (MFA) for all staff and services.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Patches for CVE-2022-31199",
+            "description": "Update Netwrix Auditor to version 10.5 to mitigate CVE-2022-31199.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is Netwrix Auditor used on externally facing networks?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict Netwrix Auditor to Internal Networks",
+            "description": "Ensure Netwrix Auditor is used only on internally facing networks to reduce risk of exploitation.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": 11
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Application Controls",
+            "description": "Implement application controls to manage and control execution of software, including allowlisting remote access programs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Limit Use of RDP and Remote Desktop Services",
+            "description": "Strictly limit the use of RDP and other remote desktop services. Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts, apply MFA, log RDP login attempts, and disable command-line activities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Restrict PowerShell Usage",
+            "description": "Restrict the use of PowerShell by using Group Policy, update to the latest version, enable enhanced logging, and ensure logs are retained for at least 180 days.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Configure Windows Registry for UAC Approval",
+            "description": "Configure the Windows Registry to require User Account Control (UAC) approval for any PsExec operations requiring administrator privileges.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Review and Audit User Accounts",
+            "description": "Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                12,
+                13,
+                14,
+                15,
+                16
+            ],
+            "next_step": 17
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Reduce Threat of Credential Compromise",
+            "description": "Implement measures such as placing domain admin accounts in the protected users’ group, implementing Credential Guard, and refraining from storing plaintext credentials in scripts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Implement Time-Based Access for Admin Accounts",
+            "description": "Implement time-based access for accounts set at the admin level and higher using methods like Just-in-Time (JIT) access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Disable File and Printer Sharing Services",
+            "description": "Disable File and Printer sharing services or use strong passwords or Active Directory authentication if required.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Implement a recovery plan to maintain and retain multiple copies of sensitive data in a secure location and maintain offline backups.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Enforce Strong Password Policies",
+            "description": "Require all accounts with password logins to comply with NIST standards, use longer passwords, store passwords in hashed format, and avoid reusing passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                18,
+                19,
+                20,
+                21,
+                22
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Require Administrator Credentials for Software Installation",
+            "description": "Require administrator credentials to install software and ensure MFA is applied for all services.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Keep Systems Up to Date",
+            "description": "Keep all operating systems, software, and firmware up to date, and prioritize patching known exploited vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting lateral movement.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Identify and Detect Abnormal Activity",
+            "description": "Use network monitoring tools to identify, detect, and investigate abnormal activity and potential ransomware traversal.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Install and Update Antivirus Software",
+            "description": "Install, regularly update, and enable real-time detection for antivirus software on all hosts.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-31199",
+    "affected_products": null
+}

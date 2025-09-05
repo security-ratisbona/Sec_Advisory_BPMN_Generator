@@ -1,0 +1,55 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade Ivanti EPMM to Latest Version",
+            "description": "Upgrade Ivanti EPMM versions to the latest version to protect against CVE-2023-35078 and CVE-2023-35081.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are you using an unsupported version (prior to 11.8.1.0)?",
+            "next_step": 3,
+            "else_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Can you immediately upgrade to a supported version?",
+            "next_step": 5,
+            "else_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Ivanti RPM Fix for CVE-2023-35078",
+            "description": "Apply the Ivanti-provided RPM fix for CVE-35078 if you cannot immediately upgrade.",
+            "commands": [
+                "install rpm url https://support.mobileiron.com/ivanti-updates/ivanti-security-update-1.0.0-1.noarch.rp"
+            ],
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Treat MDM Systems as High-Value Assets",
+            "description": "Implement additional restrictions and monitoring for MDM systems as they provide elevated access to thousands of hosts.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Mandate Phishing-Resistant MFA",
+            "description": "Mandate phishing-resistant multifactor authentication (MFA) for all staff and services.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-35081",
+    "affected_products": null
+}

@@ -1,0 +1,107 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of the HPH sector or other critical infrastructure?",
+            "next_step": 2,
+            "else_step": 8
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Asset Management and Security",
+            "description": "Develop and maintain an asset management policy to reduce the risk of exposing vulnerabilities, devices, or services that could be exploited by threat actors.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Enhance Identity Management and Device Security",
+            "description": "Secure devices and digital accounts, manage online access to protect sensitive data and PII/PHI from compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Establish Vulnerability, Patch, and Configuration Management",
+            "description": "Mitigate known vulnerabilities and establish secure configuration baselines to reduce the likelihood of threat actors exploiting known vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "CONDITION",
+            "condition": "Is the organization a software manufacturer?",
+            "next_step": 9,
+            "else_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Embed Security into Product Architecture",
+            "description": "Integrate security throughout the entire software development lifecycle (SDLC).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Eliminate Default Passwords",
+            "description": "Require administrators to set a strong password during installation and configuration to eliminate default passwords.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Create Secure Configuration Templates",
+            "description": "Provide configuration templates with safe settings based on risk appetite and support them with hardening guides.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Design Products for Compromise Resilience",
+            "description": "Design products so that the compromise of a single security control does not result in compromise of the entire system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Mandate MFA for Privileged Users",
+            "description": "Mandate phishing-resistant MFA for privileged users and make it a default feature.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for HPH Sector and Software Manufacturers",
+    "affected_products": null
+}

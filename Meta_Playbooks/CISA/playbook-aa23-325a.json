@@ -1,0 +1,168 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization or network defender using Citrix NetScaler ADC and Gateway software?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Isolate NetScaler ADC and Gateway appliances",
+            "description": "Isolate NetScaler ADC and Gateway appliances for testing until patching is ready and deployable.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Application Controls",
+            "description": "Implement application controls to manage and control the execution of software, including allowlisting remote access programs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Limit RDP and Remote Desktop Services",
+            "description": "Strictly limit the use of RDP and other remote desktop services. Audit the network for systems using RDP, close unused RDP ports, enforce account lockouts, apply phishing-resistant MFA, and log RDP login attempts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict PowerShell Usage",
+            "description": "Restrict the use of PowerShell using Group Policy, granting access only to specific users on a case-by-case basis.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update PowerShell",
+            "description": "Update Windows PowerShell or PowerShell Core to the latest version and uninstall all earlier versions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Enable Enhanced PowerShell Logging",
+            "description": "Enable enhanced PowerShell logging, including module, script block, and transcription logging. Ensure logs have a retention period of at least 180 days.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Configure Windows Registry for PsExec Operations",
+            "description": "Configure the Windows Registry to require User Account Control (UAC) approval for any PsExec operations requiring administrator privileges.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data in a physically separate, segmented, and secure location.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Enforce Password Policies",
+            "description": "Require all accounts with password logins to comply with NIST's standards for developing and managing password policies. Use longer passwords, store passwords in hashed format, add password user 'salts', avoid reusing passwords, and implement account lockouts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Disable Password Hints",
+            "description": "Disable password 'hints' to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Require Administrator Credentials for Software Installation",
+            "description": "Require administrator credentials to install software to prevent unauthorized installations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Keep Systems Updated",
+            "description": "Keep all operating systems, software, and firmware up to date. Patch vulnerable systems within 24 to 48 hours of vulnerability disclosure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Prioritize Patching of Known Exploited Vulnerabilities",
+            "description": "Prioritize patching known exploited vulnerabilities in internet-facing systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Upgrade NetScaler ADC and Gateway Appliances",
+            "description": "Upgrade vulnerable NetScaler ADC and Gateway appliances to the latest version available to lower the risk of compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Secure Remote Access Tools",
+            "description": "Secure remote access tools by implementing application controls to manage and control the execution of software, including allowlisting remote access programs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Incorporate Secure-by-Design Principles",
+            "description": "Incorporate secure-by-design and -default principles and tactics into software development practices to limit the impact of exploitation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-4966",
+    "affected_products": [
+        "Citrix NetScaler ADC",
+        "Citrix Gateway"
+    ]
+}

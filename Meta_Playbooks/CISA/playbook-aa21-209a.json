@@ -1,0 +1,151 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Enable Automatic Software Updates",
+            "description": "Ensure that automatic software updates are enabled to facilitate timely patching of vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Prioritize Patch Implementation",
+            "description": "Prioritize implementing patches for CVEs that are known to be exploited or accessible to a large number of potential attackers, especially for internet-facing systems.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Citrix ADC Patch for CVE-2019-19781",
+            "description": "Implement the appropriate refresh build according to the vulnerability details outlined by Citrix for CVE-2019-19781.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict VPN Communication to Known IPs",
+            "description": "Only allow the VPN to communicate with known Internet Protocol (IP) addresses (allow-list) to mitigate CVE-2019-19781.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Pulse Secure VPN Patch for CVE-2019-11510",
+            "description": "Upgrade to the latest Pulse Secure VPN to mitigate CVE-2019-11510.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Fortinet SSL VPN Patch for CVE-2018-13379",
+            "description": "Upgrade to the latest Fortinet SSL VPN to mitigate CVE-2018-13379.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply F5 BIG-IP Patch for CVE-2020-5902",
+            "description": "Download and install a fixed software version of the F5 BIG-IP software to mitigate CVE-2020-5902.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Apply MobileIron Patch for CVE-2020-15505",
+            "description": "Download and install a fixed software version of MobileIron software to mitigate CVE-2020-15505.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Apply Microsoft Exchange Patch for CVE-2020-0688",
+            "description": "Download and install a fixed software version of Microsoft Exchange to mitigate CVE-2020-0688.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Apply Atlassian Confluence Patch for CVE-2019-3396",
+            "description": "Download and install a fixed software version of Atlassian Confluence to mitigate CVE-2019-3396.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Apply Microsoft Office Patch for CVE-2017-11882",
+            "description": "Deploy Microsoft's patch for CVE-2017-11882 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Apply Atlassian Crowd Patch for CVE-2019-11580",
+            "description": "Upgrade Atlassian Crowd to the latest version to mitigate CVE-2019-11580.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Apply Drupal Patch for CVE-2018-7600",
+            "description": "Upgrade to the most recent version of Drupal core to mitigate CVE-2018-7600.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Apply Telerik UI Patch for CVE-2019-18935",
+            "description": "Update to the most recent version of Telerik UI for ASP.NET AJAX to mitigate CVE-2019-18935.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Apply Microsoft SharePoint Patch for CVE-2019-0604",
+            "description": "Upgrade on-premise installations of Microsoft SharePoint to the latest available version to mitigate CVE-2019-0604.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Apply Windows BITS Patch for CVE-2020-0787",
+            "description": "Apply the security updates as recommended in the Microsoft BITS security advisory to mitigate CVE-2020-0787.",
+            "commands": null,
+            "next_step": 17
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Apply Microsoft Netlogon Patch for CVE-2020-1472",
+            "description": "Apply the security updates as recommended in the Microsoft Netlogon security advisory to mitigate CVE-2020-1472.",
+            "commands": null,
+            "next_step": 18
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Require Multi-Factor Authentication",
+            "description": "Require multi-factor authentication to remotely access networks from external sources, especially for administrator or privileged accounts.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations and Indicators of Compromise",
+    "affected_products": null
+}

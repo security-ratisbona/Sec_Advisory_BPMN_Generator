@@ -1,0 +1,89 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Indicators of Compromise",
+            "description": "Check for any activity related to ManageEngine ADSelfService Plus indicators of compromise within the network.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are there any indicators of compromise?",
+            "next_step": 3,
+            "else_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to ADSelfService Plus Build 6114",
+            "description": "Update to Zoho ManageEngine ADSelfService Plus build 6114 to fix CVE-2021-40539.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict Internet Access",
+            "description": "Ensure ADSelfService Plus is not directly accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Was the NTDS.dit file compromised?",
+            "next_step": 7,
+            "else_step": 9
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Perform Domain-wide Password Resets",
+            "description": "Conduct domain-wide password resets to mitigate unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Double Kerberos TGT Password Resets",
+            "description": "Conduct double Kerberos Ticket Granting Ticket (TGT) password resets if NTDS.dit file was compromised.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Incident to CISA or FBI",
+            "description": "Report the incident to CISA or the FBI if any indicators of compromise are found, including unauthorized access or lateral movement.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2021-40539",
+    "affected_products": [
+        "Zoho ManageEngine ADSelfService Plus build < 6114"
+    ]
+}

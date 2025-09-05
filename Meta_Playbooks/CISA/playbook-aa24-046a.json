@@ -1,0 +1,304 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization or network defender?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                10,
+                16,
+                20,
+                24,
+                28,
+                32
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Secure and monitor administrator accounts needed?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review Administrator Accounts",
+            "description": "Review current administrator accounts to determine their necessity and only maintain essential accounts for network management.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict Multiple Administrator Accounts",
+            "description": "Restrict the use of multiple administrator accounts for one user.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Create Separate Administrator Accounts",
+            "description": "Create separate administrator accounts for on-premises and Azure environments to segment access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Principle of Least Privilege",
+            "description": "Implement the principle of least privilege and enable just-in-time and just enough access for administrator accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Enable Phishing-Resistant MFA",
+            "description": "Use phishing-resistant multifactor authentication (MFA) for remote access and access to sensitive data repositories.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "CONDITION",
+            "condition": "Reduce attack surface needed?",
+            "next_step": 11,
+            "else_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                12,
+                13,
+                14,
+                15
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Remove Unnecessary Accounts and Groups",
+            "description": "Establish policy and procedure for the prompt removal of unnecessary accounts and groups from the enterprise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Maintain Asset Management Policy",
+            "description": "Maintain a robust asset management policy through comprehensive documentation and tracking of assets.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Follow Routine Patching Cycle",
+            "description": "Follow a routine patching cycle for all operating systems, applications, and software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Restrict Personal Devices",
+            "description": "Restrict personal devices from connecting to the network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "CONDITION",
+            "condition": "Evaluate tenant settings needed?",
+            "next_step": 17,
+            "else_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                18,
+                19
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Evaluate User Permissions in Azure Tenant",
+            "description": "Evaluate current user permissions in the Azure tenant to restrict potentially harmful permissions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Restrict Access to Azure AD Portal",
+            "description": "Restrict access to the Azure AD portal to administrators only.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "CONDITION",
+            "condition": "Create a forensically ready organization needed?",
+            "next_step": 21,
+            "else_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                22,
+                23
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Collect Access and Security Logs",
+            "description": "Collect access- and security-focused logs for use in detection and incident response activities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Enable Complete Coverage of Tools",
+            "description": "Enable complete coverage of tools, including Endpoint Detection and Response (EDR), across the environment.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "CONDITION",
+            "condition": "Assess security configuration of Azure environment needed?",
+            "next_step": 25,
+            "else_step": null
+        },
+        {
+            "step_number": 25,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                26,
+                27
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Use Tools to Identify Attack Paths",
+            "description": "Use tools that identify attack paths to shut them down before they are exploited.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Review Security Recommendations from Microsoft 365 Defender",
+            "description": "Review the security recommendations list provided by Microsoft 365 Defender and focus remediation on critical vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 28,
+            "type": "CONDITION",
+            "condition": "Evaluate conditional access policies needed?",
+            "next_step": 29,
+            "else_step": null
+        },
+        {
+            "step_number": 29,
+            "type": "ACTION",
+            "title": "Review Conditional Access Policies",
+            "description": "Review current conditional access policies to determine if changes are necessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 30,
+            "type": "CONDITION",
+            "condition": "Reset all passwords and establish secure password policies needed?",
+            "next_step": 31,
+            "else_step": null
+        },
+        {
+            "step_number": 31,
+            "type": "ACTION",
+            "title": "Reset All Passwords and Establish Secure Password Policies",
+            "description": "Reset passwords for all users and employ strong password management alongside other attribute-based information.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 32,
+            "type": "CONDITION",
+            "condition": "Mitigations for vendors needed?",
+            "next_step": 33,
+            "else_step": null
+        },
+        {
+            "step_number": 33,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                34,
+                35,
+                36
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 34,
+            "type": "ACTION",
+            "title": "Incorporate Secure by Design Principles",
+            "description": "Incorporate secure by design principles and tactics into vendor practices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 35,
+            "type": "ACTION",
+            "title": "Prioritize Secure by Default Configurations",
+            "description": "Prioritize secure by default configurations to eliminate the need for customer implementation of hardening guidance.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 36,
+            "type": "ACTION",
+            "title": "Implement MFA as Default Feature",
+            "description": "Implement multifactor authentication (MFA), ideally phishing-resistant MFA, as a default feature for all products.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cross-Sector Cybersecurity Performance Goals",
+    "affected_products": null
+}

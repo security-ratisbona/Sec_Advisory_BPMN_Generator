@@ -1,0 +1,68 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a manufacturer of products incorporating vulnerable QNX versions?",
+            "next_step": 2,
+            "else_step": 4
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Contact BlackBerry for Patch",
+            "description": "Manufacturers of products that incorporate vulnerable versions should contact BlackBerry to obtain the patch.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Develop and Test Software Patches",
+            "description": "If developing unique versions of RTOS software, manufacturers may need to develop and test their own software patches.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the organization an end user of safety-critical systems?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Contact Manufacturer for Patch",
+            "description": "End users of safety-critical systems should contact the manufacturer of their product to obtain a patch.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is a patch available?",
+            "next_step": 7,
+            "else_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply Available Patch",
+            "description": "If a patch is available, users should apply the patch as soon as possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Apply Manufacturer's Recommended Mitigation Measures",
+            "description": "If a patch is not available, users should apply the manufacturer's recommended mitigation measures until the patch can be applied.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "BlackBerry QNX Vulnerability",
+    "affected_products": null
+}

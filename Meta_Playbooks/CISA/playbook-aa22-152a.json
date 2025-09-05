@@ -1,0 +1,209 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Implement Data Recovery Plan",
+            "description": "Maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location (e.g., hard drive, storage device, the cloud).",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation and Offline Backups",
+            "description": "Segment the network and maintain offline backups of data to ensure limited interruption to the organization.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Regular Data Backup",
+            "description": "Regularly back up data and password protect backup copies offline. Ensure copies of critical data are not accessible for modification or deletion from the system where the data resides.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Install and Update Antivirus Software",
+            "description": "Install and regularly update antivirus software on all hosts and enable real-time detection.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Install Updates and Patches",
+            "description": "Install updates/patch operating systems, software, and firmware as soon as updates/patches are released.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Review and Audit Accounts",
+            "description": "Review domain controllers, servers, workstations, and active directories for new or unrecognized accounts. Audit user accounts with administrative privileges and configure access controls with least privilege in mind.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Disable Unused Ports",
+            "description": "Disable unused ports to reduce potential attack vectors.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Add Email Banner for External Emails",
+            "description": "Consider adding an email banner to emails received from outside your organization.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Disable Hyperlinks in Emails",
+            "description": "Disable hyperlinks in received emails to prevent phishing attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Enforce Multi-Factor Authentication",
+            "description": "Implement multi-factor authentication to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Develop and Manage Password Policies",
+            "description": "Use the National Institute for Standards and Technology’s (NIST’s) standards for developing and managing password policies.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Use Longer Passwords",
+            "description": "Use longer passwords consisting of at least 8 characters and no more than 64 characters in length.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Store Passwords in Hashed Format",
+            "description": "Store passwords in hashed format using industry-recognized password managers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Add Password User Salts",
+            "description": "Add password user “salts” to shared login credentials.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Avoid Reusing Passwords",
+            "description": "Avoid reusing passwords to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Implement Account Lockouts",
+            "description": "Implement multiple failed login attempt account lockouts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Disable Password Hints",
+            "description": "Disable password “hints” to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Limit Password Change Frequency",
+            "description": "Refrain from requiring password changes more frequently than once per year.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Require Administrator Credentials for Software Installation",
+            "description": "Require administrator credentials to install software.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Use Secure Networks",
+            "description": "Only use secure networks and avoid using public Wi-Fi networks. Consider installing and using a VPN.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Conduct Cybersecurity Awareness and Training",
+            "description": "Focus on cybersecurity awareness and training. Regularly provide users with training on information security principles and techniques as well as overall emerging cybersecurity risks and vulnerabilities (e.g., ransomware and phishing scams).",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "General Cybersecurity Mitigations",
+    "affected_products": null
+}

@@ -1,0 +1,86 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a small- or medium-sized entity?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review IT Helpdesk Password Management",
+            "description": "Review IT helpdesk password management related to initial passwords, password resets for user lockouts, and shared accounts. Ensure procedures align with company policy for user verification and password strength.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review IT Helpdesk Password Management",
+            "description": "Review IT helpdesk password management related to initial passwords, password resets for user lockouts, and shared accounts. Ensure procedures align with company policy for user verification and password strength.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Disable User Accounts for Departing Staff",
+            "description": "Disable user accounts and access to organizational resources for departing staff to minimize system exposure.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Create New User Accounts Close to Start Date",
+            "description": "Create new user accounts as close as possible to an employee’s start date to minimize exposure.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Phishing-Resistant MFA",
+            "description": "Implement phishing-resistant multi-factor authentication (MFA) to strengthen user credentials.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Continuously Review MFA Settings",
+            "description": "Continuously review MFA settings to ensure coverage over all active, internet-facing protocols and ensure no exploitable services are exposed.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Provide Basic Cybersecurity Training",
+            "description": "Provide basic cybersecurity training to users covering concepts such as detecting unsuccessful login attempts, denying unauthorized MFA requests, and ensuring proper MFA setup.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Ensure Password Policies Align with NIST Guidelines",
+            "description": "Ensure password policies align with the latest NIST Digital Identity Guidelines, including meeting minimum password strength requirements.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Disable RC4 for Kerberos Authentication",
+            "description": "Disable the use of RC4 for Kerberos authentication to enhance security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cross-Sector Cybersecurity Performance Goals",
+    "affected_products": null
+}

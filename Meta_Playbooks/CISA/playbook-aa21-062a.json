@@ -1,0 +1,149 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Read Microsoft's Advisory and Security Blog",
+            "description": "Review Microsoft's advisory and security blog post for detailed information on the vulnerabilities and patches.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Identify Affected Exchange Server Version",
+            "description": "Determine the version of Microsoft Exchange Server in use to identify if it is vulnerable.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the Exchange Server version vulnerable?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Exchange Server version is in use?",
+            "cases": {
+                "Exchange Server 2010": 5,
+                "Exchange Server 2013": 6,
+                "Exchange Server 2016": 7,
+                "Exchange Server 2019": 8
+            },
+            "default": null
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is Exchange Server 2010 updated to SP 3 or any SP 3 RU?",
+            "next_step": 9,
+            "else_step": 10
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is Exchange Server 2013 updated to CU 23?",
+            "next_step": 9,
+            "else_step": 10
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Is Exchange Server 2016 updated to CU 19 or CU 18?",
+            "next_step": 9,
+            "else_step": 10
+        },
+        {
+            "step_number": 8,
+            "type": "CONDITION",
+            "condition": "Is Exchange Server 2019 updated to CU 8 or CU 7?",
+            "next_step": 9,
+            "else_step": 10
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Apply Security Patch",
+            "description": "Apply the latest security patch for the identified Exchange Server version using administrator privileges.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Upgrade to Required Cumulative Update",
+            "description": "Upgrade the Exchange Server to the required Cumulative Update before applying the security patch.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 11,
+            "type": "CONDITION",
+            "condition": "Is patching not an immediate option?",
+            "next_step": 12,
+            "else_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Alternative Mitigations",
+            "description": "Follow alternative mitigations from Microsoft's blog on Exchange Server Vulnerabilities Mitigations as a temporary solution.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                14,
+                15,
+                16,
+                17
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Restrict Untrusted Connections to Port 443",
+            "description": "Limit or block external access to internet-facing Exchange Servers by restricting untrusted connections to port 443 or setting up a VPN.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Block External Access to OWA URL",
+            "description": "Restrict external access to the Outlook Web App (OWA) URL: /owa/.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Block External Access to Exchange Admin Center URL",
+            "description": "Restrict external access to the Exchange Admin Center (EAC) aka Exchange Control Panel (ECP) URL: /ecp/.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Disconnect Vulnerable Exchange Servers from the Internet",
+            "description": "Disconnect vulnerable Exchange servers from the internet until a patch can be applied.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Microsoft Exchange Server Vulnerabilities",
+    "affected_products": [
+        "Exchange Server 2010",
+        "Exchange Server 2013",
+        "Exchange Server 2016",
+        "Exchange Server 2019"
+    ]
+}

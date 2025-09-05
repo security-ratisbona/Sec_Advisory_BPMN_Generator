@@ -1,0 +1,319 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Implement Sandboxed Browsers",
+            "description": "Consider implementing sandboxed browsers to protect systems from malware originating from web browsing. Sandboxed browsers isolate the host machine from malicious code.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Enforce Password Policies",
+            "description": "Require all accounts with password logins to comply with NIST standards for developing and managing password policies. Enforce use of longer passwords consisting of at least 15 characters.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Store Passwords Securely",
+            "description": "Store passwords in a salted and hashed format using industry-recognized password hashing algorithms. Prevent use of commonly used or known-compromised passwords.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Account Lockouts",
+            "description": "Implement multiple failed login attempt account lockouts and disable password hints.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Require Admin Credentials for Software Installation",
+            "description": "Require administrator credentials to install software.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Email and Firewall Filters",
+            "description": "Implement filters at the email gateway to filter out emails with known malicious indicators and block suspicious IP addresses at the firewall.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Install Web Application Firewall",
+            "description": "Install a web application firewall and configure with appropriate rules to protect enterprise assets.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks to prevent the spread of ransomware by controlling traffic flows and restricting adversary lateral movement.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Follow Least-Privilege Best Practice",
+            "description": "Require administrators to use administrative accounts for managing systems and use simple user accounts for non-administrative tasks. Enforce the management of and audit user accounts with administrative privileges.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Time-Based Access for Admin Accounts",
+            "description": "Implement time-based access for accounts set at the admin level and higher, such as the Just-in-Time (JIT) access method.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Keep Systems Updated",
+            "description": "Keep all operating systems, software, and firmware up to date. Prioritize patching known exploited vulnerabilities in internet-facing systems.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Restrict Service Account Access",
+            "description": "Restrict service accounts from remotely accessing other systems. Configure group policy to deny log on locally and through Terminal Services for all service accounts.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Block Direct Internet Access for Admin Interfaces",
+            "description": "Block direct internet access for administration interfaces and for remote access.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Require Phishing-Resistant MFA",
+            "description": "Require phishing-resistant multifactor authentication for all services, particularly for webmail, VPNs, and privileged accounts.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Consolidate and Monitor Internet Gateways",
+            "description": "Consolidate, monitor, and defend internet gateways.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Enable Real-Time Antivirus Detection",
+            "description": "Install, regularly update, and enable real-time detection for antivirus software on all hosts.",
+            "commands": null,
+            "next_step": 17
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Raise Phishing Awareness",
+            "description": "Raise awareness for phishing threats in your organization and provide practical training on the risks associated with email use.",
+            "commands": null,
+            "next_step": 18
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Add External Email Warning Banner",
+            "description": "Consider adding an external email warning banner for emails sent to or received from outside of your organization.",
+            "commands": null,
+            "next_step": 19
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Review Internet-Facing Services",
+            "description": "Review internet-facing services and disable any services that are no longer a business requirement to be exposed or restrict access to only those users with an explicit requirement.",
+            "commands": null,
+            "next_step": 20
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Review Domain Controllers and Active Directories",
+            "description": "Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts. Regularly verify the security level of the Active Directory domain by checking for misconfigurations.",
+            "commands": null,
+            "next_step": 21
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Develop and Update Network Diagrams",
+            "description": "Develop and regularly update comprehensive network diagrams that describe systems and data flows within your organization’s networks.",
+            "commands": null,
+            "next_step": 22
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Control and Restrict Network Connections",
+            "description": "Control and restrict network connections accordingly with a network flow matrix.",
+            "commands": null,
+            "next_step": 23
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Enable Enhanced PowerShell Logging",
+            "description": "Enable enhanced PowerShell logging, including module, script block, and transcription logging. Ensure PowerShell instances are configured to use the latest version.",
+            "commands": null,
+            "next_step": 24
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Configure Windows Registry for UAC Approval",
+            "description": "Configure the Windows Registry to require UAC approval for any PsExec operations requiring administrator privileges.",
+            "commands": null,
+            "next_step": 25
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Disable Command-Line and Scripting Activities",
+            "description": "Disable command-line and scripting activities and permissions to prevent privilege escalation and lateral movement.",
+            "commands": null,
+            "next_step": 26
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Enable Credential Guard",
+            "description": "Enable Credential Guard to protect Windows system credentials. Be aware of the limitations when enabling this security control.",
+            "commands": null,
+            "next_step": 27
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Implement Local Administrator Password Solution (LAPS)",
+            "description": "Implement Local Administrator Password Solution (LAPS) where possible if your OS is older than Windows Server 2019 and Windows 10.",
+            "commands": null,
+            "next_step": 28
+        },
+        {
+            "step_number": 28,
+            "type": "ACTION",
+            "title": "Apply Local Security Policies for Application Execution",
+            "description": "Apply local security policies to control application execution with a strict allowlist.",
+            "commands": null,
+            "next_step": 29
+        },
+        {
+            "step_number": 29,
+            "type": "ACTION",
+            "title": "Establish Application Allowlist",
+            "description": "Establish an application allowlist of approved software applications and binaries that are allowed to be executed on a system.",
+            "commands": null,
+            "next_step": 30
+        },
+        {
+            "step_number": 30,
+            "type": "ACTION",
+            "title": "Restrict NTLM Uses",
+            "description": "Restrict NTLM uses with security policies and firewalling.",
+            "commands": null,
+            "next_step": 31
+        },
+        {
+            "step_number": 31,
+            "type": "ACTION",
+            "title": "Disable Unused Ports",
+            "description": "Disable ports that are not being used for business purposes, such as RDP-TCP Port 3389.",
+            "commands": null,
+            "next_step": 32
+        },
+        {
+            "step_number": 32,
+            "type": "ACTION",
+            "title": "Identify and Eliminate Critical Active Directory Control Paths",
+            "description": "Identify Active Directory control paths and eliminate the most critical among them according to the business needs and assets.",
+            "commands": null,
+            "next_step": 33
+        },
+        {
+            "step_number": 33,
+            "type": "ACTION",
+            "title": "Detect and Investigate Abnormal Activity",
+            "description": "Identify, detect, and investigate abnormal activity and potential traversal of ransomware with a networking monitoring tool.",
+            "commands": null,
+            "next_step": 34
+        },
+        {
+            "step_number": 34,
+            "type": "ACTION",
+            "title": "Implement Tiering Model for Trust Zones",
+            "description": "Implement a tiering model by creating trust zones dedicated to an organization’s most sensitive assets.",
+            "commands": null,
+            "next_step": 35
+        },
+        {
+            "step_number": 35,
+            "type": "ACTION",
+            "title": "Block Connections to Known Malicious Systems",
+            "description": "Block connections to known malicious systems by using a Transport Layer Security (TLS) Proxy.",
+            "commands": null,
+            "next_step": 36
+        },
+        {
+            "step_number": 36,
+            "type": "ACTION",
+            "title": "Use Web Filtering or CASB",
+            "description": "Use web filtering or a Cloud Access Security Broker (CASB) to restrict or monitor access to public-file sharing services.",
+            "commands": null,
+            "next_step": 37
+        },
+        {
+            "step_number": 37,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, segmented, and secure location.",
+            "commands": null,
+            "next_step": 38
+        },
+        {
+            "step_number": 38,
+            "type": "ACTION",
+            "title": "Maintain Offline Backups",
+            "description": "Maintain offline backups of data, and regularly maintain backup and restoration. Follow the 3-2-1 backup strategy.",
+            "commands": null,
+            "next_step": 39
+        },
+        {
+            "step_number": 39,
+            "type": "ACTION",
+            "title": "Ensure Backup Data is Encrypted and Immutable",
+            "description": "Ensure all backup data is encrypted, immutable, and covers the entire organization’s data infrastructure.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "LockBit Ransomware Mitigations",
+    "affected_products": null
+}

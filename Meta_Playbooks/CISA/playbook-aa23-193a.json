@@ -1,0 +1,74 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a critical infrastructure organization?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply CISA’s Recommended Baseline Security Configurations",
+            "description": "Implement CISA’s recommended baseline security configurations for Microsoft Defender for Office 365, Azure Active Directory, Exchange Online, OneDrive for Business, Power BI, Power Platform, SharePoint Online, and Teams as per SCuBA TRA Section 6.6.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Separate Administrator Accounts from User Accounts",
+            "description": "Separate administrator accounts from user accounts according to NIST’s guidance, AC-5: Separation of Duties. Only allow designated administrator accounts to be used for administration purposes. Use a separate account without administrative access to other hosts if an individual user requires administrative rights over their workstation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Collect and Store Access and Security Logs",
+            "description": "Collect and store access and security logs for secure cloud access solutions, endpoint solutions, cloud applications/platforms, and security services, such as firewalls, data loss prevention systems, and intrusion detection systems as per SCuBA TRA Section 6.8.1.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use a Telemetry Hosting Solution",
+            "description": "Use a telemetry hosting solution (e.g., SIEM solution) that aggregates logs and telemetry data to facilitate internal organization monitoring, auditing, alerting, and threat detection activities as per SCuBA TRA Section 6.8.1.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Review Contractual Relationships with Cloud Service Providers",
+            "description": "Review contractual relationships with all Cloud Service Providers (CSPs) and ensure contracts include security controls deemed appropriate by the customer, appropriate monitoring and logging of provider-managed customer systems, monitoring of the service provider’s presence, activities, and connections to the customer network, and notification of confirmed or suspected activity.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "GENERAL CLOUD MITIGATIONS",
+    "affected_products": null
+}
