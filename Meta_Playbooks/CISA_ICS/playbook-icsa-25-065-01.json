@@ -1,0 +1,127 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product version is in use?",
+            "cases": {
+                "PCU400 versions 6.5 K and below": 2,
+                "PCU400 versions 9.4.1 and below": 3,
+                "PCULogger versions 1.1.0 and below": 4
+            },
+            "default": 5
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is IEC62351-3 secure for IEC104/DNP3 used?",
+            "next_step": 6,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is IEC62351-3 secure for IEC104/DNP3 used?",
+            "next_step": 7,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the PCULogger program used?",
+            "next_step": 8,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement General Security Practices",
+            "description": "Implement recommended security practices and firewall configurations to protect the process control network from external attacks.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update PCU400 to Version 6.6.0 or Later",
+            "description": "Update PCU400 to version 6.6.0 or later to ensure security when using IEC62351-3 secure for IEC104/DNP3.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update PCU400 to Version 9.4.2 or Later",
+            "description": "Update PCU400 to version 9.4.2 or later to ensure security when using IEC62351-3 secure for IEC104/DNP3.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update PCULogger to Version 1.2.0",
+            "description": "Update PCULogger to version 1.2.0 when available, compatible with PCU400 9.4.2 and later.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Physically Protect Process Control Systems",
+            "description": "Ensure process control systems are physically protected from unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Separate Process Control Systems from Other Networks",
+            "description": "Separate process control systems from other networks using a firewall with minimal ports exposed.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Restrict Internet Usage on Process Control Systems",
+            "description": "Ensure process control systems are not used for Internet surfing, instant messaging, or receiving e-mails.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Scan Portable Computers and Removable Media for Viruses",
+            "description": "Carefully scan portable computers and removable storage media for viruses before connecting to a control system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow internal procedures to report suspected malicious activity to CISA for tracking and correlation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "OpenSSL Vulnerabilities in Hitachi Energy PCU400 Product",
+    "affected_products": [
+        "PCU400 versions 6.5 K and below",
+        "PCU400 versions 9.4.1 and below",
+        "PCULogger versions 1.1.0 and below"
+    ]
+}

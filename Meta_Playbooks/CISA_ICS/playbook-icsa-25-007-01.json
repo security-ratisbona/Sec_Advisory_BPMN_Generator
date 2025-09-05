@@ -1,0 +1,131 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVEs by retrieving the installed product version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product version is installed?",
+            "cases": {
+                "<=3.07.02": 3,
+                "<=3.08.01": 4,
+                "<=3.08.02": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Version 3.08.00 or Later",
+            "description": "Update the product to version 3.08.00 or later to resolve vulnerabilities CVE-2024-48845, CVE-2024-51551, and CVE-2024-51555.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Version 3.08.02 or Later",
+            "description": "Update the product to version 3.08.02 or later to resolve vulnerabilities CVE-2024-6209, CVE-2024-6298, and CVE-2024-48847.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update to Version 3.08.03 or Later",
+            "description": "Update the product to version 3.08.03 or later to resolve vulnerabilities CVE-2024-6515, CVE-2024-6516, CVE-2024-6784, CVE-2024-48843, CVE-2024-48844, CVE-2024-48846, CVE-2024-48839, CVE-2024-48840, CVE-2024-51541, CVE-2024-51542, CVE-2024-51543, CVE-2024-51544, CVE-2024-51545, CVE-2024-51546, CVE-2024-51548, CVE-2024-51549, CVE-2024-51550, CVE-2024-51554, CVE-2024-11316, and CVE-2024-11317.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": 12
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Locate Control Systems Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets. Refer to CISA's ICS webpage for guidance.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to CISA's guidance on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-6209, CVE-2024-6298, CVE-2024-48847, CVE-2024-6515, CVE-2024-6516, CVE-2024-6784, CVE-2024-48843, CVE-2024-48844, CVE-2024-48846, CVE-2024-48839, CVE-2024-48840, CVE-2024-51541, CVE-2024-51542, CVE-2024-51543, CVE-2024-51544, CVE-2024-51545, CVE-2024-51546, CVE-2024-51548, CVE-2024-51549, CVE-2024-51550, CVE-2024-51554, CVE-2024-11316, CVE-2024-11317, CVE-2024-48845, CVE-2024-51551, CVE-2024-51555",
+    "affected_products": [
+        "ASP-ENT-x <=3.08.01",
+        "NEX-2x <=3.08.01",
+        "MAT-x <=3.08.01",
+        "NEXUS-3-x <=3.08.01",
+        "ASP-ENT-x <=3.08.02",
+        "NEX-2x <=3.08.02",
+        "NEXUS-3-x <=3.08.02",
+        "MAT-x <=3.08.02",
+        "ASP-ENT-x <=3.07.02",
+        "NEXUS-3-x <=3.07.02",
+        "NEX-2x <=3.07.02",
+        "MAT-x <=3.07.02"
+    ]
+}

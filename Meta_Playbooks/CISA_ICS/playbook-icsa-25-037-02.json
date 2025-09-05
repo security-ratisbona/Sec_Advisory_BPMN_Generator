@@ -1,0 +1,142 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Product and Version",
+            "description": "Determine if the system is running a vulnerable version of EcoStruxure products.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which EcoStruxure product is in use?",
+            "cases": {
+                "EcoStruxure Control Expert": 3,
+                "EcoStruxure Architecture Builder": 4,
+                "EcoStruxure Control Expert Asset Link": 5,
+                "Vijeo Designer": 6
+            },
+            "default": 7
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update EcoStruxure Control Expert to V16.1",
+            "description": "Download and install version V16.1 of EcoStruxure Control Expert to fix the vulnerability. Reboot the computer after installation.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update EcoStruxure Architecture Builder to V7.0.18",
+            "description": "Download and install version V7.0.18 of EcoStruxure Architecture Builder to fix the vulnerability.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update EcoStruxure Control Expert Asset Link to V4.0 SP1",
+            "description": "Download and install version V4.0 SP1 of EcoStruxure Control Expert Asset Link to fix the vulnerability.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update Vijeo Designer to V6.3SP1 HF1",
+            "description": "Contact Schneider Electric Customer Support to obtain and install Vijeo Designer version V6.3SP1 HF1.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply General Mitigations for Other EcoStruxure Products",
+            "description": "Limit authenticated user access, implement User Account Control practices, and follow workstation, network, and site-hardening guidelines.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Backup and Test Patches",
+            "description": "Employ back-ups and evaluate the impact of patches in a Test and Development environment or on an offline infrastructure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Limit Network Exposure",
+            "description": "Minimize network exposure for all control system devices and systems, ensuring they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Isolate Control Networks",
+            "description": "Locate control and safety system networks and remote devices behind firewalls and isolate them from the business network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Physical Security Controls",
+            "description": "Install physical controls to prevent unauthorized access to industrial control and safety systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Secure Remote Access",
+            "description": "Use secure methods like VPNs for remote access, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Scan Mobile Data Exchange Methods",
+            "description": "Scan all methods of mobile data exchange with the isolated network before use in terminals or any node connected to these networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Schneider Electric Vulnerability Advisory",
+    "affected_products": [
+        "EcoStruxure Control Expert: Versions prior to V16.1",
+        "EcoStruxure Architecture Builder: Versions prior to V7.0.18",
+        "EcoStruxure Control Expert Asset Link: Versions prior to V4.0 SP1",
+        "Vijeo Designer: Version prior to V6.3SP1 HF1"
+    ]
+}

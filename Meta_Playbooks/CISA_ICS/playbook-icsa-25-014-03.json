@@ -1,0 +1,212 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Schneider Electric product is in use?",
+            "cases": {
+                "EcoStruxure Power Monitoring Expert 2021 CU1 and prior": 2,
+                "EcoStruxure Power Operation 2022 CU4 and prior": 3,
+                "EcoStruxure Power Operation 2021 CU3 Hotfix 2 and prior": 4,
+                "EcoStruxure Power Monitoring Expert 2020 CU3 and prior": 5,
+                "EcoStruxure Power SCADA Operation 2020": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which update option for EcoStruxure Power Monitoring Expert 2021?",
+            "cases": {
+                "Update to EcoStruxure Power Monitoring Expert 2021 CU2": 7,
+                "Update to EcoStruxure Power Monitoring Expert 2022": 8,
+                "Upgrade to latest version": 9
+            },
+            "default": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update to EcoStruxure Power Monitoring Expert 2021 CU2",
+            "description": "Download and install EcoStruxure Power Monitoring Expert 2021 CU2 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update to EcoStruxure Power Monitoring Expert 2022",
+            "description": "Download and install EcoStruxure Power Monitoring Expert 2022 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Upgrade to latest version of EcoStruxure Power Monitoring Expert",
+            "description": "Contact Schneider Electric Customer Care Center to upgrade to the latest version of EcoStruxure Power Monitoring Expert.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which update option for EcoStruxure Power Operation 2022?",
+            "cases": {
+                "Update to EcoStruxure Power Operations 2022 CU5": 10,
+                "Upgrade to latest version": 11
+            },
+            "default": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Update to EcoStruxure Power Operations 2022 CU5",
+            "description": "Download and install EcoStruxure Power Operations 2022 CU5 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Upgrade to latest version of EcoStruxure Power Operations",
+            "description": "Contact Schneider Electric Customer Care Center to upgrade to the latest version of EcoStruxure Power Operations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which update option for EcoStruxure Power Operation 2021?",
+            "cases": {
+                "Update to EcoStruxure Power Operations 2021 CU3 Hotfix 3": 12,
+                "Upgrade to latest version": 13
+            },
+            "default": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Update to EcoStruxure Power Operations 2021 CU3 Hotfix 3",
+            "description": "Download and install EcoStruxure Power Operations 2021 CU3 Hotfix 3 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Upgrade to latest version of EcoStruxure Power Operations",
+            "description": "Contact Schneider Electric Customer Care Center to upgrade to the latest version of EcoStruxure Power Operations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade EcoStruxure Power Monitoring Expert 2020",
+            "description": "Contact Schneider Electric Customer Care Center to upgrade to the latest version of EcoStruxure Power Monitoring Expert as it is at its end-of-life support.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade EcoStruxure Power SCADA Operation 2020",
+            "description": "Contact Schneider Electric Customer Care Center to upgrade to the latest version of EcoStruxure Power SCADA Operation as it is at its end-of-life support.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                15,
+                16,
+                17
+            ],
+            "next_step": 18
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure control system devices and systems are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Locate Control Systems Behind Firewalls",
+            "description": "Place control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most recent version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment before deploying defensive measures.",
+            "commands": null,
+            "next_step": 19
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets.",
+            "commands": null,
+            "next_step": 20
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 21
+        },
+        {
+            "step_number": 21,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                22,
+                23
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Avoid Clicking Unsolicited Links",
+            "description": "Do not click web links or open attachments in unsolicited email messages.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Educate on Social Engineering and Phishing",
+            "description": "Refer to resources on recognizing and avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Schneider Electric Vulnerability Advisory",
+    "affected_products": [
+        "EcoStruxure Power Monitoring Expert 2021 CU1 and prior",
+        "EcoStruxure Power Operation 2022 CU4 and prior",
+        "EcoStruxure Power Operation 2021 CU3 Hotfix 2 and prior",
+        "EcoStruxure Power Monitoring Expert 2020 CU3 and prior",
+        "EcoStruxure Power SCADA Operation 2020"
+    ]
+}

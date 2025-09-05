@@ -1,0 +1,64 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version of EcoStruxure Power Build Rapsody is installed?",
+            "cases": {
+                "v2.5.2 NL and prior": 2,
+                "v2.7.1 FR and prior": 3,
+                "v2.7.5 ES and prior": 4,
+                "v2.5.4 INT and prior": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update to Version NL v2.7.2",
+            "description": "Download and install EcoStruxure Power Build Rapsody Version NL v2.7.2 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Version FR v2.7.12",
+            "description": "Download and install EcoStruxure Power Build Rapsody Version FR v2.7.12 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Version ES v2.7.52",
+            "description": "Download and install EcoStruxure Power Build Rapsody Version ES v2.7.52 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Immediate Mitigations for INT Version",
+            "description": "Apply the following mitigations: Only open projects from trusted sources, ensure malware scans before opening externally created projects, encrypt project files, use secure communication protocols, and compute a hash of project files to verify integrity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Reboot the System",
+            "description": "Reboot the system after installing the new version to ensure all changes take effect.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SEVD-2025-014-09",
+    "affected_products": [
+        "EcoStruxure Power Build Rapsody Versions v2.5.2 NL and prior",
+        "EcoStruxure Power Build Rapsody Versions v2.7.1 FR and prior",
+        "EcoStruxure Power Build Rapsody Versions v2.7.5 ES and prior",
+        "EcoStruxure Power Build Rapsody Versions v2.5.4 INT and prior"
+    ]
+}

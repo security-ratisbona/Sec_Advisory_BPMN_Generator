@@ -1,0 +1,114 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Request EcoStruxure™ IT Data Center Expert Version 8.2",
+            "description": "Contact Schneider Electric's Customer Care Center to request Version 8.2 of EcoStruxure™ IT Data Center Expert, which includes fixes for the vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Ensure Least Privilege Principle",
+            "description": "Ensure that the principles of least privilege are being followed so that only those with need have account access and that the level of their respective account authorization aligns with their role, including Privileged Accounts as described in the Data Center Expert Security Handbook.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Verify SHA1 Checksums of Upgrade Bundles",
+            "description": "Verify SHA1 checksums of upgrade bundles prior to executing upgrades as described in the Upgrades section of the Data Center Expert Security Handbook.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Delete Existing 'logcapture' Archives",
+            "description": "Delete any existing 'logcapture' archives present on the system and do not create any new 'logcapture' archives. Existing archives can be deleted from the https://server_ip/capturelogs web page after authenticating.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                12,
+                13
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Avoid Clicking Unsolicited Links or Attachments",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to 'Recognizing and Avoiding Email Scams' for more information.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Avoid Social Engineering and Phishing Attacks",
+            "description": "Refer to 'Avoiding Social Engineering and Phishing Attacks' for more information on social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "EcoStruxure™ IT Data Center Expert Vulnerabilities",
+    "affected_products": null
+}

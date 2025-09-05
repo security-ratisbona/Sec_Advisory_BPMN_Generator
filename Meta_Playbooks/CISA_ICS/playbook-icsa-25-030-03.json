@@ -1,0 +1,124 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Industrial PC is in use?",
+            "cases": {
+                "Harmony Industrial PC": 2,
+                "Pro-face Industrial PC": 3
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Uninstall System Monitor on Harmony Industrial PC",
+            "description": "Uninstall the System Monitor application using the installer available for download.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Uninstall System Monitor on Pro-face Industrial PC",
+            "description": "Uninstall the System Monitor application using the installer available for download.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Stop System Monitor Service if Not Required",
+            "description": "Turn off the System Monitor services as specified in the user guide for Harmony Industrial PC Series or Pro-face PS5000 legacy industrial PC Series.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Set Up Network Segmentation and Firewall",
+            "description": "Implement network segmentation and a firewall to block unauthorized access to configured HTTP/HTTPS ports.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Locate Control and Safety System Networks Behind Firewalls",
+            "description": "Ensure control and safety system networks and remote devices are located behind firewalls and isolated from the business network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Install Physical Controls for Unauthorized Access Prevention",
+            "description": "Install physical controls to prevent unauthorized personnel from accessing industrial control and safety systems, components, peripheral equipment, and networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Secure Controllers in Locked Cabinets",
+            "description": "Place all controllers in locked cabinets and never leave them in 'Program' mode.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Restrict Programming Software Network Connections",
+            "description": "Never connect programming software to any network other than the network intended for that device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Scan Mobile Data Exchange Methods",
+            "description": "Scan all methods of mobile data exchange with the isolated network such as CDs, USB drives, etc. before use in the terminals or any node connected to these networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Sanitize Mobile Devices Before Network Connection",
+            "description": "Never allow mobile devices that have connected to any other network besides the intended network to connect to the safety or control networks without proper sanitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure and Use Secure Remote Access",
+            "description": "Minimize network exposure for all control system devices and systems, ensuring they are not accessible from the Internet. Use secure methods like VPNs for remote access, keeping them updated to the most current version.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SEVD-2024-282-07",
+    "affected_products": [
+        "Harmony Industrial PC",
+        "Pro-face Industrial PC"
+    ]
+}

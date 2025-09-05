@@ -1,0 +1,79 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Is BLE needed?",
+            "cases": {
+                "Yes": 2,
+                "No": 3
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Check Device Availability via Modbus TCP",
+            "description": "After any restart of the device or after turning on BLE via short button press, wait for more than three minutes to check the device's availability via Modbus TCP interface. If necessary, perform a restart by turning the power supply off and on again.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Disable BLE",
+            "description": "After any restart, disable BLE by a short press on the button.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and operate the devices in a protected IT environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Social Engineering Protections",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to resources on recognizing and avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-620799",
+    "affected_products": [
+        "SENTRON Powercenter 1000 (7KN1110-0MC00)",
+        "SENTRON Powercenter 1100 (7KN1111-0MC00)"
+    ]
+}

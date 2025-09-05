@@ -1,0 +1,114 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is in use?",
+            "cases": {
+                "EVlink Home Smart": 2,
+                "Schneider Charge": 3
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Ensure EVlink Home Smart is connected to Wiser application",
+            "description": "Make sure the charging station is connected to the Wiser application to ensure the new version is downloaded and installed.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Ensure Schneider Charge is connected to Wiser application",
+            "description": "Make sure the charging station is connected to the Wiser application to ensure the new version is downloaded and installed.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Verify installed firmware version",
+            "description": "Verify the installed firmware version through the Wiser application or third-party supervision application for Schneider Charge.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use device in a personal home network",
+            "description": "Ensure the device is only used in a personal home network and not exposed to public networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Avoid public IP address and port forwarding",
+            "description": "Ensure the device does not have a publicly accessible IP address and do not use port forwarding to access the device from the public Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Segment device network",
+            "description": "Place the device on its own network segment, preferably on a guest network or VLAN if supported by the router.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use strong Wi-Fi encryption",
+            "description": "Use the strongest Wi-Fi encryption available, such as WPA3 or WPA2/3 with protected management frames.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Schedule regular reboots",
+            "description": "Schedule regular reboots of your routing device, smartphones, and computers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Prevent unauthorized physical access",
+            "description": "Ensure that unauthorized individuals cannot gain physical access to your devices and regularly inspect the device for tampering.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Consult Schneider Electric and CISA resources",
+            "description": "Refer to Schneider Electric Recommended Cybersecurity Best Practices document and CISA's resources for additional guidance.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Schneider Electric Security Notification SEVD-2024-282-04",
+    "affected_products": [
+        "EVlink Home Smart",
+        "Schneider Charge"
+    ]
+}

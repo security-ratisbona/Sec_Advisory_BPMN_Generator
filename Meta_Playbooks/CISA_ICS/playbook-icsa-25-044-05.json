@@ -1,0 +1,141 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Restrict Access to Port 161/udp",
+            "description": "Restrict access to port 161/udp to trusted IP addresses only for all affected products.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Disable Unused SNMP Service",
+            "description": "Disable the SNMP service running in the communication modules if it is not used for all affected products.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which SIPROTEC 5 product is in use?",
+            "cases": {
+                "SIPROTEC 5 Compact 7SX800 (CP050)": 4,
+                "SIPROTEC 5 7SA82 (CP150), 7SD82 (CP150), 7SJ81 (CP150), 7SJ82 (CP150), 7SK82 (CP150), 7SL82 (CP150), 7SX82 (CP150), 7SY82 (CP150), 7UT82 (CP150)": 5,
+                "SIPROTEC 5 6MD84 (CP300), 6MD85 (CP300), 6MD86 (CP300), 6MD89 (CP300), 6MU85 (CP300), 7SA86 (CP300), 7SA87 (CP300), 7SD86 (CP300), 7SD87 (CP300), 7SJ85 (CP300), 7SJ86 (CP300), 7SK85 (CP300), 7SL86 (CP300), 7SL87 (CP300), 7SS85 (CP300), 7SX85 (CP300), 7UM85 (CP300), 7UT85 (CP300), 7UT86 (CP300), 7UT87 (CP300), 7VE85 (CP300), 7VK87 (CP300), 7VU85 (CP300)": 5,
+                "SIPROTEC 5 Communication Module ETH-BA-2EL (Rev.2), ETH-BB-2FO (Rev. 2), ETH-BD-2FO": 5
+            },
+            "default": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update SIPROTEC 5 Compact 7SX800 (CP050)",
+            "description": "Update SIPROTEC 5 Compact 7SX800 (CP050) to V9.90 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update SIPROTEC 5 Products to V9.90 or Later",
+            "description": "Update the specified SIPROTEC 5 products to V9.90 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement General Security Measures",
+            "description": "Protect network access to devices with appropriate mechanisms, configure the environment according to Siemens' operational guidelines for industrial security, and follow recommendations in the product manuals.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10
+            ],
+            "next_step": 11
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Locate Control Systems Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Siemens SIPROTEC 5 Vulnerability",
+    "affected_products": [
+        "SIPROTEC 5 7KE85 (CP300)",
+        "SIPROTEC 5 7ST85 (CP300)",
+        "SIPROTEC 5 7ST86 (CP300)",
+        "SIPROTEC 5 Compact 7SX800 (CP050)",
+        "SIPROTEC 5 7SA82 (CP150)",
+        "SIPROTEC 5 7SD82 (CP150)",
+        "SIPROTEC 5 7SJ81 (CP150)",
+        "SIPROTEC 5 7SJ82 (CP150)",
+        "SIPROTEC 5 7SK82 (CP150)",
+        "SIPROTEC 5 7SL82 (CP150)",
+        "SIPROTEC 5 7SX82 (CP150)",
+        "SIPROTEC 5 7SY82 (CP150)",
+        "SIPROTEC 5 7UT82 (CP150)",
+        "SIPROTEC 5 6MD84 (CP300)",
+        "SIPROTEC 5 6MD85 (CP300)",
+        "SIPROTEC 5 6MD86 (CP300)",
+        "SIPROTEC 5 6MD89 (CP300)",
+        "SIPROTEC 5 6MU85 (CP300)",
+        "SIPROTEC 5 7SA86 (CP300)",
+        "SIPROTEC 5 7SA87 (CP300)",
+        "SIPROTEC 5 7SD86 (CP300)",
+        "SIPROTEC 5 7SD87 (CP300)",
+        "SIPROTEC 5 7SJ85 (CP300)",
+        "SIPROTEC 5 7SJ86 (CP300)",
+        "SIPROTEC 5 7SK85 (CP300)",
+        "SIPROTEC 5 7SL86 (CP300)",
+        "SIPROTEC 5 7SL87 (CP300)",
+        "SIPROTEC 5 7SS85 (CP300)",
+        "SIPROTEC 5 7SX85 (CP300)",
+        "SIPROTEC 5 7UM85 (CP300)",
+        "SIPROTEC 5 7UT85 (CP300)",
+        "SIPROTEC 5 7UT86 (CP300)",
+        "SIPROTEC 5 7UT87 (CP300)",
+        "SIPROTEC 5 7VE85 (CP300)",
+        "SIPROTEC 5 7VK87 (CP300)",
+        "SIPROTEC 5 7VU85 (CP300)",
+        "SIPROTEC 5 Communication Module ETH-BA-2EL (Rev.2)",
+        "SIPROTEC 5 Communication Module ETH-BB-2FO (Rev. 2)",
+        "SIPROTEC 5 Communication Module ETH-BD-2FO"
+    ]
+}

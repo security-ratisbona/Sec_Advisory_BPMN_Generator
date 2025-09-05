@@ -1,0 +1,151 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Close browser and client after logout",
+            "description": "Close browser and client applications after logging out and remove all locally stored session tokens to reduce risk.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is in use?",
+            "cases": {
+                "SIMOCODE ES V19": 3,
+                "SIRIUS Soft Starter ES V19 (TIA Portal)": 4,
+                "SIRIUS Safety ES V19 (TIA Portal)": 5,
+                "TIA Administrator": 6,
+                "SIMATIC PCS neo V4.1": 7,
+                "SIMATIC PCS neo V5.0": 8
+            },
+            "default": 9
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update SIMOCODE ES V19",
+            "description": "Update SIMOCODE ES V19 to V19 Update 1 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update SIRIUS Soft Starter ES V19",
+            "description": "Update SIRIUS Soft Starter ES V19 (TIA Portal) to V19 Update 1 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update SIRIUS Safety ES V19",
+            "description": "Update SIRIUS Safety ES V19 (TIA Portal) to V19 Update 1 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update TIA Administrator",
+            "description": "Update TIA Administrator to V3.0.4 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update SIMATIC PCS neo V4.1",
+            "description": "Update SIMATIC PCS neo V4.1 to V4.1 Update 2 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update SIMATIC PCS neo V5.0",
+            "description": "Update SIMATIC PCS neo V5.0 to V5.0 Update 1 or later version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Protect network access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                11,
+                12,
+                13
+            ],
+            "next_step": 14
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Minimize network exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Locate control system networks behind firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Use secure remote access methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Perform impact analysis and risk assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Report suspected malicious activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Protect against social engineering attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to resources on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-342348",
+    "affected_products": [
+        "SIMATIC PCS neo V4.0",
+        "SIMOCODE ES V19",
+        "SIRIUS Soft Starter ES V19 (TIA Portal)",
+        "SIRIUS Safety ES V19 (TIA Portal)",
+        "TIA Administrator",
+        "SIMATIC PCS neo V4.1",
+        "SIMATIC PCS neo V5.0"
+    ]
+}

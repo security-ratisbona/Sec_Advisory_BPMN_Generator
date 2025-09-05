@@ -1,0 +1,88 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected FLXEON Systems",
+            "description": "Determine if any FLXEON products are exposed directly to the Internet or are using default passwords.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are FLXEON products exposed directly to the Internet?",
+            "next_step": 3,
+            "else_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Disconnect Exposed FLXEON Products",
+            "description": "Stop and disconnect any FLXEON products that are exposed directly to the Internet, either via a direct ISP connection or via NAT port forwarding.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Reconfigure Network for FLXEON Products",
+            "description": "Ensure FLXEON systems operate behind a firewall and are accessed remotely using a secure VPN gateway.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade FLXEON Firmware",
+            "description": "Ensure that all FLXEON products are upgraded to the latest firmware version (9.3.5 or above).",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Change Default Passwords",
+            "description": "Change default passwords on FLXEON products if they are still in use.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Physical Security Controls",
+            "description": "Ensure that physical controls are in place to prevent unauthorized access to devices, components, peripheral equipment, and networks.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Secure VPN Configuration",
+            "description": "Ensure that the VPN gateway and network are set up in accordance with best industry standards and maintained with security patches for all related components.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "ABB FLXEON Vulnerabilities",
+    "affected_products": [
+        "FLXEON"
+    ]
+}

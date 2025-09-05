@@ -1,0 +1,102 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is being addressed?",
+            "cases": {
+                "CVE-2025-0477": 2,
+                "CVE-2025-0497": 3,
+                "CVE-2025-0498": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update FactoryTalk AssetCentre for CVE-2025-0477",
+            "description": "Update FactoryTalk AssetCentre to v15.00.01 or later to mitigate CVE-2025-0477.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Control Database Access for CVE-2025-0477",
+            "description": "Control access to the database by non-essential users to protect encrypted data stored in a table.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update FactoryTalk AssetCentre for CVE-2025-0497",
+            "description": "Update FactoryTalk AssetCentre to v15.00.01 or later to mitigate CVE-2025-0497.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Apply Patches for CVE-2025-0497",
+            "description": "Apply patches for legacy versions by downloading and installing the Rockwell Automation January 2025 monthly patch rollup or later. For EventLogAttachmentExtractor or ArchiveExtractor, locate article BF31148, download the patch files, and follow the instructions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Restrict Physical Access for CVE-2025-0497",
+            "description": "Restrict physical access to the machine to authorized users.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Update FactoryTalk AssetCentre for CVE-2025-0498",
+            "description": "Update FactoryTalk AssetCentre to v15.00.01 or later to mitigate CVE-2025-0498.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Restrict Physical Access for CVE-2025-0498",
+            "description": "Restrict physical access to the machine to authorized users.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rockwell Automation Vulnerabilities",
+    "affected_products": null
+}

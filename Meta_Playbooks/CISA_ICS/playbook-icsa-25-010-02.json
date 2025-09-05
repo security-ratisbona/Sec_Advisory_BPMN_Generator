@@ -1,0 +1,151 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Use HMI in Protected Environment",
+            "description": "Ensure HMI is used only in a protected environment to minimize network exposure and prevent access from public Internet or untrusted networks.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Setup Network Segmentation and Firewall",
+            "description": "Implement network segmentation and a firewall to block all unauthorized access.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Restrict Usage of Unverifiable Portable Media",
+            "description": "Limit the use of portable media that cannot be verified.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict Application Access",
+            "description": "Restrict application access to limit the transfer of firmware to HMIs.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Scan Software/Files for Rootkits",
+            "description": "Scan software and files for rootkits before usage and verify their digital signatures.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use Secure Communication Protocols",
+            "description": "When exchanging files over the network, use secure communication protocols.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Subscribe to Schneider Electric's Security Notification Service",
+            "description": "Subscribe to Schneider Electric's security notification service to stay informed about updates, affected products, and remediation plans.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Locate Control and Safety Systems Behind Firewalls",
+            "description": "Place control and safety system networks and remote devices behind firewalls and isolate them from the business network.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Install Physical Controls",
+            "description": "Install physical controls to prevent unauthorized access to industrial control and safety systems, components, peripheral equipment, and networks.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Place Controllers in Locked Cabinets",
+            "description": "Ensure all controllers are placed in locked cabinets and never left in 'Program' mode.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Connect Programming Software to Intended Network Only",
+            "description": "Never connect programming software to any network other than the network intended for that device.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Scan Mobile Data Exchange Methods",
+            "description": "Scan all methods of mobile data exchange with the isolated network, such as CDs and USB drives, before use in terminals or any node connected to these networks.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Sanitize Mobile Devices Before Connecting to Safety or Control Networks",
+            "description": "Ensure mobile devices that have connected to any other network besides the intended network are properly sanitized before connecting to safety or control networks.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure for Control System Devices",
+            "description": "Minimize network exposure for all control system devices and systems, ensuring they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Use Secure Methods for Remote Access",
+            "description": "When remote access is required, use secure methods such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most current version available.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 17
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow established internal procedures and report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 18
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Avoid Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to resources on recognizing and avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Schneider Electric Security Notification SEVD-2024-345-02",
+    "affected_products": null
+}

@@ -1,0 +1,112 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which FOXMAN-UN version is in use?",
+            "cases": {
+                "FOXMAN-UN R16A, R15A, older than R15A": 2,
+                "FOXMAN-UN R16B PC2": 3,
+                "FOXMAN-UN R15B PC4": 4,
+                "FOXMAN-UN R16B, R15B": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update to UNEM R16B PC4 or R15B PC5",
+            "description": "Update from EOL versions to UNEM R16B PC4 or R15B PC5 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to FOXMAN-UN R16B PC4",
+            "description": "Update from FOXMAN-UN R16B PC2 to R16B PC4 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to FOXMAN-UN R15B PC5",
+            "description": "Update from FOXMAN-UN R15B PC4 to R15B PC5 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Deny nemadm account for SSH logins",
+            "description": "Configure DenyUsers in /etc/ssh/sshd_config to deny nemadm account for SSH logins.",
+            "commands": [
+                "echo 'DenyUsers nemadm' >> /etc/ssh/sshd_config"
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Apply General Mitigation Factors",
+            "description": "Apply general mitigation factors to minimize risk of exploitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most recent version.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-2013, CVE-2024-2012, CVE-2024-2011, CVE-2024-28021, CVE-2024-28023, CVE-2024-28020, CVE-2024-28022, CVE-2024-28024",
+    "affected_products": [
+        "FOXMAN-UN R16A",
+        "FOXMAN-UN R15A",
+        "FOXMAN-UN older than R15A",
+        "FOXMAN-UN R16B PC2",
+        "FOXMAN-UN R15B PC4",
+        "FOXMAN-UN R16B",
+        "FOXMAN-UN R15B"
+    ]
+}

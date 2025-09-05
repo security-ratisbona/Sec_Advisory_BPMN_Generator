@@ -1,0 +1,66 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is being addressed?",
+            "cases": {
+                "CVE-2025-24481": 2,
+                "CVE-2025-24482": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade or Patch for CVE-2025-24481",
+            "description": "Upgrade to V15.0 or apply the patch for CVE-2025-24481. Refer to Answer ID 1152306 for details.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Protect Physical Access",
+            "description": "Ensure physical access to the workstation is protected to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict Access to Port 8091",
+            "description": "Restrict access to Port 8091 at the network or workstation level to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade or Patch for CVE-2025-24482",
+            "description": "Upgrade to V15.0 or apply the patch for CVE-2025-24482. Refer to Answer ID 1152304 for details.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Check Environment Variables",
+            "description": "Ensure the FactoryTalk® View SE installation path (C:\\Program Files (x86)\\Common Files\\Rockwell) is set before all others in the PATH environment variable.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for CVE-2025-24481 and CVE-2025-24482",
+    "affected_products": null
+}
