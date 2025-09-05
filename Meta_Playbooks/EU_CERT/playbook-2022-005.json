@@ -1,0 +1,61 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by retrieving the installed version of Avalanche, Ivanti File Director, or MobileIron.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is affected?",
+            "cases": {
+                "Avalanche": 4,
+                "Ivanti File Director": 5,
+                "MobileIron": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Mitigation for Avalanche",
+            "description": "Apply the available mitigation or fix for Avalanche versions 6.3.0, 6.3.1, 6.3.2, and 6.3.3.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Mitigation for Ivanti File Director",
+            "description": "Apply the available mitigation or fix for Ivanti File Director versions 2020.3, 2021.1, and 2021.3.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Mitigation for MobileIron",
+            "description": "Apply the available mitigation or fix for MobileIron as per the provided guidance.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Avalanche: 6.3.0, 6.3.1, 6.3.2, 6.3.3",
+        "Ivanti File Director: 2020.3, 2021.1, 2021.3",
+        "MobileIron"
+    ]
+}

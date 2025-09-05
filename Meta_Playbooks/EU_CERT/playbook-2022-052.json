@@ -1,0 +1,67 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check for Evidence of Exploitation",
+            "description": "Consult Confluence documentation to get a list of users with their last logon times. Verify if the last authentication time for 'disabledsystemuser' is 'null'.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the last authentication time for 'disabledsystemuser' null?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review SMTP Server Logs for Information Disclosure",
+            "description": "Check the logs of the SMTP server configured to send outbound mail from Confluence to identify any messages sent to 'dontdeletethisuser@email.com'.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Disable or Delete 'disabledsystemuser' Account",
+            "description": "Disable or delete the 'disabledsystemuser' account to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version of Questions for Confluence is installed?",
+            "cases": {
+                "2.7.x": 6,
+                "3.0.2": 7
+            },
+            "default": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update Questions for Confluence 2.7.x",
+            "description": "Update to version 2.7.38 or higher to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update Questions for Confluence 3.0.2",
+            "description": "Update to version 3.0.5 or higher to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Confluence Vulnerability - disabledsystemuser",
+    "affected_products": [
+        "Questions for Confluence 2.7.x - versions 2.7.34, 2.7.35",
+        "Questions for Confluence 3.0.2 - version 3.0.2"
+    ]
+}

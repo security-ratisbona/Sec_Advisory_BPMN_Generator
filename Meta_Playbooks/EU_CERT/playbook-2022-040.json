@@ -1,0 +1,69 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Confluence Version",
+            "description": "Determine if the Confluence Server or Data Center version is affected by checking the installed version against the fixed versions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Confluence version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade to Latest Confluence Version",
+            "description": "Install the latest version of Confluence Server or Data Center to address the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Scan for Indicators of Compromise (IOCs)",
+            "description": "Scan Confluence servers for IOCs published by Volexity researchers and any other suspicious behavior.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is it possible to upgrade Confluence?",
+            "next_step": 6,
+            "else_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Atlassian Workarounds",
+            "description": "Apply the recommended workarounds for Confluence versions 7.15.0 to 7.18.0 and 7.0.0 to 7.14.2 if upgrading is not possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Monitor for Other Security Flaws",
+            "description": "Be aware that the mitigation does not cover other security flaws fixed in the update. Continue monitoring for any additional vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Confluence Server and Data Center < 7.4.17",
+        "Confluence Server and Data Center < 7.13.7",
+        "Confluence Server and Data Center < 7.14.3",
+        "Confluence Server and Data Center < 7.15.2",
+        "Confluence Server and Data Center < 7.16.4",
+        "Confluence Server and Data Center < 7.17.4",
+        "Confluence Server and Data Center < 7.18.1"
+    ]
+}

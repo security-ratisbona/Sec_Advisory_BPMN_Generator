@@ -1,0 +1,26 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Apply Citrix ADM Patches",
+            "description": "Apply the patches provided by Citrix to mitigate the vulnerability in Citrix ADM versions 13.0 before 13.0-85.19 and 13.1 before 13.1-21.53.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Segment Network Traffic",
+            "description": "Segment network traffic to the Citrix ADM’s IP address, either physically or logically, from standard network traffic as a mitigation measure.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Citrix ADM 13.0 before 13.0-85.19",
+        "Citrix ADM 13.1 before 13.1-21.53"
+    ]
+}

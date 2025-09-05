@@ -1,0 +1,39 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review ISC Mitigation for CVE-2022-2906",
+            "description": "Apply the necessary mitigation provided by ISC for CVE-2022-2906.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review ISC Mitigation for CVE-2022-3080",
+            "description": "Apply the necessary mitigation provided by ISC for CVE-2022-3080.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review ISC Mitigation for CVE-2022-38177",
+            "description": "Apply the necessary mitigation provided by ISC for CVE-2022-38177.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Review ISC Mitigation for CVE-2022-38178",
+            "description": "Apply the necessary mitigation provided by ISC for CVE-2022-38178.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Multiple versions of BIND 9",
+    "affected_products": null
+}

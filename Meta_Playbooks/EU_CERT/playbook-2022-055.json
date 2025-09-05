@@ -1,0 +1,53 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which method to disable SmartForward/SmartReply?",
+            "cases": {
+                "Email+ Client Settings": 2,
+                "Configuration Option": 3
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Disable SmartForward/SmartReply via Email+ Client Settings",
+            "description": "From the email+ client, navigate to settings and disable 'Use smart send'.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Email+ version is in use?",
+            "cases": {
+                "Version 3.1.1 and higher": 4,
+                "Version 2.18 and higher": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Disable SmartForward/SmartReply via Configuration for Version 3.1.1 and Higher",
+            "description": "Use the 'disabled_features' key and include the value 'smart_send' to disable SmartForward/SmartReply.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable SmartForward/SmartReply via Configuration for Version 2.18 and Higher",
+            "description": "Use the 'enabled_features' key and include the value 'disable_smart_send' to disable SmartForward/SmartReply.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Android email+ all versions",
+    "affected_products": [
+        "Android email+ all versions"
+    ]
+}

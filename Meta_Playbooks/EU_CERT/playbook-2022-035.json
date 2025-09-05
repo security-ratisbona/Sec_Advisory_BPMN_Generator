@@ -1,0 +1,35 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Enable Automatic Firmware Update",
+            "description": "Enable automatic firmware update to apply the vendor patch and mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "USG FLEX 100, 100W, 200, 500, 700: ZLD5.00 through ZLD5.21 Patch 1",
+        "USG FLEX 50(W), USG20(W)-VPN: ZLD5.10 through ZLD5.21 Patch 1",
+        "ATP series: ZLD5.10 through ZLD5.21 Patch 1",
+        "VPN series: ZLD V4.60 through ZLD V5.21 Patch 1"
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerabilities by retrieving the installed version of Cisco Nexus Dashboard.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running Cisco Nexus Dashboard version 1.1 or later?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the system running Cisco Nexus Dashboard version 1.1?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Cisco Nexus Dashboard 2.2(1e)",
+            "description": "Upgrade to the fixed software release 2.2(1e) to address the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade to Cisco Nexus Dashboard 2.2(1e)",
+            "description": "Upgrade to the fixed software release 2.2(1e) to address the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-20861 and CVE-2022-20858",
+    "affected_products": [
+        "Cisco Nexus Dashboard 1.1 and later"
+    ]
+}

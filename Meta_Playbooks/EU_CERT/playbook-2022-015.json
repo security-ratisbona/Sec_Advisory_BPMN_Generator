@@ -1,0 +1,21 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Apply Security Patch",
+            "description": "Apply the latest security patch to Microsoft Exchange Server to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Microsoft Exchange Server 2019 Cumulative Update 11",
+        "Microsoft Exchange Server 2019 Cumulative Update 10",
+        "Microsoft Exchange Server 2016 Cumulative Update 22",
+        "Microsoft Exchange Server 2016 Cumulative Update 21",
+        "Microsoft Exchange Server 2013 Cumulative Update 23"
+    ]
+}

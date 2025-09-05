@@ -1,0 +1,63 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Oracle Products",
+            "description": "Consult Oracle's official page to identify the specific versions of Oracle products affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Patches to Affected Oracle Products",
+            "description": "Apply the recommended patches to all identified affected Oracle products to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Oracle Database Server",
+        "Oracle Airlines Data Model",
+        "Oracle Big Data Graph",
+        "Oracle Communications Data Model",
+        "Oracle Essbase",
+        "Oracle GoldenGate",
+        "Oracle Graph Server and Client",
+        "Oracle NoSQL Database",
+        "Oracle REST Data Services",
+        "Oracle Secure Backup",
+        "Oracle Spatial Studio",
+        "Oracle TimesTen In-Memory Database",
+        "Oracle Commerce",
+        "Oracle Communications Applications",
+        "Oracle Communications",
+        "Oracle Construction and Engineering",
+        "Oracle E-Business Suite",
+        "Oracle Enterprise Manager",
+        "Oracle Financial Services Applications",
+        "Oracle Food and Beverage Applications",
+        "Oracle Fusion Middleware",
+        "Oracle Health Sciences Applications",
+        "Oracle HealthCare Applications",
+        "Oracle Hospitality Applications",
+        "Oracle Hyperion",
+        "Oracle iLearning",
+        "Oracle Insurance Applications",
+        "Oracle Java SE",
+        "Oracle JD Edwards",
+        "Oracle MySQL",
+        "Oracle PeopleSoft",
+        "Oracle Policy Automation",
+        "Oracle Retail Applications",
+        "Oracle Siebel CRM",
+        "Oracle Supply Chain",
+        "Oracle Support Tools",
+        "Oracle Systems",
+        "Oracle Utilities Applications",
+        "Oracle Virtualization"
+    ]
+}

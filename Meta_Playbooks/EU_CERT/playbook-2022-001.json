@@ -1,0 +1,91 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by CVE-2021-22045 by retrieving the installed VMware product version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2021-22045?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which VMware product is installed?",
+            "cases": {
+                "VMware ESXi 6.5": 4,
+                "VMware ESXi 6.7": 5,
+                "VMware ESXi 7": 6,
+                "VMware Workstation 16.x": 7,
+                "VMware Fusion 12.x": 8,
+                "VMware Cloud Foundation (ESXi) 3.x, 4.x": 9
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Update for VMware ESXi 6.5",
+            "description": "Update VMware ESXi 6.5 to version ESXi650-202111101-SG to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Update for VMware ESXi 6.7",
+            "description": "Update VMware ESXi 6.7 to version ESXi670-202110101-SG to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Workaround for VMware ESXi 7",
+            "description": "Implement the workaround to disable CD-ROM/DVD devices on all running virtual machines as a temporary solution.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update VMware Workstation 16.x",
+            "description": "Update VMware Workstation 16.x to version 16.2.0 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update VMware Fusion 12.x",
+            "description": "Update VMware Fusion 12.x to version 12.2.0 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Apply Workaround for VMware Cloud Foundation (ESXi) 3.x, 4.x",
+            "description": "Implement the workaround to disable CD-ROM/DVD devices on all running virtual machines as a temporary solution.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2021-22045",
+    "affected_products": [
+        "VMware ESXi 6.5",
+        "VMware ESXi 6.7",
+        "VMware ESXi 7",
+        "VMware Workstation 16.x",
+        "VMware Fusion 12.x",
+        "VMware Cloud Foundation (ESXi) 3.x, 4.x"
+    ]
+}

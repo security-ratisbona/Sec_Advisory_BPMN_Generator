@@ -1,0 +1,60 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected SonicWall Appliances and Versions",
+            "description": "Determine if the SonicWall appliance is affected by checking the model and installed SonicOS version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the appliance affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which appliance model is affected?",
+            "cases": {
+                "NSsp 15700": 4,
+                "Other Models": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Hotfix for NSsp 15700",
+            "description": "Contact SonicWall support to obtain and apply the hotfix build 7.0.1-5030-HF-R844 for NSsp 15700.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update SonicOS to Fixed Version",
+            "description": "Update the SonicOS to the fixed version as specified for the affected appliance model.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict SonicOS Management Interface Access",
+            "description": "Modify SonicOS Management access rules to ensure the management interface is not exposed to the Internet.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-22274",
+    "affected_products": [
+        "TZ270, TZ270W, TZ370, TZ370W, TZ470, TZ470W, TZ570, TZ570W, TZ570P, TZ670, NSa 2700, NSa 3700, NSa 4700, NSa 5700, NSa 6700, NSsp 10700, NSsp 11700, NSsp 13700, NSv 270, NSv 470, NSv 870: 7.0.1-5050 and older",
+        "NSsp 15700: 7.0.1-R579 and older",
+        "NSv 10, NSv 25, NSv 50, NSv 100, NSv 200, NSv 300, NSv 400, NSv 800, NSv 1600: 6.5.4.4-44v-21-1452 and earlier"
+    ]
+}

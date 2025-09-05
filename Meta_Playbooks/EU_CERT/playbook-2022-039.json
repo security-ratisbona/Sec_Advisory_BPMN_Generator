@@ -1,0 +1,92 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Install June 2022 Cumulative Windows Updates",
+            "description": "Apply the latest updates provided with the June 2022 cumulative Windows Updates to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Enable Protected View",
+            "description": "Enable 'Protected View' in Microsoft Office applications to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Disable Preview Mode",
+            "description": "Disable 'Preview Mode' in Microsoft Office applications to prevent potential exploitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Monitor for Suspicious Behavior in Microsoft Office",
+            "description": "Monitor for suspicious behaviors in Microsoft Office products. Ensure that 'msdt.exe' is not spawned by Office products like 'words.exe', 'outlook.exe', and 'excel.exe'.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is updating not an option?",
+            "next_step": 7,
+            "else_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Remove ms-msdt Handler from Registry",
+            "description": "Remove the 'ms-msdt' handler from the Windows Registry as a temporary workaround.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Delete search-ms Protocol Handler from Registry",
+            "description": "Delete the 'search-ms' protocol handler from the Windows Registry as a temporary workaround.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Enable Attack Surface Reduction Features",
+            "description": "Use Attack Surface Reduction features to prevent Office applications from spawning child processes. Be aware that this may block some legitimate applications.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "All Windows versions still receiving Security Updates"
+    ]
+}

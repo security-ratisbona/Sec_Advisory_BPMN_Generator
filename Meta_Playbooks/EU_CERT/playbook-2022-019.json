@@ -1,0 +1,73 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by retrieving the installed version of Veeam Backup & Replication.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version of Veeam Backup & Replication is installed?",
+            "cases": {
+                "Veeam Backup & Replication 11a (build 11.0.1.1261 P20220302) or later": 3,
+                "Veeam Backup & Replication 10a (build 10.0.1.4854 P20220304) or later": 3,
+                "Veeam Backup & Replication 9.5": 4,
+                "Veeam Backup & Replication 10": 5,
+                "Veeam Backup & Replication 11": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Confirm System is Not Vulnerable",
+            "description": "The system is not vulnerable if running Veeam Backup & Replication 11a or 10a with the specified builds or later.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Veeam Backup & Replication 9.5",
+            "description": "Upgrade to a supported version of Veeam Backup & Replication as there is no patch available for version 9.5.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Patch for Veeam Backup & Replication 10 or 11",
+            "description": "Apply the available patches for Veeam Backup & Replication 10 or 11 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Disable Veeam Distribution Service",
+            "description": "As a temporary mitigation, stop and disable the Veeam Distribution Service on the Veeam Backup & Replication server and distribution servers in Protection Groups.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Veeam Backup & Replication 9.5",
+        "Veeam Backup & Replication 10",
+        "Veeam Backup & Replication 11"
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is affected by checking the model and version of the Cisco router.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Cisco router model is affected?",
+            "cases": {
+                "RV160 Series Routers": 3,
+                "RV260 Series Routers": 3,
+                "RV340 Series Routers": 4,
+                "RV345 Series Routers": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Await Software Fixes for RV160 and RV260 Series",
+            "description": "Cisco is working on fixes for the RV160 and RV260 Series Routers. Monitor Cisco's updates for the release of these fixes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade RV340 and RV345 Series Routers",
+            "description": "Apply the latest software updates released by Cisco to address the vulnerabilities in RV340 and RV345 Series Routers.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "RV160 VPN Routers",
+        "RV160W Wireless-AC VPN Routers",
+        "RV260 VPN Routers",
+        "RV260P VPN Routers with PoE",
+        "RV260W Wireless-AC VPN Routers",
+        "RV340 Dual WAN Gigabit VPN Routers",
+        "RV340W Dual WAN Gigabit Wireless-AC VPN Routers",
+        "RV345 Dual WAN Gigabit VPN Routers",
+        "RV345P Dual WAN Gigabit POE VPN Routers"
+    ]
+}

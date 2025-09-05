@@ -1,0 +1,50 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the Cisco Umbrella Virtual Appliance is affected by the vulnerability by retrieving the installed software version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Cisco Umbrella Virtual Appliance version is installed?",
+            "cases": {
+                "3.2 and earlier": 4,
+                "3.3": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Migrate to a Fixed Release",
+            "description": "Migrate Cisco Umbrella Virtual Appliance 3.2 and earlier to a fixed release to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update to Version 3.3.2",
+            "description": "Update Cisco Umbrella Virtual Appliance 3.3 to version 3.3.2 to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Cisco Umbrella Virtual Appliance for VMWare ESXi and Hyper-V < 3.3.2"
+    ]
+}

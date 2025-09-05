@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Installed PHP Everywhere Plugin Version",
+            "description": "Check the installed version of the PHP Everywhere plugin to determine if it is vulnerable.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed PHP Everywhere plugin version <= 2.0.3?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade PHP Everywhere Plugin to Version 3.0.0",
+            "description": "Upgrade the PHP Everywhere plugin to version 3.0.0 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "PHP Everywhere plugins versions <= 2.0.3"
+    ]
+}

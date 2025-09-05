@@ -1,0 +1,81 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Systems",
+            "description": "Determine if the system is affected by checking for the presence of Windows TCP/IP with IPSec enabled or Microsoft Dynamics CRM (on-premises).",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which vulnerability is present?",
+            "cases": {
+                "CVE-2022-34718": 3,
+                "CVE-2022-35805 or CVE-2022-34700": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Latest Security Updates for Windows TCP/IP",
+            "description": "Apply the latest security updates to mitigate the Windows TCP/IP Remote Code Execution Vulnerability (CVE-2022-34718).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Latest Security Updates for Microsoft Dynamics CRM",
+            "description": "Apply the latest security updates to mitigate the Microsoft Dynamics CRM Remote Code Execution Vulnerabilities (CVE-2022-35805 and CVE-2022-34700).",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-34718, CVE-2022-35805, CVE-2022-34700",
+    "affected_products": [
+        ".NET and Visual Studio",
+        ".NET Framework",
+        "Azure Arc",
+        "Cache Speculation",
+        "HTTP.sys",
+        "Microsoft Dynamics",
+        "Microsoft Edge (Chromium-based)",
+        "Microsoft Graphics Component",
+        "Microsoft Office",
+        "Microsoft Office SharePoint",
+        "Microsoft Office Visio",
+        "Microsoft Windows ALPC",
+        "Microsoft Windows Codecs Library",
+        "Network Device Enrollment Service (NDES)",
+        "Role: DNS Server",
+        "Role: Windows Fax Service",
+        "SPNEGO Extended Negotiation",
+        "Visual Studio Code",
+        "Windows Common Log File System Driver",
+        "Windows Credential Roaming Service",
+        "Windows Defender",
+        "Windows Distributed File System (DFS)",
+        "Windows DPAPI (Data Protection Application Programming Interface)",
+        "Windows Enterprise App Management",
+        "Windows Event Tracing",
+        "Windows Group Policy",
+        "Windows IKE Extension",
+        "Windows Kerberos",
+        "Windows Kernel",
+        "Windows LDAP",
+        "Lightweight Directory Access Protocol",
+        "Windows ODBC Driver",
+        "Windows OLE",
+        "Windows Photo Import API",
+        "Windows Print Spooler Components",
+        "Windows Remote Access Connection Manager",
+        "Windows Remote Procedure Call",
+        "Windows TCP/IP",
+        "Windows Transport Security Layer (TLS)"
+    ]
+}

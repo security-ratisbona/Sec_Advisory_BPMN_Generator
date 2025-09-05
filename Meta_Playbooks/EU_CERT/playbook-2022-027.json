@@ -1,0 +1,59 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Configuration",
+            "description": "Check if the system is affected by the CVE by verifying the Cisco WLC Software Release and macfilter radius compatibility configuration.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which macfilter configuration is in use?",
+            "cases": {
+                "No macfilters": 4,
+                "macfilters": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Reset macfilter radius compatibility to default",
+            "description": "For environments without macfilters, reset the macfilter radius compatibility mode to the default value.",
+            "commands": [
+                "wlc > config macfilter radius-compat cisco"
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Modify macfilter compatibility for environments with macfilters",
+            "description": "For environments with macfilters, modify the macfilter compatibility to either cisco or free.",
+            "commands": [
+                "wlc > config macfilter radius-compat cisco",
+                "wlc > config macfilter radius-compat free"
+            ],
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "3504 Wireless Controller",
+        "5520 Wireless Controller",
+        "8540 Wireless Controller",
+        "Mobility Express",
+        "Virtual Wireless Controller (vWLC)"
+    ]
+}

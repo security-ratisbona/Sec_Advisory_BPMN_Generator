@@ -1,0 +1,23 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade Samba",
+            "description": "Upgrade Samba to the latest available version to ensure all security patches are applied.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Disable SMB1",
+            "description": "Disable the use of SMB1 to enhance security and prevent vulnerabilities associated with older protocols.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Samba Upgrade and SMB1 Disabling Recommendation",
+    "affected_products": null
+}

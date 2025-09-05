@@ -1,0 +1,71 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Kernel Version",
+            "description": "Check if the system is affected by the vulnerability by retrieving the installed Linux kernel version and distribution.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Linux distribution is installed?",
+            "cases": {
+                "Debian Bullseye": 4,
+                "Ubuntu": 5,
+                "SUSE Linux Enterprise": 6,
+                "Red Hat Enterprise Linux": 7
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Mitigation Steps for Debian Bullseye",
+            "description": "Follow the specific mitigation steps provided for Debian Bullseye to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Mitigation Steps for Ubuntu",
+            "description": "Follow the specific mitigation steps provided for Ubuntu releases to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Mitigation Steps for SUSE Linux Enterprise",
+            "description": "Follow the specific mitigation steps provided for SUSE Linux Enterprise to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply Mitigation Steps for Red Hat Enterprise Linux",
+            "description": "Follow the specific mitigation steps provided for Red Hat Enterprise Linux to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Linux kernel versions 5.4 through 5.6.10 on Red Hat Enterprise Linux (RHEL) 8.x",
+        "Debian Bullseye",
+        "Ubuntu Linux",
+        "SUSE Linux Enterprise 15.3"
+    ]
+}

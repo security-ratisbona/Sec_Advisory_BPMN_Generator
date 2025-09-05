@@ -1,0 +1,52 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Jira Version",
+            "description": "Determine if the installed version of Jira or Jira Service Management is affected by the vulnerability by checking the version number.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version of Jira or Jira Service Management affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Version",
+            "description": "Upgrade Jira or Jira Service Management to a fixed version to remediate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Workaround by Upgrading Mobile Plugin",
+            "description": "Manually upgrade the Mobile Plugin for Jira Data Center and Server to version 3.2.15 if unable to immediately upgrade Jira or Jira Service Management.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable Mobile Plugin",
+            "description": "Disable the Mobile Plugin for Jira Data Center and Server as a temporary workaround if unable to upgrade.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Jira Core Server: 8.0 < version < 8.13.22",
+        "Jira Software Server: 8.0 < version < 8.13.22",
+        "Jira Software Data Center: 8.0 < version < 8.13.22",
+        "Jira Service Management Server: 4.0 < version < 4.13.22",
+        "Jira Service Management Data Center: 4.0 < version < 4.13.22"
+    ]
+}
