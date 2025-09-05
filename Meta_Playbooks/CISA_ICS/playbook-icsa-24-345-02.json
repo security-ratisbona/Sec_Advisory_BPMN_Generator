@@ -1,0 +1,134 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Contact Schneider Electric for Patch Information",
+            "description": "Contact the local service representative or Schneider Electric Process Automation Global Customer Support Center for information on how to download and install Patch HF97872598 for EcoStruxure Foxboro DCS Core Control Services v9.5 to v9.8.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Install Patch HF97872598",
+            "description": "Download and install Patch HF97872598 for EcoStruxure Foxboro DCS Core Control Services v9.5 to v9.8. Reboot the system after installation.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Test Patch in Development Environment",
+            "description": "Use appropriate patching methodologies and evaluate the impact of the patch in a test and development environment or on an offline infrastructure.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Back-Up Systems",
+            "description": "Create back-ups of systems before applying patches to ensure data integrity and recovery options.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is the patch applied?",
+            "next_step": 6,
+            "else_step": 10
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Secure Physical Access",
+            "description": "Install EcoStruxure Foxboro DCS workstations in a secure location to prevent physical access by unauthorized personnel.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Password Protections",
+            "description": "Set appropriate password protections to prevent remote access by unauthorized personnel.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Subscribe to Security Notifications",
+            "description": "Subscribe to Schneider Electric's security notification service to stay informed of all updates, including details on affected products and remediation plans.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                11,
+                12,
+                13,
+                14,
+                15
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Locate Networks Behind Firewalls",
+            "description": "Locate control and safety system networks and remote devices behind firewalls and isolate them from the business network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Install Physical Controls",
+            "description": "Install physical controls to prevent unauthorized access to industrial control and safety systems, components, peripheral equipment, and networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Secure Controllers",
+            "description": "Place all controllers in locked cabinets and never leave them in the 'Program' mode.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Scan Mobile Data Exchange Methods",
+            "description": "Scan all methods of mobile data exchange with the isolated network such as CDs, USB drives, etc. before use in the terminals or any node connected to these networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Restrict Mobile Device Connections",
+            "description": "Never allow mobile devices that have connected to any other network besides the intended network to connect to the safety or control networks without proper sanitation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SEVD-2024-191-02 EcoStruxure Foxboro DCS Core Control Services",
+    "affected_products": [
+        "EcoStruxure Foxboro DCS Core Control Services v9.5 to v9.8"
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Apply Immediate Mitigations",
+            "description": "Apply immediate mitigations to reduce the risk of exploit for Modicon M241/M251/M258/LMC058.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Use Protected Environment",
+            "description": "Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from public internet or untrusted networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Filter Ports and IP",
+            "description": "Filter ports and IP through the embedded firewall.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Setup Network Segmentation",
+            "description": "Setup network segmentation and implement a firewall to block all unauthorized access to Port 502/TCP.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Unused Protocols",
+            "description": "Disable all unused protocols (default configuration).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Subscribe to Security Notification Service",
+            "description": "Subscribe to Schneider Electric's security notification service to stay informed of all updates, including details on affected products and remediation plans.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Industry Cybersecurity Best Practices",
+            "description": "Implement Schneider Electric's recommended industry cybersecurity best practices.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+            ],
+            "next_step": 18
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Locate Networks Behind Firewalls",
+            "description": "Locate control and safety system networks and remote devices behind firewalls and isolate them from the business network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Install Physical Controls",
+            "description": "Install physical controls so no unauthorized personnel can access your industrial control and safety systems, components, peripheral equipment, and networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Secure Controllers",
+            "description": "Place all controllers in locked cabinets and never leave them in the 'Program' mode.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Restrict Programming Software Connections",
+            "description": "Never connect programming software to any network other than the network intended for that device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Scan Mobile Data Exchange Methods",
+            "description": "Scan all methods of mobile data exchange with the isolated network such as CDs, USB drives, etc. before use in the terminals or any node connected to these networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Sanitize Mobile Devices",
+            "description": "Never allow mobile devices that have connected to any other network besides the intended network to connect to the safety or control networks without proper sanitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and systems and ensure that they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods, such as virtual private networks (VPNs). Recognize that VPNs may have vulnerabilities and should be updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 19
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SEVD-2024-345-03",
+    "affected_products": [
+        "Modicon M241",
+        "Modicon M251",
+        "Modicon M258",
+        "Modicon LMC058"
+    ]
+}

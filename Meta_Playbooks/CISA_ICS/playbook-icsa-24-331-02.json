@@ -1,0 +1,64 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by verifying the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running Schneider Electric PowerLogic P5 v01.500.104 or prior?",
+            "next_step": 3,
+            "else_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update PowerLogic P5 Firmware",
+            "description": "Contact Schneider Electric's Customer Care Center to download and install PowerLogic P5 Wave 4.2.3 P5L30 firmware, which includes a fix for the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Industry Cybersecurity Best Practices",
+            "description": "Apply Schneider Electric's recommended cybersecurity best practices to enhance system security.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Consult Schneider Electric Security Notification",
+            "description": "Refer to Schneider Electric Security Notification SEVD-2024-163-02 for detailed information on the vulnerability and its mitigation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Industry Cybersecurity Best Practices",
+            "description": "Apply Schneider Electric's recommended cybersecurity best practices to enhance system security.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Consult Schneider Electric Security Notification",
+            "description": "Refer to Schneider Electric Security Notification SEVD-2024-163-02 for detailed information on the vulnerability and its mitigation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Schneider Electric Security Notification SEVD-2024-163-02",
+    "affected_products": [
+        "Schneider Electric PowerLogic P5 v01.500.104 and prior"
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product and version is in use?",
+            "cases": {
+                "Hitachi Energy MicroSCADA X SYS600": 2,
+                "Hitachi Energy MicroSCADA Pro SYS600": 3
+            },
+            "default": 4
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update MicroSCADA X SYS600",
+            "description": "Update Hitachi Energy MicroSCADA X SYS600 to Version 10.6 to mitigate CVE-2024-4872 and CVE-2024-3980.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Patch to MicroSCADA Pro SYS600",
+            "description": "Apply Patch 9.4 FP2 HF6 to Hitachi Energy MicroSCADA Pro SYS600. Ensure installation of previous FP2 hotfixes before HF6 to mitigate CVE-2024-4872 and CVE-2024-3980.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Physically Protect Process Control Systems",
+            "description": "Ensure process control systems are physically protected from unauthorized access and have no direct Internet connections.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Firewall Protections",
+            "description": "Separate process control systems from other networks using a firewall system with minimal exposed ports.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict Internet Usage on Control Systems",
+            "description": "Ensure process control systems are not used for Internet surfing, instant messaging, or receiving emails.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Scan Portable Devices for Viruses",
+            "description": "Carefully scan portable computers and removable storage media for viruses before connecting them to control systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Enforce Proper Password Policies",
+            "description": "Follow proper password policies and processes to secure systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Deploy According to Cybersecurity Guidelines",
+            "description": "Deploy products following the 'MicroSCADA cybersecurity deployment guideline' document.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Maintain Systems with Supported Versions",
+            "description": "Ensure systems are maintained with products running on supported versions and follow maintenance releases.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement CISA Recommended Cybersecurity Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, including defense-in-depth strategies.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Multiple vulnerabilities in Hitachi Energy MicroSCADA Pro/X SYS600 product",
+    "affected_products": [
+        "Hitachi Energy MicroSCADA X SYS600",
+        "Hitachi Energy MicroSCADA Pro SYS600"
+    ]
+}

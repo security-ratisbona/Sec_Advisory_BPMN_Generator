@@ -1,0 +1,75 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Solar-Log Firmware",
+            "description": "Download and install the latest firmware version 6.2.0-170 for Solar-Log Base 15 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure control system devices and systems are not accessible from the internet by minimizing network exposure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Secure Remote Access",
+            "description": "Use secure methods such as VPNs for remote access, ensuring VPNs are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed on the CISA ICS webpage.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Monitor and Report Malicious Activity",
+            "description": "Follow established internal procedures to monitor and report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Solar-Log Vulnerability Mitigation",
+    "affected_products": [
+        "Solar-Log Base 15: Firmware 6.2.0-170"
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which PowerLogic PM model is in use?",
+            "cases": {
+                "PowerLogic PM5320": 2,
+                "PowerLogic PM5340": 3,
+                "PowerLogic PM5341": 4
+            },
+            "default": 5
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update PowerLogic PM5320 to Version 2.4.0",
+            "description": "Apply the update to PowerLogic PM5320 to version 2.4.0 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update PowerLogic PM5340 to Version 2.4.0",
+            "description": "Apply the update to PowerLogic PM5340 to version 2.4.0 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update PowerLogic PM5341 to Version 2.7.0",
+            "description": "Apply the update to PowerLogic PM5341 to version 2.7.0 to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Enable IGMP Snooping",
+            "description": "Ensure that IGMP Snooping is enabled on the switch to intelligently forward multicast traffic only to necessary ports.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Configure VLAN Interface Settings",
+            "description": "Set up VLAN interface settings on the switch to ensure proper IGMP operation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Multicast Filtering",
+            "description": "Use IGMP filtering to control the propagation of IGMP traffic through the network, configuring filters on a switch virtual interface (SVI), per-port, or per-port per-VLAN basis.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Locate Networks Behind Firewalls",
+            "description": "Locate control and safety system networks and remote devices behind firewalls and isolate them from the business network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Install Physical Controls",
+            "description": "Install physical controls to prevent unauthorized access to industrial control and safety systems, components, peripheral equipment, and networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Secure Controllers",
+            "description": "Place all controllers in locked cabinets and never leave them in the 'Program' mode.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Restrict Network Connections",
+            "description": "Never connect programming software to any network other than the network intended for that device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Scan Mobile Data Exchange Methods",
+            "description": "Scan all methods of mobile data exchange with the isolated network such as CDs, USB drives, etc. before use in the terminals or any node connected to these networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Sanitize Mobile Devices",
+            "description": "Never allow mobile devices that have connected to any other network besides the intended network to connect to the safety or control networks without proper sanitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and systems and ensure that they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods, such as virtual private networks (VPNs). Ensure VPNs are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Schneider Electric Security Notification SEVD-2024-317-01",
+    "affected_products": [
+        "PowerLogic PM5320",
+        "PowerLogic PM5340",
+        "PowerLogic PM5341"
+    ]
+}

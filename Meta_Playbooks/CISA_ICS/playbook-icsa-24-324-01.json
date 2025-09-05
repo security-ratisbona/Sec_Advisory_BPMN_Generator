@@ -1,0 +1,89 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Firmware to Version 1.106 or Later",
+            "description": "Update the firmware of MELSEC iQ-F Series FX5-ENET/IP to version 1.106 or later to fix the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Use within a LAN and block access from untrusted networks and hosts through firewalls.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Restrict Physical Access",
+            "description": "Restrict physical access to the product, as well as to computers and network devices located within the same network as the product.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Use Firewall or VPN for Internet Access",
+            "description": "Use a firewall or virtual private network (VPN) to prevent unauthorized access when internet access is required.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement IP Filter Function",
+            "description": "Use the IP filter function to block access from untrusted hosts. Refer to the MELSEC iQ-F FX5 User's Manual (Communication) for details.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Use Secure Methods for Remote Access",
+            "description": "When remote access is required, use more secure methods, such as virtual private networks (VPNs), and ensure they are updated to the most current version available.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitsubishi Electric MELSEC iQ-F Series FX5-ENET/IP Vulnerability",
+    "affected_products": [
+        "MELSEC iQ-F Series FX5-ENET/IP"
+    ]
+}

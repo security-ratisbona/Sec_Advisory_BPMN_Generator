@@ -1,0 +1,91 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Apply Update When Available",
+            "description": "Apply the update provided by Hitachi Energy as soon as it becomes available to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Disconnect MSM from Internet",
+            "description": "Ensure that the MSM device is not directly connected to the internet to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement User Access Management",
+            "description": "Adopt user access management and use OS inbuilt functionality to limit unauthorized access via MSM Client application.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Install Antivirus Protection",
+            "description": "Equip computers with the latest antivirus protection engines and signature rules that operate the MSM Client application.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Follow CIS Hardening Guidelines",
+            "description": "Implement hardening guidelines published by the Center for Internet Security (CIS) to protect host operating systems connected to MSM.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Firewall and Security Practices",
+            "description": "Physically protect process control systems, separate networks with firewalls, and ensure portable devices are virus-free before connecting to control systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment before deploying defensive measures as recommended by CISA.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement CISA Recommended Cybersecurity Strategies",
+            "description": "Follow CISA's recommended cybersecurity strategies for proactive defense of ICS assets, including defense-in-depth strategies.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Hitachi Energy MSM Vulnerability",
+    "affected_products": null
+}

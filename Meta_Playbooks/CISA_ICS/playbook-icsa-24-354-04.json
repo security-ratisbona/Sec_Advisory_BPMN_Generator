@@ -1,0 +1,101 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update SIMATIC PCS neo",
+            "description": "Update SIMATIC PCS neo to V5.0 Update 1 or later version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update SINEC NMS and UMC",
+            "description": "Update SINEC NMS to V3.0 SP2 or later version and UMC to V2.15 or later version.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Contact Siemens Customer Support",
+            "description": "Contact Siemens customer support to receive patch and update information.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Filter Ports 4002 and 4004",
+            "description": "Filter the Ports 4002 and 4004 to only accept connections to/from the IP addresses of machines that run UMC and are part of the UMC network using an external firewall.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Are RT server machines used?",
+            "next_step": 7,
+            "else_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Block Port 4004",
+            "description": "If no RT server machines are used, block Port 4004 completely.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, following CISA's guidance and best practices.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-928984",
+    "affected_products": [
+        "SIMATIC PCS neo V5.0",
+        "SINEC NMS V3.0 SP2",
+        "UMC V2.15"
+    ]
+}

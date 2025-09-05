@@ -1,0 +1,162 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Block HTTP Access or Disable HTTP Web Service",
+            "description": "Users should consider blocking HTTP access to the device at the firewall level or disable the HTTP web service to reduce the risk of exposure.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which firmware version is installed?",
+            "cases": {
+                "PowerLogic PM5560, 5563, 5580": 3,
+                "PowerLogic PM5561": 4,
+                "PowerLogic PM5562": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Firmware for PowerLogic PM5560, 5563, 5580",
+            "description": "Update to firmware version 2.8.3 to fix vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Firmware for PowerLogic PM5561",
+            "description": "Update to firmware version 10.7.3 to fix vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Firmware for PowerLogic PM5562",
+            "description": "Update to firmware version 4.3.5 to fix vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+            ],
+            "next_step": 17
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Locate Networks Behind Firewalls",
+            "description": "Locate control and safety system networks and remote devices behind firewalls and isolate them from the business network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Install Physical Controls",
+            "description": "Install physical controls so no unauthorized personnel can access your industrial control and safety systems, components, peripheral equipment, and networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Secure Controllers in Locked Cabinets",
+            "description": "Place all controllers in locked cabinets and never leave them in the 'Program' mode.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Restrict Programming Software Connections",
+            "description": "Never connect programming software to any network other than the network intended for that device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Scan Mobile Data Exchange Methods",
+            "description": "Scan all methods of mobile data exchange with the isolated network such as CDs, USB drives, etc. before use in the terminals or any node connected to these networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Sanitize Mobile Devices",
+            "description": "Never allow mobile devices that have connected to any other network besides the intended network to connect to the safety or control networks without proper sanitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and systems and ensure that they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods, such as virtual private networks (VPNs). Recognize that VPNs may have vulnerabilities and should be updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Report Malicious Activity to CISA",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Consult Additional Resources",
+            "description": "Refer to Schneider Electric Recommended Cybersecurity Best Practices document and the associated Schneider Electric Security Notification SEVD-2021-159-02. Also, consult CISA's ICS webpage for additional mitigation guidance and recommended practices.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Schneider Electric Security Notification SEVD-2021-159-02",
+    "affected_products": [
+        "PowerLogic PM5560",
+        "PowerLogic PM5561",
+        "PowerLogic PM5562",
+        "PowerLogic PM5563",
+        "PowerLogic PM5580",
+        "PowerLogic PM8ECC"
+    ]
+}

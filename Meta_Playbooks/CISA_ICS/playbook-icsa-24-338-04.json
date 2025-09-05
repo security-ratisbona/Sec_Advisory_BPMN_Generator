@@ -1,0 +1,70 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is being addressed?",
+            "cases": {
+                "CVE-2024-8299 or CVE-2024-9852": 2,
+                "CVE-2024-8300": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Use ICONICS Product Suite version 10.97.3 or later",
+            "description": "Ensure that the ICONICS Product Suite is updated to version 10.97.3 or later to mitigate vulnerabilities CVE-2024-8299 and CVE-2024-9852.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is AlarmWorX64 MMX in use?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Follow ICONICS Whitepaper Guidelines",
+            "description": "Follow the guidelines provided in the ICONICS Whitepaper on Security Vulnerabilities, November 2024 edition, for using AlarmWorX64 MMX.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which GENESIS64TM version is in use?",
+            "cases": {
+                "10.97.2": 6,
+                "10.97.3 series": 7
+            },
+            "default": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply GENESIS64TM 10.97.2 Critical Fixes Rollup 3",
+            "description": "Apply the Critical Fixes Rollup 3 for GENESIS64TM version 10.97.2 to mitigate CVE-2024-8300.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply GENESIS64TM 10.97.3 Critical Fixes Rollup 1",
+            "description": "Apply the Critical Fixes Rollup 1 for GENESIS64TM version 10.97.3 series to mitigate CVE-2024-8300.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for CVE-2024-8299, CVE-2024-9852, and CVE-2024-8300",
+    "affected_products": [
+        "ICONICS Product Suite versions 10.97.3 and later",
+        "GENESIS64TM version 10.97.2",
+        "GENESIS64TM version 10.97.3 series"
+    ]
+}

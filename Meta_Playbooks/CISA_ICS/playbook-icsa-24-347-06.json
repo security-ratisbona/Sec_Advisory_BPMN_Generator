@@ -1,0 +1,91 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Simcenter Femap to Latest Version",
+            "description": "Update Simcenter Femap to the latest version V2406 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Simcenter Femap version is in use?",
+            "cases": {
+                "Simcenter Femap V2306 or V2401": 3,
+                "Simcenter Femap V2406": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Integrate Femap 2406 Nastran Updates",
+            "description": "Integrate the update published under 'Femap 2406 Nastran Updates' applicable to all Femap 2406.x versions.",
+            "commands": [
+                "https://support.sw.siemens.com/downloads/PL20240416271650117/"
+            ],
+            "next_step": 3
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Avoid Opening Untrusted BDF Files",
+            "description": "Do not open untrusted BDF files in the affected applications to reduce risk.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Use Firewalls and VPNs",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks. Use secure methods like VPNs for remote access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-881356",
+    "affected_products": [
+        "Simcenter Femap V2306",
+        "Simcenter Femap V2401",
+        "Simcenter Femap V2406"
+    ]
+}

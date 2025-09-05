@@ -1,0 +1,114 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is in use?",
+            "cases": {
+                "Modicon M340 CPU": 2,
+                "Modicon MC80": 5,
+                "Modicon Momentum Unity M1E Processor": 6
+            },
+            "default": 9
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Modicon M340 CPU Firmware",
+            "description": "Download and install version SV3.65 of Modicon M340 CPU firmware to fix vulnerabilities.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Evaluate Patch Impact",
+            "description": "Evaluate the impact of the patch in a Test and Development environment or on an offline infrastructure.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Configure Access Control List for Modicon M340 CPU",
+            "description": "Configure the Access Control List following the recommendations in the 'Modicon M340 for Ethernet Communications Modules and Processors User Manual' chapter 'Messaging Configuration Parameters'.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Configure Access Control List for Modicon MC80",
+            "description": "Configure the Access Control List following the recommendations in the 'MC80 Programmable Logic Controller(PLC), User Manual' section 'Access Control List (ACL)'.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Configure Access Control List for Modicon Momentum Unity M1E Processor",
+            "description": "Configure the Access Control List following the recommendations in the 'Momentum for EcoStruxure™ Control Expert - 171CBU78090, 171CBU98090, 171CBU98091 Processors, User Guide' section 'Controlling Access'.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Setup Network Segmentation and Firewall",
+            "description": "Setup network segmentation and implement a firewall to block all unauthorized access to port 502/TCP.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use External Firewall Devices",
+            "description": "Consider using external firewall devices such as EAGLE40-07 from Belden to establish VPN connections.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement General Security Recommendations",
+            "description": "Implement industry cybersecurity best practices such as isolating control networks, using physical controls, and scanning mobile data exchange methods.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and systems, ensuring they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-8937 and CVE-2024-8938",
+    "affected_products": [
+        "Modicon M340 CPU (part numbers BMXP34*)",
+        "Modicon MC80 (part numbers BMKC80)",
+        "Modicon Momentum Unity M1E Processor (171CBU*)"
+    ]
+}

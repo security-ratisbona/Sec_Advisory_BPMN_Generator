@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade to V-SFT Ver6",
+            "description": "Upgrade from V-SFT Ver5 to V-SFT Ver6 to mitigate vulnerabilities CVE-2024-11799, CVE-2024-11800, and CVE-2024-11801.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Plan for Future Fixes",
+            "description": "Prepare for the upcoming fix for CVE-2024-11802 and CVE-2024-11803, scheduled for release in May 2025.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Social Engineering Protections",
+            "description": "Educate users to avoid clicking web links or opening attachments in unsolicited email messages. Refer to resources on recognizing and avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement ICS Cybersecurity Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed in CISA's resources.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Monitor and Report Malicious Activity",
+            "description": "Follow established internal procedures to monitor for suspected malicious activity and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-11799, CVE-2024-11800, CVE-2024-11801, CVE-2024-11802, CVE-2024-11803",
+    "affected_products": [
+        "V-SFT Ver5",
+        "TELLUS Lite"
+    ]
+}

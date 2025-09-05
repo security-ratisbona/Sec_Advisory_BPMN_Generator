@@ -1,0 +1,105 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update to PowerSYSTEM Center 2020 Update 23",
+            "description": "Update to the latest version of PowerSYSTEM Center 2020 to address vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is updating to PowerSYSTEM Center 2020 Update 23 possible?",
+            "next_step": 3,
+            "else_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Application Allow-Listing",
+            "description": "Implement application allow-listing to prevent unauthorized executables from running.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enable DEP and ASLR",
+            "description": "Ensure Data Execution Prevention (DEP) and Address Space Layout Randomization (ASLR) are enabled within the operating system. Memory protection controls can be enabled via Windows Security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10
+            ],
+            "next_step": 11
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as Virtual Private Networks (VPNs), ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Consult CISA Resources",
+            "description": "Consult CISA resources for additional mitigation guidance and recommended practices, including the ICS webpage and technical information papers.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "PowerSYSTEM Center 2020 Vulnerabilities",
+    "affected_products": null
+}

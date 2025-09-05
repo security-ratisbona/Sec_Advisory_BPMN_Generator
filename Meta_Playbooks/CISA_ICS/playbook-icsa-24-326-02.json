@@ -1,0 +1,54 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update OSCAT Basic Library",
+            "description": "Update the OSCAT Basic Library to Version 3.3.5 to address the security vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Adjust Library Version in CODESYS Project",
+            "description": "Adjust the version of the OSCAT Basic library to be used in the Library Manager of the CODESYS project to Version 3.3.5.0.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update CODESYS Application on PLC",
+            "description": "Update the CODESYS application on the PLC by download or online change and rebuild/download the boot application.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the OSCAT Basic library updated or the vulnerability mitigated in the PLC program?",
+            "next_step": 5,
+            "else_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Perform Download or Online Change",
+            "description": "Perform a download or online change to update the application on the PLC.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Validate Values in PLC Program",
+            "description": "Validate all values in the PLC program before they are passed to the affected function. Block negative values as function parameters of MONTH_TO_STRING.",
+            "commands": null,
+            "next_step": 5
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CODESYS OSCAT Basic Library Vulnerability",
+    "affected_products": null
+}

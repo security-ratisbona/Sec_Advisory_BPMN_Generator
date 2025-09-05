@@ -1,0 +1,70 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update to Fixed Firmware Version",
+            "description": "Update the device firmware to FWA-INDRV-MP-20V36 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is a device update possible and feasible?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Compensatory Measures",
+            "description": "Define and implement compensatory measures individually in the context of the operational environment, as described in the 'Security Manual Electric Drives and Controls'.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Network Security Measures",
+            "description": "Minimize network exposure for control system devices, locate them behind firewalls, and use VPNs for remote access.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed on the CISA ICS webpage.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited emails. Refer to CISA guidelines on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "BOSCH-SA-315415",
+    "affected_products": null
+}

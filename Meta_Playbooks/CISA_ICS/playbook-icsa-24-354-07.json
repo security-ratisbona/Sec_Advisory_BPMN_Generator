@@ -1,0 +1,169 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update EcoStruxure Machine Expert",
+            "description": "On the engineering workstation, update to v2.2.2 of EcoStruxure Machine Expert.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Modicon Controller is in use?",
+            "cases": {
+                "M241": 3,
+                "M251": 4,
+                "M262": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Modicon Controller M241 Firmware",
+            "description": "Update Modicon Controller M241 to the latest Firmware version 5.2.11.24 and perform a reboot.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Modicon Controller M251 Firmware",
+            "description": "Update Modicon Controller M251 to the latest Firmware version 5.2.11.24 and perform a reboot.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Modicon Controller M262 Firmware",
+            "description": "Update Modicon Controller M262 to the latest Firmware version 5.2.8.26 and perform a reboot.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Protected Environment",
+            "description": "Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from public internet or untrusted networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Enable User Management and Password Features",
+            "description": "Ensure usage of user management and password features. User rights are enabled by default and forced to create a strong password at first use.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Deactivate Webserver When Not Needed",
+            "description": "Deactivate the Webserver after use when not needed.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Encrypted Communication Links",
+            "description": "Use encrypted communication links to secure data transmission.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Setup Network Segmentation and Firewall",
+            "description": "Setup network segmentation and implement a firewall to block all unauthorized access to port 80/HTTP and 443/HTTPS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Use VPN for Remote Access",
+            "description": "Use VPN (Virtual Private Networks) tunnels if remote access is required.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Avoid Clicking Unsolicited Links",
+            "description": "Do not click web links or open attachments in unsolicited email messages.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Recognize and Avoid Email Scams",
+            "description": "Refer to 'Recognizing and Avoiding Email Scams' for more information on avoiding email scams.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Avoid Social Engineering and Phishing Attacks",
+            "description": "Refer to 'Avoiding Social Engineering and Phishing Attacks' for more information on social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SEVD-2024-191-04",
+    "affected_products": [
+        "Schneider Electric Modicon Controllers Version prior to v5.2.11.24",
+        "Schneider Electric Modicon Controllers M258 / LMC058 All versions",
+        "Schneider Electric Modicon Controllers M262 Versions prior to v5.2.8.26"
+    ]
+}

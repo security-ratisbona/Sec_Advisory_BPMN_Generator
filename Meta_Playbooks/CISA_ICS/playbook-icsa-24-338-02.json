@@ -1,0 +1,65 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Contact Siemens Customer Support",
+            "description": "Contact Siemens customer support to receive patch and update information for RUGGEDCOM APE1808.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Limit Access to Management Interface",
+            "description": "Reduce exposure by limiting access to the management interface to trusted internal IP addresses as described in Palo Alto Networks' Security Advisory.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and operate devices in a protected IT environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures as recommended by CISA.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets as detailed in CISA's guidance.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to CISA's guidance on recognizing and avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-0012, CVE-2024-9474",
+    "affected_products": [
+        "RUGGEDCOM APE1808"
+    ]
+}

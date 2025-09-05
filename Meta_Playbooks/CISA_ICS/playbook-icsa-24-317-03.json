@@ -1,0 +1,79 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade to Corrected Version",
+            "description": "Upgrade the affected software to V15.0 to correct the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is upgrading to V15.0 possible?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Complete Mitigation Process",
+            "description": "The system has been upgraded to V15.0, completing the mitigation process.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Harden Windows OS Security",
+            "description": "Remove the INTERACTIVE group from the folder's security properties and add specific users or user groups with least privilege permissions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure control system devices and systems are not accessible from the internet by minimizing network exposure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "CONDITION",
+            "condition": "Is remote access required?",
+            "next_step": 9,
+            "else_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Secure Remote Access",
+            "description": "Use secure methods such as VPNs for remote access, ensuring VPNs are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rockwell Automation Vulnerability",
+    "affected_products": null
+}

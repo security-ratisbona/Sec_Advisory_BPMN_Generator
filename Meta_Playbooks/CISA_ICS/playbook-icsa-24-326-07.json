@@ -1,0 +1,84 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update mySCADA Software",
+            "description": "Update to the latest versions of mySCADA software to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure control system devices and systems are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Secure Remote Access",
+            "description": "Use secure methods such as VPNs for remote access, ensuring VPNs are updated to the latest version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment before deploying defensive measures.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow internal procedures to report suspected malicious activity to CISA for tracking and correlation.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited emails. Refer to CISA guidelines for avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "mySCADA Vulnerabilities",
+    "affected_products": [
+        "mySCADA PRO Manager 1.3",
+        "mySCADA PRO Runtime 9.2.1"
+    ]
+}

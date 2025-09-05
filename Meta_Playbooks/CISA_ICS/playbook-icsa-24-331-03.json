@@ -1,0 +1,147 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is in use?",
+            "cases": {
+                "Modicon M340 CPU": 2,
+                "Modicon M580 CPU": 3,
+                "Modicon M580 CPU Safety": 4,
+                "Modicon MC80": 5,
+                "Modicon Momentum Unity M1E Processor": 6,
+                "EcoStruxure Control Expert": 7,
+                "EcoStruxure Process Expert": 8
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Firmware for Modicon M340 CPU",
+            "description": "Download and install Firmware Version SV3.60 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Firmware for Modicon M580 CPU",
+            "description": "Download and install Firmware Version SV4.20 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Firmware for Modicon M580 CPU Safety",
+            "description": "Download and install Firmware Version SV4.21 to fix CVE-2023-6408. Ensure EcoStruxure Control Expert v16.0 HF001 or later is used.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Configure Security for Modicon MC80",
+            "description": "Set up an application password, network segmentation, and firewall to block unauthorized access to Port 502/TCP. Configure access control list as per the manual.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Configure Security for Modicon Momentum Unity M1E Processor",
+            "description": "Set up an application password, network segmentation, and firewall to block unauthorized access to Port 502/TCP. Set up secure communication as per the guideline.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update EcoStruxure Control Expert",
+            "description": "Download and install Version 16.0 to fix vulnerabilities. Reboot the computer after installation. Enable encryption on application project and store files securely.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update EcoStruxure Process Expert",
+            "description": "Download and install Version 15.3 HF008 to fix vulnerabilities. Manage application files securely within the database.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Set Up Application Password",
+            "description": "Set up an application password in the project properties for enhanced security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation and Firewall",
+            "description": "Set up network segmentation and implement a firewall to block unauthorized access to Port 502/TCP.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Configure Access Control List",
+            "description": "Configure the access control list following the recommendations of the user manuals.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Set Up Secure Communication",
+            "description": "Set up secure communication according to the guidelines in the cybersecurity manuals.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Consider External Firewall Devices",
+            "description": "Consider using external firewall devices such as EAGLE40-07 from Belden to establish VPN connections.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Activate CPU Memory Protection",
+            "description": "Ensure the CPU is running with memory protection activated by configuring the input bit to a physical input.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-6408",
+    "affected_products": [
+        "Modicon M340 CPU",
+        "Modicon M580 CPU",
+        "Modicon M580 CPU Safety",
+        "Modicon MC80",
+        "Modicon Momentum Unity M1E Processor",
+        "EcoStruxure Control Expert",
+        "EcoStruxure Process Expert"
+    ]
+}
