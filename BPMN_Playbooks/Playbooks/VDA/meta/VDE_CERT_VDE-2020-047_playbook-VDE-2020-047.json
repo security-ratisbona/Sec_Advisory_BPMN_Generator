@@ -1,0 +1,27 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Network Configuration",
+            "description": "Ensure that network-capable devices are operated in closed networks or protected with a suitable firewall.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Consult Phoenix Contact Application Note",
+            "description": "Refer to the Phoenix Contact application note for detailed recommendations on measures to protect network-capable devices with Ethernet connection.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigation for BTP 2043W, BTP 2070W, BTP 2102W",
+    "affected_products": [
+        "1050387, BTP 2043W, all versions",
+        "1046666, BTP 2070W, all versions",
+        "1046667, BTP 2102W, all versions"
+    ]
+}

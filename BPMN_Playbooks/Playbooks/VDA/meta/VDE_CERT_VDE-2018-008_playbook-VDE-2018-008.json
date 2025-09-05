@@ -1,0 +1,62 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which RM Shell version is running on the Pepperl+Fuchs HMI device?",
+            "cases": {
+                "RM Shell 4": 2,
+                "RM Shell 5": 3,
+                "Windows 7 or Windows 10": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update RM Shell 4 with Security Patches",
+            "description": "Update Pepperl+Fuchs HMI devices running RM Shell 4 with RM Image 4 Security Patches 01/2017 to 05/2018 (18-33400C).",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update RM Shell 5 with Security Patch",
+            "description": "Update Pepperl+Fuchs HMI devices running RM Shell 5 with RM Image 5 Security: Windows Cumulative Security Patch 07/2018 (18-33624).",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Windows 7 or Windows 10",
+            "description": "Update Pepperl+Fuchs HMI devices running Windows 7 or Windows 10 using the Windows Update mechanism.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Ensure CredSSP Protocol Compatibility",
+            "description": "Ensure all connected third-party clients or servers use the latest version of the CredSSP protocol after deploying the patch.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Install Updates on Both Server and HMI Device",
+            "description": "Install updates on both the server and the HMI device to maintain system compatibility and avoid errors due to encryption oracle remediation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "Box Thin Client BTC*, <= current version",
+        "VisuNet PC*, <= current version",
+        "VisuNet RM*, <= current version"
+    ]
+}

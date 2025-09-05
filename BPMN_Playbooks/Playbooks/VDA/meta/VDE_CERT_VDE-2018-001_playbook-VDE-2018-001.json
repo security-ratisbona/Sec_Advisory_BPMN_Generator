@@ -1,0 +1,62 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade to Firmware Version 8.6.1",
+            "description": "Upgrade the firmware to version 8.6.1 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Verify Firmware Upgrade",
+            "description": "Verify the firmware upgrade by checking the version and validating the checksum.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "FL MGUARD CENTERPORT, 7.2 <= 8.6.0",
+        "FL MGUARD CORE TX VPN, 7.2 <= 8.6.0",
+        "FL MGUARD DELTA TX/TX, 7.2 <= 8.6.0",
+        "FL MGUARD DELTA TX/TX VPN, 7.2 <= 8.6.0",
+        "FL MGUARD GT/GT, 7.2 <= 8.6.0",
+        "FL MGUARD GT/GT VPN, 7.2 <= 8.6.0",
+        "FL MGUARD PCI4000 VPN, 7.2 <= 8.6.0",
+        "FL MGUARD PCIE4000 VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS2000 3G VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS2000 4G VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS2000 TX/TX-B, 7.2 <= 8.6.0",
+        "FL MGUARD RS2000 TX/TX VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS2005 TX VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS4000 3G VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS4000 4G VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS4000 TX/TX, 7.2 <= 8.6.0",
+        "FL MGUARD RS4000 TX/TX-P, 7.2 <= 8.6.0",
+        "FL MGUARD RS4000 TX/TX VPN, 7.2 <= 8.6.0",
+        "FL MGUARD RS4000 TX/TX VPN-M, 7.2 <= 8.6.0",
+        "FL MGUARD RS4004 TX/DTX, 7.2 <= 8.6.0",
+        "FL MGUARD RS4004 TX/DTX VPN, 7.2 <= 8.6.0",
+        "FL MGUARD SMART2, 7.2 <= 8.6.0",
+        "FL MGUARD SMART2 VPN, 7.2 <= 8.6.0"
+    ]
+}

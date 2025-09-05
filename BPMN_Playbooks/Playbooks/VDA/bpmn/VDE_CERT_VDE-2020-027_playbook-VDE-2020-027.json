@@ -1,0 +1,55 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Devices",
+            "description": "Identify devices with firmware version FW07 or lower.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are there any affected devices?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Firmware",
+            "description": "Upgrade affected devices to the latest standard firmware version higher than FW07.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Network and Port Restrictions",
+            "description": "Restrict network access to the device, disable unused TCP/UDP ports, and disable web-based management ports 80/443 after the configuration phase.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Firmware Vulnerability FW07",
+    "affected_products": [
+        "750-831/xxx-xxx, <= FW07",
+        "750-852, <= FW07",
+        "750-880/xxx-xxx, <= FW07",
+        "750-881, <= FW07",
+        "750-882, <= FW07",
+        "750-885/xxx-xxx, <= FW07",
+        "750-889, <= FW07"
+    ]
+}

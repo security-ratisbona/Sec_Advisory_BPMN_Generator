@@ -1,0 +1,40 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is upgrading to firmware version 8.8.3 possible?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade to Firmware Version 8.8.3",
+            "description": "Upgrade all affected mGuard devices to firmware version 8.8.3 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Detach Network Cables from Affected Switch Ports",
+            "description": "As a mitigation measure, detach network cables from affected switch ports instead of deactivating by configuration.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FL MGUARD RS4004 TX/DTX Vulnerability",
+    "affected_products": [
+        "2701876, FL MGUARD RS4004 TX/DTX, < 8.8.3",
+        "2701877, FL MGUARD RS4004 TX/DTX VPN, < 8.8.3",
+        "mGuard rs4000 4TX/3G/TX VPN, < 8.8.3",
+        "mGuard rs4000 4TX/TX, < 8.8.3",
+        "mGuard rs4000 4TX/TX VPN, < 8.8.3",
+        "2903440, TC MGUARD RS4000 3G VPN, < 8.8.3",
+        "1010463, TC MGUARD RS4000 4G ATT VPN, < 8.8.3",
+        "2903586, TC MGUARD RS4000 4G VPN, < 8.8.3",
+        "1010461, TC MGUARD RS4000 4G VZW VPN, < 8.8.3"
+    ]
+}

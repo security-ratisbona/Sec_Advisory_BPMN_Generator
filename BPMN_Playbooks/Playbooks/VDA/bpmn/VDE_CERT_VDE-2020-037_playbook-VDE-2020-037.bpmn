@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_VDE_CERT_VDE-2020-037_playbook-VDE-2020-037" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_VDE_CERT_VDE-2020-037_playbook-VDE-2020-037" isExecutable="true">
+    <bpmn:startEvent id="StartEvent" name="Start"/>
+    <bpmn:endEvent id="EndEvent" name="End"/>
+    <bpmn:exclusiveGateway id="GW_split_excl_1" name="Is it acceptable to reinstall TwinCAT?"/>
+    <bpmn:exclusiveGateway id="GW_join_excl_1"/>
+    <bpmn:task id="Task_1" name="Uninstall and Reinstall TwinCAT 3.1"/>
+    <bpmn:task id="Task_2" name="Move Existing Projects"/>
+    <bpmn:task id="Task_3" name="Remove Former Content"/>
+    <bpmn:task id="Task_4" name="Download and Prepare Script for Existing Installations"/>
+    <bpmn:scriptTask id="Task_5" name="Execute Script on IPC">
+      <bpmn:script>console.log(&quot;['set-executionpolicy -ExecutionPolicy Unrestricted -Scope Process', '.\\cve-2020-12510.ps1']&quot;);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:task id="Task_6" name="Verify Script Execution"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0" sourceRef="StartEvent" targetRef="GW_split_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1" sourceRef="GW_split_excl_1" targetRef="Task_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_2" sourceRef="GW_split_excl_1" targetRef="GW_join_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_3" sourceRef="Task_1" targetRef="Task_2"/>
+    <bpmn:sequenceFlow id="SequenceFlow_4" sourceRef="Task_2" targetRef="Task_3"/>
+    <bpmn:sequenceFlow id="SequenceFlow_5" sourceRef="Task_3" targetRef="GW_join_excl_1"/>
+    <bpmn:sequenceFlow id="SequenceFlow_6" sourceRef="GW_join_excl_1" targetRef="Task_4"/>
+    <bpmn:sequenceFlow id="SequenceFlow_7" sourceRef="Task_4" targetRef="Task_5"/>
+    <bpmn:sequenceFlow id="SequenceFlow_8" sourceRef="Task_5" targetRef="Task_6"/>
+    <bpmn:sequenceFlow id="SequenceFlow_9" sourceRef="Task_6" targetRef="EndEvent"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_VDE_CERT_VDE-2020-037_playbook-VDE-2020-037">
+    <bpmndi:BPMNPlane id="Plane_VDE_CERT_VDE-2020-037_playbook-VDE-2020-037" bpmnElement="Process_VDE_CERT_VDE-2020-037_playbook-VDE-2020-037">
+      <bpmndi:BPMNShape id="StartEvent_di" bpmnElement="StartEvent">
+        <dc:Bounds x="80" y="609" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_excl_1_di" bpmnElement="GW_split_excl_1">
+        <dc:Bounds x="150" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1_di" bpmnElement="Task_1">
+        <dc:Bounds x="220" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_2_di" bpmnElement="Task_2">
+        <dc:Bounds x="370" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_3_di" bpmnElement="Task_3">
+        <dc:Bounds x="520" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_join_excl_1_di" bpmnElement="GW_join_excl_1">
+        <dc:Bounds x="670" y="609.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_4_di" bpmnElement="Task_4">
+        <dc:Bounds x="740" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_5_di" bpmnElement="Task_5">
+        <dc:Bounds x="890" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_6_di" bpmnElement="Task_6">
+        <dc:Bounds x="1040" y="600" width="100" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_di" bpmnElement="EndEvent">
+        <dc:Bounds x="1190" y="609" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0_di" bpmnElement="SequenceFlow_0">
+        <di:waypoint x="116" y="627"/>
+        <di:waypoint x="150" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1_di" bpmnElement="SequenceFlow_1">
+        <di:waypoint x="186" y="627.0"/>
+        <di:waypoint x="186" y="628"/>
+        <di:waypoint x="220" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_2_di" bpmnElement="SequenceFlow_2">
+        <di:waypoint x="168" y="645.0"/>
+        <di:waypoint x="168" y="882.0"/>
+        <di:waypoint x="688" y="882.0"/>
+        <di:waypoint x="688" y="645.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_3_di" bpmnElement="SequenceFlow_3">
+        <di:waypoint x="320" y="628"/>
+        <di:waypoint x="370" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_4_di" bpmnElement="SequenceFlow_4">
+        <di:waypoint x="470" y="628"/>
+        <di:waypoint x="520" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_5_di" bpmnElement="SequenceFlow_5">
+        <di:waypoint x="620" y="628"/>
+        <di:waypoint x="670" y="627.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_6_di" bpmnElement="SequenceFlow_6">
+        <di:waypoint x="706" y="627.0"/>
+        <di:waypoint x="706" y="628"/>
+        <di:waypoint x="740" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_7_di" bpmnElement="SequenceFlow_7">
+        <di:waypoint x="840" y="628"/>
+        <di:waypoint x="890" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_8_di" bpmnElement="SequenceFlow_8">
+        <di:waypoint x="990" y="628"/>
+        <di:waypoint x="1040" y="628"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_9_di" bpmnElement="SequenceFlow_9">
+        <di:waypoint x="1140" y="628"/>
+        <di:waypoint x="1190" y="627"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

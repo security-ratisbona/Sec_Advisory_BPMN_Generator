@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Devices",
+            "description": "Check if the devices are affected by verifying the model and version number.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are the devices affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the affected devices to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Install Latest Software Update",
+            "description": "Download and install the latest software update V4.2.0 from the official website to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "B95061060, COM465DP, < 4.2.0 | B95061061, COM465DP, < 4.2.0 | B95061070, COM465ID, < 4.2.0 | B95061065, COM465IP, < 4.2.0 | B95061066, COM465IP, < 4.2.0 | B95061030, CP700, < 4.2.0 | B95061080, CP907, < 4.2.0 | B95061081, CP915, < 4.2.0 | B95061085, CP915, < 4.2.0 | B95061092, CP915, < 4.2.0",
+    "affected_products": [
+        "B95061060, COM465DP, < 4.2.0",
+        "B95061061, COM465DP, < 4.2.0",
+        "B95061070, COM465ID, < 4.2.0",
+        "B95061065, COM465IP, < 4.2.0",
+        "B95061066, COM465IP, < 4.2.0",
+        "B95061030, CP700, < 4.2.0",
+        "B95061080, CP907, < 4.2.0",
+        "B95061081, CP915, < 4.2.0",
+        "B95061085, CP915, < 4.2.0",
+        "B95061092, CP915, < 4.2.0"
+    ]
+}

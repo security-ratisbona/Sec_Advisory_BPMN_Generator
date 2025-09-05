@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_VDE_CERT_VDE-2020-025_playbook-VDE-2020-025" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.35.0">
+  <bpmn:process id="Process_VDE_CERT_VDE-2020-025_playbook-VDE-2020-025" isExecutable="true">
+    <bpmn:startEvent id="StartEvent" name="Start" />
+    <bpmn:endEvent id="EndEvent" name="End" />
+    <bpmn:exclusiveGateway id="GW_split_excl_1" name="Is updating to PLCnext Engineer 2020.6 or higher possible?" />
+    <bpmn:exclusiveGateway id="GW_join_excl_1" />
+    <bpmn:task id="Task_1" name="Update to PLCnext Engineer 2020.6 or higher" />
+    <bpmn:parallelGateway id="GW_split_para_1" />
+    <bpmn:parallelGateway id="GW_join_para_1" />
+    <bpmn:task id="Task_2" name="Use Secure File Exchange Services" />
+    <bpmn:task id="Task_3" name="Avoid Unencrypted Email for Project Files" />
+    <bpmn:task id="Task_4" name="Verify Project File Integrity" />
+    <bpmn:sequenceFlow id="SequenceFlow_0" sourceRef="StartEvent" targetRef="GW_split_excl_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_1" sourceRef="GW_split_excl_1" targetRef="Task_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_2" sourceRef="GW_split_excl_1" targetRef="GW_join_excl_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_3" sourceRef="Task_1" targetRef="GW_join_para_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_4" sourceRef="GW_join_excl_1" targetRef="GW_split_para_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_5" sourceRef="GW_split_para_1" targetRef="Task_2" />
+    <bpmn:sequenceFlow id="SequenceFlow_6" sourceRef="GW_split_para_1" targetRef="Task_3" />
+    <bpmn:sequenceFlow id="SequenceFlow_7" sourceRef="GW_split_para_1" targetRef="Task_4" />
+    <bpmn:sequenceFlow id="SequenceFlow_8" sourceRef="Task_2" targetRef="GW_join_para_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_9" sourceRef="Task_3" targetRef="GW_join_para_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_10" sourceRef="Task_4" targetRef="GW_join_para_1" />
+    <bpmn:sequenceFlow id="SequenceFlow_11" sourceRef="GW_join_para_1" targetRef="EndEvent" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_VDE_CERT_VDE-2020-025_playbook-VDE-2020-025">
+    <bpmndi:BPMNPlane id="Plane_VDE_CERT_VDE-2020-025_playbook-VDE-2020-025" bpmnElement="Process_VDE_CERT_VDE-2020-025_playbook-VDE-2020-025">
+      <bpmndi:BPMNShape id="StartEvent_di" bpmnElement="StartEvent">
+        <dc:Bounds x="160" y="269" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="166" y="305" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_di" bpmnElement="EndEvent">
+        <dc:Bounds x="890" y="269" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="898" y="305" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_excl_1_di" bpmnElement="GW_split_excl_1" isMarkerVisible="true">
+        <dc:Bounds x="230" y="269" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="208" y="305" width="81" height="66" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_join_excl_1_di" bpmnElement="GW_join_excl_1" isMarkerVisible="true">
+        <dc:Bounds x="450" y="269" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1_di" bpmnElement="Task_1">
+        <dc:Bounds x="300" y="260" width="100" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_split_para_1_di" bpmnElement="GW_split_para_1">
+        <dc:Bounds x="520" y="269" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="GW_join_para_1_di" bpmnElement="GW_join_para_1">
+        <dc:Bounds x="740" y="269" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_2_di" bpmnElement="Task_2">
+        <dc:Bounds x="590" y="78" width="100" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_3_di" bpmnElement="Task_3">
+        <dc:Bounds x="590" y="169" width="100" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_4_di" bpmnElement="Task_4">
+        <dc:Bounds x="590" y="260" width="100" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0_di" bpmnElement="SequenceFlow_0">
+        <di:waypoint x="196" y="287" />
+        <di:waypoint x="230" y="287" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1_di" bpmnElement="SequenceFlow_1">
+        <di:waypoint x="266" y="287" />
+        <di:waypoint x="266" y="288" />
+        <di:waypoint x="300" y="288" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_2_di" bpmnElement="SequenceFlow_2">
+        <di:waypoint x="248" y="269" />
+        <di:waypoint x="248" y="210" />
+        <di:waypoint x="468" y="210" />
+        <di:waypoint x="468" y="269" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_3_di" bpmnElement="SequenceFlow_3">
+        <di:waypoint x="350" y="316" />
+        <di:waypoint x="350" y="460" />
+        <di:waypoint x="758" y="460" />
+        <di:waypoint x="758" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_4_di" bpmnElement="SequenceFlow_4">
+        <di:waypoint x="486" y="287" />
+        <di:waypoint x="520" y="287" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_5_di" bpmnElement="SequenceFlow_5">
+        <di:waypoint x="538" y="269" />
+        <di:waypoint x="538" y="106" />
+        <di:waypoint x="590" y="106" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_6_di" bpmnElement="SequenceFlow_6">
+        <di:waypoint x="538" y="269" />
+        <di:waypoint x="538" y="197" />
+        <di:waypoint x="590" y="197" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_7_di" bpmnElement="SequenceFlow_7">
+        <di:waypoint x="556" y="287" />
+        <di:waypoint x="556" y="288" />
+        <di:waypoint x="590" y="288" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_8_di" bpmnElement="SequenceFlow_8">
+        <di:waypoint x="690" y="106" />
+        <di:waypoint x="758" y="106" />
+        <di:waypoint x="758" y="269" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_9_di" bpmnElement="SequenceFlow_9">
+        <di:waypoint x="690" y="197" />
+        <di:waypoint x="758" y="197" />
+        <di:waypoint x="758" y="269" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10_di" bpmnElement="SequenceFlow_10">
+        <di:waypoint x="690" y="288" />
+        <di:waypoint x="740" y="287" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11_di" bpmnElement="SequenceFlow_11">
+        <di:waypoint x="776" y="287" />
+        <di:waypoint x="890" y="287" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
