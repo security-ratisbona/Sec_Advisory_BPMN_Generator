@@ -1,0 +1,72 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by CVE-2023-2829 or CVE-2023-2911 by retrieving the installed BIND version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2023-2829 or CVE-2023-2911?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating BIND possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update BIND to the Latest Recommended Version",
+            "description": "Update the BIND system to the latest recommended version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is the system affected by?",
+            "cases": {
+                "CVE-2023-2829": 6,
+                "CVE-2023-2911": 7
+            },
+            "default": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Aggressive Use of DNSSEC-Validated Cache",
+            "description": "Set 'synth-from-dnssec' to 'no' to prevent the issue related to CVE-2023-2829.",
+            "commands": [
+                "synth-from-dnssec no;"
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Adjust Stale Answer Client Timeout",
+            "description": "Set 'stale-answer-client-timeout' to 'off' or to a non-zero value to prevent the issue related to CVE-2023-2911.",
+            "commands": [
+                "stale-answer-client-timeout off;"
+            ],
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-2829 and CVE-2023-2911",
+    "affected_products": [
+        "BIND 9.16.33 -> 9.16.41",
+        "BIND 9.18.7 -> 9.18.15",
+        "BIND Supported Preview Edition 9.16.33-S1 -> 9.16.41-S1",
+        "BIND Supported Preview Edition 9.18.11-S1 -> 9.18.15-S1"
+    ]
+}

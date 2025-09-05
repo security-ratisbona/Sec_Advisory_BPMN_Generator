@@ -1,0 +1,35 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Product and Version",
+            "description": "Determine if the installed version of Adobe Acrobat or Acrobat Reader is affected by checking the product version against the affected versions list.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Adobe Software",
+            "description": "Update Adobe Acrobat or Acrobat Reader to the latest version as recommended in the Security Bulletin.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Adobe Acrobat and Reader Security Update",
+    "affected_products": [
+        "Acrobat DC Continuous: 23.003.20284 and earlier",
+        "Acrobat Reader DC Continuous: 23.003.20284 and earlier",
+        "Acrobat 2020 Classic 2020: 20.005.30516 (Mac) and earlier/ 20.005.30514 (Win) and earlier",
+        "Acrobat Reader 2020 Classic 2020: 20.005.30516 (Mac) and earlier/ 20.005.30514 (Win) and earlier"
+    ]
+}

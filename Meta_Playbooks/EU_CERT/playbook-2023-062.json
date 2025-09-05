@@ -1,0 +1,83 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Cisco Devices",
+            "description": "Determine if the Cisco device is running a vulnerable release of Cisco Adaptive Security Appliance (ASA) Software or Cisco Firepower Threat Defence (FTD) software.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the device running a vulnerable release?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Are software updates available from Cisco?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Cisco Software Updates",
+            "description": "Update the Cisco device with the latest software updates provided by Cisco to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Configure Dynamic Access Policy (DAP)",
+            "description": "Terminate VPN tunnel establishment when the 'DefaultADMINGroup' or 'DefaultL2LGroup' connection profile/tunnel group is used.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Deny Remote Access VPN Using Default Group Policy",
+            "description": "Deny remote access VPN using the default group policy ('DfltGrpPolicy').",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Restrict Users in the LOCAL User Database",
+            "description": "Lock users to a specific connection profile/tunnel group only to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Prevent Remote Access VPN Sessions",
+            "description": "Prevent users from establishing remote access VPN sessions to mitigate unauthorized access risks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cisco ASA and FTD Vulnerability",
+    "affected_products": [
+        "Cisco Adaptive Security Appliance (ASA) Software",
+        "Cisco Firepower Threat Defence (FTD) software"
+    ]
+}

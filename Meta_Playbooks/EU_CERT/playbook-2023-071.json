@@ -1,0 +1,119 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Current Product Version",
+            "description": "Determine the current version of the product to assess vulnerability to the listed CVEs.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product version is currently installed?",
+            "cases": {
+                "Earlier than 20.3": 3,
+                "20.3": 4,
+                "20.4": 5,
+                "20.5": 5,
+                "20.6": 6,
+                "20.7": 7,
+                "20.8": 8,
+                "20.9": 9,
+                "20.10": 10,
+                "20.11": 11,
+                "20.12": 12
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "No Action Required for Versions Earlier than 20.3",
+            "description": "Versions earlier than 20.3 are not affected by the listed CVEs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.3",
+            "description": "Upgrade to version 20.3.4 for CVE-2023-20034 and 20.3.7 for CVE-2023-20262.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Versions 20.4 and 20.5",
+            "description": "Migrate to a fixed release to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.6",
+            "description": "Upgrade to version 20.6.2 for CVE-2023-20253, 20.6.1 for CVE-2023-20034, and 20.6.3.4 for CVE-2023-20254.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.7",
+            "description": "Upgrade to version 20.7.1 for CVE-2023-20253 and CVE-2023-20034.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.8",
+            "description": "Upgrade to version 20.8.1 for CVE-2023-20253 and migrate to a fixed release for CVE-2023-20254 and CVE-2023-20262.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.9",
+            "description": "Upgrade to version 20.9.3.4 for CVE-2023-20252, 20.9.1 for CVE-2023-20253, 20.9.3.2 for CVE-2023-20254, and 20.9.3 for CVE-2023-20262.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.10",
+            "description": "Upgrade to version 20.10.1 for CVE-2023-20253 and 20.10.1.2 for CVE-2023-20254.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.11",
+            "description": "Upgrade to version 20.11.1 for CVE-2023-20253 and 20.11.1.2 for CVE-2023-20254, and 20.11.1 for CVE-2023-20262.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Upgrade to Fixed Release for Version 20.12",
+            "description": "Upgrade to version 20.12.1 for CVE-2023-20262.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-20252, CVE-2023-20253, CVE-2023-20034, CVE-2023-20254, CVE-2023-20262",
+    "affected_products": [
+        "IOS XE Software",
+        "SD-WAN cEdge Routers",
+        "SD-WAN vEdge Routers",
+        "Catalyst SD-WAN Manager version 20.12"
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Product and Version",
+            "description": "Determine if the product and version in use are affected by the vulnerability by checking the product name and version number against the impacted versions list.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the product affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product category does the affected product belong to?",
+            "cases": {
+                "SAML-based SSO currently active": 4,
+                "SAML-based SSO configured at least once": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is updating the product to the latest version possible?",
+            "next_step": 6,
+            "else_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update Product to Latest Version",
+            "description": "Update the affected product to the latest version as specified in the fixed versions list to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Deactivate SAML-based SSO Configuration",
+            "description": "As a temporary measure, deactivate the SAML-based SSO configuration for the affected product until an update can be performed.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Product to Latest Version",
+            "description": "Update the affected product to the latest version as specified in the fixed versions list to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SAML-based SSO Vulnerability",
+    "affected_products": [
+        "Access Manager Plus: 4307 and below",
+        "Active Directory 360: 4309 and below",
+        "ADAudit Plus: 7080 and below",
+        "ADManager Plus: 7161 and below",
+        "ADSelfService Plus: 6210 and below",
+        "Analytics Plus: 5140 and below",
+        "Application Control Plus: 10.1.2220.17 and below",
+        "Asset Explorer: 6982 and below",
+        "Browser Security Plus: 11.1.2238.5 and below",
+        "Device Control Plus: 10.1.2220.17 and below",
+        "Endpoint Central: 10.1.2228.10 and below",
+        "Endpoint Central MSP: 10.1.2228.10 and below",
+        "Endpoint DLP: 10.1.2137.5 and below",
+        "Key Manager Plus: 6400 and below",
+        "OS Deployer: 1.1.2243.0 and below",
+        "PAM 360: 5712 and below",
+        "Password Manager Pro: 12123 and below",
+        "Patch Manager Plus: 10.1.2220.17 and below",
+        "Remote Access Plus: 10.1.2228.10 and below",
+        "Remote Monitoring and Management (RMM): 10.1.40 and below",
+        "ServiceDesk Plus: 14003 and below",
+        "ServiceDesk Plus MSP: 13000 and below",
+        "SupportCenter Plus: 11017 to 11025",
+        "Vulnerability Manager Plus: 10.1.2220.17 and below"
+    ]
+}

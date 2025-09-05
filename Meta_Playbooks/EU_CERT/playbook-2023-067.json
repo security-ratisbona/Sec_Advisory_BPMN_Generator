@@ -1,0 +1,55 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify GitLab Version",
+            "description": "Determine the current version of GitLab CE or EE running on the system.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the GitLab version between 13.12 and 16.2.7 or between 16.3 and 16.3.4?",
+            "next_step": 4,
+            "else_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the GitLab version earlier than 16.2 with both 'Direct transfers' and 'Security policies' enabled?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is upgrading to the latest GitLab version possible?",
+            "next_step": 5,
+            "else_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade GitLab to Latest Version",
+            "description": "Upgrade GitLab CE or EE to the latest version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Vulnerable Features",
+            "description": "Disable the 'Direct transfers' feature and/or the 'Security policies' feature to mitigate the vulnerability in versions earlier than 16.2.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "GitLab CE/EE Vulnerability",
+    "affected_products": [
+        "GitLab CE and EE versions 13.12 through 16.2.7",
+        "GitLab CE and EE versions 16.3 through 16.3.4"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Refer to the provided links to identify the exact versions of each affected Microsoft Windows system and the corresponding patch that should be applied.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Install Microsoft Updates",
+            "description": "CERT-EU highly recommends installing the updates provided by Microsoft to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Multiple versions of Microsoft Windows",
+    "affected_products": null
+}

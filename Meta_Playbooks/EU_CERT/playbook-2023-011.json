@@ -1,0 +1,49 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify ClamAV Version",
+            "description": "Determine the installed version of ClamAV to check if it is affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the ClamAV version 0.104?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade ClamAV from 0.104 to a Supported Version",
+            "description": "ClamAV 0.104 has reached end-of-life and will not be patched. Upgrade to a supported version immediately.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the ClamAV version 0.103.7 or earlier, 0.105.1 or earlier, or 1.0.0 or earlier?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Install ClamAV Updates",
+            "description": "Install the latest updates for ClamAV to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "ClamAV Vulnerability Advisory",
+    "affected_products": [
+        "ClamAV 0.103.7 and earlier",
+        "ClamAV 0.105.1 and earlier",
+        "ClamAV 1.0.0 and earlier"
+    ]
+}

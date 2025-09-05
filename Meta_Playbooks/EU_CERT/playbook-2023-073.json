@@ -1,0 +1,87 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Confluence Version",
+            "description": "Check if the Confluence instance is running a version between 8.0.0 and 8.5.1, which are affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Confluence version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading to a fixed version possible?",
+            "next_step": 4,
+            "else_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Confluence to a Fixed Version",
+            "description": "Upgrade Confluence to version 8.3.3, 8.4.3, 8.5.2, or any later version to fix the vulnerability.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Verify Confluence Instances Post-Upgrade",
+            "description": "After upgrading, check all affected Confluence instances for unexpected members in 'confluence-administrators', newly created user accounts, requests to '/setup/*.action', presence of '/setup/setupadministrator.action' in logs, and '/server-info.action' in network access logs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict External Network Access",
+            "description": "Restrict external network access to the affected Confluence instance to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Block Access to '/setup/*' Endpoints",
+            "description": "Block access to the '/setup/*' endpoints by modifying configuration files and restarting Confluence.",
+            "commands": [
+                "<security-constraint> <web-resource-collection> <url-pattern>/setup/*</url-pattern> <http-method-omission>*</http-method-omission> </web-resource-collection> <auth-constraint /> </security-constraint>"
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Verify Confluence Instances Without Upgrade",
+            "description": "Check all affected Confluence instances for unexpected members in 'confluence-administrators', newly created user accounts, requests to '/setup/*.action', presence of '/setup/setupadministrator.action' in logs, and '/server-info.action' in network access logs.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Confluence Data Center and Server Vulnerability",
+    "affected_products": [
+        "Confluence Data Center and Server 8.0.0 to 8.0.4",
+        "Confluence Data Center and Server 8.1.0 to 8.1.4",
+        "Confluence Data Center and Server 8.2.0 to 8.2.3",
+        "Confluence Data Center and Server 8.3.0 to 8.3.2",
+        "Confluence Data Center and Server 8.4.0 to 8.4.2",
+        "Confluence Data Center and Server 8.5.0 to 8.5.1"
+    ]
+}

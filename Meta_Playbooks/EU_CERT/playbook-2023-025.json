@@ -1,0 +1,76 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by CVE-2023-27350 or CVE-2023-27351 by verifying the installed version of PaperCut MF or NG.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2023-27350 or CVE-2023-27351?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade PaperCut MF or NG",
+            "description": "Upgrade to PaperCut MF and PaperCut NG versions 20.1.7, 21.2.11, or 22.0.9 and later to address the vulnerabilities.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Check Application Log for Suspicious Activity",
+            "description": "Look for suspicious activity in 'Logs' > 'Application Log' within the PaperCut admin interface, especially updates from a user called '[setup wizard]'.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Monitor for New Suspicious Users",
+            "description": "Look for new (suspicious) users being created or other configuration keys being tampered with.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Check Debug Mode Logs for SetupCompleted",
+            "description": "If the Application Server logs are in debug mode, check for lines mentioning 'SetupCompleted' at times not correlating with server installation or upgrade.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Locate Server Logs",
+            "description": "Find server logs in '[app-path]/server/logs/*.*', where 'server.log' is normally the most recent log file.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-27350 and CVE-2023-27351",
+    "affected_products": [
+        "PaperCut MF or NG version 8.0 or later",
+        "PaperCut MF or NG version 15.0 or later"
+    ]
+}

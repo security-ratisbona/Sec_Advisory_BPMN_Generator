@@ -1,0 +1,50 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed FortiOS or FortiProxy version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading to the latest version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Latest Version",
+            "description": "Upgrade affected FortiOS & FortiProxy products to the latest version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable HTTP/2 Support",
+            "description": "Disable HTTP/2 support on SSL inspection profiles used by proxy policies or firewall policies with proxy mode as a workaround.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FortiOS and FortiProxy Vulnerability",
+    "affected_products": [
+        "FortiOS version 7.2.0 through 7.2.3",
+        "FortiOS version 7.0.0 through 7.0.10",
+        "FortiProxy version 7.2.0 through 7.2.2",
+        "FortiProxy version 7.0.0 through 7.0.9"
+    ]
+}

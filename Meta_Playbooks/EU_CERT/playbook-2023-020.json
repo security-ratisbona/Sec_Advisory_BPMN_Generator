@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by identifying if it is running Microsoft Windows Server 2022 or Microsoft Windows 11 (21H2, 22H2).",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Latest Patches for Microsoft Windows Server 2022",
+            "description": "Apply the latest patches for Microsoft Windows Server 2022, prioritizing Internet-facing systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Latest Patches for Microsoft Windows 11",
+            "description": "Apply the latest patches for systems running Microsoft Windows 11.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable HTTP/3 via Registry Key",
+            "description": "Disable HTTP/3 by modifying the registry key to mitigate the vulnerability on servers using buffered I/O.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Microsoft Windows Server 2022 and Windows 11 Vulnerability",
+    "affected_products": [
+        "Microsoft Windows Server 2022",
+        "Microsoft Windows 11 (21H2, 22H2)"
+    ]
+}

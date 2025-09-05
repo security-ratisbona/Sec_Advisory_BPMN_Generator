@@ -1,0 +1,56 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is affected by checking the installed version of QTS, QuTS hero, QuTScloud, Multimedia Console, or Media Streaming add-on.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE affects the system?",
+            "cases": {
+                "CVE-2023-23368": 3,
+                "CVE-2023-23369": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install Updates for CVE-2023-23368",
+            "description": "Install the latest updates for QTS 5.0.x, QTS 4.5.x, QuTS hero h5.0.x, QuTS hero h4.5.x, and QuTScloud c5.0.x as per QNAP product support status.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Install Updates for CVE-2023-23369",
+            "description": "Install the latest updates for QTS 5.1.x, QTS 4.3.6, QTS 4.3.4, QTS 4.3.3, QTS 4.2.x, Multimedia Console 2.1.x, Multimedia Console 1.4.x, Media Streaming add-on 500.1.x, and Media Streaming add-on 500.0.x as per QNAP product support status.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-23368 and CVE-2023-23369",
+    "affected_products": [
+        "QTS 5.0.x",
+        "QTS 4.5.x",
+        "QuTS hero h5.0.x",
+        "QuTS hero h4.5.x",
+        "QuTScloud c5.0.x",
+        "QTS 5.1.x",
+        "QTS 4.3.6",
+        "QTS 4.3.4",
+        "QTS 4.3.3",
+        "QTS 4.2.x",
+        "Multimedia Console 2.1.x",
+        "Multimedia Console 1.4.x",
+        "Media Streaming add-on 500.1.x",
+        "Media Streaming add-on 500.0.x"
+    ]
+}

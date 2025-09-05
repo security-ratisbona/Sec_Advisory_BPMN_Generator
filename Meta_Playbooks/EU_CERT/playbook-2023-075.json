@@ -1,0 +1,83 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Isolate NetScaler ADC and Gateway Appliances",
+            "description": "Isolate the appliances for testing and preparation of patch deployment.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Can vulnerable appliances be prioritized for patching?",
+            "next_step": 3,
+            "else_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade Appliances",
+            "description": "Upgrade vulnerable NetScaler ADC and Gateway appliances to the latest firmware versions, which mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Terminate Sessions",
+            "description": "Post upgrading, terminate all active and persistent sessions (per appliance).",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "CLI Connection and Command Execution",
+            "description": "Connect to the NetScaler appliance using the CLI and run commands to terminate all connections and clear persistent sessions.",
+            "commands": [
+                "kill icaconnection -all",
+                "kill rdp connection -all",
+                "kill pcoipConnection -all",
+                "kill aaa session -all",
+                "clear lb persistentSessions"
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Credential Rotation",
+            "description": "Rotate credentials for identities that were provisioned for accessing resources via a vulnerable NetScaler ADC or Gateway appliance.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Search for Web Shells or Backdoors",
+            "description": "If web shells or backdoors are identified on NetScaler appliances, rebuild the appliances using a clean-source image, including the latest firmware.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Enforce Ingress IP Address Restrictions",
+            "description": "Enforce ingress IP address restrictions to limit the exposure and attack surface until the necessary patches have been applied.",
+            "commands": null,
+            "next_step": 3
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-4966",
+    "affected_products": [
+        "NetScaler ADC and NetScaler Gateway 14.1 before 14.1-8.50",
+        "NetScaler ADC and NetScaler Gateway 13.1 before 13.1-49.15",
+        "NetScaler ADC and NetScaler Gateway 13.0 before 13.0-92.19",
+        "NetScaler ADC 13.1-FIPS before 13.1-37.164",
+        "NetScaler ADC 12.1-FIPS before 12.1-55.300",
+        "NetScaler ADC 12.1-NDcPP before 12.1-55.300"
+    ]
+}

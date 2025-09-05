@@ -1,0 +1,105 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is running an affected version of git, GitLab CE/EE, or Github Enterprise Server.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running an affected version?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading to the latest version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Latest Version",
+            "description": "Upgrade to the latest patched version of git, GitLab CE/EE, or Github Enterprise Server to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is applicable?",
+            "cases": {
+                "CVE-2022-23521": 6,
+                "CVE-2022-41903": 7,
+                "CVE-2022-41953": 8
+            },
+            "default": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Disable git archive in untrusted repositories",
+            "description": "Prevent the use of 'git archive' in untrusted repositories to avoid potential exploits.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Disable git archive via git daemon",
+            "description": "If exposing 'git archive' via 'git daemon', disable it by configuring 'git config -global daemon.uploadArch false'.",
+            "commands": [
+                "git config -global daemon.uploadArch false"
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Avoid running git archive directly on untrusted repositories",
+            "description": "Do not execute 'git archive' directly on repositories that are not trusted.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Avoid cloning from untrusted sources",
+            "description": "Do not clone repositories from untrusted sources to prevent exploitation of the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Avoid using Git GUI for cloning",
+            "description": "Refrain from using Git GUI for cloning repositories. If unavoidable, ensure the sources are trusted.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2022-41903",
+    "affected_products": [
+        "git-for-windows <=2.39.0(2)",
+        "git <= v2.30.6, v2.31.5, v2.32.4, v2.33.5, v2.34.5, v2.35.5, v2.36.3, v2.37.4, v2.38.2, v2.39.0",
+        "GitLab CE/EE < 15.7.4, 15.6.5, 15.5.8",
+        "Github Enterprise Server < 3.3.19, 3.4.14, 3.5.11, 3.6.7, 3.7.4"
+    ]
+}

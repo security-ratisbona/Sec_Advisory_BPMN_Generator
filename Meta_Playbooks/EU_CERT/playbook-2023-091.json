@@ -1,0 +1,49 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is running Citrix Hypervisor 8.2 CU1 LTSR and check the CPU type and PCI pass-through configuration.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE affects the system?",
+            "cases": {
+                "CVE-2023-23583": 3,
+                "CVE-2023-46835": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the system running on Intel Ice Lake or later CPUs?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Does the system have a PCI device passed through to the guest VM and an AMD CPU?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Security Fixes",
+            "description": "Apply the recommended security fixes for the identified vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Citrix Hypervisor 8.2 CU1 LTSR Vulnerabilities",
+    "affected_products": [
+        "Citrix Hypervisor 8.2 CU1 LTSR"
+    ]
+}

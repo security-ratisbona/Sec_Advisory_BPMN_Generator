@@ -1,0 +1,71 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify MSMQ Installation",
+            "description": "Check if MSMQ is installed on the system as it is an optional Windows component.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is MSMQ installed?",
+            "next_step": 3,
+            "else_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is patching possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply April 2023 Security Updates",
+            "description": "Install the latest patches for Microsoft Windows operating systems to address the vulnerability.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable MSMQ",
+            "description": "Prevent exploitation by disabling MSMQ through the Control Panel.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Block Inbound Connections on Port 1801/tcp",
+            "description": "Block inbound connections for port 1801/tcp from untrusted sources to prevent exploitation attempts.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Review Network Connections for MSMQ",
+            "description": "Detect potential exploitation attempts by reviewing network connections on endpoints where MSMQ service is running (port 1801/tcp) from unexpected sources.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Review Child Processes of mqsvc.exe",
+            "description": "Check for suspicious events by reviewing potential child processes of mqsvc.exe, such as mqsvc.exe executing cmd.exe or powershell.exe.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "MSMQ Vulnerability",
+    "affected_products": [
+        "All Windows operating systems including Windows Server 2022 and Windows 11"
+    ]
+}

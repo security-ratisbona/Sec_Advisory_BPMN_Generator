@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Apache Struts Version",
+            "description": "Check if the installed Apache Struts version is within the affected range (2.0.0 through 2.5.32 and 6.0.0 through 6.3.0.1).",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Apache Struts version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade Apache Struts",
+            "description": "Upgrade to a non-vulnerable version of Apache Struts to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Apache Struts Vulnerability",
+    "affected_products": [
+        "Apache Struts 2.0.0 through 2.5.32",
+        "Apache Struts 6.0.0 through 6.3.0.1"
+    ]
+}

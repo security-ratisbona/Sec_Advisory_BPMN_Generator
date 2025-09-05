@@ -1,0 +1,17 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Access Rights Manager",
+            "description": "Update Access Rights Manager to the latest version to apply security and bug fixes.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Access Rights Manager 2023.2.1 Service Release",
+    "affected_products": [
+        "Access Rights Manager 2023.2"
+    ]
+}

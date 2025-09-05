@@ -1,0 +1,25 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Ivanti's Security Advisory",
+            "description": "Consult Ivanti's security advisory for detailed information on the vulnerability and recommended actions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade Ivanti Sentry",
+            "description": "Upgrade affected Ivanti Sentry systems to a version later than 9.18 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Ivanti Sentry Vulnerability",
+    "affected_products": [
+        "Ivanti Sentry versions 9.18 and prior"
+    ]
+}

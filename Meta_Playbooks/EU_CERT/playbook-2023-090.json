@@ -1,0 +1,27 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Products and Versions",
+            "description": "Refer to Microsoft's security update guide to identify specific product and version details affected by the vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Microsoft's November Patches",
+            "description": "Immediately apply the patches released by Microsoft in November to address the zero-day vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Zero-day vulnerabilities in Microsoft Products",
+    "affected_products": [
+        "Microsoft Windows",
+        "ASP.NET",
+        "Microsoft Office"
+    ]
+}

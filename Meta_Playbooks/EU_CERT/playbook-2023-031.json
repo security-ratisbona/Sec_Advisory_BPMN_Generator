@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify GitLab Version",
+            "description": "Determine if the installed GitLab version is 16.0.0, which is affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed GitLab version 16.0.0?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade GitLab to Version 16.0.1",
+            "description": "Upgrade GitLab CE/EE from version 16.0.0 to version 16.0.1 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "GitLab CE/EE Version 16.0.0 Vulnerability",
+    "affected_products": [
+        "GitLab Community Edition (CE) 16.0.0",
+        "GitLab Enterprise Edition (EE) 16.0.0"
+    ]
+}

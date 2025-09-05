@@ -1,0 +1,27 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Microsoft's Updates",
+            "description": "Users and administrators should review the latest updates provided by Microsoft for affected products.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Necessary Patches",
+            "description": "Apply the necessary patches to secure Microsoft SharePoint Server, Microsoft Exchange Server, and Microsoft Office (Excel, OneNote, and Outlook).",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Microsoft Security Updates for SharePoint, Exchange, and Office",
+    "affected_products": [
+        "Microsoft SharePoint Server",
+        "Microsoft Exchange Server",
+        "Microsoft Office (Excel, OneNote, Outlook)"
+    ]
+}

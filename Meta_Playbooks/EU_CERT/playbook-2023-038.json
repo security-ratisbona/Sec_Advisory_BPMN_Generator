@@ -1,0 +1,86 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed FortiOS or FortiProxy version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Fixed Version",
+            "description": "Update FortiOS or FortiProxy to the fixed version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review Systems for Evidence of Exploit",
+            "description": "Review the systems for evidence of exploit of previous vulnerabilities, notably CVE-2022-04-0684.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Follow Hardening Recommendations",
+            "description": "Implement vendor-recommended hardening measures to enhance system security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Minimize Attack Surface",
+            "description": "Disable unused features and manage devices via an out-of-band method wherever possible to minimize the attack surface.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FortiOS and FortiProxy Vulnerability",
+    "affected_products": [
+        "FortiOS-6K7K version 7.0.10",
+        "FortiOS-6K7K version 7.0.5",
+        "FortiOS-6K7K version 6.4.12",
+        "FortiOS-6K7K version 6.4.10",
+        "FortiOS-6K7K version 6.4.8",
+        "FortiOS-6K7K version 6.4.6",
+        "FortiOS-6K7K version 6.4.2",
+        "FortiOS-6K7K version 6.2.9 through 6.2.13",
+        "FortiOS-6K7K version 6.2.6 through 6.2.7",
+        "FortiOS-6K7K version 6.2.4",
+        "FortiOS-6K7K version 6.0.12 through 6.0.16",
+        "FortiOS-6K7K version 6.0.10",
+        "FortiProxy version 7.2.0 through 7.2.3",
+        "FortiProxy version 7.0.0 through 7.0.9",
+        "FortiProxy version 2.0.0 through 2.0.12",
+        "FortiProxy 1.2 all versions",
+        "FortiProxy 1.1 all versions",
+        "FortiOS version 7.2.0 through 7.2.4",
+        "FortiOS version 7.0.0 through 7.0.11",
+        "FortiOS version 6.4.0 through 6.4.12",
+        "FortiOS version 6.0.0 through 6.0.16"
+    ]
+}

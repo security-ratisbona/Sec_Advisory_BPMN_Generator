@@ -1,0 +1,27 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Atlassian Security Bulletin",
+            "description": "Review the latest Atlassian security bulletin to understand the vulnerabilities and recommended actions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Necessary Updates",
+            "description": "Apply the necessary updates to mitigate the vulnerabilities in Confluence Data Center & Server and Bamboo Data Center.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-22505, CVE-2023-22508, CVE-2023-22506",
+    "affected_products": [
+        "Confluence Data Center & Server >= 8.0.0",
+        "Confluence Data Center & Server >= 7.4.0",
+        "Bamboo Data Center >= 8.0.0"
+    ]
+}

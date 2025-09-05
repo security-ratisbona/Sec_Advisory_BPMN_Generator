@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is running VMware Aria Operations for Logs version 8.x before 8.14 or VMware Cloud Foundation (VMware Aria Operations for Logs) versions 5.x and 4.x.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to the Latest Version",
+            "description": "Update VMware Aria Operations for Logs to version 8.14 or later, and VMware Cloud Foundation (VMware Aria Operations for Logs) to the latest available version.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "VMware Aria Operations for Logs Vulnerability",
+    "affected_products": [
+        "VMware Aria Operations for Logs running on version 8.x before version 8.14",
+        "VMware Cloud Foundation (VMware Aria Operations for Logs) running on versions 5.x and 4.x"
+    ]
+}

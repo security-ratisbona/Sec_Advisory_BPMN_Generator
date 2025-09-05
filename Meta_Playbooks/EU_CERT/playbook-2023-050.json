@@ -1,0 +1,36 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected NetScaler Version",
+            "description": "Determine if the NetScaler ADC or NetScaler Gateway version is affected by checking the installed version against the vulnerable versions listed.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the NetScaler version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Latest NetScaler Version",
+            "description": "Install the latest updated version of NetScaler ADC or NetScaler Gateway to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "NetScaler ADC and NetScaler Gateway Vulnerabilities",
+    "affected_products": [
+        "NetScaler ADC and NetScaler Gateway 13.1 before 13.1-49.13",
+        "NetScaler ADC and NetScaler Gateway 13.0 before 13.0-91.13",
+        "NetScaler ADC 13.1-FIPS before 13.1-37.159",
+        "NetScaler ADC 12.1-FIPS before 12.1-55.297",
+        "NetScaler ADC 12.1-NDcPP before 12.1-55.297"
+    ]
+}

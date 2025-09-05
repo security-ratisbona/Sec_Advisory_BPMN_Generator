@@ -1,0 +1,29 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Ubuntu Security Bulletins",
+            "description": "Check the official Ubuntu security bulletins for updates related to the vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Necessary Updates",
+            "description": "Apply the necessary updates as recommended in the Ubuntu security bulletins to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-32629",
+    "affected_products": [
+        "Ubuntu 23.04 (Lunar Lobster) Version 6.2.0",
+        "Ubuntu 22.10 (Kinetic Kudu) Version 5.19.0",
+        "Ubuntu 22.04 LTS (Jammy Jellyfish) Versions 5.19.0 and 6.2.0",
+        "Ubuntu 20.04 LTS (Focal Fossa) Version 5.4.0",
+        "Ubuntu 18.04 LTS (Bionic Beaver) Version 5.4.0"
+    ]
+}

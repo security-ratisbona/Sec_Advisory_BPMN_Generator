@@ -1,0 +1,35 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Splunk Products and Versions",
+            "description": "Determine if the installed Splunk products and versions are affected by the vulnerabilities listed in the advisory.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are the installed Splunk products and versions affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Splunk Products",
+            "description": "Update affected versions of Splunk Enterprise, Splunk Cloud Platform, Splunk App for Lookup File Editing, and Splunk App for Stream to the latest versions to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Splunk Advisory",
+    "affected_products": [
+        "Splunk Enterprise <9.0.5, <8.2.11 and <8.1.14",
+        "Splunk Cloud Platform <9.0.2303.100",
+        "Splunk App for Lookup File Editing versions <4.0.1",
+        "Splunk App for Stream versions <8.1.1"
+    ]
+}

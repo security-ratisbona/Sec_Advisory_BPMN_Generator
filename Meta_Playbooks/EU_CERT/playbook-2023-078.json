@@ -1,0 +1,67 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check if Web UI Feature is Enabled",
+            "description": "Verify if the web UI feature is enabled by checking for 'ip http server' and 'ip http secure-server' in the system configuration.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the web UI feature enabled?",
+            "next_step": 3,
+            "else_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Disable HTTP Server Feature",
+            "description": "Disable the HTTP Server feature on all internet-facing systems to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Scan for Indicators of Compromise (IoCs)",
+            "description": "Scan affected devices for the presence of IoCs by checking system logs for specific log messages and using the provided curl command to detect implants.",
+            "commands": [
+                "curl -k -X POST \"https://systemip/webui/logoutconfirm.html?logon_hash=1\""
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update Affected Devices",
+            "description": "Update affected devices with the latest fixed software releases available on the Cisco Software Download Center.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Affected Devices",
+            "description": "Update affected devices with the latest fixed software releases available on the Cisco Software Download Center.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cisco IOS XE Software Web UI Vulnerability",
+    "affected_products": [
+        "Cisco IOS XE Software with Web UI feature enabled"
+    ]
+}

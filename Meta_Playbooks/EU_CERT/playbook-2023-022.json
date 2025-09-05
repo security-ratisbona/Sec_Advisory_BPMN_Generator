@@ -1,0 +1,27 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade FortiPresence Instances",
+            "description": "Upgrade FortiPresence instances to version 2.0.0 or above to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review and Apply Fortinet April 2023 Vulnerability Advisories",
+            "description": "Review the April 2023 Vulnerability Advisories from Fortinet and apply the relevant updates to ensure all known vulnerabilities are addressed.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FortiPresence Vulnerability Advisory",
+    "affected_products": [
+        "FortiPresence 1.2 all versions",
+        "FortiPresence 1.1 all versions",
+        "FortiPresence 1.0 all versions"
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is running a vulnerable version of Jira (5.3.0 to 5.5.0) and if it is affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading to the latest fixed version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Latest Fixed Version",
+            "description": "Upgrade Jira to the latest fixed versions 5.3.3, 5.5.1, or 5.6.0 or later to remediate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Temporary Workaround",
+            "description": "Manually upgrade the version-specific JAR file as a temporary workaround if an upgrade is not immediately possible.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Jira Vulnerability in Versions 5.3.0 to 5.5.0",
+    "affected_products": [
+        "Jira 5.3.0",
+        "Jira 5.3.1",
+        "Jira 5.3.2",
+        "Jira 5.4.0",
+        "Jira 5.4.1",
+        "Jira 5.5.0"
+    ]
+}

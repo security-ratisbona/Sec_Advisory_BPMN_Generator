@@ -1,0 +1,28 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Ivanti's Security Advisory",
+            "description": "Consult Ivanti's security advisory to understand the details of the vulnerability and recommended actions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade Affected Systems",
+            "description": "Upgrade supported EPMM versions 11.10, 11.9, and 11.8 to the latest version to mitigate the vulnerability. Consider upgrading unsupported older versions as well.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "EPMM Vulnerability",
+    "affected_products": [
+        "EPMM versions 11.10",
+        "EPMM versions 11.9",
+        "EPMM versions 11.8",
+        "Unsupported older versions"
+    ]
+}

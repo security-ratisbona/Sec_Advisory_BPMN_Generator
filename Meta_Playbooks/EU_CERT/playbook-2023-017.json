@@ -1,0 +1,79 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Jenkins Version",
+            "description": "Check if the Jenkins server is running a vulnerable version by retrieving the installed version number.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Jenkins server running a vulnerable version?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Jenkins product is installed?",
+            "cases": {
+                "Jenkins weekly": 4,
+                "Jenkins LTS": 5,
+                "update-center2": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Jenkins weekly to version 2.394",
+            "description": "Update the Jenkins weekly server to version 2.394 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Jenkins LTS version is preferred?",
+            "cases": {
+                "2.375.4": 7,
+                "2.387.1": 8
+            },
+            "default": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update Jenkins LTS to version 2.375.4",
+            "description": "Update the Jenkins LTS server to version 2.375.4 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update Jenkins LTS to version 2.387.1",
+            "description": "Update the Jenkins LTS server to version 2.387.1 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update update-center2 to version 3.15",
+            "description": "Update the update-center2 to version 3.15 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Jenkins Vulnerability Advisory",
+    "affected_products": [
+        "Jenkins weekly up to and including 2.393",
+        "Jenkins LTS up to and including 2.375.3",
+        "update-center2 up to and including 3.14"
+    ]
+}

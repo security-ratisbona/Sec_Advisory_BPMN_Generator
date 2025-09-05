@@ -1,0 +1,50 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Detailed Advisory",
+            "description": "Review the detailed advisory for each vulnerability affecting Microsoft products and services.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply May 2023 Patch Tuesday Updates",
+            "description": "Apply the May 2023 Patch Tuesday security updates to protect systems against potential exploitation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "May 2023 Patch Tuesday",
+    "affected_products": [
+        "Windows (multiple versions)",
+        "Microsoft Office (various applications)",
+        "Microsoft Edge (Chromium-based)",
+        "Microsoft Graphics Component",
+        "Microsoft Teams",
+        "Microsoft Windows Codecs Library",
+        "Remote Desktop Client",
+        "SysInternals",
+        "Visual Studio Code",
+        "Windows Backup Engine",
+        "Windows Installer",
+        "Windows iSCSI Target Service",
+        "Windows LDAP",
+        "Lightweight Directory Access Protocol",
+        "Windows MSHTML Platform",
+        "Windows Network File System",
+        "Windows NFS Portmapper",
+        "Windows NTLM",
+        "Windows OLE",
+        "Windows PGM",
+        "Windows RDP Client",
+        "Windows Remote Procedure Call Runtime",
+        "Windows Secure Boot",
+        "Windows Secure Socket Tunneling Protocol (SSTP)",
+        "Windows SMB",
+        "Windows Win32K"
+    ]
+}
