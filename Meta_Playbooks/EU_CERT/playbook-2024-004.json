@@ -1,0 +1,144 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is affected by checking the installed version of Ivanti Connect Secure, Policy Secure, or ZTA.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2024-22024?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Have immediate actions been performed?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Available Patches",
+            "description": "Apply the patches available for the affected versions as soon as possible.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Update as Part of Remediation",
+            "description": "Apply the update as part of the remediation actions if immediate actions have not been performed.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is patching possible?",
+            "next_step": 7,
+            "else_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply Mitigation File",
+            "description": "Import the mitigation file 'importing mitigation.release.20240126.5.xml' to block the vulnerability CVE-2024-22024.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Take Affected Products Offline",
+            "description": "Take the affected Ivanti products offline until patching or mitigation can be implemented.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12
+            ],
+            "next_step": 13
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Acquire Forensic Evidence",
+            "description": "Acquire forensic evidence (disk image and memory) to perform a compromise assessment.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Run External Integrity Checker Tool (ICT)",
+            "description": "Run the external Integrity Checker Tool (ICT) to scan the current state of the appliance. Ensure forensic evidence is taken before running it.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Perform Compromise Assessment",
+            "description": "Perform a compromise assessment by contacting Ivanti support to create a forensic image of the device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                14,
+                15,
+                16
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Reset Local Users' Passwords",
+            "description": "Reset local users' passwords, including those of service accounts used for auth server configuration.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Revoke and Replace Private Certificates",
+            "description": "Revoke and replace any private certificate that was installed on the ICS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Hunt for Suspicious Events",
+            "description": "Hunt for suspicious events during the past weeks, such as suspicious authentication and recently created privileged users.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-22024",
+    "affected_products": [
+        "Ivanti Connect Secure 9.1R14.4",
+        "Ivanti Connect Secure 9.1R17.2",
+        "Ivanti Connect Secure 9.1R18.3",
+        "Ivanti Connect Secure 22.4R2.2",
+        "Ivanti Connect Secure 22.5R1.1",
+        "Ivanti Policy Secure 22.5R1.1",
+        "ZTA 22.6R1.3"
+    ]
+}

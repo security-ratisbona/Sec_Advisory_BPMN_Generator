@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected EPMM Version",
+            "description": "Check if the Ivanti Endpoint Manager Mobile (EPMM) version is 12.0 or earlier.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the EPMM version 12.0 or earlier?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update EPMM to Version 12.1.0.0 or Later",
+            "description": "Update the Ivanti Endpoint Manager Mobile (EPMM) to version 12.1.0.0 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Ivanti Endpoint Manager Mobile (EPMM) versions 12.0 and earlier",
+    "affected_products": [
+        "Ivanti Endpoint Manager Mobile (EPMM) versions 12.0 and earlier"
+    ]
+}

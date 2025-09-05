@@ -1,0 +1,75 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Version",
+            "description": "Determine if the installed version of Ivanti Virtual Traffic Manager is affected by checking the version number.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version is installed?",
+            "cases": {
+                "22.2": 4,
+                "22.3": 5,
+                "22.3R2": 5,
+                "22.5R1": 5,
+                "22.6R1": 5,
+                "22.7R1": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Resolved Version 22.2R1",
+            "description": "Apply the available patch to update Ivanti Virtual Traffic Manager to version 22.2R1.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Schedule Update to Resolved Version",
+            "description": "Plan to update Ivanti Virtual Traffic Manager to the resolved version during the week of August 19th.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update to Resolved Version 22.7R2",
+            "description": "Apply the available patch to update Ivanti Virtual Traffic Manager to version 22.7R2.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict Access to Management Interface",
+            "description": "Restrict access to the management interface by binding it to an internal network or private IP address to reduce the attack surface.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Ivanti Virtual Traffic Manager Vulnerability",
+    "affected_products": [
+        "Ivanti Virtual Traffic Manager 22.2",
+        "Ivanti Virtual Traffic Manager 22.3",
+        "Ivanti Virtual Traffic Manager 22.3R2",
+        "Ivanti Virtual Traffic Manager 22.5R1",
+        "Ivanti Virtual Traffic Manager 22.6R1",
+        "Ivanti Virtual Traffic Manager 22.7R1"
+    ]
+}

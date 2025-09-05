@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Apache OFBiz Version",
+            "description": "Check the installed version of Apache OFBiz to determine if it is below version 18.12.11.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Apache OFBiz version below 18.12.11?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade Apache OFBiz",
+            "description": "Upgrade Apache OFBiz to version 18.21.11 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Apache OFBiz versions below 18.12.11",
+    "affected_products": [
+        "Apache OFBiz versions below 18.12.11"
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is running runc version 1.1.11 or earlier to determine if it is affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running runc version 1.1.11 or earlier?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade runc to Version 1.1.12",
+            "description": "Upgrade runc to version 1.1.12 to apply patches for the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Technologies Incorporating runc",
+            "description": "Update all technologies and container runtimes that incorporate runc to their latest patched versions.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Follow Vendor Advisories",
+            "description": "Follow vendor advisories and apply updates for container hosting services and infrastructure to ensure all components are secure.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "runc version 1.1.11 and earlier vulnerability",
+    "affected_products": [
+        "runc version 1.1.11 and earlier"
+    ]
+}

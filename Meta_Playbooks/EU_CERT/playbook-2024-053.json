@@ -1,0 +1,53 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Apply Hotfix",
+            "description": "Apply the hotfix provided by Check Point to address the security flaw in affected devices.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Change Security Gateway's Account Password",
+            "description": "Change the password of the Security Gateway's account in Active Directory to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Prevent Local Accounts from VPN Access",
+            "description": "Prevent local accounts from connecting to VPN with password authentication to mitigate unauthorized access risks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review Authentication Logs",
+            "description": "Review the authentication logs for local accounts to identify any suspicious connections.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Check Point Security Flaw",
+    "affected_products": [
+        "Quantum Security Gateway and CloudGuard Network Security: R81.20, R81.10, R81, R80.40",
+        "Quantum Maestro and Quantum Scalable Chassis: R81.20, R81.10, R80.40, R80.30SP, R80.20SP",
+        "Quantum Spark Gateways: R81.10.x, R80.20.x, R77.20.x"
+    ]
+}

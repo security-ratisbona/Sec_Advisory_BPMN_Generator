@@ -1,0 +1,52 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by CVE-2024-36401 or CVE-2024-36404 by retrieving the installed package versions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2024-36401 or CVE-2024-36404?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating to the latest version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Latest Version",
+            "description": "Follow the vendor's instructions to update to the latest versions of the affected packages to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Remove gt-complex-x.y.jar File",
+            "description": "Remove the 'gt-complex-x.y.jar' file from GeoServer to eliminate the vulnerable code. Note that this may impact other functionalities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-36401",
+    "affected_products": [
+        "org.geoserver.web:gs-web-app",
+        "org.geoserver:gs-wfs",
+        "org.geoserver:gs-wms",
+        "org.geotools.xsd:gt-xsd-core",
+        "org.geotools:gt-app-schema",
+        "org.geotools:gt-complex"
+    ]
+}

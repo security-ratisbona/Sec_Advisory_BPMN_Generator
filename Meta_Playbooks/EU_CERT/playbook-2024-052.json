@@ -1,0 +1,35 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check Vulnerable Version",
+            "description": "Use the Cisco tool to check if your version of Firepower Management Center (FMC) Software is vulnerable.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running a vulnerable version?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Fixed Version",
+            "description": "Update to a fixed version of Cisco FMC software to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cisco Firepower Management Center Vulnerability",
+    "affected_products": [
+        "Firepower Management Center (FMC) Software 7.3.X",
+        "Firepower Management Center (FMC) Software 7.2.X before 7.2.5.1",
+        "Firepower Management Center (FMC) Software 7.1.X",
+        "Firepower Management Center (FMC) Software 7.0.X before 7.0.6.1"
+    ]
+}

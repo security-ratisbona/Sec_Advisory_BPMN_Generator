@@ -1,0 +1,52 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by retrieving the installed version of NetScaler ADC and NetScaler Gateway.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2023-6548?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install the Latest Security Patches",
+            "description": "Apply the latest security patches for NetScaler ADC and NetScaler Gateway to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the management interface exposed to the internet?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict Management Interface Access",
+            "description": "Ensure that the management interface is not exposed to the internet, following the secure deployment guide of Citrix.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-6548",
+    "affected_products": [
+        "NetScaler ADC and NetScaler Gateway 13.0 before 13.0-92.21",
+        "NetScaler ADC and NetScaler Gateway 13.1 before 13.1-51.15",
+        "NetScaler ADC and NetScaler Gateway 14.1 before 14.1-12.35",
+        "NetScaler ADC 12.1-NDcPP before 12.1-55.302",
+        "NetScaler ADC 12.1-FIPS before 12.1-55.302",
+        "NetScaler ADC 13.1-FIPS before 13.1-37.176"
+    ]
+}

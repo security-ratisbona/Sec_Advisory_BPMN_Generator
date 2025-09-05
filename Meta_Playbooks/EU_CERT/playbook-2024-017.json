@@ -1,0 +1,37 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Product Version",
+            "description": "Determine if the installed product version is affected by checking against the list of vulnerable versions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the product version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade to Non-Vulnerable Version",
+            "description": "Upgrade the product to a version that is not vulnerable, as recommended by CERT-EU.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CERT-EU Advisory",
+    "affected_products": [
+        "version 7.1.0 through 7.1.1 (fixed in 7.1.2)",
+        "version 7.0.0 through 7.0.2 (fixed in 7.0.3)",
+        "version 6.7.0 through 6.7.8 (fixed in 6.7.9)",
+        "version 6.6.0 through 6.6.3 (fixed in 6.6.5)",
+        "version 6.5.0 through 6.5.2 (fixed in 6.5.3)",
+        "version 6.4.0 through 6.4.2 (fixed in 6.4.4)"
+    ]
+}

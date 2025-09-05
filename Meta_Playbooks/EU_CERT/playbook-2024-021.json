@@ -1,0 +1,44 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Confluence Version",
+            "description": "Check if the Confluence Data Center or Confluence Server version is affected by CVE-2024-21678 by verifying the installed version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Confluence version affected by CVE-2024-21678?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Latest Version",
+            "description": "Install the latest version of Atlassian products to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-21678",
+    "affected_products": [
+        "Confluence Data Center 8.7.0 to 8.7.1",
+        "Confluence Data Center 8.6.0 to 8.6.1",
+        "Confluence Data Center and Server 8.5.0 to 8.5.4 LTS",
+        "Confluence Data Center and Server 8.4.0 to 8.4.5",
+        "Confluence Data Center and Server 8.3.0 to 8.3.4",
+        "Confluence Data Center and Server 8.2.0 to 8.2.3",
+        "Confluence Data Center and Server 8.1.0 to 8.1.4",
+        "Confluence Data Center and Server 8.0.0 to 8.0.4",
+        "Confluence Data Center and Server 7.20.0 to 7.20.3",
+        "Confluence Data Center and Server 7.19.0 to 7.19.17 LTS",
+        "Confluence Data Center and Server 7.18.0 to 7.18.3",
+        "Confluence Data Center and Server 7.17.0 to 7.17.5",
+        "Confluence Data Center and Server earlier versions"
+    ]
+}

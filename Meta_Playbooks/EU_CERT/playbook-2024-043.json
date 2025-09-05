@@ -1,0 +1,111 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Use the Cisco Software Checker tool to determine if the Cisco ASA or FTD appliance is affected by the vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2024-20353?",
+            "next_step": 3,
+            "else_step": 7
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Check for SSL Listen Sockets",
+            "description": "Run the command 'show asp table socket | include SSL' to check for SSL listen sockets on any TCP port. If a socket is present, the device is vulnerable.",
+            "commands": [
+                "show asp table socket | include SSL"
+            ],
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which software is running?",
+            "cases": {
+                "Cisco ASA Software": 5,
+                "Cisco FTD Software": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Check Cisco ASA Software Vulnerable Configurations",
+            "description": "Review the running configuration for features that may enable SSL listen sockets, such as AnyConnect IKEv2, Local Certificate Authority, Management Web Server Access, Mobile User Security, REST API, and SSL VPN.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Check Cisco FTD Software Vulnerable Configurations",
+            "description": "Review the running configuration for features that may enable SSL listen sockets, such as AnyConnect IKEv2, AnyConnect SSL VPN, and HTTP server enabled.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2024-20358?",
+            "next_step": 8,
+            "else_step": 11
+        },
+        {
+            "step_number": 8,
+            "type": "CONDITION",
+            "condition": "Is lockdown mode enabled on Cisco FTD Software?",
+            "next_step": 9,
+            "else_step": 11
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Update Cisco FTD Software",
+            "description": "Update to the latest version of Cisco Firepower Threat Defense (FTD) Software to mitigate CVE-2024-20358.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Perform Compromise Assessment for CVE-2024-20358",
+            "description": "Follow the compromise assessment steps to ensure that vulnerable devices have not been exploited. Check for flows to/from ASA devices to IPs in the IOC list and use 'show memory region | include lina' to identify potential tampering.",
+            "commands": [
+                "show memory region | include lina"
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Update Cisco ASA Software",
+            "description": "Update to the latest version of Cisco Adaptive Security Appliance (ASA) Software to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Perform Compromise Assessment for CVE-2024-20353",
+            "description": "Follow the compromise assessment steps to ensure that vulnerable devices have not been exploited. Check for flows to/from ASA devices to IPs in the IOC list and use 'show memory region | include lina' to identify potential tampering.",
+            "commands": [
+                "show memory region | include lina"
+            ],
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-20353 and CVE-2024-20358",
+    "affected_products": [
+        "Cisco ASA Software",
+        "Cisco FTD Software"
+    ]
+}

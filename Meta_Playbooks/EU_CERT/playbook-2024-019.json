@@ -1,0 +1,39 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Microsoft Products and Versions",
+            "description": "Check the Microsoft advisory to identify the affected products and their versions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are there updates available for the affected products?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Updates to Affected Microsoft Products",
+            "description": "Apply the released updates to the affected Microsoft products, including Windows, Defender for Endpoint Protection, Office, Exchange Server, Dynamics, DotNET, Edge, and Azure.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Microsoft Products Vulnerability Advisory",
+    "affected_products": [
+        "Windows",
+        "Defender for Endpoint Protection",
+        "Office",
+        "Exchange Server",
+        "Dynamics",
+        "DotNET",
+        "Edge",
+        "Azure"
+    ]
+}

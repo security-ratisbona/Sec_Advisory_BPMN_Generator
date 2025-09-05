@@ -1,0 +1,60 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update TeamCity On-Premises to Latest Version",
+            "description": "Update TeamCity On-Premises installations to the latest version as per vendor instructions to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review Web Access Logs for Exploitation Attempts",
+            "description": "Search web access logs for double dot path segments (i.e., '../') after vulnerable paths: '/res/', '/update/', and '/.well-known/acme-challenge/'.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Review Software Logs for Access Token Exploitation",
+            "description": "Search 'teamcity-javaLogging' log files for strings matching the regular expressions: ';\\S*\\.jsp\\?\\S*jsp=' and '\\/\\S*\\?\\S*jsp=\\S*;\\.jsp' to detect access token exploitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review Logs for Malicious Plugin Uploads",
+            "description": "Check 'teamcity-server.log' and 'teamcity-activities.log' for plugin uploads and deletions in quick succession by the same user account as the initial access token creation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Review Logs for Unauthorized Administrator Account Creation",
+            "description": "Check 'teamcity-server.log' and 'teamcity-activities.log' for new administrator account creation. Also review the TeamCity administration console’s Audit page for newly created accounts.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "TeamCity On-Premises Vulnerabilities",
+    "affected_products": [
+        "TeamCity On-Premises < 2023.11.4"
+    ]
+}

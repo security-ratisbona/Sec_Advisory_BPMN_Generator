@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify EPMM Version",
+            "description": "Check the installed version of EPMM to determine if it is prior to 12.1.0.1.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the EPMM version prior to 12.1.0.1?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update EPMM to Latest Version",
+            "description": "Update the EPMM software to the latest version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "EPMM vulnerabilities",
+    "affected_products": [
+        "EPMM versions prior to 12.1.0.1"
+    ]
+}

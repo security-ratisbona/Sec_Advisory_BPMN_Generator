@@ -1,0 +1,66 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is applicable?",
+            "cases": {
+                "CVE-2023-48788": 2,
+                "CVE-2023-42789 and CVE-2023-42790": 3
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade FortiClientEMS",
+            "description": "Upgrade FortiClientEMS to version 7.2.3 or above, or to version 7.0.11 or above to mitigate CVE-2023-48788.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading FortiOS or FortiProxy possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade FortiOS and FortiProxy",
+            "description": "Upgrade FortiOS to version 7.4.2, 7.2.6, 7.0.13, 6.4.15, or 6.2.16 or above. Upgrade FortiProxy to version 7.4.1, 7.2.7, 7.0.13, or 2.0.14 or above to mitigate CVE-2023-42789 and CVE-2023-42790.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Workaround for FortiOS and FortiProxy",
+            "description": "Set a non-form-based authentication scheme to mitigate CVE-2023-42789 and CVE-2023-42790.",
+            "commands": [
+                "config authentication scheme",
+                "edit scheme",
+                "set method <method>",
+                "next",
+                "end"
+            ],
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "FortiClientEMS 7.2.0 through 7.2.2",
+        "FortiClientEMS 7.0.1 through 7.0.10",
+        "FortiOS version 7.4.0 through 7.4.1",
+        "FortiOS version 7.2.0 through 7.2.5",
+        "FortiOS version 7.0.0 through 7.0.12",
+        "FortiOS version 6.4.0 through 6.4.14",
+        "FortiOS version 6.2.0 through 6.2.15",
+        "FortiProxy version 7.4.0",
+        "FortiProxy version 7.2.0 through 7.2.6",
+        "FortiProxy version 7.0.0 through 7.0.12",
+        "FortiProxy version 2.0.0 through 2.0.13"
+    ]
+}

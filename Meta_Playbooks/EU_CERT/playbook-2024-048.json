@@ -1,0 +1,52 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed version of Veeam Backup Enterprise Manager.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading to the latest version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to the Latest Version",
+            "description": "Upgrade Veeam Backup Enterprise Manager to version 12.1.2.172 or later to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Stop and Disable Veeam Services",
+            "description": "Stop and disable the Veeam Backup Enterprise Manager and Veeam RESTful API services to mitigate vulnerabilities.",
+            "commands": [
+                "Stop-Service -Name VeeamEnterpriseManagerSvc",
+                "Set-Service -Name VeeamEnterpriseManagerSvc -StartupType Disabled",
+                "Stop-Service -Name VeeamRESTSvc",
+                "Set-Service -Name VeeamRESTSvc -StartupType Disabled"
+            ],
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Veeam Backup Enterprise Manager Vulnerability",
+    "affected_products": [
+        "Veeam Backup Enterprise Manager < 12.1.2.172"
+    ]
+}

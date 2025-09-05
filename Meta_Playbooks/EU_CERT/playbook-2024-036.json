@@ -1,0 +1,78 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Product and Version",
+            "description": "Determine if the system is running an affected version of FortiClientLinux, FortiClientMac, FortiOS, or FortiProxy.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is affected?",
+            "cases": {
+                "FortiClientLinux": 3,
+                "FortiClientMac": 4,
+                "FortiOS": 5,
+                "FortiProxy": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update FortiClientLinux to Latest Version",
+            "description": "Follow the vendor's instructions to update FortiClientLinux to the latest version to mitigate vulnerabilities CVE-2023-45590.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update FortiClientMac to Latest Version",
+            "description": "Follow the vendor's instructions to update FortiClientMac to the latest version to mitigate vulnerabilities CVE-2023-45588 and CVE-2024-31492.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update FortiOS to Latest Version",
+            "description": "Follow the vendor's instructions to update FortiOS to the latest version to mitigate vulnerability CVE-2023-41677.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update FortiProxy to Latest Version",
+            "description": "Follow the vendor's instructions to update FortiProxy to the latest version to mitigate vulnerability CVE-2023-41677.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-45590, CVE-2023-45588, CVE-2024-31492, CVE-2023-41677",
+    "affected_products": [
+        "FortiClientLinux version 7.2.0",
+        "FortiClientLinux version 7.0.6 through 7.0.10",
+        "FortiClientLinux version 7.0.3 through 7.0.4",
+        "FortiClientMac version 7.2.0 through 7.2.3",
+        "FortiClientMac version 7.0.6 through 7.0.10",
+        "FortiOS version 7.4.0 through 7.4.1",
+        "FortiOS version 7.2.0 through 7.2.6",
+        "FortiOS version 7.0.0 through 7.0.12",
+        "FortiOS version 6.4.0 through 6.4.14",
+        "FortiOS version 6.2.0 through 6.2.15",
+        "FortiOS 6.0 all versions",
+        "FortiProxy version 7.4.0 through 7.4.1",
+        "FortiProxy version 7.2.0 through 7.2.7",
+        "FortiProxy version 7.0.0 through 7.0.13",
+        "FortiProxy 2.0 all versions",
+        "FortiProxy 1.2 all versions",
+        "FortiProxy 1.1 all versions",
+        "FortiProxy 1.0 all versions"
+    ]
+}

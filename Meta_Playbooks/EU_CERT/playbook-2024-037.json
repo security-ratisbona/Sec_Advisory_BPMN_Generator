@@ -1,0 +1,149 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Verify if the system is affected by checking the PAN-OS version and configuration for GlobalProtect gateway or portal.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Identify Exploitation Level",
+            "description": "Follow the verification steps suggested by the vendor to determine the exploitation level of the device.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "SWITCH_CONDITION",
+            "condition": "What is the exploitation level?",
+            "cases": {
+                "Level 0 - probing": 5,
+                "Level 1 - test": 5,
+                "Level 2 - potential exfiltration": 6,
+                "Level 3 - interactive access": 7
+            },
+            "default": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                12,
+                13
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update to Latest PAN-OS Hotfix",
+            "description": "Apply the latest PAN-OS hotfix to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Create Master Key and Elect AES-256-GCM",
+            "description": "Create a master key and elect AES-256-GCM for encryption.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Engage Incident Response and Isolate Device",
+            "description": "Engage incident response team and isolate the device to determine what was done on the device.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Update to Latest PAN-OS Hotfix and Perform Private Data Reset",
+            "description": "After incident response, apply the latest PAN-OS hotfix and perform a Private Data Reset.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Engage Incident Response and Isolate Device",
+            "description": "Engage incident response team and isolate the device to determine what was done on the device and in the network.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Update to Latest PAN-OS Hotfix and Perform Factory Reset",
+            "description": "After incident response, apply the latest PAN-OS hotfix and perform a Factory Reset.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Enable Threat ID 95187",
+            "description": "Enable Threat ID 95187 in Applications and Threats content version 8833-8682 to block attacks for this vulnerability.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Ensure Vulnerability Protection on GlobalProtect Interface",
+            "description": "Ensure vulnerability protection is applied to the GlobalProtect interface to prevent exploitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Identify Indicators of Exploit Activity",
+            "description": "Use the PAN-OS CLI command to identify indicators of exploit activity on the device.",
+            "commands": [
+                "grep pattern \"failed to unmarshal session(.\\+.\\/\" mp-log gpsvc.log*"
+            ],
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-3400",
+    "affected_products": [
+        "PAN-OS 11.1 before version 11.1.2-h3",
+        "PAN-OS 11.0 before version 11.0.4-h1",
+        "PAN-OS 10.2 before version 10.2.9-h1",
+        "PAN-OS 10.2 before version 10.2.8-h3",
+        "PAN-OS 10.2 before version 10.2.7-h8"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is running a version of SolarWinds Access Rights Manager prior to 2024.3.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running a version prior to 2024.3?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to the Latest Version",
+            "description": "Update the system to the latest version of SolarWinds Access Rights Manager to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SolarWinds Access Rights Manager Vulnerability",
+    "affected_products": [
+        "SolarWinds Access Rights Manager versions prior to 2024.3"
+    ]
+}

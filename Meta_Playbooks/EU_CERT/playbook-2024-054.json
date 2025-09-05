@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Confluence Version",
+            "description": "Determine if the Confluence instance is running a version prior to 8.9.1 for Data Center or prior to 8.5.9 LTS and 7.19.22 LTS for Server.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Confluence version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade Confluence",
+            "description": "Upgrade to Confluence Data Center version 8.9.1 or later, or Confluence Server version 8.5.9 LTS or 7.19.22 LTS.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Confluence Data Center and Server Vulnerability",
+    "affected_products": [
+        "Confluence Data Center: Versions prior to 8.9.1",
+        "Confluence Server: Versions prior to 8.5.9 LTS and 7.19.22 LTS"
+    ]
+}

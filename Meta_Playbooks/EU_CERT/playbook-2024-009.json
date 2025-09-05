@@ -1,0 +1,40 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Atlassian Products and Versions",
+            "description": "Determine if any of the Atlassian products in use are affected by the vulnerabilities by checking their versions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are any Atlassian products affected by the vulnerabilities?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install Latest Version of Atlassian Products",
+            "description": "Update all affected Atlassian products to their latest versions to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2023-22527",
+    "affected_products": [
+        "Confluence Data Center and Server 8 versions before Dec. 5, 2023",
+        "Bitbucket Data Center before versions 7.21.21, 8.9.9, 8.13.5, 8.14.4, 8.15.3, 8.16.2 and 8.17.0",
+        "Bitbucket Server before versions 7.21.21, 8.9.9, 8.13.5 and 8.14.4",
+        "Bamboo Data Center and Server before versions 9.2.9, 9.3.6 and 9.4.2",
+        "Jira Data Center and Server before versions 9.4.13 and 9.7.0",
+        "Jira Service Management Data Center and Server before versions 4.20.30, 5.4.15 and 5.12.2",
+        "Crowd Data Center and Server before the version 5.2.2",
+        "Confluence Data Center before versions 7.19.18, 8.5.5 and 8.7.2",
+        "Confluence Server before versions 7.19.18 and 8.5.5"
+    ]
+}

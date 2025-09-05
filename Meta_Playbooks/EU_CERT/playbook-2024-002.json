@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Installed Version of Ivanti Endpoint Management",
+            "description": "Check the installed version of Ivanti Endpoint Management software to determine if it is prior to version 2022 Service Update 5.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version prior to 2022 Service Update 5?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Ivanti Endpoint Management 2022 Service Update 5",
+            "description": "Update the Ivanti Endpoint Management software to version 2022 Service Update 5 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Ivanti Endpoint Management Vulnerability",
+    "affected_products": [
+        "Ivanti Endpoint Management software (EPM) prior to version 2022 Service Update 5"
+    ]
+}

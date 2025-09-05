@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Zabbix Server Version",
+            "description": "Determine if the Zabbix Server version is within the affected range (6.4.0 to 6.4.15 or 7.0.0alpha1 to 7.0.0rc2).",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Zabbix Server version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade Zabbix Server",
+            "description": "Upgrade to Zabbix version 6.4.16rc1 or 7.0.0rc3 immediately, as no workarounds are available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Zabbix Server Vulnerability Advisory",
+    "affected_products": [
+        "Zabbix Server versions 6.4.0 to 6.4.15",
+        "Zabbix Server versions 7.0.0alpha1 to 7.0.0rc2"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Rust Version",
+            "description": "Determine the installed version of Rust on Windows systems to check if it is affected.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Rust version before 1.77.2?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the system running code that executes batch files with untrusted arguments?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Rust",
+            "description": "Upgrade Rust to version 1.77.2 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rust Vulnerability on Windows",
+    "affected_products": [
+        "All Rust versions before 1.77.2 on Windows"
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed version of Adobe Commerce, Magento Open Source, Acrobat DC, Acrobat Reader DC, Acrobat 2020, or Acrobat Reader 2020.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Latest Software Version",
+            "description": "Update the affected software installations to the latest versions as per vendor instructions.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Adobe and Magento Vulnerabilities",
+    "affected_products": [
+        "Adobe Commerce version 2.4.6-x prior to 2.4.6-p4",
+        "Adobe Commerce version 2.4.5-x prior to 2.4.5-p6",
+        "Adobe Commerce version 2.4.4-x prior to 2.4.4-p7",
+        "Adobe Commerce version 2.4.3-x prior to 2.4.3-ext-6",
+        "Adobe Commerce version 2.4.2-x prior to 2.4.2-ext-6",
+        "Adobe Commerce version 2.4.1-x prior to 2.4.1-ext-6",
+        "Adobe Commerce version 2.4.0-x prior to 2.4.0-ext-6",
+        "Adobe Commerce version 2.3.7-x prior to 2.3.7-p4-ext-6",
+        "Magento Open Source versions 2.4.6-x prior to 2.4.6-p4",
+        "Magento Open Source versions 2.4.5-x prior to 2.4.5-p6",
+        "Magento Open Source versions 2.4.4-x prior to 2.4.4-p7",
+        "Acrobat DC versions prior to 23.008.20533 on Windows and macOS",
+        "Acrobat Reader DC versions prior to 23.008.20533 on Windows and macOS",
+        "Acrobat 2020 versions prior to 20.005.30574 on Windows and macOS",
+        "Acrobat Reader 2020 versions prior to 20.005.30574 on Windows and macOS"
+    ]
+}

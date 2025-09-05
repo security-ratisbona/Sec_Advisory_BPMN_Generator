@@ -1,0 +1,63 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by identifying the Cisco product and its version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running a vulnerable release of Cisco IMC in the default configuration?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Cisco Integrated Management Controller",
+            "description": "Update to the latest version of Cisco Integrated Management Controller to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cisco IMC Vulnerability",
+    "affected_products": [
+        "5000 Series Enterprise Network Compute Systems (ENCS)",
+        "Catalyst 8300 Series Edge uCPE",
+        "UCS C-Series M5, M6, and M7 Rack Servers in standalone mode",
+        "UCS E-Series Servers",
+        "UCS S-Series Storage Servers in standalone mode",
+        "Application Policy Infrastructure Controller (APIC) Servers",
+        "Business Edition 6000 and 7000 Appliances",
+        "Catalyst Center Appliances",
+        "Cloud Services Platform (CSP) 5000 Series",
+        "Common Services Platform Collector (CSPC) Appliances",
+        "Connected Mobile Experiences (CMX) Appliances",
+        "Connected Safety and Security UCS Platform Series Servers",
+        "Cyber Vision Center Appliances",
+        "Expressway Series Appliances",
+        "HyperFlex Edge Nodes",
+        "HyperFlex Nodes in HyperFlex Datacenter without Fabric Interconnect (DC-NO-FI) deployment mode",
+        "IEC6400 Edge Compute Appliances",
+        "IOS XRv 9000 Appliances",
+        "Meeting Server 1000 Appliances",
+        "Nexus Dashboard Appliances",
+        "Prime Infrastructure Appliances",
+        "Prime Network Registrar Jumpstart Appliances",
+        "Secure Email Gateways",
+        "Secure Email and Web Manager",
+        "Secure Endpoint Private Cloud Appliances",
+        "Secure Firewall Management Center Appliances",
+        "Secure Malware Analytics Appliances",
+        "Secure Network Analytics Appliances",
+        "Secure Network Server Appliances",
+        "Secure Web Appliances",
+        "Secure Workload Servers",
+        "Telemetry Broker Appliances"
+    ]
+}

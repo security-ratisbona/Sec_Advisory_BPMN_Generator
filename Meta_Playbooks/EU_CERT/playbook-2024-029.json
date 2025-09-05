@@ -1,0 +1,35 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Atlassian Products and Versions",
+            "description": "Check if the Atlassian products (Bamboo, Bitbucket, Confluence, Jira Software) are affected by retrieving the installed version and comparing it with the vendor's advisory.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are the Atlassian products affected by the vulnerabilities?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install Latest Version of Atlassian Products",
+            "description": "Update to the latest version of Atlassian products (Bamboo, Bitbucket, Confluence, Jira Software) to mitigate the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Atlassian Products Vulnerabilities",
+    "affected_products": [
+        "Bamboo Data Center and Server",
+        "Bitbucket Data Center and Server",
+        "Confluence Data Center and Server",
+        "Jira Software Data Center and Server"
+    ]
+}

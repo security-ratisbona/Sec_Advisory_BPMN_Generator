@@ -1,0 +1,47 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Git Version",
+            "description": "Check the installed Git version to determine if it is prior to 2.45.1.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Git version prior to 2.45.1?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading Git possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Git to Version 2.45.1 or Later",
+            "description": "Upgrade Git to the latest version (at least 2.45.1) to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Exercise Caution When Cloning Repositories",
+            "description": "If upgrading is not possible, exercise caution when cloning repositories, especially from untrusted sources, to mitigate potential risks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Git Vulnerabilities Prior to Version 2.45.1",
+    "affected_products": [
+        "Git installations prior to version 2.45.1 on Windows, macOS, Linux, and BSD"
+    ]
+}

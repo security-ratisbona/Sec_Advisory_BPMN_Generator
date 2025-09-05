@@ -1,0 +1,35 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by retrieving the installed version of Atlassian products.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install the Latest Version of Atlassian Products",
+            "description": "Update to the latest version of Atlassian products to mitigate the vulnerability, prioritizing internet-facing instances.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Atlassian Products Vulnerability",
+    "affected_products": [
+        "Bamboo Data Center: 9.6.0, 9.5.0 to 9.5.2, 9.4.0 to 9.4.3, 9.3.0 to 9.3.6, 9.2.0 to 9.2.12 (LTS), 9.1.0 to 9.1.3, 9.0.0 to 9.0.4, 8.2.0 to 8.2.9, and any earlier versions",
+        "Confluence Data Center: 8.7.0, 8.6.0 to 8.6.2, 8.5.0 to 8.5.6 (LTS), 8.4.0 to 8.4.5, 8.3.0 to 8.3.4, 8.2.0 to 8.2.3, 8.1.0 to 8.1.4, 8.0.0 to 8.0.4, 7.20.0 to 7.20.3, 7.19.0 to 7.19.19 (LTS), 7.18.0 to 7.18.3, 7.17.0 to 7.17.5, and any earlier versions",
+        "Jira Software Data Center: 9.14.0 to 9.14.1, 9.13.0 to 9.13.1, 9.12.0 to 9.12.5 LTS, 9.11.0 to 9.11.3, 9.10.0 to 9.10.2, 9.9.0 to 9.9.2, 9.8.0 to 9.8.2, 9.7.0 to 9.7.2, 9.6.0, 9.5.0 to 9.5.1, 9.4.0 to 9.4.17 LTS, 9.3.0 to 9.3.3, 9.2.0 to 9.2.1, 9.1.0 to 9.1.1, 9.0.0, and any earlier versions",
+        "Jira Service Management Data Center: 5.12.0 to 5.12.5 (LTS), 5.11.0 to 5.11.3, 5.10.0 to 5.10.2, 5.9.0 to 5.9.2, 5.8.0 to 5.8.2, 5.7.0 to 5.7.2, 5.6.0 to 5.6.2, 5.5.0 to 5.5.1, 5.4.0 to 5.4.18 (LTS), and any earlier versions"
+    ]
+}

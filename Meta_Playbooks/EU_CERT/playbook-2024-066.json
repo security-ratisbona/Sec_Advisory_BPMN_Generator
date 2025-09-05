@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is affected by CVE-2024-6387 by checking the OpenSSH version and the operating system.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2024-6387?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is patching possible immediately?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Security Patches",
+            "description": "Review and apply patches from Linux distribution security bulletins for Ubuntu, Debian, RedHat, and Cisco.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Set LoginGraceTime to 0",
+            "description": "Set the 'LoginGraceTime' to 0 in the sshd configuration file as a temporary workaround, noting the risk of denial-of-service attacks.",
+            "commands": [
+                "sed -i 's/^#?LoginGraceTime.*/LoginGraceTime 0/' /etc/ssh/sshd_config"
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict SSH Access to Trusted Hosts",
+            "description": "Restrict SSH access to only trusted hosts to enhance security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-6387",
+    "affected_products": [
+        "OpenSSH on Linux 8.5p1 to <9.8p1",
+        "Cisco products (refer to Cisco's advisory)"
+    ]
+}

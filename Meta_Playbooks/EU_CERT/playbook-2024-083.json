@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Installed Version of Cortex XSOAR CommonScripts",
+            "description": "Check the installed version of Cortex XSOAR CommonScripts to determine if it is prior to 1.12.33.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version prior to 1.12.33?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Patch for Cortex XSOAR CommonScripts",
+            "description": "Update Cortex XSOAR CommonScripts to version 1.12.33 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Palo Alto Networks Cortex XSOAR CommonScripts Vulnerability",
+    "affected_products": [
+        "Palo Alto Networks Cortex XSOAR CommonScripts prior to 1.12.33"
+    ]
+}

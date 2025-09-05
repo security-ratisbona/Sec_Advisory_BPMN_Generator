@@ -1,0 +1,45 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by CVE-2024-20307 or CVE-2024-20308 by reviewing the installed version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by CVE-2024-20307 or CVE-2024-20308?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating to the latest version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to the Latest Version",
+            "description": "Update the affected product to the latest version to mitigate the vulnerabilities CVE-2024-20307 and CVE-2024-20308.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Cisco Workarounds",
+            "description": "Implement the workarounds provided by Cisco for CVE-2024-20307 and CVE-2024-20308 as an alternative mitigation measure.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-20307 and CVE-2024-20308",
+    "affected_products": null
+}

@@ -1,0 +1,40 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed version of macOS, iOS, iPadOS, tvOS, or Safari.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Affected Devices",
+            "description": "Update macOS to version 12.7, 13.6, or 14.3; iOS and iPadOS to version 16.7 or 17.3; tvOS to version 17.3; Safari to version 17.3.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CERT-EU Advisory",
+    "affected_products": [
+        "macOS 12.x before 12.7",
+        "macOS 13.x before 13.6",
+        "macOS 14.x before 14.3",
+        "iOS 16.x before 16.7",
+        "iPadOS 16.x before 16.7",
+        "iOS 17.x before 17.3",
+        "iPadOS 17.x before 17.3",
+        "tvOS before 17.3",
+        "Safari before 17.3"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Jenkins Version",
+            "description": "Check if the Jenkins instance is running a version up to and including 2.441 for weekly releases or up to and including 2.426.2 for LTS releases.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the Jenkins version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Jenkins to Latest Patched Version",
+            "description": "Update the Jenkins instance to the latest patched version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Jenkins Vulnerability Advisory",
+    "affected_products": [
+        "Jenkins weekly up to and including 2.441",
+        "Jenkins LTS up to and including 2.426.2"
+    ]
+}
