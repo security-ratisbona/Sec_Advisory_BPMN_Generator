@@ -1,0 +1,125 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which system version?",
+            "cases": {
+                "Windows": 4,
+                "RM Shell": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply '2024-08 Cumulative Update'",
+            "description": "Download and install the '2024-08 Cumulative Update' from Microsoft to patch security vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which RM Shell version?",
+            "cases": {
+                "RM Shell 5 based on Windows 10 LTSB 2016": 6,
+                "RM Shell 5 based on Windows 10 LTSC 2019": 7,
+                "RM Shell 6 based on Windows 10 LTSC 2021": 8
+            },
+            "default": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Security Patch '18-33624T' (Windows - 2024-08)",
+            "description": "Install the '18-33624T Windows Cumulative Security Patch - 2024-08' to mitigate identified security risks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply Security Patch '18-34182G' (Windows - 2024-08)",
+            "description": "Install the '18-34182G Windows Cumulative Security Patch - 2024-08' to mitigate identified security risks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Apply Security Patch '18-34927A' (RM Image - Windows - 2024-08)",
+            "description": "Install the '18-34927A RM Image Security Patch - Windows Cumulative Security Patch 2024-08' to mitigate identified security risks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-38063",
+    "affected_products": [
+        "Image <= 118-0241B: Native Windows installed on PC82****-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0241B: Native Windows installed on PC9****-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0242H: VisuNet RM Shell 5 installed on BTC01-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0243M: VisuNet RM Shell 5 installed on RM82***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0243M: VisuNet RM Shell 5 installed on RM9***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0244N: VisuNet RM Shell 5 installed on RM2***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0249M: VisuNet RM Shell 5 installed on RM37***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0250B: Native Windows installed on PC82****-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0250B: Native Windows installed on PC9****-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0259: Native Windows installed on PC2***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0261: Native Windows installed on PC97**-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0269: Native Windows installed on PC37***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0274J: VisuNet RM Shell 5 installed on RM2***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0280A: Native Windows installed on BTC12-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0281E: VisuNet RM Shell 5 installed on RM2***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 118-0281E: VisuNet RM Shell 5 installed on RM37***-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 18-33385C: Native Windows installed on PCU1*100-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 18-33416N: VisuNet RM Shell 5 installed on TCU1*00-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 18-33582M: VisuNet RM Shell 5 installed on BTC12-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 18-33834F: VisuNet RM Shell 5 installed on BTC14-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773",
+        "Image <= 18-34023C: VisuNet RM Shell 5 installed on TCU1*00-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34024A: Native Windows installed on PCU1*100-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34055D: Native Windows installed on BPC3200-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34055D: Native Windows installed on PC-320-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34068A: VisuNet RM Shell 5 installed on BTC12-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34076C: VisuNet RM Shell 5 installed on BTC12-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34093E: VisuNet RM Shell 5 installed on BPC3200-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34093E: VisuNet RM Shell 5 installed on RM-320-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34191C: VisuNet RM Shell 5 installed on BTC14-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34261A: VisuNet RM Shell 5 installed on RM2***-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34261A: VisuNet RM Shell 5 installed on RM37***-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34263A: VisuNet RM Shell 5 installed on RM2***-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34264A: VisuNet RM Shell 5 installed on RM2***-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34264A: VisuNet RM Shell 5 installed on RM37***-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34298A: VisuNet RM Shell 5 installed on RM82***-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34298A: VisuNet RM Shell 5 installed on RM9***-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34308: VisuNet RM Shell 5 installed on BTC01-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34309: VisuNet RM Shell 5 installed on TCU1*00-*:Version Windows 10 IoT Enterprise LTSC 2019 < KB5041578",
+        "Image <= 18-34720C: VisuNet RM Shell 6 installed on TCU1*00-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34754C: VisuNet RM Shell 6 installed on TCU1*00-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34755D: VisuNet RM Shell 6 installed on BTC12-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34756D: VisuNet RM Shell 6 installed on BTC14-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34757D: VisuNet RM Shell 6 installed on BPC3200-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34757D: VisuNet RM Shell 6 installed on RM-320-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34760C: VisuNet RM Shell 6 installed on BTC22-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34831: Native Windows installed on PCU1*100-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34873: Native Windows installed on BPC3200-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-34873: Native Windows installed on PC-320-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580",
+        "Image <= 18-35000: VisuNet RM Shell 6 installed on BTC24-*:Version Windows 10 IoT Enterprise LTSC 2021 < KB5041580"
+    ]
+}

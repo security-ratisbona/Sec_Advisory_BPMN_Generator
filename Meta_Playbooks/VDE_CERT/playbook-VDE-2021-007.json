@@ -1,0 +1,53 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure that affected products are not accessible via the Internet by minimizing their network exposure.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Isolate Affected Products",
+            "description": "Isolate affected products from the corporate network to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is remote access required?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "If remote access is required, implement secure methods such as virtual private networks (VPNs) to access affected products.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigation for PCV and WCS3B Series",
+    "affected_products": [
+        "262163, PCV100-F200-B25-V1D-6011, <= V1.10.0",
+        "284068, PCV100-F200-B25-V1D-6011-6720, <= V1.10.0",
+        "262161, PCV50-F200-B25-V1D, <= V1.10.0",
+        "262162, PCV80-F200-B25-V1D, <= V1.10.0",
+        "293431-100004, PXV100-F200-B25-V1D, <= V1.10.0",
+        "293431-100010, PXV100I-F200-B25-V1D, <= V1.10.0",
+        "262006, WCS3B-LS510, <= V1.2.1",
+        "304867, WCS3B-LS510D, <= V1.2.1",
+        "304868, WCS3B-LS510DH, <= V1.2.1",
+        "312681, WCS3B-LS510DH-OM, <= V1.2.1",
+        "312682, WCS3B-LS510D-OM, <= V1.2.1",
+        "304866, WCS3B-LS510H, <= V1.2.1",
+        "312680, WCS3B-LS510H-OM, <= V1.2.1",
+        "312683, WCS3B-LS510-OM, <= V1.2.1"
+    ]
+}

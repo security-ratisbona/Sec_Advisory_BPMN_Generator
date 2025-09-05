@@ -1,0 +1,48 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check Device Version",
+            "description": "Verify if the Tab-Ex 02 device is running version <= v01.03.2020.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the device running version <= v01.03.2020?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Plan for Device Update",
+            "description": "Prepare for the planned update for Tab-Ex 02, scheduled for 05/2020, to patch all affected devices.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Configure Network and Software Installations",
+            "description": "Ensure that outgoing connections and local software installations are configured by administrators.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Ensure Data Connection Encryption",
+            "description": "Ensure that data connections are encrypted using protocols such as HTTPS or SSH.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Tab-Ex 02 Vulnerability",
+    "affected_products": [
+        "Tab-Ex 02 <= v01.03.2020"
+    ]
+}

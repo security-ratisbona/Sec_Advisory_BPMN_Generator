@@ -1,0 +1,46 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Exchange Project Data Securely",
+            "description": "Ensure that project data is exchanged only via secure exchange services to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Protect Project Storage",
+            "description": "Use appropriate means to protect the project storage from unauthorized manipulation.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Avoid Opening Unknown Project Data",
+            "description": "Do not open project data from an unknown source to avoid potential security risks.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Reduce User Rights",
+            "description": "Reduce the user rights of the host application to the necessary minimum to limit potential exploitation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigation for SRP700, Asset Health Monitoring and related products",
+    "affected_products": [
+        "SRP700, Asset Health Monitoring (FieldCare SFE500), <= 2.15.01",
+        "SFE100, DeviceCare, <= 1.07.00",
+        "SFE500, FieldCare, <= 2.15.01",
+        "SMT50, Field Xpert, <= 1.05.00",
+        "SMT70, Field Xpert, <= 1.05.00",
+        "SMT77, Field Xpert, <= 1.05.00"
+    ]
+}

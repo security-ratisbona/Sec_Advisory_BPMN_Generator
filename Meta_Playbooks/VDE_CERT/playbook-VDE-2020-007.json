@@ -1,0 +1,29 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the device to prevent unauthorized access and potential denial of service attacks.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Consult WAGO's Cyber Security Handbook",
+            "description": "Follow the instructions in WAGO's handbook 'Cyber Security for Controller' to implement recommended security measures.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cyber Security for Controller",
+    "affected_products": [
+        "750-81xx/xxx-xxx (PFC100), >= FW05",
+        "750-82xx/xxx-xxx (PFC200), >= FW05",
+        "762-4xxx, >= FW05",
+        "762-5xxx, >= FW05",
+        "762-6xxx, >= FW05"
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Renew Certificate with Customer-Specific Hostname",
+            "description": "Adjust the hostname to a customer-specific one that does not contain the serial number to renew the certificate.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Restrict Unauthorized Access to Automation Components",
+            "description": "Ensure that no unauthorized access can take place to automation components by implementing security measures.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Restrict Internet Access for Automation Components",
+            "description": "Ensure that automation components do not have direct access to Internet resources and cannot be accessed from insecure networks.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Security Measures for Automation Components",
+            "description": "Use available security measures such as authentication and authorization groups to protect automation components.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "QHA200, moneo appliance, <= 1.9.3 | QHA210, moneo appliance, <= 1.9.3",
+    "affected_products": [
+        "QHA200, moneo appliance, <= 1.9.3",
+        "QHA210, moneo appliance, <= 1.9.3"
+    ]
+}

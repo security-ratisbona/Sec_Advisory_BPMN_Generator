@@ -1,0 +1,85 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is MODBUS communication needed?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Deactivate MODBUS-Server",
+            "description": "Deactivate the MODBUS-Server in the product settings of the web-based management if no MODBUS communication is needed.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply General Security Best Practices",
+            "description": "Use general security best practices to protect systems from local and network attacks. Do not allow direct access to the device from untrusted networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update to Latest Firmware",
+            "description": "Update to the latest firmware according to the table in chapter solutions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Defense-in-Depth Strategy for ICS",
+            "description": "Ensure that industrial control systems (ICS) are not directly accessible from the Internet and are protected by consistently applying the defense-in-depth strategy.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Consult BSI ICS Security Compendium",
+            "description": "Consult the BSI ICS Security Compendium for general information on securing ICS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update Firmware for Specific WAGO Series",
+            "description": "Update the firmware for the affected WAGO series to the specified versions: 750-332, 750-362/xxx-xxx, 750-363/xxx-xxx, 750-364/xxx-xxx, 750-365/xxx-xxx, 750-823, 750-832/xxx-xxx, 750-862, 750-890/xxx-xxx, 750-891, 750-893 to FW11.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "WAGO ICS Vulnerability",
+    "affected_products": [
+        "WAGO 750-332",
+        "WAGO 750-362/xxx-xxx",
+        "WAGO 750-363/xxx-xxx",
+        "WAGO 750-364/xxx-xxx",
+        "WAGO 750-365/xxx-xxx",
+        "WAGO 750-823",
+        "WAGO 750-832/xxx-xxx",
+        "WAGO 750-862",
+        "WAGO 750-890/xxx-xxx",
+        "WAGO 750-891",
+        "WAGO 750-893"
+    ]
+}

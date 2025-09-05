@@ -1,0 +1,83 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Firmware",
+            "description": "Update to the latest firmware version according to the provided table to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply General Security Best Practices",
+            "description": "Use general security best practices to protect systems from local and network attacks. Do not allow direct access to the device from untrusted networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Defense-in-Depth Strategy",
+            "description": "Ensure that industrial control systems (ICS) are not directly accessible from the Internet and are protected by a defense-in-depth strategy.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Consult BSI ICS Security Compendium",
+            "description": "Refer to the BSI ICS Security Compendium for general information on securing ICS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Ensure that the device is not accessible from untrusted networks and apply network segmentation where possible.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "WAGO Vulnerability Advisory",
+    "affected_products": [
+        "751-9301, Compact Controller CC100, FW20 <= FW22",
+        "751-9301, Compact Controller CC100, = FW23",
+        "752-8303/8000-002, Edge Controller, = FW22",
+        "750-81xx/xxx-xxx, PFC100, FW20 <= FW22",
+        "750-82xx/xxx-xxx, PFC200, FW20 <= FW22",
+        "750-821x/xxx-xxx, PFC200, = FW23",
+        "762-5xxx, Touch Panel 600 Advanced Line, = FW22",
+        "762-6xxx, Touch Panel 600 Marine Line, = FW22",
+        "762-4xxx, Touch Panel 600 Standard Line, = FW22"
+    ]
+}

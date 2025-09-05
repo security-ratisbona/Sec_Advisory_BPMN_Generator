@@ -1,0 +1,48 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Restrict HTTP Traffic",
+            "description": "Restrict HTTP traffic to the energy storage system by using an inbound firewall or other measures on the network level.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Monitor for OTA Updates",
+            "description": "Monitor for the availability of OTA updates for the affected products.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the OTA update available?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply OTA Update",
+            "description": "Apply the OTA update to the affected products as soon as it becomes available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Vulnerability in Energy Storage Systems",
+    "affected_products": [
+        "2709858310 - 90, Element backup, < F21000400",
+        "2700852201 - 52, Element S1, < 2e.3.8.0",
+        "2700852301 - 53, Element S2, < 2e.3.8.0",
+        "2700852401 - 53, Element S2, < 2e.3.8.0",
+        "2709852201 - 53, Element S3, < 2e.3.8.0",
+        "2709852201 - 53, Element S3, < 2e.4.4.0",
+        "2709858202 - 13, Element S4, < D21010400",
+        "2703852201, One L/XL, < 2e.3.8.0",
+        "2707852201, Pulse (not pulse neo), < C21010800"
+    ]
+}

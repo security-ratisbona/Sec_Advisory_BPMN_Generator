@@ -1,0 +1,28 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Configure Perimeter Firewall",
+            "description": "Configure a perimeter firewall to block traffic from untrusted networks and users to the device.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Change Default Passwords",
+            "description": "Change default password for operator, service, and admin accounts.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "RSG35, Ecograph T, >= V2.0.0 (08/2015) | ORSG35, Ecograph T Neutral/Private Label, >= V2.0.0 (08/2015) | RSG45, Memograph M, >= V2.0.0 (08/2015) | ORSG45, Memograph M Neutral/Private Label, >= V2.0.0 (08/2015)",
+    "affected_products": [
+        "RSG35, Ecograph T, >= V2.0.0 (08/2015)",
+        "ORSG35, Ecograph T Neutral/Private Label, >= V2.0.0 (08/2015)",
+        "RSG45, Memograph M, >= V2.0.0 (08/2015)",
+        "ORSG45, Memograph M Neutral/Private Label, >= V2.0.0 (08/2015)"
+    ]
+}

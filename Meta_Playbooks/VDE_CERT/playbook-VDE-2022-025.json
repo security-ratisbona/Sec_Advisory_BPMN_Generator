@@ -1,0 +1,56 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Phoenix Contact Classic Line Controllers",
+            "description": "Determine if the system includes any Phoenix Contact classic line controllers that are affected.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are Phoenix Contact classic line controllers in use?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Ensure Closed Network Operation",
+            "description": "Operate the Phoenix Contact classic line controllers exclusively in closed industrial networks.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Suitable Firewall Protection",
+            "description": "Protect the network containing Phoenix Contact classic line controllers with a suitable firewall.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Phoenix Contact Classic Line Controllers Vulnerability",
+    "affected_products": [
+        "AXC 1050, all versions",
+        "2701295, AXC 1050 XC, all versions",
+        "2700989, AXC 3050, all versions",
+        "2730844, FC 350 PCI ETH, all versions",
+        "ILC1x0, all versions",
+        "ILC1x1, all versions",
+        "2700977, ILC 1x1 GSM/GPRS, all versions",
+        "ILC 3xx, all versions",
+        "2700291, PC WORX RT BASIC, all versions",
+        "2701680, PC WORX SRT, all versions",
+        "2730190, RFC 430 ETH-IB, all versions",
+        "2730200, RFC 450 ETH-IB, all versions",
+        "2700784, RFC 460R PN 3TX, all versions",
+        "1096407, RFC 460R PN 3TX-S, all versions",
+        "2916600, RFC 470 PN 3TX, all versions",
+        "2916794, RFC 470S PN 3TX, all versions",
+        "2404577, RFC 480S PN 4TX, all versions"
+    ]
+}

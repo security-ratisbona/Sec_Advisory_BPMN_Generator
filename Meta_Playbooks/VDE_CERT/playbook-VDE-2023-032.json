@@ -1,0 +1,74 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by retrieving the installed firmware or software version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is affected?",
+            "cases": {
+                "u-create studio": 4,
+                "u-control web Controllers and IoT-Gateways": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is disabling the network server function in CodeMeter possible?",
+            "next_step": 6,
+            "else_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Network Server Function in CodeMeter",
+            "description": "Disable the network server function within CodeMeter to mitigate the vulnerability.",
+            "commands": [
+                "Navigate to the CodeMeter WebAdmin Website",
+                "Select option Settings > Server > Server access",
+                "Choose option 'deactivate' in section 'network server'",
+                "Click 'Apply' button on the bottom of the website"
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update CodeMeter Control Center Software",
+            "description": "Update the CodeMeter control center software to at least version 7.60c to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Firmware for u-control web Controllers and IoT-Gateways",
+            "description": "Update the firmware to at least version 2.0.2 for affected u-control web Controllers and IoT-Gateways.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Vulnerability in u-OS Products",
+    "affected_products": [
+        "IOT-GW30-4G-EU (with u-OS), 2.0.0 , 2.0.1",
+        "IOT-GW30 (with u-OS), 2.0.0 , 2.0.1",
+        "UC20-WL2000-AC (with u-OS), 2.0.0 , 2.0.1",
+        "UC20-WL2000-IOT (with u-OS), 2.0.0 , 2.0.1",
+        "u-create studio, <= 4.2.4"
+    ]
+}

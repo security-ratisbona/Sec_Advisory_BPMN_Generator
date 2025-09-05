@@ -1,0 +1,47 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check Current Version of Benchmark Programming Tool",
+            "description": "Verify the installed version of the Benchmark Programming Tool to determine if it is affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version <= 1.2.71?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating to version 1.2.72 possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Benchmark Programming Tool Version 1.2.72",
+            "description": "Download and install version 1.2.72 from the Miele website to close the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Adjust Write Permissions of Installation Folder",
+            "description": "Modify the write permissions of the installation folder C:\\Miele_Service\\Miele Benchmark Programming Tool to allow file exchanges only with administrative permissions.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Benchmark Programming Tool Vulnerability",
+    "affected_products": [
+        "Benchmark Programming Tool <= 1.2.71"
+    ]
+}

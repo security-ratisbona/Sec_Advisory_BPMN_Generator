@@ -1,0 +1,57 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by verifying the installed version of TruControl.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running TruControl version 2.14.0 to 3.14.0?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is it possible to update to TruControl version 3.16.0 or higher?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to TruControl version 3.16.0 or higher",
+            "description": "Update the system to TruControl version 3.16.0 or higher to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Contact Service Partner for Patch Instructions",
+            "description": "Contact the service partner at service.tls@trumpf.com for instructions on how to retrieve the patch.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "TruControl Vulnerability",
+    "affected_products": [
+        "redpowerDirect, 2.14.0 <= 3.14.0",
+        "TruDiode, 2.14.0 <= 3.14.0",
+        "TruDisk, 2.14.0 <= 3.14.0",
+        "TruFiber, 2.14.0 <= 3.14.0",
+        "TruMicro2000, 2.14.0 <= 3.14.0",
+        "TruMicro5000, 2.14.0 <= 3.14.0",
+        "TruMicro6000, 2.14.0 <= 3.14.0",
+        "TruMicro7000, 2.14.0 <= 3.14.0",
+        "TruMicro8000, 2.14.0 <= 3.14.0",
+        "TruMicro9000, 2.14.0 <= 3.14.0",
+        "TruPulse, 2.14.0 <= 3.14.0"
+    ]
+}

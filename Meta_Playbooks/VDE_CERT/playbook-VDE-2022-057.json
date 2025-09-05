@@ -1,0 +1,65 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Com-Server Products and Versions",
+            "description": "Check if the Com-Server products are affected by retrieving the installed firmware version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are the Com-Server products affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Com-Server family is in use?",
+            "cases": {
+                "Com-Server": 4,
+                "Com-Server Highspeed": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Com-Server Family",
+            "description": "Update Com-Server family products to version 1.55 or higher to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Com-Server Highspeed Family",
+            "description": "Update Com-Server Highspeed family products to version 1.78 or higher to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Com-Server Vulnerabilities",
+    "affected_products": [
+        "58665, Com-Server ++, < 1.55",
+        "58664, Com-Server 20mA, < 1.55",
+        "58661, Com-Server LC, < 1.55",
+        "58662, Com-Server PoE 3 x Isolated, < 1.55",
+        "58669, Com-Server UL, < 1.55",
+        "58651, Com-Server Highspeed 100BaseFX, < 1.78",
+        "58652, Com-Server Highspeed 100BaseLX, < 1.78",
+        "58331, Com-Server Highspeed 19\" 1Port, < 1.78",
+        "58334, Com-Server Highspeed 19\" 4Port, < 1.78",
+        "58231, Com-Server Highspeed Compact, < 1.78",
+        "58631, Com-Server Highspeed Industry, < 1.78",
+        "58633, Com-Server Highspeed Isolated, < 1.78",
+        "58431, Com-Server Highspeed OEM, < 1.78",
+        "58031, Com-Server Highspeed Office 1 Port, < 1.78",
+        "58034, Com-Server Highspeed Office 4 Port, < 1.78",
+        "58641, Com-Server Highspeed PoE, < 1.78"
+    ]
+}

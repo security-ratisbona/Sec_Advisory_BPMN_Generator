@@ -1,0 +1,42 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check Implementation for ProConOS/ProConOS eCLR",
+            "description": "Manufacturers using ProConOS/ProConOS eCLR in their automation devices should check their implementation and may publish an advisory according to their product.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review Security Measures for Automation Systems",
+            "description": "Users of automation devices utilizing ProConOS/ProConOS eCLR should check if their application requires additional security measures like an adequate defense-in-depth networking architecture, the use of virtual private networks (VPNs) for remote access, as well as the use of firewalls for network segmentation or controller isolation.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Consult Manufacturer Security Advisories",
+            "description": "Users should check their manufacturers' security advisories for more adequate information according to their dedicated device.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Refer to Generic Security Recommendations",
+            "description": "Refer to generic information and recommendations for security measures to protect network-capable devices as found in the application note.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "MULTIPROG, all versions | ProConOS, all versions | ProConOS eCLR, all versions",
+    "affected_products": [
+        "ProConOS",
+        "ProConOS eCLR"
+    ]
+}

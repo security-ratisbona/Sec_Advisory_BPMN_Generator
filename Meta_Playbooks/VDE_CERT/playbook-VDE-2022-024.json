@@ -1,0 +1,55 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify SIMA² Master Station Software Version",
+            "description": "Determine the current software version of the SIMA² Master Station to assess if it is affected by the vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the software version < V 2.6?",
+            "next_step": 3,
+            "else_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is it possible to upgrade the software?",
+            "next_step": 4,
+            "else_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade SIMA² Master Station Software",
+            "description": "Upgrade the SIMA² Master Station software to version V 2.6 or higher to fix the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Verify Compliance with Product Security Guideline",
+            "description": "Ensure that the SIMA² Master Station is configured according to the Product Security Guideline for cybersecurity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict Access to SIMA² Master Station",
+            "description": "Restrict access to the SIMA² Master Station to legitimate network partners using a sufficient firewall setup and robust network segmentation.",
+            "commands": null,
+            "next_step": 5
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SIMA² Master Station < V 2.6 Mitigation",
+    "affected_products": [
+        "SIMA² Master Station < V 2.6"
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is FTP Server enabled and not needed?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Deactivate FTP Server",
+            "description": "Deactivate the FTP Server through the product settings in the web-based management if FTP data transfer is not needed.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply General Security Best Practices",
+            "description": "Use general security best practices to protect systems from local and network attacks. Do not allow direct access to the device from untrusted networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update to Latest Firmware",
+            "description": "Update to the latest firmware according to the table in chapter solutions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Protect ICS from Internet Access",
+            "description": "Ensure that industrial control systems (ICS) are not directly accessible from the Internet and apply the defense-in-depth strategy.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Consult BSI ICS Security Compendium",
+            "description": "Refer to the BSI ICS Security Compendium for general information on securing ICS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Update to Fixed Firmware Version",
+            "description": "Update to the fixed firmware version as listed for each product model.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "WAGO 750 Series Vulnerability",
+    "affected_products": [
+        "750-330, <= FW13",
+        "750-332, <= FW10",
+        "750-352/xxx-xxx, <= FW14",
+        "750-362/xxx-xxx, <= FW10",
+        "750-363/xxx-xxx, <= FW10",
+        "750-364/xxx-xxx, <= FW10",
+        "750-365/xxx-xxx, <= FW10",
+        "750-823, <= FW10",
+        "750-829, <= FW13",
+        "750-831/xxx-xxx, <= FW13",
+        "750-832/xxx-xxx, <= FW10",
+        "750-852, <= FW16",
+        "750-862, <= FW10",
+        "750-880/xxx-xxx, <= FW16",
+        "750-881, <= FW16",
+        "750-882, <= FW16",
+        "750-885/xxx-xxx, <= FW16",
+        "750-889, <= FW16",
+        "750-890/xxx-xxx, <= FW10",
+        "750-891, <= FW10",
+        "750-893, <= FW10"
+    ]
+}

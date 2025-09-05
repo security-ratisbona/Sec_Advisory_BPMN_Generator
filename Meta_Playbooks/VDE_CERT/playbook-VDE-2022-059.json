@@ -1,0 +1,54 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Restrict Registry Access",
+            "description": "Ensure that the Registry can only be accessed with administrator privileges to prevent unauthorized modifications.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is in use?",
+            "cases": {
+                "HOPCS": 3,
+                "X-OPC or X-OTS": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install HOPCS with Security Considerations",
+            "description": "Install HOPCS in a path without spaces and select a user with low privileges in the DCOM settings using dcomcnfg/Identity.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Protect X-OPC or X-OTS User Program",
+            "description": "Protect the user program with system variables as per Automation Security Manual '3.2.2.2 Access Restrictions'. Implement measures like forcing deactivation, setting read-only in RUN, and reload deactivation.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Monitor for Updates",
+            "description": "Monitor for updates as all present products will be fixed. Note that HOPCS is not suitable for present HIMA Products and is not planned to be fixed.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "HOPCS, X-OPC, X-OTS Vulnerabilities",
+    "affected_products": [
+        "892042400, HOPCS, <= 3.56.4",
+        "894000016, X-OPC A+E, <= 5.6.1210",
+        "894000015, X-OPC DA, <= 5.6.1210",
+        "895900001, X-OTS, <= 1.32.550"
+    ]
+}

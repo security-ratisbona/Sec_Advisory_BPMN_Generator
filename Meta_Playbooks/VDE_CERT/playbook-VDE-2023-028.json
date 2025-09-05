@@ -1,0 +1,67 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is upgrading to SIMA² Master Station software Version 2.6 or above possible?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade to SIMA² Master Station software Version 2.6 or above",
+            "description": "Upgrade the SIMA² Master Station to software Version 2.6 or above to fix the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Configure Internal DNS Servers",
+            "description": "Configure the use of internal DNS servers only and block external DNS traffic where possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Segment Networks",
+            "description": "Segment networks and shield affected devices from untrusted networks using firewalls.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Network Intrusion Detection",
+            "description": "Use network intrusion detection mechanisms to filter malicious packets.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Apply Product Update",
+            "description": "Apply a product update to the SIMA² Master Station at the earliest convenience.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SIMA² Master Station < V 2.6 Mitigation",
+    "affected_products": [
+        "SIMA² Master Station < V 2.6"
+    ]
+}

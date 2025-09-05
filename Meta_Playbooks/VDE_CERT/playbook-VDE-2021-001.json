@@ -1,0 +1,67 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is Patching to PACTware 6 possible?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade to PACTware 6",
+            "description": "Upgrade to PACTware 6 which includes the proposed solution by M&M based on FDT Container component version >= 3.6.20304.x.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Exchange project data securely",
+            "description": "Exchange project data only via secure exchange services to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Protect project storage",
+            "description": "Use appropriate means to protect the project storage from unauthorized manipulation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Avoid opening unknown project data",
+            "description": "Do not open project data from an unknown source to prevent potential security risks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Reduce user rights",
+            "description": "Reduce the user rights of the host application to the necessary minimum to limit potential exploitation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "PACTware 5.0, <= 5.0.5.31",
+    "affected_products": [
+        "PACTware 5.0, <= 5.0.5.31"
+    ]
+}

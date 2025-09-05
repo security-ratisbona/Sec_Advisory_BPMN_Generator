@@ -1,0 +1,92 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is firmware update possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Firmware",
+            "description": "Update the firmware to the fixed version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the device to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Strong Passwords",
+            "description": "Ensure strong passwords are used to secure the device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Disable Unused TCP/UDP Ports",
+            "description": "Disable any unused TCP/UDP ports to reduce attack surface.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Avoid Direct Internet Connection",
+            "description": "Do not directly connect the device to the internet to enhance security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "WAGO PFC100/PFC200 and WAGO Compact Controller CC100 Vulnerability",
+    "affected_products": [
+        "750-81xx/xxx-xxx, 03.07.14(19) <= 03.07.18(19)",
+        "750-81xx/xxx-xxx, 03.08.07(20) <= 03.08.08(20)",
+        "750-8217/xxx-xxx, 03.07.14(19) <= 03.07.18(19)",
+        "750-8217/xxx-xxx, 03.08.07(20) <= 03.08.08(20)",
+        "750-82xx/xxx-xxx, 03.07.14(19) <= 03.07.18(19)",
+        "750-82xx/xxx-xxx, 03.08.07(20) <= 03.08.08(20)",
+        "751-9301, 03.07.14(19) <= 03.08.08(20)",
+        "752-8303/8000-002, 03.07.14(19) <= 03.07.18(19)",
+        "762-4xxx, 03.07.14(19) <= 03.07.18(19)",
+        "762-5xxx, 03.07.14(19) <= 03.07.18(19)",
+        "762-6xxx, 03.07.14(19) <= 03.07.18(19)"
+    ]
+}

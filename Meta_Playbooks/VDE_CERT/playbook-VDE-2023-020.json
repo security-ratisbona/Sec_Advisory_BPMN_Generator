@@ -1,0 +1,113 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update User Documentation",
+            "description": "Update the user documentation in the next product version to address the identified issues.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is communication running over an untrusted network?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Switch to VPN for Secure Communication",
+            "description": "Switch communication to run over a VPN to ensure full protection when using an untrusted network.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Minimize and Protect Network Access",
+            "description": "Minimize and protect network access to connected devices using state-of-the-art techniques and processes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use Devices in Protected Environment",
+            "description": "Ensure devices are used only in a protected environment to minimize network exposure and prevent external access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Firewalls",
+            "description": "Use firewalls to protect and separate the control system network from other networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Activate User Management and Password Features",
+            "description": "Activate and apply user management and password features to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Encrypted Communication Links",
+            "description": "Ensure communication links are encrypted to protect data in transit.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Limit Access to Development and Control Systems",
+            "description": "Limit access to both development and control systems by physical means, operating system features, etc.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Up-to-date Virus Detection Solutions",
+            "description": "Protect both development and control systems by using up-to-date virus detection solutions.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "General Recommendations for Secure Communication",
+    "affected_products": [
+        "8169406, MSE6-C2M-5000-FB36-D-M-RG-BAR-M12L4-AGD, all versions",
+        "8157913, MSE6-C2M-5000-FB36-D-M-RG-BAR-M12L5-AGD, all versions",
+        "8169407, MSE6-C2M-5000-FB43-D-M-RG-BAR-M12L4-MQ1-AGD, all versions",
+        "8157912, MSE6-C2M-5000-FB43-D-M-RG-BAR-M12L5-MQ1-AGD, all versions",
+        "8157908, MSE6-C2M-5000-FB44-D-M-RG-BAR-AMI-AGD, all versions",
+        "8157909, MSE6-C2M-5000-FB44-D-RG-BAR-AMI-AGD, all versions",
+        "8085453, MSE6-D2M-5000-CBUS-S-RG-BAR- VCB-AGD, all versions",
+        "2465321, MSE6-E2M-5000-FB13-AGD, all versions",
+        "3990296, MSE6-E2M-5000-FB36-AGD, all versions",
+        "3992150, MSE6-E2M-5000-FB37-AGD, all versions",
+        "8157910, MSE6-E2M-5000-FB43-AGD, all versions",
+        "8157911, MSE6-E2M-5000-FB44-AGD, all versions"
+    ]
+}

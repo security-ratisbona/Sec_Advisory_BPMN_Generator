@@ -1,0 +1,87 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is affected by checking the installed version of the software products listed.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading to CodeMeter V7.60c possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to CodeMeter V7.60c",
+            "description": "Download and install CodeMeter V7.60c from the WIBU-SYSTEMS homepage to fix the vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply General Security Best Practices",
+            "description": "Use general security best practices to protect systems from local and network attacks as described in the application node AH EN INDUSTRIAL SECURITY.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Configure CodeMeter to Run as Client Only",
+            "description": "Run CodeMeter as client only and use localhost as binding for the CodeMeter communication to prevent remote network attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Disable or Restrict CmWAN Server",
+            "description": "Check if CmWAN is enabled and disable it if not needed. If running, ensure it is behind a reverse proxy with user authentication and restrict access using a host-based firewall.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Install Phoenix Contact Activation Wizard Version 1.7",
+            "description": "Install Phoenix Contact Activation Wizard from version 1.7 when available. Regularly check the Phoenix Contact e-Shop for updates.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "PHOENIX CONTACT Vulnerabilities",
+    "affected_products": [
+        "E-Mobility Charging Suite <= 1.7.0",
+        "FL Network Manager <= 7.0",
+        "IOL Conf <= 1.7.0",
+        "MTP DESIGNER <= 1.2.0 BETA",
+        "PHOENIX CONTACT Activation Wizard <= 1.6",
+        "PLCnext Engineer <= 2023.6"
+    ]
+}

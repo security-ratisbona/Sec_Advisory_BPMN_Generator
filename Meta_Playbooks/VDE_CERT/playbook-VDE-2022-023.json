@@ -1,0 +1,22 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Contact TRUMPF Service",
+            "description": "Reach out to TRUMPF Service with the PR number 496330 to address the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "TRUMPF Vulnerability Advisory",
+    "affected_products": [
+        "Job Order Interface, = All Versions",
+        "Oseon, <= 1.6",
+        "TruTops Boost with option Graphic separation of cut parts, = All Versions",
+        "TruTops Boost with option Inventory of sheets and remainder sheets, = All Versions",
+        "TruTops Fab, = All Versions",
+        "TruTops Monitor, = All Versions"
+    ]
+}

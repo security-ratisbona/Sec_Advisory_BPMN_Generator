@@ -1,0 +1,47 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check ConfigPull Functionality Usage",
+            "description": "Determine if the ConfigPull functionality is being used and if configuration files are stored unencrypted.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is ConfigPull functionality used and config files stored unencrypted?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Encrypt Configuration Files",
+            "description": "Store configuration files encrypted with the device-specific public key of the mGuard appliances.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is upgrading to version 1.13.0.2 or higher possible?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade FL MGUARD DM UNLIMITED",
+            "description": "Upgrade FL MGUARD DM UNLIMITED to version 1.13.0.2 or higher to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "2981974",
+    "affected_products": [
+        "FL MGUARD DM UNLIMITED <= 1.13.0.1"
+    ]
+}

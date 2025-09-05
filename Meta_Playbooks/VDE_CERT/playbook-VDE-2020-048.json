@@ -1,0 +1,73 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Exchange project data securely",
+            "description": "Ensure that project data is exchanged only via secure exchange services to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Protect project storage",
+            "description": "Use appropriate means to protect the project storage from unauthorized manipulation.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Avoid opening unknown project data",
+            "description": "Do not open project data from an unknown source to prevent potential security risks.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Reduce user rights",
+            "description": "Reduce the user rights of the host application to the necessary minimum to limit potential exploitation.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which update option to choose for fdtCONTAINER component/application?",
+            "cases": {
+                "Option 1": 6,
+                "Option 2": 7
+            },
+            "default": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update to secure deserialization version (Option 1)",
+            "description": "Update the fdtCONTAINER component/application to a version that provides a more secure deserialization of the project data, compatible with existing files.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update to secure deserialization version with updated technology (Option 2)",
+            "description": "Update the fdtCONTAINER component/application to a version that provides secure deserialization with updated serialization technology, breaking compatibility with existing files.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigation for fdtCONTAINER and dtmINSPECTOR",
+    "affected_products": [
+        "dtmINSPECTOR bBased on FDT 1.2.x, = 3",
+        "fdtCONTAINER application, < 4.5",
+        "fdtCONTAINER application, 4.5.0 < 4.5.20304.x",
+        "fdtCONTAINER application, 4.6.0 < 4.6.20304.x",
+        "fdtCONTAINER component, < 3.5",
+        "fdtCONTAINER component, 3.5.0 < 3.5.20304.x",
+        "fdtCONTAINER component, 3.6.0 < 3.6.20304.x"
+    ]
+}

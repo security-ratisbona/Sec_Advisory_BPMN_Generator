@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is updating to PLCnext Engineer 2020.6 or higher possible?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update to PLCnext Engineer 2020.6 or higher",
+            "description": "Update the software to the latest version PLCnext Engineer 2020.6 or higher to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Use Secure File Exchange Services",
+            "description": "Exchange project files only using secure file exchange services to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Avoid Unencrypted Email for Project Files",
+            "description": "Do not exchange project files via unencrypted email to ensure their security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Verify Project File Integrity",
+            "description": "Avoid importing project files from unknown sources and use checksums to verify the integrity of exchanged or stored project files.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "PLCnext Engineer <= 2020.3.1",
+    "affected_products": [
+        "PLCnext Engineer <= 2020.3.1"
+    ]
+}

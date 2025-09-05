@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed version of myREX24 or myREX24.virtual.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system version <= 2.11.2?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Version 2.12.1",
+            "description": "Update the system to version 2.12.1 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "myREX24 and myREX24.virtual Vulnerability",
+    "affected_products": [
+        "myREX24 <= 2.11.2",
+        "myREX24.virtual <= 2.11.2"
+    ]
+}

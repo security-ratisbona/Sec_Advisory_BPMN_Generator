@@ -1,0 +1,80 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Verify Update Packet Hashes",
+            "description": "Check the hashes of the update packet and ensure they match the original. Do not use update files with different hashes.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Follow WAGO's Cyber Security Handbook",
+            "description": "Follow the instructions provided in WAGO's handbook on Cyber Security for Controller.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the device and avoid direct internet connections.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Use Encrypted VPN Connection",
+            "description": "Use an encrypted VPN connection to access the device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Unused TCP/UDP Ports",
+            "description": "Disable any unused TCP/UDP ports on the device to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Strong Passwords",
+            "description": "Use strong passwords for all user accounts, especially for administrative accounts on the device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Complete Mitigation Process",
+            "description": "Ensure all mitigation steps are completed and verify the security of the device.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Cybersecurity Advisory for WAGO Controllers",
+    "affected_products": [
+        "750-81xx/xxx-xxx (PFC100), >= FW12",
+        "750-82xx/xxx-xxx (PFC200), >= FW12",
+        "762-4xxx, >= FW12",
+        "762-5xxx, >= FW12",
+        "762-6xxx, >= FW12"
+    ]
+}

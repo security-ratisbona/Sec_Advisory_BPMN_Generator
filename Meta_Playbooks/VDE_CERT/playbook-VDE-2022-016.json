@@ -1,0 +1,54 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by verifying the installed version of TruTops Boost, TruTops Fab, or TruTops Monitor.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the updated version available via the service channel?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Latest Version via Service Channel",
+            "description": "Use the service channel to update to the latest version of the TRUMPF products to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Hotfix",
+            "description": "Download and apply the hotfix from the provided link to mitigate the vulnerability.",
+            "commands": [
+                "wget https://files.trumpf.com/w/LmhlkCA74heAIdS4GvJDDHqirMU0dpXbTRr7Erw8CXBvQ"
+            ],
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "TRUMPF Product Vulnerability",
+    "affected_products": [
+        "TruTops Boost, V13.01 <= V13.05",
+        "TruTops Boost, = V13.08.21",
+        "TruTops Fab, V22.01. <= V22.05.",
+        "TruTops Fab, = V22.08.21",
+        "TruTops Monitor, V22.01. <= V22.05.",
+        "TruTops Monitor, = V22.08.21"
+    ]
+}

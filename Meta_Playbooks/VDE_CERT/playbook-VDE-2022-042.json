@@ -1,0 +1,62 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating the firmware possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Firmware to Fixed Version",
+            "description": "Update the firmware to the fixed version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Reactivate MAC Address Filter",
+            "description": "Reactivate the MAC Address Filter after restart to ensure it is working.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Test MAC Address Filter Functionality",
+            "description": "Add a test-client to the MAC Address Filter list, enable it, and check if access to the web-based management is blocked via the test-client.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "WAGO PFC100/PFC200 and Touch Panel 600 Vulnerability",
+    "affected_products": [
+        "750-81xx/xxx-xxx, Series WAGO PFC100/PFC200, 03.01.07(13) <= 03.10.08(22)",
+        "750-8217/xxx-xxx, Series WAGO PFC100/PFC200, 03.04.10(16) <= 03.10.08(22)",
+        "750-82xx/xxx-xxx, Series WAGO PFC100/PFC200, 03.01.07(13) <= 03.10.08(22)",
+        "762-4xxx, Series WAGO Touch Panel 600, 03.01.07(13) <= 03.10.09(22)",
+        "762-5xxx, Series WAGO Touch Panel 600, 03.01.07(13) <= 03.10.09(22)",
+        "762-6xxx, Series WAGO Touch Panel 600, 03.01.07(13) <= 03.10.09(22)",
+        "751-9301, WAGO Compact Controller CC100, 03.07.17(19) <= 03.09.08(21)",
+        "752-8303/8000-002, WAGO Edge Controller, 03.06.09(18) <= 03.10.09(22)"
+    ]
+}

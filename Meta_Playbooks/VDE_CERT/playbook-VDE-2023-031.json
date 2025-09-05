@@ -1,0 +1,90 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Systems and Versions",
+            "description": "Determine if the system is affected by checking the installed versions of the listed products.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating to TRUMPF License Expert >= V2.0.0 possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update TRUMPF License Expert",
+            "description": "Download and install the latest version of the TRUMPF License Expert software (>= V2.0.0) from trumpf.com/de_DE/produkte/software/software-lizenzierung on all affected servers and workstations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement General Security Best Practices",
+            "description": "Apply general security best practices such as network segmentation, endpoint protection, and system hardening.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict Network Access to TRUMPF License Expert Server",
+            "description": "Restrict network access to the TRUMPF License Expert server component to required clients only by using firewalls or other suitable products.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Apply System Hardening Measures",
+            "description": "Implement system hardening measures to enhance security posture.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "TRUMPF Software Vulnerability",
+    "affected_products": [
+        "MonitoringAnalyzer, V1.0 <= V1.3",
+        "Oseon, V1.0.0 <= V3.0.22",
+        "ProgrammingTube, V1.0.1 <= V4.6.3",
+        "TecZoneBend, V18.02.R8 <= V23.06.01",
+        "ToPsCalculation, V14.00 <= V22.00.00",
+        "Tops Unfold, = V05.03.00.00",
+        "TrumpfLicenseExpert, V1.5.2 <= V1.11.1",
+        "TruTops, V08.00 <= V12.01.00.00",
+        "TruTopsBoost, V06.00.23.00 <= V16.0.22",
+        "TruTops Cell Classic, <= V09.09.02",
+        "TruTops Cell SW48, V01.00 <= V02.26.0",
+        "TruTopsFab (inkl.TruTops Monitor), V15.00.23.00 <= V22.8.25",
+        "TruTopsFab_Storage_SmallStore, V14.06.20 <= V20.04.20.00",
+        "TruTops Mark 3D, V01.00 <= V06.01",
+        "TruTopsPrint, V00.06.00 <= V01.00",
+        "TruTopsPrintMultilaserAssistant, >= V01.02",
+        "TruTopsWeld, V7.0.198.241 <= V9.0.28148.1",
+        "TubeDesign, V08.00 <= V14.06.150"
+    ]
+}

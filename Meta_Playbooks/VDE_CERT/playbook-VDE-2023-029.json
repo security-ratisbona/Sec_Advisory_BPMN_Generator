@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed version of REX 200 or REX 250.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system version less than 7.3.2?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Version 7.3.2",
+            "description": "Update the system to version 7.3.2 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "REX 200, < 7.3.2 | REX 250, < 7.3.2",
+    "affected_products": [
+        "REX 200, < 7.3.2",
+        "REX 250, < 7.3.2"
+    ]
+}

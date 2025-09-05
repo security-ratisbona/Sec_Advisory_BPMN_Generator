@@ -1,0 +1,33 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is running mbCONNECT24 or mymbCONNECT24 version 2.11.2 or earlier.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running version 2.11.2 or earlier?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Version 2.12.1",
+            "description": "Update mbCONNECT24 or mymbCONNECT24 to version 2.12.1 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "mbCONNECT24 and mymbCONNECT24 Vulnerability",
+    "affected_products": [
+        "mbCONNECT24 <= 2.11.2",
+        "mymbCONNECT24 <= 2.11.2"
+    ]
+}

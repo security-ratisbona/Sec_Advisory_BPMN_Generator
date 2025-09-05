@@ -1,0 +1,157 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Technical User Manual Documentation",
+            "description": "Update the technical user manual documentation in the next product version to address the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the communication running over an untrusted network?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Switch to VPN for Secure Communication",
+            "description": "Switch to an alternative solution such as running the communication over a VPN for full protection.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Minimize and Protect Network Access",
+            "description": "Minimize and protect network access to connected devices using state-of-the-art techniques and processes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use Controllers and Devices in Protected Environment",
+            "description": "Ensure controllers and devices are used only in a protected environment to minimize network exposure and prevent external access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Firewall Protection",
+            "description": "Use firewalls to protect and separate the control system network from other networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Activate User Management and Password Features",
+            "description": "Activate and apply user management and password features to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Encrypted Communication Links",
+            "description": "Implement encrypted communication links to secure data transmission.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Limit Access to Development and Control Systems",
+            "description": "Limit access to both development and control systems by physical means, operating system features, etc.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Up-to-Date Virus Detection Solutions",
+            "description": "Protect both development and control systems by using up-to-date virus detection solutions.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Festo Product Vulnerability",
+    "affected_products": [
+        "4080499, Bus module CPX-E-EP, = All Versions",
+        "4080497, Bus module CPX-E-PN, = All Versions",
+        "541302, Bus node CPX-FB32, = All Versions",
+        "548755, Bus node CPX-FB33, = All Versions",
+        "1912451, Bus node CPX-FB36, = All Versions",
+        "2735960, Bus node CPX-FB37, = All Versions",
+        "2093101, Bus node CPX-FB39, = All Versions",
+        "2474896, Bus node CPX-FB40, = All Versions",
+        "8110369, Bus node CPX-FB43, = All Versions",
+        "548751, Bus node CPX-M-FB34, = All Versions",
+        "548749, Bus node CPX-M-FB35, = All Versions",
+        "8110370, Bus node CPX-M-FB44, = All Versions",
+        "8110371, Bus node CPX-M-FB45, = All Versions",
+        "2798071, Bus node CTEU-EP, = All Versions",
+        "2201471, Bus node CTEU-PN, = All Versions",
+        "8107589, Bus node CTEU-PN-EX1C, = All Versions",
+        "3501040, Camera system CHB-C-N, = All Versions",
+        "Compact Vision System SBO*-C-*, = All Versions",
+        "Compact Vision System SBO*-M-*, = All Versions",
+        "Compact Vision System SBO*-Q-*, = All Versions",
+        "Control block CPX-CEC, = All Versions",
+        "Control block CPX-CEC-C1, = All Versions",
+        "Control block CPX-CEC-C1-V3, = All Versions",
+        "Control block CPX-CEC-M1, = All Versions",
+        "Control block CPX-CEC-M1-V3, = All Versions",
+        "Control block CPX-CEC-S1-V3, = All Versions",
+        "555668, Control block CPX-CMXX, = All Versions",
+        "555667, Control block CPX-CMXX, = All Versions",
+        "529041, Control block CPX-FEC-1-IE, = All Versions",
+        "Controller CECC-D, = All Versions",
+        "Controller CECC-D-BA, = All Versions",
+        "Controller CECC-LK, = All Versions",
+        "Controller CECC-S, = All Versions",
+        "Controller CECC-X-*, = All Versions",
+        "553852, Controller CECX-X-C1, = All Versions",
+        "553853, Controller CECX-X-M1, = All Versions",
+        "3605478, Controller CMXH-ST2-C5-7-DIOP, = All Versions",
+        "Controller CPX-E-CEC-*, = All Versions",
+        "8067301, Controller SBRD-Q, = All Versions",
+        "8086610, EtherNet/IP interface CPX-AP-I-EP-M12, = All Versions",
+        "8086607, EtherNet/IP interface CPX-AP-I-PN-M12, = All Versions",
+        "8069773, Gateway CPX-IOT, = All Versions",
+        "Integrated drive EMCA-EC-67-*, = All Versions",
+        "Motor controller CMMO-ST-C5-1-DION, = All Versions",
+        "Motor controller CMMO-ST-C5-1-DIOP, = All Versions",
+        "Motor controller CMMO-ST-C5-1-LKP, = All Versions",
+        "Motor controller CMMP-AS-*, = All Versions",
+        "Motor controller CMMT-AS-*, = All Versions",
+        "Operator unit CDPX-X-A-S-10, = All Versions",
+        "Operator unit CDPX-X-A-W-13, = All Versions",
+        "Operator unit CDPX-X-A-W-4, = All Versions",
+        "Operator unit CDPX-X-A-W-7, = All Versions",
+        "Planar surface gantry EXCM-*, = All Versions",
+        "8084006, Servo drive CMMT-ST-C8-1C-EP-S0, = All Versions",
+        "8084004, Servo drive CMMT-ST-C8-1C-PN-S0, = All Versions",
+        "8047502, VTEM-S1-*, = All Versions"
+    ]
+}

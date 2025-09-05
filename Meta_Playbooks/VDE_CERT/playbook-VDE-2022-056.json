@@ -1,0 +1,55 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is it possible to install the patched firmware immediately?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Install Patched Firmware",
+            "description": "Install the patched firmware with at least version 1.17.0 to fix the vulnerability. The firmware can be obtained from weidmueller.com.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Avoid Clicking External Links",
+            "description": "Ensure that authenticated users logged into the product do not click on links from external sources as a temporary mitigation measure.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Weidmueller IoT-GW30 Vulnerability",
+    "affected_products": [
+        "8000075041, 19 IOT MD01 LAN H4 S0011 (contains IoT-GW30), = n/a",
+        "8000058270, FP IOT MD01 4EU S2 00000 (contains IoT-GW30-4G-EU), = n/a",
+        "8000058603, FP IOT MD01 LAN S2 00000 (contains IoT-GW30), = n/a",
+        "8000055224, FP IOT MD01 LAN S2 S0011 (contains IoT-GW30), = n/a",
+        "8000058282, FP IOT MD02 4EU S3 00000 (contains IoT-GW30-4G-EU), = n/a",
+        "2682620000, IoT-GW30, <= 1.16.0",
+        "2682630000, IoT-GW30-4G-EU, <= 1.16.0",
+        "1334950000, UC20-WL2000-AC, <= 1.16.0",
+        "1334990000, UC20-WL2000-IOT, <= 1.16.0"
+    ]
+}

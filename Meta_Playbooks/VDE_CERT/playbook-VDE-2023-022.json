@@ -1,0 +1,59 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Installed CODESYS Development System Version",
+            "description": "Check the installed version of the CODESYS Development System to determine if it is affected by the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the installed version of CODESYS Development System between 3.5.11.0 and 3.5.19.19?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which method to update CODESYS Development System?",
+            "cases": {
+                "CODESYS Installer": 4,
+                "CODESYS Store": 5,
+                "CODESYS Update Area": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update CODESYS Development System via CODESYS Installer",
+            "description": "Use the CODESYS Installer to download and install the update to version 3.5.19.20.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update CODESYS Development System via CODESYS Store",
+            "description": "Download and install the update to version 3.5.19.20 from the CODESYS Store.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update CODESYS Development System via CODESYS Update Area",
+            "description": "Follow the instructions in the CODESYS Update area to obtain and install the update to version 3.5.19.20.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CODESYS Development System, 3.5.11.0 < 3.5.19.20",
+    "affected_products": [
+        "CODESYS Development System, 3.5.11.0 < 3.5.19.20"
+    ]
+}

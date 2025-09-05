@@ -1,0 +1,79 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is affected?",
+            "cases": {
+                "1264327 ENERGY AXC PU": 4,
+                "1110435 SMARTRTU AXC SG": 5,
+                "1264328 SMARTRTU AXC IG": 6,
+                "1169323 Infobox": 7
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update ENERGY AXC PU Firmware",
+            "description": "Update the firmware of ENERGY AXC PU to version V04.15.00.01 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update SMARTRTU AXC SG Firmware",
+            "description": "Update the firmware of SMARTRTU AXC SG to version V01.09.00.00 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Plan Update for SMARTRTU AXC IG",
+            "description": "Plan to update the firmware of SMARTRTU AXC IG by the end of Q3 2023 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Network Protection for Infobox",
+            "description": "As Infobox is discontinued and no update is available, ensure it is operated in a closed network or protected with a suitable firewall.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Network Protection Measures",
+            "description": "Operate network-capable devices in closed networks or protect them with a suitable firewall. Refer to Phoenix Contact's application note for detailed recommendations.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Phoenix Contact Vulnerability Advisory",
+    "affected_products": [
+        "1264327 ENERGY AXC PU < V04.15.00.00",
+        "1169323 Infobox <= V02.02.00.00",
+        "1264328 SMARTRTU AXC IG <= V01.02.00.01",
+        "1110435 SMARTRTU AXC SG <= V01.08.00.02"
+    ]
+}

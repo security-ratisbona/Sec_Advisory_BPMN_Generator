@@ -1,0 +1,63 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Devices",
+            "description": "Check if the device is affected by verifying the firmware version. Devices with firmware version FW03 or lower are affected.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the device affected (FW03 or lower)?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Device Firmware",
+            "description": "Update the firmware of affected devices to a version higher than FW03.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the device by not connecting it directly to the internet and disabling unused TCP/UDP ports.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Web-Based Management Ports",
+            "description": "Disable web-based management ports 80/443 after the configuration phase to enhance security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Firmware Vulnerability in Devices <= FW03",
+    "affected_products": [
+        "750-362 <= FW03",
+        "750-363 <= FW03",
+        "750-823 <= FW03",
+        "750-832/xxx-xxx <= FW03",
+        "750-862 <= FW03",
+        "750-890/xxx-xxx <= FW03",
+        "750-891 <= FW03"
+    ]
+}

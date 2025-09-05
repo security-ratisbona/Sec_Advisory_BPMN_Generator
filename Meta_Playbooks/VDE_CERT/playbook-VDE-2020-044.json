@@ -1,0 +1,67 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Device Firmware",
+            "description": "Update the device to the latest firmware version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the device to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Disconnect Device from Internet",
+            "description": "Ensure the device is not directly connected to the internet to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable Unused TCP/UDP Ports",
+            "description": "Disable any unused TCP/UDP ports to reduce potential attack vectors.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Web-Based Management Ports",
+            "description": "Disable web-based management ports 80/443 after the configuration phase to prevent unauthorized web access.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Device Firmware Vulnerability",
+    "affected_products": [
+        "750-362, <= FW07",
+        "750-363, <= FW07",
+        "750-823, <= FW07",
+        "750-832/xxx-xxx, <= FW07",
+        "750-862, <= FW07",
+        "750-890/xxx-xxx, <= FW07",
+        "750-891, <= FW07",
+        "750-893, <= FW07"
+    ]
+}

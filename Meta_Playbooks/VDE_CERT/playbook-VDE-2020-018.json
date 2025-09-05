@@ -1,0 +1,77 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is PPPD activated in the device configuration?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Firmware to Latest Version",
+            "description": "Update the device firmware to the latest version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FL MGUARD and TC Product Vulnerability",
+    "affected_products": [
+        "FL MGUARD CENTERPORT < 8.8.2",
+        "FL MGUARD CORE TX VPN < 8.8.2",
+        "FL MGUARD DELTA TX/TX < 8.8.2",
+        "FL MGUARD DELTA TX/TX VPN < 8.8.2",
+        "FL MGUARD GT/GT < 8.8.2",
+        "FL MGUARD GT/GT VPN < 8.8.2",
+        "FL MGUARD PCI4000 VPN < 8.8.2",
+        "FL MGUARD PCI4000 VPN/K2 < 8.8.2",
+        "FL MGUARD PCIE4000 VPN < 8.8.2",
+        "FL MGUARD PCIE4000 VPN/K2 < 8.8.2",
+        "FL MGUARD RS2000 TX/TX-B < 8.8.2",
+        "FL MGUARD RS2000 TX/TX VPN < 8.8.2",
+        "FL MGUARD RS2005 TX VPN < 8.8.2",
+        "FL MGUARD RS4000 TX/TX < 8.8.2",
+        "FL MGUARD RS4000 TX/TX-P < 8.8.2",
+        "FL MGUARD RS4000 TX/TX VPN < 8.8.2",
+        "FL MGUARD RS4000 TX/TX VPN/K1 < 8.8.2",
+        "FL MGUARD RS4000 TX/TX VPN-M < 8.8.2",
+        "FL MGUARD RS4000 VPN/K2 < 8.8.2",
+        "FL MGUARD RS4004 TX/DTX < 8.8.2",
+        "FL MGUARD RS4004 TX/DTX VPN < 8.8.2",
+        "FL MGUARD SMART2 < 8.8.2",
+        "FL MGUARD SMART2 VPN < 8.8.2",
+        "FL MGUARD SMART2 VPN/K1 < 8.8.2",
+        "TC CLOUD CLIENT 1002-4G < 2.03.19",
+        "TC CLOUD CLIENT 1002-4G ATT < 2.03.19",
+        "TC CLOUD CLIENT 1002-4G VZW < 2.03.19",
+        "TC MGUARD RS2000 3G VPN < 8.8.2",
+        "TC MGUARD RS2000 4G ATT VPN < 8.8.2",
+        "TC MGUARD RS2000 4G VPN < 8.8.2",
+        "TC MGUARD RS2000 4G VZW VPN < 8.8.2",
+        "TC MGUARD RS4000 3G VPN < 8.8.2",
+        "TC MGUARD RS4000 4G ATT VPN < 8.8.2",
+        "TC MGUARD RS4000 4G VPN < 8.8.2",
+        "TC MGUARD RS4000 4G VZW VPN < 8.8.2",
+        "TC ROUTER 2002T-3G < 2.05.5",
+        "TC ROUTER 3002T-4G < 2.05.5",
+        "TC ROUTER 3002T-4G ATT < 2.05.5",
+        "TC ROUTER 3002T-4G VZW < 2.05.5"
+    ]
+}

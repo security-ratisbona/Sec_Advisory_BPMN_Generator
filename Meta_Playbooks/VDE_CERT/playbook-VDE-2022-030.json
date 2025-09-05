@@ -1,0 +1,114 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is it possible to install version V01.08.01.3021?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Install version V01.08.01.3021",
+            "description": "Update to version V01.08.01.3021 to solve the identified security vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Use products in a protected environment",
+            "description": "Ensure products are used in a protected and controlled environment to minimize network impact and ensure they are inaccessible from outside.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Configure external firewalls",
+            "description": "Use external firewalls to protect the automation system network and separate it from other networks. Block port 4840 via the external firewall and open this port for authenticated access only.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement VPN for remote access",
+            "description": "Use Virtual Private Networks (VPN) tunnels when remote access is required.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Deploy Intrusion Detection Systems (IDS)",
+            "description": "Use IDS where possible to detect anomalies in the network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Activate user administration and password functions",
+            "description": "Activate and use user administration and password functions to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use encrypted communication links",
+            "description": "Ensure communication links are encrypted to protect data integrity and confidentiality.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Restrict access to development tools and projects",
+            "description": "Restrict access to development tools, their projects, and the products of the automation system by physical means, operating system functions, etc.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Protect development tools with virus detection",
+            "description": "Protect the development tool by using the latest virus detection solutions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Use certificate-based communication",
+            "description": "Use certificate-based communication via the message security modes Sign or Sign&Encrypt and trust the corresponding client certificates on the machine controller by the OPC-UA server to reduce the risk of exploitation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "cabinet c520, V01.07.00.2757 < V01.08.01.3021",
+    "affected_products": [
+        "cabinet c520, V01.07.00.2757 < V01.08.01.3021",
+        "cabinet c550, V01.07.00.2757 < V01.08.01.3021",
+        "cabinet c750, V01.07.00.2757 < V01.08.01.3021"
+    ]
+}

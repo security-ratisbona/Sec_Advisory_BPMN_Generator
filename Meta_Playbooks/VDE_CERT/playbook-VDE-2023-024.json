@@ -1,0 +1,51 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected CODESYS Products and Versions",
+            "description": "Check if the CODESYS Development System or CODESYS Scripting is affected by retrieving the installed version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the CODESYS Development System version < 3.5.17.0 or CODESYS Scripting version < 4.1.0.0?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CODESYS product needs updating?",
+            "cases": {
+                "CODESYS Development System": 4,
+                "CODESYS Scripting": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update CODESYS Development System",
+            "description": "Update CODESYS Development System to version 3.5.17.0 or newer using the CODESYS Installer or by visiting the CODESYS update area.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update CODESYS Scripting",
+            "description": "Update CODESYS Scripting to version 4.1.0.0 or newer using the CODESYS Installer or by visiting the CODESYS update area.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CODESYS Development System and Scripting Vulnerability",
+    "affected_products": [
+        "CODESYS Development System, 3.5.9.0 < 3.5.17.0",
+        "CODESYS Scripting, 4.0.0.0 < 4.1.0.0"
+    ]
+}

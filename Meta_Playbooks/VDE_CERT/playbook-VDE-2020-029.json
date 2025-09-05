@@ -1,0 +1,116 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Device and Firmware Version",
+            "description": "Check if the device is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the device affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which device model is in use?",
+            "cases": {
+                "750-362": 4,
+                "750-363": 4,
+                "750-823": 4,
+                "750-832/xxx-xxx": 4,
+                "750-862": 4,
+                "750-891": 4,
+                "750-890/xxx-xxx": 4,
+                "750-352": 5,
+                "750-831/xxx-xxx": 5,
+                "750-852": 5,
+                "750-880/xxx-xxx": 5,
+                "750-881": 5,
+                "750-889": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Device Firmware to FW05",
+            "description": "Update the device firmware to version FW05 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Device Firmware to FW14",
+            "description": "Update the device firmware to version FW14 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the device to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Use Strong Passwords",
+            "description": "Ensure that strong passwords are used to secure the device.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Disable Direct Internet Connection",
+            "description": "Do not directly connect the device to the internet to reduce exposure to threats.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Disable Unused TCP/UDP Ports",
+            "description": "Disable any unused TCP/UDP ports to minimize potential attack vectors.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Device Firmware Vulnerability",
+    "affected_products": [
+        "750-352, <= FW13",
+        "750-362, <= FW03",
+        "750-363, <= FW03",
+        "750-823, <= FW03",
+        "750-831/xxx-xxx, <= FW13",
+        "750-832/xxx-xxx, <= FW03",
+        "750-852, <= FW13",
+        "750-862, <= FW03",
+        "750-880/xxx-xxx, <= FW13",
+        "750-881, <= FW13",
+        "750-889, <= FW13",
+        "750-890/xxx-xxx, <= FW03",
+        "750-891, <= FW03"
+    ]
+}

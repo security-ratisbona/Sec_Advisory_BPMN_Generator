@@ -1,0 +1,96 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Products and Versions",
+            "description": "Determine if the system is running any of the affected products or versions: CIROS <= 7.0.6, FluidDraw P5, FluidDraw P6 < 6.2c, MES PC with preinstalled MES4 before December 2022.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running an affected version of FluidDraw?",
+            "next_step": 3,
+            "else_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is the FluidDraw installation package version below 6.2c?",
+            "next_step": 4,
+            "else_step": 6
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Skip CodeMeter Installation from FluidDraw Package",
+            "description": "Do not use the WIBU CodeMeter package included in the FluidDraw installation package. Instead, download and install the current CodeMeter version from the WIBU website.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Existing WIBU CodeMeter Installations",
+            "description": "If a vulnerable CodeMeter version is already installed, update it to the current version from the WIBU website.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is the system running an affected version of CIROS?",
+            "next_step": 7,
+            "else_step": 10
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Ensure CIROS Installer is Post-September 15, 2022",
+            "description": "For future CIROS installations, use an installer downloaded after September 15, 2022, from the Festo Infoportal.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update WIBU CodeMeter Runtime for CIROS",
+            "description": "Update the WIBU CodeMeter Runtime to at least version 7.30a from the WIBU Systems website for existing CIROS installations.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "CONDITION",
+            "condition": "Is the system running MES PC with preinstalled MES4 before December 2022?",
+            "next_step": 11,
+            "else_step": 12
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Update CodeMeter Runtime for MES PC",
+            "description": "Ensure the PC has at least CodeMeter Runtime 7.30a installed. Download the update from the WIBU Systems website if necessary.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Restrict Unprivileged Access and Protect Network Access",
+            "description": "Restrict unprivileged access to machines running Festo software and minimize and protect network access to connected devices using state-of-the-art techniques and processes.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CIROS and FluidDraw Vulnerabilities",
+    "affected_products": [
+        "CIROS <= 7.0.6",
+        "FluidDraw P5",
+        "FluidDraw P6 < 6.2c",
+        "MES PC with preinstalled MES4 before December 2022"
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check Manufacturer Implementation",
+            "description": "Manufacturers using ProConOS/ProConOS eCLR should check their implementation and may publish an advisory according to their product.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review Security Measures for Automation Systems",
+            "description": "Users of automation devices utilizing ProConOS/ProConOS eCLR should check if their application requires additional security measures like an adequate defense-in-depth networking architecture, the use of VPNs for remote access, and firewalls for network segmentation or controller isolation.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Consult Manufacturer Security Advisories",
+            "description": "Users should check their manufacturers' security advisories for more adequate information according to their dedicated device.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Ensure Protected Environment for Logic Transfer and Storage",
+            "description": "Ensure that the logic is always transferred or stored in protected environments. This applies to data in transmission as well as data at rest.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Secure Connections Between Engineering Tools and Controller",
+            "description": "Connections between the Engineering Tools and the controller must always be in a locally protected environment or protected by VPN for remote access.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Protect Project Data During Transfer and Storage",
+            "description": "Project data shouldn’t be sent as a file via e-mail or other transfer mechanisms without additional integrity and authenticity checks. Project data should be saved in protected environments only.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "MULTIPROG, all versions | ProConOS, all versions | ProConOS eCLR, all versions",
+    "affected_products": [
+        "ProConOS",
+        "ProConOS eCLR"
+    ]
+}

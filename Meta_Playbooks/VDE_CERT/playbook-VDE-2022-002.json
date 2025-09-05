@@ -1,0 +1,72 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review WIBU-SYSTEMS Advisory",
+            "description": "Refer to the official WIBU-SYSTEMS Advisory WIBU-210910-01 for detailed information on risk mitigation and impact of the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is updating WIBU-SYSTEMS Codemeter possible?",
+            "next_step": 3,
+            "else_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update WIBU-SYSTEMS Codemeter",
+            "description": "Install the latest available stand-alone WIBU-SYSTEMS Codemeter version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable 'Mass Storage' Container Type in CodeMeter",
+            "description": "Disable the container type 'Mass Storage' in CodeMeter via the Windows Registry as a mitigation measure.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update e!COCKPIT to Version 1.11",
+            "description": "Install the updated e!COCKPIT setup routines (Version 1.11) with the latest WIBU-SYSTEMS Codemeter version when available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update WAGO-I/O-Pro (CODESYS 2.3) to Version 2.3.9.68",
+            "description": "Install the updated WAGO-I/O-Pro (CODESYS 2.3) setup routines (Version 2.3.9.68) with the latest WIBU-SYSTEMS Codemeter version when available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "WIBU-210910-01",
+    "affected_products": [
+        "WAGO e!COCKPIT engineering software installation bundle, < V1.11",
+        "WAGO-I/O-Pro (CODESYS 2.3) engineering software installation, = 2.3.9.46",
+        "WAGO-I/O-Pro (CODESYS 2.3) engineering software installation, = 2.3.9.47",
+        "WAGO-I/O-Pro (CODESYS 2.3) engineering software installation, = 2.3.9.49",
+        "WAGO-I/O-Pro (CODESYS 2.3) engineering software installation, = 2.3.9.53",
+        "WAGO-I/O-Pro (CODESYS 2.3) engineering software installation, = 2.3.9.55",
+        "WAGO-I/O-Pro (CODESYS 2.3) engineering software installation, = 2.3.9.61",
+        "WAGO-I/O-Pro (CODESYS 2.3) engineering software installation, = 2.3.9.66"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Avoid Using Untrusted Hyperlinks",
+            "description": "Do not use hyperlinks provided by untrusted third parties to access the SIMA² System Diagnostics Manager. This includes hyperlinks from emails, social media, messaging services, webpages with comments, and QR codes.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement External Web Application Firewall (WAF)",
+            "description": "Use an external Web Application Firewall (WAF) to mitigate attacks using reflected cross-site scripting.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SIMA² Master Station, all versions",
+    "affected_products": null
+}

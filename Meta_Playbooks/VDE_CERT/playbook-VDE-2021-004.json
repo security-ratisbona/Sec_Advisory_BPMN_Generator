@@ -1,0 +1,32 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the EtherNet/IP network containing affected products to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is remote access required?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Secure Remote Access",
+            "description": "Use secure methods such as virtual private networks (VPNs) for remote access to the EtherNet/IP network.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "1334920000",
+    "affected_products": [
+        "UR20-FBC-EIP: 01.00.00 <= 01.08.00"
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is affected?",
+            "cases": {
+                "FL MGUARD and TC MGUARD": 4,
+                "FL MGUARD DM UNLIMITED": 5,
+                "FL WLAN devices": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is upgrading to firmware version 8.8.6 possible?",
+            "next_step": 7,
+            "else_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Upgrade to Firmware Version 8.8.6",
+            "description": "Upgrade the firmware to version 8.8.6 or later to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Deactivate Affected Functionality",
+            "description": "Deactivate affected functionality or ensure it is not exposed on untrusted interfaces to reduce the possibility of an attack.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade FL MGUARD DM UNLIMITED",
+            "description": "Upgrade FL MGUARD DM UNLIMITED to version 1.13.0.2 or higher to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Await Firmware Update for FL WLAN Devices",
+            "description": "Wait for the next regular release to fix the vulnerability in FL WLAN devices. A release date is not yet defined.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FL MGUARD and FL WLAN Vulnerabilities",
+    "affected_products": [
+        "1153079, FL MGUARD 1102, <= 1.5.2",
+        "1153078, FL MGUARD 1105, <= 1.5.2",
+        "2702547, FL MGUARD CENTERPORT, <= 8.8.5",
+        "2702820, FL MGUARD CENTERPORT VPN-1000, <= 8.8.5",
+        "2702884, FL MGUARD CORE TX, <= 8.8.5",
+        "2702831, FL MGUARD CORE TX VPN, <= 8.8.5",
+        "2700967, FL MGUARD DELTA TX/TX, <= 8.8.5",
+        "2700968, FL MGUARD DELTA TX/TX VPN, <= 8.8.5",
+        "2981974, FL MGUARD DM UNLIMITED, <= 1.13.0.1",
+        "2700197, FL MGUARD GT/GT, <= 8.8.5",
+        "2700198, FL MGUARD GT/GT VPN, <= 8.8.5",
+        "2701274, FL MGUARD PCI4000, <= 8.8.5",
+        "2701275, FL MGUARD PCI4000 VPN, <= 8.8.5",
+        "1073944, FL MGUARD PCI4000 VPN/K2, <= 8.8.5",
+        "2701277, FL MGUARD PCIE4000, <= 8.8.5",
+        "2701278, FL MGUARD PCIE4000 VPN, <= 8.8.5",
+        "1073940, FL MGUARD PCIE4000 VPN/K2, <= 8.8.5",
+        "2702139, FL MGUARD RS2000 TX/TX-B, <= 8.8.5",
+        "2700642, FL MGUARD RS2000 TX/TX VPN, <= 8.8.5",
+        "2701875, FL MGUARD RS2005 TX VPN, <= 8.8.5",
+        "2700634, FL MGUARD RS4000 TX/TX, <= 8.8.5",
+        "2702470, FL MGUARD RS4000 TX/TX-M, <= 8.8.5",
+        "2702259, FL MGUARD RS4000 TX/TX-P, <= 8.8.5",
+        "2200515, FL MGUARD RS4000 TX/TX VPN, <= 8.8.5",
+        "1053403, FL MGUARD RS4000 TX/TX VPN/K1, <= 8.8.5",
+        "1073943, FL MGUARD RS4000 VPN/K2, <= 8.8.5",
+        "2701876, FL MGUARD RS4004 TX/DTX, <= 8.8.5",
+        "2701877, FL MGUARD RS4004 TX/DTX VPN, <= 8.8.5",
+        "2700640, FL MGUARD SMART2, <= 8.8.5",
+        "2700639, FL MGUARD SMART2 VPN, <= 8.8.5",
+        "1053405, FL MGUARD SMART2 VPN/K1, <= 8.8.5",
+        "2702899, FL WLAN 1010, <= 2.70",
+        "2702900, FL WLAN 1011, <= 2.70",
+        "2702534, FL WLAN 1100, <= 2.70",
+        "2702538, FL WLAN 1101, <= 2.70",
+        "1119246, FL WLAN 2010, <= 2.70",
+        "1119248, FL WLAN 2011, <= 2.70",
+        "2702535, FL WLAN 2100, <= 2.70",
+        "2702540, FL WLAN 2101, <= 2.70",
+        "2700718, FL WLAN 5100, <= 3.21",
+        "2701093, FL WLAN 5101, <= 3.21",
+        "2701850, FL WLAN 5102, <= 3.21",
+        "1043193, FL WLAN 5110, <= 3.21",
+        "1043201, FL WLAN 5111, <= 3.21",
+        "2903441, TC MGUARD RS2000 3G VPN, <= 8.8.5",
+        "1010464, TC MGUARD RS2000 4G ATT VPN, <= 8.8.5",
+        "2903588, TC MGUARD RS2000 4G VPN, <= 8.8.5",
+        "1010462, TC MGUARD RS2000 4G VZW VPN, <= 8.8.5",
+        "2903440, TC MGUARD RS4000 3G VPN, <= 8.8.5",
+        "1010463, TC MGUARD RS4000 4G ATT VPN, <= 8.8.5",
+        "2903586, TC MGUARD RS4000 4G VPN, <= 8.8.5",
+        "1010461, TC MGUARD RS4000 4G VZW VPN, <= 8.8.5"
+    ]
+}

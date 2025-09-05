@@ -1,0 +1,112 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by retrieving the installed version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure affected products are not accessible via the Internet by minimizing their network exposure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Isolate Affected Products",
+            "description": "Isolate affected products from the corporate network to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is remote access required?",
+            "next_step": 7,
+            "else_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Secure Remote Access",
+            "description": "Use secure methods such as virtual private networks (VPNs) for remote access to affected products.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigation for Network Exposure",
+    "affected_products": [
+        "312679, CS3B-LS610-OM, <= V3.0.0",
+        "289804-100000, OHV-F230-B17, <= V1.1.0",
+        "316742, OIT500-F113-B17-CB, <= V1.3.4",
+        "247325, PCV100-F200-B17-V1D, <= V3.2.3",
+        "264850, PCV100-F200-B17-V1D-6011, <= V3.2.5",
+        "282529, PCV100-F200-B17-V1D-6011-6997, <= V3.2.3",
+        "70103187, PCV100-F200-B17-V1D-6011-8203, <= V3.2.5",
+        "259676, PCV50-F200-B17-V1D, <= V3.2.3",
+        "244538, PCV80-F200-B17-V1D, <= V3.2.3",
+        "303883, PGV100A-F200A-B28-V1D, <= V1.0.3",
+        "303881, PGV100A-F200-B28-V1D, <= V1.0.3",
+        "70105189, PGV100AQ-F200A-B28-V1D, <= V2.1.1",
+        "70105231, PGV100AQ-F200-B28-V1D, <= V2.1.1",
+        "285693-100000, PGV100-F200A-B17-V1D, <= V2.0.0",
+        "285693-100005, PGV100-F200-B17-V1D-7477, <= V2.0.0",
+        "285693-100001, PGV150I-F200A-B17-V1D, <= V2.0.0",
+        "293772, PHA150-F200A-B17-V1D, <= V3.1.5",
+        "307562, PHA150-F200-B17-V1D, <= V3.1.5",
+        "295658, PHA200-F200A-B17-T-V1D, <= V3.1.5",
+        "266679, PHA200-F200A-B17-V1D, <= V3.1.5",
+        "266680, PHA200-F200-B17-V1D, <= V3.1.5",
+        "283557, PHA300-F200A-B17-T-V1D, <= V3.1.5",
+        "258403, PHA300-F200A-B17-V1D, <= V3.1.5",
+        "265869, PHA300-F200-B17-T-V1D, <= V3.1.5",
+        "255662, PHA300-F200-B17-V1D, <= V3.1.5",
+        "323292, PHA400-F200A-B17-T-V1D, <= V3.1.5",
+        "270875, PHA400-F200A-B17-V1D, <= V3.1.5",
+        "257498, PHA400-F200-B17-V1D, <= V3.1.5",
+        "323438, PHA500-F200A-B17-T-V1D, <= V3.1.5",
+        "292696, PHA500-F200A-B17-V1D, <= V3.1.5",
+        "292686, PHA500-F200-B17-V1D, <= V3.1.5",
+        "291103, PHA600-F200A-B17-V1D, <= V3.1.5",
+        "292701, PHA600-F200-B17-V1D, <= V3.1.5",
+        "70103352, PHA700-F200-B17-V1D, <= V3.1.5",
+        "320263, PHA800-F200-B17-V1D, <= V3.1.5",
+        "296169, PXV100A-F200-B28-V1D, <= V1.0.3",
+        "298410, PXV100A-F200-B28-V1D-6011, <= V1.0.3",
+        "70105248, PXV100AQ-F200-B28-V1D, <= V2.1.1",
+        "70105249, PXV100AQ-F200-B28-V1D-6011, <= V2.1.1",
+        "293431-100003, PXV100-F200-B17-V1D, <= V4.2.0",
+        "293431-100020, PXV100-F200-B17-V1D-3636, <= V4.2.0",
+        "262007, WCS3B-LS610, <= V3.0.0",
+        "280552, WCS3B-LS610D, <= V3.0.0",
+        "280553, WCS3B-LS610DH, <= V3.0.0",
+        "312677, WCS3B-LS610DH-OM, <= V3.0.0",
+        "312678, WCS3B-LS610D-OM, <= V3.0.0",
+        "280551, WCS3B-LS610H, <= V3.0.0",
+        "312676, WCS3B-LS610H-OM, <= V3.0.0"
+    ]
+}

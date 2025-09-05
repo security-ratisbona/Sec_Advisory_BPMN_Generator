@@ -1,0 +1,17 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Configure Perimeter Firewall",
+            "description": "Block traffic from untrusted networks to the BK9000 device to mitigate potential vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "BK9000 Vulnerability",
+    "affected_products": [
+        "BK9000, all versions"
+    ]
+}

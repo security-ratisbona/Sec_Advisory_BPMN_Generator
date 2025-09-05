@@ -1,0 +1,54 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by verifying the installed firmware version and configurations against the affected product list.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating to the latest firmware version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Firmware to Secure Version",
+            "description": "Update the firmware to the secure version as recommended by WAGO for the specific device series.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Restrict network access to the device and ensure it is not directly connected to the internet as a temporary mitigation measure.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "WAGO Device Vulnerability",
+    "affected_products": [
+        "751-9301/xxx-xxx, Compact Controller 100, <= FW25",
+        "752-8303/8000-002, Edge Controller, <= FW25",
+        "750-810x/xxx-xxx, PFC100, <= FW22 Patch1",
+        "750-821x/xxx-xxx, PFC200, <= FW25",
+        "750-820x/xxx-xxx, PFC200, <= FW22 Patch1",
+        "762-5xxx, Touch Panel 600 Advanced Line, <= FW25",
+        "762-6xxx, Touch Panel 600 Marine Line, <= FW25",
+        "762-4xxx, Touch Panel 600 Standard Line, <= FW25"
+    ]
+}

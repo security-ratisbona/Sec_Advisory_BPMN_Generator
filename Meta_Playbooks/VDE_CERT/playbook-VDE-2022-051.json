@@ -1,0 +1,77 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by verifying the installed firmware version and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is upgrading to firmware version 8.9.0 or later possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Firmware Version 8.9.0 or Later",
+            "description": "Upgrade the system to firmware version 8.9.0 or later to fix the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict Access to HTTPS Management Interface",
+            "description": "Ensure that access to the HTTPS management interface is not allowed from untrusted networks. By default, access should only be allowed from internal interfaces.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "FL MGUARD Vulnerability",
+    "affected_products": [
+        "2702547, FL MGUARD CENTERPORT, < 8.9.0",
+        "2702820, FL MGUARD CENTERPORT VPN-1000, < 8.9.0",
+        "2702884, FL MGUARD CORE TX, < 8.9.0",
+        "2702831, FL MGUARD CORE TX VPN, < 8.9.0",
+        "2700967, FL MGUARD DELTA TX/TX, < 8.9.0",
+        "2700968, FL MGUARD DELTA TX/TX VPN, < 8.9.0",
+        "2700197, FL MGUARD GT/GT, < 8.9.0",
+        "2700198, FL MGUARD GT/GT VPN, < 8.9.0",
+        "2701274, FL MGUARD PCI4000, < 8.9.0",
+        "2701275, FL MGUARD PCI4000 VPN, < 8.9.0",
+        "2701277, FL MGUARD PCIE4000, < 8.9.0",
+        "2701278, FL MGUARD PCIE4000 VPN, < 8.9.0",
+        "2702139, FL MGUARD RS2000 TX/TX-B, < 8.9.0",
+        "2700642, FL MGUARD RS2000 TX/TX VPN, < 8.9.0",
+        "2701875, FL MGUARD RS2005 TX VPN, < 8.9.0",
+        "2700634, FL MGUARD RS4000 TX/TX, < 8.9.0",
+        "2702470, FL MGUARD RS4000 TX/TX-M, < 8.9.0",
+        "2702259, FL MGUARD RS4000 TX/TX-P, < 8.9.0",
+        "2200515, FL MGUARD RS4000 TX/TX VPN, < 8.9.0",
+        "2701876, FL MGUARD RS4004 TX/DTX, < 8.9.0",
+        "2701877, FL MGUARD RS4004 TX/DTX VPN, < 8.9.0",
+        "2700640, FL MGUARD SMART2, < 8.9.0",
+        "2700639, FL MGUARD SMART2 VPN, < 8.9.0",
+        "2903441, TC MGUARD RS2000 3G VPN, < 8.9.0",
+        "1010464, TC MGUARD RS2000 4G ATT VPN, < 8.9.0",
+        "2903588, TC MGUARD RS2000 4G VPN, < 8.9.0",
+        "1010462, TC MGUARD RS2000 4G VZW VPN, < 8.9.0",
+        "2903440, TC MGUARD RS4000 3G VPN, < 8.9.0",
+        "1010463, TC MGUARD RS4000 4G ATT VPN, < 8.9.0",
+        "2903586, TC MGUARD RS4000 4G VPN, < 8.9.0",
+        "1010461, TC MGUARD RS4000 4G VZW VPN, < 8.9.0"
+    ]
+}

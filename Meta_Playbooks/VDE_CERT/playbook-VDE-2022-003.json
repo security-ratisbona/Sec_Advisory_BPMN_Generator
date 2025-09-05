@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed version of the OPC UA components.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is updating to the latest version possible?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to Latest Version",
+            "description": "Update the affected OPC UA components to the latest version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Configure OPC UA Security Modes",
+            "description": "Configure applications to use SecurityMode other than 'None' for all OPC UA connections. Avoid connections to unknown OPC UA servers with SecurityMode=None, especially those discovered via mDNS, LDS, or untrusted GDS.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "OPC UA Vulnerability",
+    "affected_products": [
+        "EK9160 (TcOpcUaServer), < 3.2.0.239",
+        "IPC Diagnostic UA Server on windows images (MDP UA Server), < 3.1.0.8",
+        "TF2110 (Setup), < 1.12.754.0",
+        "TF6100-OPC-UA-Client (TcOpcUaClient), < 2.2.9.1",
+        "TF6100-OPC-UA-Gateway (TcOpcUaGateway), < 1.5.8.454",
+        "TF6100-OPC-UA-Server (TcOpcUaServer), < 3.2.0.240",
+        "TS6100-0030-OPC-UA (TcOpcUaClient), < 2.2.9.1",
+        "TS6100-0030-OPC-UA (TcOpcUaGateway), < 1.5.8.454",
+        "TS6100-0030-OPC-UA (TcOpcUaServer), < 3.2.0.240",
+        "TS6100-OPC-UA (TcOpcUaClient), < 2.2.9.1",
+        "TS6100-OPC-UA (TcOpcUaGateway), < 1.5.8.454",
+        "TS6100-OPC-UA (TcOpcUaServer), < 3.2.0.240"
+    ]
+}

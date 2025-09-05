@@ -1,0 +1,42 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure that affected products are not accessible via the Internet by minimizing their network exposure.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Isolate Affected Products",
+            "description": "Isolate affected products from the corporate network to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is remote access required?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Secure Remote Access",
+            "description": "Use secure methods such as virtual private networks (VPNs) for remote access to affected products.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "IC-KP2-1HB17-2V1D, <= 18-31766H | IC-KP2-2HB17-2V1D, <= 18-31440H | IC-KP-B17-AIDA1, <= 18-31785F",
+    "affected_products": [
+        "IC-KP2-1HB17-2V1D, <= 18-31766H",
+        "IC-KP2-2HB17-2V1D, <= 18-31440H",
+        "IC-KP-B17-AIDA1, <= 18-31785F"
+    ]
+}

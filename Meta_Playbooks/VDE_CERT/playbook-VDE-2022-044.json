@@ -1,0 +1,53 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Product and Version",
+            "description": "Determine if the system is running an affected version of PAScal, PASconnect, PASmotion, PNOZmulti Configurator, or PNOZmulti Configurator LTS.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running an affected version?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Avoid Using Untrusted Files",
+            "description": "Do not use .zip or .par files from untrusted sources. Contact local Pilz support if loading a file from an untrusted source is necessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Check for Fixed Version",
+            "description": "Visit the Pilz Shop to check for and download the fixed version of the affected product.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "General Countermeasures for Pilz Products",
+    "affected_products": [
+        "PAScal <= 1.9.1",
+        "PASconnect < 1.4.0",
+        "PASmotion < 1.4.1",
+        "PNOZmulti Configurator < 11.2.0",
+        "PNOZmulti Configurator LTS < 10.14.4"
+    ]
+}

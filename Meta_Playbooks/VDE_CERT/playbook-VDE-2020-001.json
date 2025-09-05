@@ -1,0 +1,75 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the CVE by retrieving the installed version of ILC 2050 BI or ILC 2050 BI-L.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the CVE?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to Emalytics 1.2.3 or Higher",
+            "description": "Update the Engineering software to Emalytics 1.2.3 or higher and recommission the controllers.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Download and Verify Update",
+            "description": "Download the updated version from the vendor's product page and verify the SHA-256 checksum.",
+            "commands": [
+                "wget <vendor_product_page>/Emalytics_Setup_1.2.3.zip",
+                "echo \"cf24d29f408cc80c3e9bf09234a9469bb2b2d01d832e9136ed75cae6b48df293  Emalytics_Setup_1.2.3.zip\" | sha256sum -c -"
+            ],
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is it possible to update to Emalytics 1.2.3 or higher?",
+            "next_step": 6,
+            "else_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Install the Update",
+            "description": "Install the Emalytics 1.2.3 update to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Contact Phoenix Contact for Fixed Version",
+            "description": "If updating is not possible, contact Phoenix Contact via email to obtain a fixed version.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Network Security Measures",
+            "description": "Operate network-capable devices in closed networks or protect them with a suitable firewall. Refer to the application note for detailed security measures.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": null,
+    "affected_products": [
+        "2403160, ILC 2050 BI, < 1.2.3",
+        "2404671, ILC 2050 BI-L, < 1.2.3"
+    ]
+}

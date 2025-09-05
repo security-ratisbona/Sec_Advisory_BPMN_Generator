@@ -1,0 +1,102 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by the vulnerability by retrieving the installed RM Shell version and Windows LTSC version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system affected by the vulnerability?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Windows LTSC version is installed?",
+            "cases": {
+                "Windows 10 LTSB 2016": 4,
+                "Windows 10 LTSC 2019": 5
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Install Security Patch for Windows 10 LTSB 2016",
+            "description": "Install the RM Image 5 Windows Cumulative Security Patch 03/2022 (KB5011495) including the 2021-09 Servicing Stack Update (KB5005698) and Microsoft .NET Framework 4.7.2 for x64 (KB4054590).",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Install Security Patch for Windows 10 LTSC 2019",
+            "description": "Install the RM Image 5.5 Windows Cumulative Security Patch for LTSC 03/2022 (KB5011503) including the 08/2021 Servicing Stack Update (KB5005112).",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Connect Only to Trusted RDP Servers",
+            "description": "Ensure that connections are made only to trusted RDP servers to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Protect RDP Servers with Security Measures",
+            "description": "Protect your RDP servers with anti-virus software and an Intrusion Detection System (IDS).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Access Control for RDP Servers",
+            "description": "Implement access control to RDP servers and manage the roles of administrator and engineer on the affected device.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "RM Shell Version 5.x Vulnerability",
+    "affected_products": [
+        "BTC11-*-TS2-*",
+        "BTC11-*-TS3-*",
+        "BTC12-*-TS2-*",
+        "BTC12-*-TS3-*",
+        "BTC14-*-TS2-*",
+        "BTC14-*-TS3-*",
+        "PAD-EX01P8DZ2EURC0508256WIFRMS",
+        "RM2xx-*-T6-*",
+        "RM3207-*-T61-*",
+        "RM-320S-*-2-*",
+        "RM32xx-*-T61-*",
+        "RM37xx-*-T6-*",
+        "RM82xx-*-T61-*",
+        "RM87xx-*-T61-*",
+        "RM9xx-*-T61-*",
+        "RM-GXP-*-T2-*",
+        "RM-GXP-*-T3-*",
+        "UPGRADE-RMSHELL4-TO-SHELL5*",
+        "UPGRADE-TO-SHELL5-2019-LTSC*"
+    ]
+}
