@@ -1,0 +1,66 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization a network defender?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Strong Password Policy and Multifactor Authentication",
+            "description": "Use a strong password policy and multifactor authentication to reduce the impact of password compromises.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Keep Systems and Software Up to Date",
+            "description": "Ensure operating systems and productivity applications are up to date. Use the latest supported versions, apply security patches promptly, and use antivirus to guard against known malware threats.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Prevent and Detect Lateral Movement",
+            "description": "Implement architectural controls for network segregation and protect management interfaces of critical operational systems. Use browse-down architecture to prevent attackers from gaining privileged access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Set Up Security Monitoring Capability",
+            "description": "Collect data needed to analyze network intrusions and review incident management processes.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Deploy Host-Based Intrusion Detection System",
+            "description": "Deploy a host-based intrusion detection system to defend against various threats.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "General Cybersecurity Advisory",
+    "affected_products": null
+}

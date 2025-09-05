@@ -1,0 +1,103 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which category does the network fall into?",
+            "cases": {
+                "Category 1": 2,
+                "Category 2": 3,
+                "Category 3": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Confirm No Malicious Binary Presence",
+            "description": "Forensically confirm that the malicious binary was never present on the systems. Ensure that the network does not utilize affected versions of SolarWinds Orion products.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": 11
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Initiate Incident Response Procedures",
+            "description": "Assume the environment has been compromised and initiate incident response procedures immediately. Coordinate with leadership and incident response team for recovery and remediation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Rebuild Platform and Harden Configuration",
+            "description": "Rebuild the platform and harden the configuration based on SolarWinds secure configuration guidelines. Resume use after thorough risk evaluation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Deny All Communications Outside Network Management Enclave",
+            "description": "Deny all incoming and outgoing communications outside of the organization’s device network management enclave. Ensure communications to the public internet from hosts running SolarWinds Orion products are blocked.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict Cloud and On-Premises Instances",
+            "description": "Ensure cloud instances of Orion only monitor cloud resources in that cloud infrastructure. On-premises instances should not be permissioned with any cloud/hosted identity accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Change Account Credentials and Enable MFA",
+            "description": "Change all account credentials or shared secrets used by the affected SolarWinds Orion device. Enable MFA for these credentials whenever possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Remove Inbound Trust Relationships",
+            "description": "Remove all inbound trust relationships to the SolarWinds Orion device being rebuilt.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Configure Logging and Update Platform",
+            "description": "Configure logging to ensure all logs are captured and stored for at least 180 days. Implement subsequent SolarWinds Orion Platform updates within 48 hours of release.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Restore SolarWinds from Legacy Database",
+            "description": "Restore SolarWinds from the legacy database following the SolarWinds restore guidance. Ensure correct restoration guidance is followed for affected versions.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SolarWinds Orion Vulnerability",
+    "affected_products": null
+}

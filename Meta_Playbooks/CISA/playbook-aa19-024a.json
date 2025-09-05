@@ -1,0 +1,50 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                2,
+                3,
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Account Passwords",
+            "description": "Update the passwords for all accounts that can change organizations’ DNS records.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Multifactor Authentication",
+            "description": "Implement multifactor authentication on domain registrar accounts, or on other systems used to modify DNS records.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Audit Public DNS Records",
+            "description": "Audit public DNS records to verify they are resolving to the intended location.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Revoke Fraudulent Encryption Certificates",
+            "description": "Search for encryption certificates related to domains and revoke any fraudulently requested certificates.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Safeguard Networks Against DNS Threat",
+    "affected_products": null
+}

@@ -1,0 +1,80 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Upgrade BIG-IP Software",
+            "description": "Upgrade BIG-IP software to the corresponding patches for CVE-2020-5902.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is there evidence of CVE-2020-5902 exploitation after patching?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Reconstitute Affected Systems",
+            "description": "Take immediate action to reconstitute affected systems if exploitation evidence is found after patching.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Has system compromise been discovered?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Reimage Compromised Hosts",
+            "description": "Reimage compromised hosts to restore them to a secure state.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Provision New Account Credentials",
+            "description": "Create new account credentials to replace potentially compromised ones.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Limit Access to Management Interface",
+            "description": "Limit access to the management interface to the fullest extent possible to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement network segmentation to prevent intruder propagation and lateral movement within the network.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2020-5902",
+    "affected_products": null
+}

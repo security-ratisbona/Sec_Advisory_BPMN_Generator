@@ -1,0 +1,131 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Has the organization patched for Citrix CVE-2019-19781?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Follow CISA Alert AA20-031A",
+            "description": "Implement the recommendations in CISA Alert AA20-031A for suspected compromise related to Citrix CVE-2019-19781.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Is Windows Active Directory in use and compromise suspected?",
+            "next_step": 4,
+            "else_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Remediate Compromised Windows Active Directory Forest",
+            "description": "Conduct remediation of the compromised Windows Active Directory forest if compromise is suspected.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is compromise suspected?",
+            "next_step": 6,
+            "else_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Rebuild/Reimage Compromised NetScaler Devices",
+            "description": "Rebuild or reimage compromised NetScaler devices if compromise is suspected.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Audit Configuration and Patch Management Programs",
+            "description": "Routinely audit configuration and patch management programs to ensure security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Monitor Network Traffic",
+            "description": "Monitor network traffic for unexpected and unapproved protocols, especially outbound to the internet (e.g., SSH, SMB, RDP).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Multi-Factor Authentication",
+            "description": "Implement multi-factor authentication, especially for privileged accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Separate Administrative Accounts",
+            "description": "Use separate administrative accounts on separate administration workstations.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Principle of Least Privilege",
+            "description": "Implement the principle of least privilege on data access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Secure Remote Access Solutions",
+            "description": "Secure RDP and other remote access solutions using multifactor authentication and 'jump boxes' for access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Deploy Endpoint Defense Tools",
+            "description": "Deploy endpoint defense tools on all endpoints; ensure they work and are up to date.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Keep Software Up to Date",
+            "description": "Ensure all software is kept up to date to protect against vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Citrix CVE-2019-19781",
+    "affected_products": null
+}

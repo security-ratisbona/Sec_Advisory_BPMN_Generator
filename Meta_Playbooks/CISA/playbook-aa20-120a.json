@@ -1,0 +1,101 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization using O365?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Enable Multi-Factor Authentication for Administrator Accounts",
+            "description": "Enable multi-factor authentication (MFA) for Azure Active Directory (AD) Global Administrators to secure cloud-based accounts and prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Assign Administrator Roles Using Role-Based Access Control (RBAC)",
+            "description": "Use Azure AD's built-in administrator roles instead of the Global Administrator account to limit overly permissive privileges and practice the principle of 'Least Privilege'.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enable Unified Audit Log (UAL)",
+            "description": "Enable the Unified Audit Log in the Security and Compliance Center to investigate and search for potentially malicious actions within O365.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Enable Multi-Factor Authentication for All Users",
+            "description": "Enable multi-factor authentication (MFA) for all users to protect data and prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Does the organization require legacy email clients?",
+            "next_step": 10,
+            "else_step": 11
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Inventory Users Requiring Legacy Protocols",
+            "description": "Inventory users who require legacy email clients and protocols, and limit access to those protocols using Azure AD Conditional Access policies.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Disable Legacy Protocol Authentication",
+            "description": "Disable legacy protocol authentication at the tenant or user level to reduce the attack surface.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Enable Alerts for Suspicious Activity",
+            "description": "Create and enable alerts within the Security and Compliance Center to notify administrators of abnormal events, such as logins from suspicious locations and accounts exceeding sent email thresholds.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Integrate Logs with Existing SIEM Tool",
+            "description": "Integrate and correlate O365 logs with existing log management and monitoring solutions to detect and correlate anomalous activity.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "O365 Security Recommendations",
+    "affected_products": [
+        "O365"
+    ]
+}

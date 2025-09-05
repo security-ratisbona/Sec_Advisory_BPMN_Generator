@@ -1,0 +1,109 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization willing to block all Tor traffic?",
+            "next_step": 2,
+            "else_step": 6
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Block all web traffic to and from public Tor entry and exit nodes",
+            "description": "Implement tools to restrict all traffic—malicious and legitimate—to and from Tor entry and exit nodes. This is the most restrictive approach.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Maintain up-to-date lists of known Tor exit and entry node IP addresses",
+            "description": "Ensure the organization maintains an updated list of known Tor exit and entry node IP addresses. The Tor Project maintains an authoritative list.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Set external policies to block incoming traffic from known Tor exit nodes",
+            "description": "Configure network security tools to block incoming traffic from known Tor exit nodes to prevent malicious reconnaissance and exploit attempts.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Set internal policies to block outgoing traffic to Tor entry nodes",
+            "description": "Configure network security tools to block outgoing traffic to Tor entry nodes to prevent data exfiltration and C2 traffic.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is the organization willing to tailor monitoring and analysis of Tor traffic?",
+            "next_step": 7,
+            "else_step": 13
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Maintain up-to-date lists of known Tor exit and entry node IP addresses",
+            "description": "Ensure the organization maintains an updated list of known Tor exit and entry node IP addresses. The Tor Project maintains an authoritative list.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Analyze traffic to determine normal patterns of behavior",
+            "description": "Baseline existing Tor traffic to/from known entry/exit nodes over a period of months to distinguish legitimate vs. anomalous uses of Tor.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Inspect traffic to understand legitimate traffic",
+            "description": "Level-set the organization’s risk tolerance for blocking or allowing Tor traffic to/from specific services.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Institute behavioral signatures/rules",
+            "description": "Implement rules to block unexpected/potentially malicious activity and allow legitimate activity.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Monitor for use of specific TCP/UDP ports",
+            "description": "Monitor for use of TCP/UDP ports 9001, 9030, 9040, 9050, 9051, 9150, and TCP ports 443 and 8443 for potential malicious activity.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Monitor and examine large dataflows between networks and Tor IP addresses",
+            "description": "Examine any large dataflows between networks and Tor IP addresses, regardless of port, as this could be unauthorized data exfiltration.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Implement a blended approach to Tor traffic management",
+            "description": "Block all Tor traffic to some resources, allow and monitor for others. Continuously re-evaluate risk tolerance associated with different applications.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Tor Traffic",
+    "affected_products": null
+}

@@ -1,0 +1,218 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of federal, state, local, tribal, territorial governments, or the private sector?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review Configuration Changes",
+            "description": "System owners and administrators should review any configuration changes prior to implementation to avoid unwanted impacts.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Block Malware-Associated Email Attachments",
+            "description": "Block email attachments commonly associated with malware (e.g., .dll and .exe).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Block Unscannable Email Attachments",
+            "description": "Block email attachments that cannot be scanned by antivirus software (e.g., .zip files).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Group Policy Object and Firewall Rules",
+            "description": "Implement Group Policy Object and firewall rules to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement Antivirus Program and Patch Management",
+            "description": "Implement an antivirus program and a formalized patch management process.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Email Gateway Filters",
+            "description": "Implement filters at the email gateway to block suspicious emails.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Block Suspicious IP Addresses",
+            "description": "Block suspicious IP addresses at the firewall.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Adhere to Principle of Least Privilege",
+            "description": "Ensure that users have the minimum level of access necessary to perform their duties.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Implement DMARC Validation System",
+            "description": "Implement a Domain-Based Message Authentication, Reporting & Conformance validation system.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Segment and Segregate Networks",
+            "description": "Segment and segregate networks and functions to limit the spread of malware.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Limit Lateral Communications",
+            "description": "Limit unnecessary lateral communications within the network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Disable File and Printer Sharing Services",
+            "description": "Disable file and printer sharing services. If these services are required, use strong passwords or Active Directory authentication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Enforce Multi-Factor Authentication",
+            "description": "Enforce multi-factor authentication for accessing systems.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Exercise Caution with Email Attachments",
+            "description": "Exercise caution when opening email attachments, even if the attachment is expected and the sender appears to be known.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Enable Firewall on Workstations",
+            "description": "Enable a firewall on agency workstations, configured to deny unsolicited connection requests.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Disable Unnecessary Services",
+            "description": "Disable unnecessary services on agency workstations and servers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Scan and Remove Suspicious Email Attachments",
+            "description": "Scan for and remove suspicious email attachments; ensure the scanned attachment is its 'true file type' (i.e., the extension matches the file header).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Monitor Web Browsing Habits",
+            "description": "Monitor users' web browsing habits; restrict access to suspicious or risky sites.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Exercise Caution with Removable Media",
+            "description": "Exercise caution when using removable media (e.g., USB thumb drives, external drives, CDs).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Scan Downloaded Software",
+            "description": "Scan all software downloaded from the internet prior to executing.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Maintain Situational Awareness",
+            "description": "Maintain situational awareness of the latest threats and implement appropriate access control lists.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Consult Additional Resources",
+            "description": "Visit the MITRE ATT&CK Techniques pages, CISA’s Alert on Technical Approaches to Uncovering and Remediating Malicious Activity, and the joint CISA and MS-ISAC Ransomware Guide for more information on addressing potential incidents and applying best practice incident response procedures.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Best Practices for Network Defenders",
+    "affected_products": null
+}

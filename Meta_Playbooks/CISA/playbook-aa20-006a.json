@@ -1,0 +1,143 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is vulnerability mitigation needed?",
+            "next_step": 2,
+            "else_step": 9
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Disable unnecessary ports and protocols",
+            "description": "Review network security device logs and determine whether to shut off unnecessary ports and protocols.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Patch externally facing equipment",
+            "description": "Focus on patching critical and high vulnerabilities that allow for remote code execution or denial of service on externally facing equipment.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Log and limit usage of PowerShell",
+            "description": "Limit the usage of PowerShell to only users and accounts that need it, enable code signing of PowerShell scripts, and enable logging of all PowerShell commands.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Ensure backups are up to date",
+            "description": "Ensure backups are up to date and stored in an easily retrievable location that is air-gapped from the organizational network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Manage access control for domain controller replication",
+            "description": "Manage the access control list for 'Replicating Directory Changes' and other permissions associated with domain controller replication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Ensure complex passwords for local administrator accounts",
+            "description": "Ensure that local administrator accounts have complex, unique passwords across all systems on the network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "CONDITION",
+            "condition": "Is incident preparation needed?",
+            "next_step": 10,
+            "else_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Enhance monitoring of network and email traffic",
+            "description": "Review network signatures and indicators for focused operations activities, monitor for new phishing themes and adjust email rules accordingly, and follow best practices of restricting attachments via email or other mechanisms.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Monitor for unexpected processes interacting with Isass.exe",
+            "description": "Monitor Windows systems for unexpected processes interacting with Isass.exe.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Use AuditD on Linux systems",
+            "description": "Use the AuditD monitoring tool to watch for hostile processes opening a maps file in the proc file system, alerting on the pid, process name, and arguments for such programs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Utilize Antimalware Scan Interface (AMSI) on Windows 10",
+            "description": "Consider utilizing the Antimalware Scan Interface (AMSI) on Windows 10 to analyze commands after being processed/interpreted.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Monitor for file creation and transfers over SMB",
+            "description": "Monitor for file creation and files transferred within a network over SMB.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Inspect URLs within emails",
+            "description": "URL inspection within email (including expanding shortened links) can help detect links leading to known malicious sites.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Potential threat from Iranian actors",
+    "affected_products": null
+}

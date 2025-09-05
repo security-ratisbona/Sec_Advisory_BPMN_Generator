@@ -1,0 +1,84 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization an educational institution?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review and Establish Continuity Plans",
+            "description": "Evaluate and establish business continuity plans to ensure educational operations can continue during emergencies.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Network Best Practices",
+            "description": "Patch systems, check configurations, change passwords regularly, use multi-factor authentication, disable unused ports, and implement allow listing.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enhance User Awareness",
+            "description": "Conduct training on cybersecurity threats and ensure users know how to report suspicious activities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement Ransomware Best Practices",
+            "description": "Regularly back up data, air gap, and password protect backup copies offline. Implement a recovery plan.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Enroll in Denial-of-Service Mitigation Service",
+            "description": "Consider enrolling in a service to detect and redirect abnormal traffic flows.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Ensure Secure Video-Conferencing Practices",
+            "description": "Use updated applications, require passwords, vet participants, and control screensharing privileges.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Evaluate EdTech Providers",
+            "description": "Assess cybersecurity policies, data security practices, and data usage policies of third-party and edtech services.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Educational Institutions",
+    "affected_products": null
+}

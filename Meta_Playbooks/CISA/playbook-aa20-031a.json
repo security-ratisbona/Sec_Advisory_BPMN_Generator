@@ -1,0 +1,88 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which method to check for vulnerability?",
+            "cases": {
+                "Citrix tool": 2,
+                "Open-source utility": 3
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Use Citrix's Tool to Check for Vulnerability",
+            "description": "Use Citrix's official tool to check if the system is vulnerable.",
+            "commands": [
+                "https://support.citrix.com/article/CTX269180"
+            ],
+            "next_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Use Open-source Utility to Check for Vulnerability",
+            "description": "Use an open-source utility to check for the vulnerability or previous device compromise.",
+            "commands": [
+                "https://github.com/cisagov/check-cve-2019-19781",
+                "https://github.com/x1sec/citrixmash_scanner",
+                "https://github.com/fireeye/ioc-scanner-CVE-2019-19781/releases/tag/v1.2"
+            ],
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Follow Citrix Instructions to Mitigate Vulnerability",
+            "description": "Follow instructions from Citrix to mitigate the vulnerability.",
+            "commands": [
+                "https://support.citrix.com/article/CTX267679",
+                "https://support.citrix.com/article/CTX267027"
+            ],
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade Firmware to Patched Version",
+            "description": "Upgrade the firmware to a patched version to ensure the system is protected against vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Subscribe to Citrix Alerts for Firmware Updates",
+            "description": "Subscribe to Citrix Alerts to receive notifications about firmware updates.",
+            "commands": [
+                "https://support.citrix.com/user/alerts"
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Patch Devices to the Most Current Version",
+            "description": "Patch devices to the most current version using Citrix's download resources.",
+            "commands": [
+                "https://www.citrix.com/downloads/citrix-gateway/",
+                "https://www.citrix.com/downloads/citrix-adc/",
+                "https://www.citrix.com/downloads/citrix-sd-wan/"
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Deploy VPN Capability",
+            "description": "Consider deploying a VPN capability using standardized protocols, preferably ones listed on the NIAP Product Compliant List (PCL), in front of publicly accessible gateway appliances to require user authentication for the VPN before being able to reach these appliances.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2019-19781",
+    "affected_products": null
+}

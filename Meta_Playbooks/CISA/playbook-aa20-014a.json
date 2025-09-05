@@ -1,0 +1,55 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Read Microsoft January 2020 Release Notes",
+            "description": "Access and read the Microsoft January 2020 Release Notes page for detailed information on critical patches.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Critical Patches to Mission Critical Systems",
+            "description": "Prioritize and apply critical patches to mission critical systems, internet-facing systems, and networked servers.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Patches to Other Affected IT/OT Assets",
+            "description": "After patching mission critical systems, prioritize and apply patches to other affected IT/OT assets.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Review Guide to Enterprise Patch Management Technologies",
+            "description": "Review NIST Special Publication 800-40 Revision 3 to understand the basics of enterprise patch management technologies.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review CISA Insights Publications",
+            "description": "Access and review CISA Insights publications for background information on cyber threats and ready-made mitigation activities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Review CISA’s Cyber Essentials",
+            "description": "Download and review CISA’s Cyber Essentials guide for small businesses and local government agencies to develop cybersecurity practices.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Microsoft January 2020 Release Notes",
+    "affected_products": null
+}

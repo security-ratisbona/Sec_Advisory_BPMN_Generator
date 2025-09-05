@@ -1,0 +1,95 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Ensure Secure Configuration of SAP Landscape",
+            "description": "Ensure a secure configuration of the SAP landscape to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Restrict Access to SAP Message Server",
+            "description": "Restrict access to the SAP Message Server to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review SAP Notes 1408081 and 821875",
+            "description": "Review the SAP Notes 1408081 and 821875 for guidance on securing SAP systems.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Restrict Authorized Hosts via ACL Files",
+            "description": "Restrict authorized hosts using ACL files on Gateways (gw/acl_mode and secinfo) and Message Servers (ms/acl_info).",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review SAP Note 1421005",
+            "description": "Review SAP Note 1421005 for additional security measures.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Split MS Internal/Public Ports",
+            "description": "Split MS internal/public ports using rdisp/msserv=0 and rdisp/msserv_internal=39NN.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Restrict Access to Message Server Internal Port",
+            "description": "Restrict access to the Message Server internal port (tcp/39NN) to clients or the internet.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Enable Secure Network Communications (SNC)",
+            "description": "Enable Secure Network Communications (SNC) for clients to enhance security.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Scan for Exposed SAP Components",
+            "description": "Scan the network for any exposed SAP components that may be vulnerable.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Ensure SAP Components Are Not Exposed to the Internet",
+            "description": "Ensure that SAP components are not exposed to the internet to prevent unauthorized access.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Remove or Secure Exposed SAP Components",
+            "description": "Remove or secure any SAP components that are exposed to the internet.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SAP Vulnerabilities in OPCDE Presentation",
+    "affected_products": null
+}

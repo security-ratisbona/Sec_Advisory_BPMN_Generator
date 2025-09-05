@@ -1,0 +1,170 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Use Trusted Resources for COVID-19 Information",
+            "description": "For information regarding the COVID-19 pandemic, use trusted resources, such as the Centers for Disease Control and Prevention (CDC)’s COVID-19 Situation Summary.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Follow CISA Guidance for Defending Against COVID-19 Cyber Scams",
+            "description": "Refer to CISA Insights and Alerts for guidance on defending against COVID-19 related cyber scams.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Follow NCSC Guidance on Spotting Suspicious Messages",
+            "description": "Refer to NCSC guidance to help spot, understand, and deal with suspicious messages and emails.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Implement NCSC Guidance on Mitigating Malware and Ransomware",
+            "description": "Follow NCSC guidance on mitigating malware and ransomware attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Implement NCSC Guidance on Home Working",
+            "description": "Follow NCSC guidance on home working to ensure security while working remotely.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement NCSC Guidance on End User Device Security",
+            "description": "Follow NCSC guidance on securing end user devices.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Educate Users on Identifying Phishing Emails",
+            "description": "Educate users on spotting phishing emails using NCSC's top tips: Authority, Urgency, Emotion, Scarcity.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13
+            ],
+            "next_step": 14
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Make it Difficult for Attackers to Reach Users",
+            "description": "Implement measures to make it difficult for attackers to reach your users.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Help Users Identify and Report Phishing Emails",
+            "description": "Help users identify and report suspected phishing emails using CISA Tips.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Protect Organization from Undetected Phishing Emails",
+            "description": "Implement measures to protect your organization from the effects of undetected phishing emails.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Respond Quickly to Phishing Incidents",
+            "description": "Plan and implement quick response strategies to phishing incidents.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Secure Online Meetings",
+            "description": "Do not make meetings public. Require a meeting password or use the waiting room feature and control the admittance of guests.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Avoid Sharing Meeting Links Publicly",
+            "description": "Do not share a link to a meeting on an unrestricted publicly available social media post. Provide the link directly to specific people.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Manage Screensharing Options",
+            "description": "Change screensharing to 'Host Only' to prevent unauthorized access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Ensure Updated Remote Access Applications",
+            "description": "Ensure users are using the updated version of remote access/meeting applications.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Address Telework Policies for Security",
+            "description": "Ensure telework policies address requirements for physical and information security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "COVID-19 Cybersecurity Advisory",
+    "affected_products": null
+}

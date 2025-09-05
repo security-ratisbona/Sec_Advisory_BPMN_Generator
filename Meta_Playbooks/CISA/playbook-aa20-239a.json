@@ -1,0 +1,23 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Contact Authorities",
+            "description": "Contact law enforcement, CISA, or Treasury immediately regarding any identified activity related to BeagleBoyz.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Incorporate IOCs into Detection Systems",
+            "description": "Incorporate IOCs identified in CISA’s Malware Analysis Reports into intrusion detection systems and security alert systems to enable active blocking or reporting of suspected malicious activity.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "BeagleBoyz Activity",
+    "affected_products": null
+}

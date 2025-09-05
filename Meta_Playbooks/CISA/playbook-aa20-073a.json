@@ -1,0 +1,55 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Software and Security Configurations",
+            "description": "Update VPNs, network infrastructure devices, and devices used for remote work with the latest software patches and security configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Alert Employees to Phishing Attempts",
+            "description": "Inform employees about the expected increase in phishing attempts and provide guidance on avoiding social engineering and phishing attacks.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Prepare IT Security Personnel for Remote Access Tasks",
+            "description": "Ensure IT security personnel are ready to enhance log review, attack detection, and incident response and recovery tasks as per NIST guidelines.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Multi-Factor Authentication (MFA)",
+            "description": "Implement MFA on all VPN connections to enhance security. If MFA is not implemented, enforce the use of strong passwords.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Test VPN Limitations and Implement Modifications",
+            "description": "Test VPN limitations to prepare for mass usage and implement modifications like rate limiting to prioritize users needing higher bandwidths.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Report Cybersecurity Incidents to CISA",
+            "description": "Contact CISA to report incidents, phishing, malware, and other cybersecurity concerns.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Alternate Workplace Options Recommendations",
+    "affected_products": null
+}

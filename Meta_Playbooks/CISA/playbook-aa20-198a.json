@@ -1,0 +1,174 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Configuration Changes",
+            "description": "Ensure any configuration changes are reviewed by system owners and administrators to avoid unwanted impacts.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+            ],
+            "next_step": 19
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Maintain Antivirus Signatures",
+            "description": "Maintain up-to-date antivirus signatures and engines.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Latest Security Updates",
+            "description": "Ensure systems have the latest security updates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable File and Printer Sharing",
+            "description": "Disable file and printer sharing services. If required, use strong passwords or Active Directory authentication.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict User Permissions",
+            "description": "Restrict users' permissions to install and run unwanted software applications. Do not add users to the local administrators’ group unless required.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Enforce Strong Password Policy",
+            "description": "Enforce a strong password policy.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Exercise Caution with Email Attachments",
+            "description": "Exercise caution when opening email attachments, even if the attachment is expected and the sender appears to be known.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Enable Personal Firewall",
+            "description": "Enable a personal firewall on agency workstations that is configured to deny unsolicited connection requests.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Disable Unnecessary Services",
+            "description": "Disable unnecessary services on agency workstations and servers.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Scan and Remove Suspicious Email Attachments",
+            "description": "Scan for and remove suspicious email attachments; ensure the scanned attachment is its 'true file type'.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Monitor Web Browsing Habits",
+            "description": "Monitor users' web browsing habits; restrict access to sites with unfavorable content.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Exercise Caution with Removable Media",
+            "description": "Exercise caution when using removable media (e.g., USB thumb drives, external drives, CDs).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Scan Downloaded Software",
+            "description": "Scan all software downloaded from the internet prior to executing.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Maintain Situational Awareness",
+            "description": "Maintain situational awareness of the latest threats and implement appropriate Access Control Lists (ACLs).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Sign Up for CISA Alerts",
+            "description": "Sign up to receive CISA’s alerts on security topics and threats.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Sign Up for CISA Vulnerability Scanning",
+            "description": "Sign up for CISA’s free vulnerability scanning and testing services to help secure internet-facing systems from weak configuration and known vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Review CISA Cybersecurity Resources",
+            "description": "Review CISA's cybersecurity assessment services for more information about vulnerability scanning and other services.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Acknowledge Contributions",
+            "description": "Acknowledge contributions from Palo Alto Networks and IBM to this alert.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CISA Best Practices for Security Posture",
+    "affected_products": null
+}

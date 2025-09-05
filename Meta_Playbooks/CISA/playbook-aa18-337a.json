@@ -1,0 +1,138 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is RDP used for remote communication?",
+            "next_step": 2,
+            "else_step": 3
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Disable RDP or Install Patches",
+            "description": "Disable RDP service if unneeded or install available patches to secure the service.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Verify Cloud-Based VM RDP Ports",
+            "description": "Ensure cloud-based VMs with public IPs have no open RDP ports unless necessary. Use a firewall and VPN for systems with open RDP ports.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enable Strong Passwords and Account Lockout Policies",
+            "description": "Implement strong passwords and account lockout policies to protect against brute force attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Apply Two-Factor Authentication",
+            "description": "Where possible, apply two-factor authentication to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Regularly Apply System and Software Updates",
+            "description": "Ensure that system and software updates are applied regularly to maintain security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Maintain a Good Backup Strategy",
+            "description": "Implement and maintain a robust backup strategy to protect against data loss.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Enable and Review Logging",
+            "description": "Enable logging for RDP logins, keep logs for at least 90 days, and review them regularly to detect intrusion attempts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Adhere to Cloud Provider's Best Practices",
+            "description": "Follow the cloud provider’s best practices for remote access when creating cloud-based virtual machines.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Ensure Third Parties Follow Remote Access Policies",
+            "description": "Ensure that third parties requiring RDP access adhere to internal remote access policies.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure for Control System Devices",
+            "description": "Minimize network exposure for control system devices and disable RDP on critical devices where possible.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Regulate External-to-Internal RDP Connections",
+            "description": "Limit external-to-internal RDP connections and use secure methods like VPNs for required external access.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Restrict User Permissions",
+            "description": "Restrict users' ability to install and run unwanted software applications.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Scan and Remove Suspicious Email Attachments",
+            "description": "Scan for and remove suspicious email attachments, ensuring the scanned attachment matches its true file type.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Disable File and Printer Sharing Services",
+            "description": "Disable file and printer sharing services. If required, use strong passwords or Active Directory authentication.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Strengthening Security Posture",
+    "affected_products": null
+}

@@ -1,0 +1,343 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Discontinue FTP and Telnet Services",
+            "description": "Move to more secure file storage/file transfer and remote access services by discontinuing FTP and Telnet services.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement Secure File Transfer Protocols",
+            "description": "Evaluate business needs and justifications to host files on alternative Secure File Transfer Protocol (SFTP) or HTTPS-based public sites.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Use Secure Shell (SSH) for Remote Access",
+            "description": "Use Secure Shell (SSH) for access to remote devices and servers.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Identify and Deny Non-Approved VPN Services",
+            "description": "Identify non-approved VPN services across the enterprise and develop measures to add the application and browser plugins that enable them to the denylist.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Enhance Endpoint Monitoring",
+            "description": "Enhance endpoint monitoring to obtain visibility on devices with non-approved VPN services running.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Complete Decommissioning of Outdated Servers",
+            "description": "Ensure that decommissioning of systems has been completed or take appropriate action to remove them from the network.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Reimage or Remove Compromised Systems",
+            "description": "Reimage or remove any compromised systems found on the network.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Educate Users on Safe Download Practices",
+            "description": "Monitor and educate users to be cautious of any downloads from third-party sites or vendors.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Block Malicious Sites",
+            "description": "Block known bad domains and add a web content filtering capability to block malicious sites by category.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Sanitize Removable Media and Investigate Network Shares",
+            "description": "Sanitize removable media and investigate network shares accessible by users.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Improve Malware Detection Tools",
+            "description": "Improve existing network-based malware detection tools with sandboxing capabilities.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Identify and Disable Unnecessary Ports and Protocols",
+            "description": "Identify and disable ports, protocols, and services not needed for official business to prevent lateral movement by attackers.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Audit Active Directory for Service Accounts",
+            "description": "Audit the Active Directory (AD) to identify and document active service accounts.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Restrict Service Account Usage",
+            "description": "Restrict use of service accounts using AD group policy and disallow interactive login by adding service account to a group of non-interactive login users.",
+            "commands": null,
+            "next_step": 15
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Monitor Service Account Activities",
+            "description": "Continuously monitor service account activities by enhancing logging.",
+            "commands": null,
+            "next_step": 16
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Rotate Service Account Passwords",
+            "description": "Rotate service accounts and apply password best practices without service degradation or disruption.",
+            "commands": null,
+            "next_step": 17
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Remove Unnecessary Remote Administration Tools",
+            "description": "Remove all remote administration tools that are not required for day-to-day IT operations.",
+            "commands": null,
+            "next_step": 18
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Monitor Remote-Control Sessions",
+            "description": "Closely monitor and log events for each remote-control session required by department IT operations.",
+            "commands": null,
+            "next_step": 19
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Implement Secure Remote Desktop Gateway Solutions",
+            "description": "Implement secure remote desktop gateway solutions to restrict RDP service trust across multiple network zones.",
+            "commands": null,
+            "next_step": 20
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Implement Privileged Account Monitoring for RDP",
+            "description": "Implement privileged account monitoring and short time password lease for RDP service use.",
+            "commands": null,
+            "next_step": 21
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Enable Enhanced Monitoring of RDP Services",
+            "description": "Implement enhanced and continuous monitoring of RDP services by enabling logging and ensure RDP logins are captured in the logs.",
+            "commands": null,
+            "next_step": 22
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Force Password Resets and Revoke Certificates",
+            "description": "Force password resets; revoke and issue new certificates for affected accounts/devices.",
+            "commands": null,
+            "next_step": 23
+        },
+        {
+            "step_number": 23,
+            "type": "ACTION",
+            "title": "Reset Passwords for Domain Controller Compromise",
+            "description": "If it is suspected that the attacker has gained access to the Domain Controller, reset passwords for all local accounts and the kbrtgt account twice.",
+            "commands": null,
+            "next_step": 24
+        },
+        {
+            "step_number": 24,
+            "type": "ACTION",
+            "title": "Patch Known Vulnerabilities",
+            "description": "Patch known vulnerabilities in external facing devices and servers immediately, starting with the point of compromise.",
+            "commands": null,
+            "next_step": 25
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Notify Vendor for Unknown Exploitation Methods",
+            "description": "If the point of compromise is known but how it was exploited is unknown, notify the vendor for analysis and patch development.",
+            "commands": null,
+            "next_step": 26
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Educate Users on Phishing and Incident Response",
+            "description": "Educate users to be cautious of downloads, train them on recognizing phishing emails, and actions to take during an incident.",
+            "commands": null,
+            "next_step": 27
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Implement Application Allowlisting",
+            "description": "Enable application directory allowlisting through Microsoft Software Restriction Policy or AppLocker.",
+            "commands": null,
+            "next_step": 28
+        },
+        {
+            "step_number": 28,
+            "type": "ACTION",
+            "title": "Implement Least Privilege and Remove Unnecessary Accounts",
+            "description": "Decrease a threat actor’s ability to access key network resources by implementing the principle of least privilege and removing unnecessary accounts.",
+            "commands": null,
+            "next_step": 29
+        },
+        {
+            "step_number": 29,
+            "type": "ACTION",
+            "title": "Create and Test Regular Backups",
+            "description": "Identify essential data, make regular backup copies, and test that backups are working.",
+            "commands": null,
+            "next_step": 30
+        },
+        {
+            "step_number": 30,
+            "type": "ACTION",
+            "title": "Create Secure System Baseline Images",
+            "description": "Create and deploy a secure system baseline image to all workstations and servers.",
+            "commands": null,
+            "next_step": 31
+        },
+        {
+            "step_number": 31,
+            "type": "ACTION",
+            "title": "Upgrade or Decommission End-of-Life Servers",
+            "description": "Upgrade or decommission end-of-life non-Windows servers and servers running Windows Server 2003 or older versions.",
+            "commands": null,
+            "next_step": 32
+        },
+        {
+            "step_number": 32,
+            "type": "ACTION",
+            "title": "Implement Asset and Patch Management Processes",
+            "description": "Apply asset and patch management processes to ensure systems are up to date.",
+            "commands": null,
+            "next_step": 33
+        },
+        {
+            "step_number": 33,
+            "type": "ACTION",
+            "title": "Configure and Monitor System Logs",
+            "description": "Configure and monitor workstation and server system logs through a host-based endpoint detection and response platform and firewall.",
+            "commands": null,
+            "next_step": 34
+        },
+        {
+            "step_number": 34,
+            "type": "ACTION",
+            "title": "Deploy Anti-Malware Solutions",
+            "description": "Deploy an anti-malware solution on workstations to prevent spyware, adware, and malware as part of the OS security baseline.",
+            "commands": null,
+            "next_step": 35
+        },
+        {
+            "step_number": 35,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement proper network segmentation to prevent lateral movement by intruders.",
+            "commands": null,
+            "next_step": 36
+        },
+        {
+            "step_number": 36,
+            "type": "ACTION",
+            "title": "Conduct Regular Vulnerability Scans",
+            "description": "Conduct regular vulnerability scans of the internal and external networks and hosted content to identify and mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 37
+        },
+        {
+            "step_number": 37,
+            "type": "ACTION",
+            "title": "Use Multi-Factor Authentication",
+            "description": "Use multi-factor authentication to protect against credential theft for O365 administrators and users.",
+            "commands": null,
+            "next_step": 38
+        },
+        {
+            "step_number": 38,
+            "type": "ACTION",
+            "title": "Create Secure System Baseline for Networking Equipment",
+            "description": "Create a secure system baseline image and deploy it to all networking equipment.",
+            "commands": null,
+            "next_step": 39
+        },
+        {
+            "step_number": 39,
+            "type": "ACTION",
+            "title": "Implement Intrusion Detection System",
+            "description": "Implement an intrusion detection system (IDS) and apply continuous monitoring.",
+            "commands": null,
+            "next_step": 40
+        },
+        {
+            "step_number": 40,
+            "type": "ACTION",
+            "title": "Strengthen Router and Firewall Configurations",
+            "description": "Strengthen router configuration and improve firewall security by enabling automatic updates and implementing allowlists.",
+            "commands": null,
+            "next_step": 41
+        },
+        {
+            "step_number": 41,
+            "type": "ACTION",
+            "title": "Manage Internet Access",
+            "description": "Manage access to the internet by providing access from only devices/accounts that need it and proxying all connections.",
+            "commands": null,
+            "next_step": 42
+        },
+        {
+            "step_number": 42,
+            "type": "ACTION",
+            "title": "Evaluate Security Configurations for Cloud Services",
+            "description": "Evaluate and consider the security configurations of Microsoft Office 365 (O365) and other cloud collaboration service platforms prior to deployment.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "General Mitigation Guidance",
+    "affected_products": null
+}

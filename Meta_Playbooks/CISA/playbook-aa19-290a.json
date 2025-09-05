@@ -1,0 +1,46 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected Devices",
+            "description": "Determine the breadth of the problem by identifying devices running unsupported operating systems and assess the risk of not upgrading.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade to a Newer Operating System",
+            "description": "Upgrade affected devices to a newer, supported operating system to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Establish Migration Plan",
+            "description": "Develop and execute a plan to systematically migrate to currently supported operating systems or employ a cloud-based service.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "CONDITION",
+            "condition": "Is the organization unable to upgrade?",
+            "next_step": 5,
+            "else_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Contact Operating System Vendor",
+            "description": "Explore opportunities for fee-for-service maintenance with the operating system vendor if unable to upgrade.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Unsupported Operating System Mitigation",
+    "affected_products": null
+}

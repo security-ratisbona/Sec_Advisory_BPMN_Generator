@@ -1,0 +1,101 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review SAP Security Note#2934135",
+            "description": "Review the SAP Security Note#2934135 for detailed information on the vulnerability and recommended actions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Apply Critical Patches",
+            "description": "Apply critical patches to affected SAP components as soon as possible, prioritizing external-facing systems first, followed by internal systems.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Access SAP One Support Launchpad",
+            "description": "Access the SAP One Support Launchpad to download patched versions of affected components.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Scan SAP Systems for Vulnerabilities",
+            "description": "Scan SAP systems for known vulnerabilities, including missing security patches, dangerous configurations, and vulnerabilities in custom code.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Ensure Secure Configuration of SAP Landscape",
+            "description": "Ensure that the SAP landscape is securely configured to prevent unauthorized access and exploitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Analyze SAP Interface Security Settings",
+            "description": "Identify and analyze the security settings of SAP interfaces between systems and applications to understand risks posed by trust relationships.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Analyze Systems for Malicious User Authorizations",
+            "description": "Analyze systems for malicious or excessive user authorizations to prevent unauthorized access and privilege escalation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Monitor Systems for Indicators of Compromise",
+            "description": "Monitor systems for indicators of compromise resulting from the exploitation of vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Monitor Systems for Suspicious User Behavior",
+            "description": "Monitor systems for suspicious user behavior, including both privileged and non-privileged users, to detect potential security breaches.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Apply Threat Intelligence on New Vulnerabilities",
+            "description": "Apply threat intelligence on new vulnerabilities to improve security posture against advanced targeted attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SAP Security Note#2934135",
+    "affected_products": null
+}

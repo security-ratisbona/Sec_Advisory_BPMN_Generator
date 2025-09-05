@@ -1,0 +1,240 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the organization part of the HPH Sector?",
+            "next_step": 2,
+            "else_step": 6
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Review or Establish Business Continuity Plans",
+            "description": "Ensure business continuity plans are in place to maintain essential functions during emergencies, such as cyberattacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Review or Establish Patching Plans and Security Policies",
+            "description": "Ensure patching plans, security policies, and user agreements address current threats posed by malicious cyber actors.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Evaluate Continuity and Capability",
+            "description": "Identify and address continuity gaps to establish a viable continuity program for functioning during cyberattacks or other emergencies.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+            ],
+            "next_step": 23
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Patch Operating Systems, Software, and Firmware",
+            "description": "Patch operating systems, software, and firmware as soon as manufacturers release updates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Check Configurations for Operating System Versions",
+            "description": "Check configurations for every operating system version for organization-owned assets to prevent issues from arising.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Regularly Change Passwords",
+            "description": "Regularly change passwords to network systems and accounts and avoid reusing passwords for different accounts.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Multi-Factor Authentication",
+            "description": "Implement multi-factor authentication where possible.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Disable Unused Remote Access/RDP Ports",
+            "description": "Disable unused remote access/Remote Desktop Protocol (RDP) ports and monitor remote access/RDP logs.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Application and Remote Access Allow Listing",
+            "description": "Implement allow listing to only allow systems to execute programs known and permitted by the established security policy.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Audit User Accounts with Administrative Privileges",
+            "description": "Audit user accounts with administrative privileges and configure access controls with least privilege in mind.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Audit Logs for New Accounts",
+            "description": "Audit logs to ensure new accounts are legitimate.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Scan for Open or Listening Ports",
+            "description": "Scan for open or listening ports and mediate those that are not needed.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 16,
+            "type": "ACTION",
+            "title": "Identify and Backup Critical Assets",
+            "description": "Identify critical assets such as patient database servers, medical records, and telehealth infrastructure; create backups and house them offline.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 17,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation",
+            "description": "Implement network segmentation to ensure sensitive data does not reside on the same server and network segment as the email environment.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 18,
+            "type": "ACTION",
+            "title": "Set Antivirus and Anti-Malware Solutions to Auto-Update",
+            "description": "Set antivirus and anti-malware solutions to automatically update and conduct regular scans.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 19,
+            "type": "ACTION",
+            "title": "Regularly Back Up Data and Protect Backup Copies",
+            "description": "Regularly back up data, air gap, and password protect backup copies offline.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 20,
+            "type": "ACTION",
+            "title": "Implement a Recovery Plan",
+            "description": "Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers in a physically separate, secure location.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 21,
+            "type": "ACTION",
+            "title": "Focus on User Awareness and Training",
+            "description": "Provide training on information security principles and techniques, and ensure employees know who to contact when they see suspicious activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 22,
+            "type": "ACTION",
+            "title": "Do Not Pay Ransoms",
+            "description": "Avoid paying ransoms as it does not guarantee file recovery and may encourage further criminal activity.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 23,
+            "type": "CONDITION",
+            "condition": "Is there evidence of a TrickBot infection?",
+            "next_step": 24,
+            "else_step": null
+        },
+        {
+            "step_number": 24,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                25,
+                26,
+                27
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 25,
+            "type": "ACTION",
+            "title": "Back Up and Secure Sensitive Data",
+            "description": "Immediately back up and secure sensitive or proprietary data upon indicators of a TrickBot network compromise.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 26,
+            "type": "ACTION",
+            "title": "Review DNS Logs for TrickBot Indicators",
+            "description": "Review DNS logs and use the XOR key of 0xB9 to decode XOR encoded DNS requests to reveal the presence of Anchor_DNS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 27,
+            "type": "ACTION",
+            "title": "Maintain and Provide Relevant Logs",
+            "description": "Maintain and provide relevant logs upon evidence of a TrickBot infection.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "AA20-302A",
+    "affected_products": null
+}

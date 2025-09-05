@@ -1,0 +1,73 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Review Microsoft Security Advisory and Customer Guidance",
+            "description": "Review the Microsoft Security Advisory and the Microsoft Customer Guidance for CVE-2019-0708 to understand the vulnerability and recommended actions.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Install Available Patches",
+            "description": "Apply the security updates released by Microsoft to patch the vulnerability, including patches for Windows Vista, Windows XP, and Windows Server 2003.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "CONDITION",
+            "condition": "Are there systems that cannot be patched?",
+            "next_step": 4,
+            "else_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade End-of-Life Operating Systems",
+            "description": "Consider upgrading any EOL OSs no longer supported by Microsoft to a newer, supported OS, such as Windows 10.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable Unnecessary Services",
+            "description": "Disable services not being used by the OS to limit exposure to vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Enable Network Level Authentication",
+            "description": "Enable Network Level Authentication in Windows 7, Windows Server 2008, and Windows Server 2008 R2 to force session requests to be authenticated.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Block TCP Port 3389 at Enterprise Perimeter Firewall",
+            "description": "Block TCP port 3389 at the enterprise perimeter firewall to prevent exploitation of BlueKeep from outside the network.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2019-0708",
+    "affected_products": null
+}

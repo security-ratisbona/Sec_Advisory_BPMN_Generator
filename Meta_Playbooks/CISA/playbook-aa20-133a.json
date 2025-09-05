@@ -1,0 +1,123 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is being addressed?",
+            "cases": {
+                "CVE-2017-11882": 2,
+                "CVE-2017-0199": 3,
+                "CVE-2017-5638": 4,
+                "CVE-2012-0158": 5,
+                "CVE-2019-0604": 6,
+                "CVE-2017-0143": 7,
+                "CVE-2018-4878": 8,
+                "CVE-2017-8759": 9,
+                "CVE-2015-1641": 10,
+                "CVE-2018-7600": 11,
+                "CVE-2019-11510": 12,
+                "CVE-2019-19781": 13
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Microsoft Office Products for CVE-2017-11882",
+            "description": "Update affected Microsoft Office products (2007 SP3, 2010 SP2, 2013 SP1, 2016) with the latest security patches to mitigate CVE-2017-11882.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Microsoft Products for CVE-2017-0199",
+            "description": "Update affected Microsoft products (Office 2007 SP3, 2010 SP2, 2013 SP1, 2016, Vista SP2, Server 2008 SP2, Windows 7 SP1, Windows 8.1) with the latest security patches to mitigate CVE-2017-0199.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade Apache Struts for CVE-2017-5638",
+            "description": "Upgrade to Apache Struts version 2.3.32 or 2.5.10.1 to mitigate CVE-2017-5638.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Microsoft Products for CVE-2012-0158",
+            "description": "Update affected Microsoft products (Office 2003 SP3, 2007 SP2/SP3, 2010 Gold/SP1, SQL Server 2000 SP4, 2005 SP4, 2008 SP2/SP3/R2, BizTalk Server 2002 SP1, Commerce Server 2002 SP4, 2007 SP2, 2009 Gold/R2, Visual FoxPro 8.0 SP1, 9.0 SP2, Visual Basic 6.0) with the latest security patches to mitigate CVE-2012-0158.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update Microsoft SharePoint for CVE-2019-0604",
+            "description": "Update affected Microsoft SharePoint products with the latest security patches to mitigate CVE-2019-0604.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Update Microsoft Windows for CVE-2017-0143",
+            "description": "Update affected Microsoft Windows products (Vista SP2, Server 2008 SP2/R2 SP1, Windows 7 SP1, Windows 8.1, Server 2012 Gold/R2, RT 8.1, Windows 10 Gold/1511/1607, Server 2016) with the latest security patches to mitigate CVE-2017-0143.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Update Adobe Flash Player for CVE-2018-4878",
+            "description": "Update Adobe Flash Player to the latest version to mitigate CVE-2018-4878.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Update Microsoft .NET Framework for CVE-2017-8759",
+            "description": "Update affected Microsoft .NET Framework versions (2.0, 3.5, 3.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7) with the latest security patches to mitigate CVE-2017-8759.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Update Microsoft Word for CVE-2015-1641",
+            "description": "Update affected Microsoft Word products (2007 SP3, Office 2010 SP2, Word 2010 SP2, Word 2013 SP1, Word 2013 RT SP1, Word for Mac 2011, Office Compatibility Pack SP3, Word Automation Services on SharePoint Server 2010 SP2 and 2013 SP1, Office Web Apps Server 2010 SP2 and 2013 SP1) with the latest security patches to mitigate CVE-2015-1641.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Upgrade Drupal for CVE-2018-7600",
+            "description": "Upgrade to the most recent version of Drupal 7 or 8 core to mitigate CVE-2018-7600.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Update Pulse Secure Devices for CVE-2019-11510",
+            "description": "Update affected Pulse Secure devices with the latest security patches to mitigate CVE-2019-11510.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Update Citrix Devices for CVE-2019-19781",
+            "description": "Update affected Citrix devices with the latest security patches to mitigate CVE-2019-19781.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitigations for Top Vulnerabilities",
+    "affected_products": null
+}

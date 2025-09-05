@@ -1,0 +1,63 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update VPNs and Network Devices",
+            "description": "Update VPNs, network infrastructure devices, and devices used for remote work with the latest software patches and configurations.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement Multi-Factor Authentication",
+            "description": "Use multi-factor authentication to reduce the impact of password compromises.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Protect Management Interfaces",
+            "description": "Protect the management interfaces of critical operational systems using browse-down architecture to prevent attackers from gaining privileged access.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Set Up Security Monitoring Capability",
+            "description": "Establish a security monitoring capability to collect data needed for analyzing network intrusions.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review and Refresh Incident Management Processes",
+            "description": "Review and refresh incident management processes to ensure effective response to security incidents.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use Modern Systems and Software",
+            "description": "Use modern systems and software with built-in security features. If unable to upgrade immediately, take short-term steps to improve security on obsolete platforms.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Invest in Malware Prevention",
+            "description": "Invest in preventing malware-based attacks across various scenarios.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Password Spraying and Security Enhancements",
+    "affected_products": null
+}

@@ -1,0 +1,58 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Citrix Products",
+            "description": "Update Citrix ADC, Citrix Gateway, and Citrix SD-WAN WANOP to the latest fixed builds available on Citrix Downloads pages.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are the updates applied successfully?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Verify Mitigation Application",
+            "description": "Use the tool in CTX269180 – CVE-2019-19781 – Verification ToolTest to verify the successful application of the mitigations.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Apply Citrix Interim Mitigation Steps",
+            "description": "Apply Citrix’s interim mitigation steps for CVE-2019-19781 until the appropriate update is implemented.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Review NSA's Citrix Advisory",
+            "description": "Review NSA’s Citrix Advisory for additional mitigations and defense-in-depth strategies.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Deploy VPN in Front of Citrix Appliances",
+            "description": "Deploy a VPN capability using standardized protocols, preferably ones listed on the NIAP Product Compliant List (PCL), in front of publicly accessible Citrix ADC and Citrix Gateway appliances to require user authentication for the VPN before accessing these appliances.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2019-19781",
+    "affected_products": [
+        "Citrix ADC",
+        "Citrix Gateway",
+        "Citrix SD-WAN WANOP"
+    ]
+}
