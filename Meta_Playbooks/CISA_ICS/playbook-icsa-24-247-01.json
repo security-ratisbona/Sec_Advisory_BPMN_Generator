@@ -1,0 +1,131 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which CVE is applicable?",
+            "cases": {
+                "CVE-2023-46380": 2,
+                "CVE-2023-46382": 2,
+                "CVE-2023-46383": 2,
+                "CVE-2023-46385": 2,
+                "CVE-2023-46381": 3,
+                "CVE-2023-46387": 4,
+                "CVE-2023-46389": 4,
+                "CVE-2023-46384": 5,
+                "CVE-2023-46386": 6,
+                "CVE-2023-46388": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Disable HTTP on LOYTEC Device",
+            "description": "Disable HTTP on the LOYTEC device as recommended by LOYTEC's security hardening guide.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade to Latest Firmware for CVE-2023-46381",
+            "description": "Upgrade to the latest firmware to harden permissions on LWEB projects.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Latest Firmware for CVE-2023-46387 and CVE-2023-46389",
+            "description": "Upgrade to the latest firmware to protect registry.xml and dpal_config.zml by admin access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Patch for CVE-2023-46384",
+            "description": "Apply the patch published in LINX Configurator.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade LINX Firmware for CVE-2023-46386 and CVE-2023-46388",
+            "description": "Upgrade LINX firmware to implement encrypted storage of SMTP credentials.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10
+            ],
+            "next_step": 11
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Locate Control Systems Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to CISA guidelines for more information on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "LOYTEC Vulnerabilities",
+    "affected_products": null
+}

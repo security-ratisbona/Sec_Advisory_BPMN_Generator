@@ -1,0 +1,81 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Remove INTERACTIVE Group from Folder Security",
+            "description": "Remove the INTERACTIVE group from the security properties of the HMI projects folder to prevent unauthorized modifications.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Assign User Permissions to HMI Projects Folder",
+            "description": "Add specific users or user groups to the HMI projects folder and assign appropriate permissions. Consider assigning read-only permissions to limit modifications.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Consult FactoryTalk View SE Help for Security Settings",
+            "description": "In Version 14, open FactoryTalk View Studio and navigate to Help -> FactoryTalk View SE Help -> Security -> 'HMI projects folder' for detailed security settings.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure control system devices and systems are not accessible from the internet to minimize exposure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the latest version.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment before deploying defensive measures.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow internal procedures to report suspected malicious activity to CISA for tracking and correlation.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rockwell Automation Security Advisory SD 1688",
+    "affected_products": null
+}

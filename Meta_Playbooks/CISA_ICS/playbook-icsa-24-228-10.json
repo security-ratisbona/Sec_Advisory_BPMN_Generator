@@ -1,0 +1,117 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Evaluate Impact of Vulnerability",
+            "description": "Evaluate the impact of the vulnerability based on operational environment, architecture, and product implementation.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the product version affected?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which upgrade path is applicable?",
+            "cases": {
+                "Recommended": 4,
+                "Alternative 1": 5,
+                "Alternative 2": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to AVEVA System Platform 2023 R2 P01",
+            "description": "Upgrade all affected versions to AVEVA System Platform 2023 R2 P01 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Upgrade to AVEVA System Platform 2023 P04",
+            "description": "Upgrade Historian 2023 through 2023 P03 to AVEVA System Platform 2023 P04 to fix the vulnerability.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Upgrade to AVEVA System Platform 2020 R2 SP1 P01 and Apply Hotfix 3190476",
+            "description": "Upgrade Historian 2020 R2 through 2020 R2 SP1 P01 to AVEVA System Platform 2020 R2 SP1 P01 and apply Hotfix 3190476.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "next_step": 15
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Verify Source of URLs for Historian REST Interface",
+            "description": "Establish procedures for Historian REST Interface users to verify the source of URLs shared with them is trusted before opening.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Implement Social Engineering Protections",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to resources on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Report Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "AVEVA-2024-005",
+    "affected_products": null
+}

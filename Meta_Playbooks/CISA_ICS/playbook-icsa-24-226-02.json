@@ -1,0 +1,91 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update AADvance Standalone OPC-DA Server",
+            "description": "Update the AADvance Standalone OPC-DA Server to version 2.02 or later to address the vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Implement Security Best Practices",
+            "description": "Implement Rockwell Automation's suggested security best practices to minimize the risk of the vulnerability.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Generate Environment-Specific Prioritization",
+            "description": "Use Stakeholder-Specific Vulnerability Categorization to generate more environment-specific prioritization.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7
+            ],
+            "next_step": 8
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as Virtual Private Networks (VPNs), ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Implement Defense-in-Depth Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed in CISA's resources.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rockwell Automation Vulnerabilities",
+    "affected_products": [
+        "AADvance Standalone OPC-DA Server"
+    ]
+}

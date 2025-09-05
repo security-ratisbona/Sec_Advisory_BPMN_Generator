@@ -1,0 +1,89 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Evaluate Impact of Vulnerabilities",
+            "description": "Evaluate the impact of the vulnerabilities based on the operational environment, architecture, and product implementation.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Are the affected product versions in use?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Security Updates",
+            "description": "Apply security updates by installing SuiteLink v3.7.100 to fix all impacted products and affected versions.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Apply Firewall Rules",
+            "description": "Apply host and/or network firewall rules to restrict the SuiteLink server to accept traffic only from trusted sources. SuiteLink listens on port 5413 by default.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as Virtual Private Networks (VPNs), ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "AVEVA-2024-007",
+    "affected_products": null
+}

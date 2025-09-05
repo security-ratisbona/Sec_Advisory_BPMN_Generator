@@ -1,0 +1,90 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update InfoScan System",
+            "description": "Update InfoScan system to version 1.38 or later by logging into InfoScan, selecting 'System Prefs', opening Maintenance, and clicking 'Install Now'.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is internet access available?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Install Update via Internet",
+            "description": "Install the update directly from the InfoScan system if internet access is available.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Download Update from Dorsett Controls Customer Portal",
+            "description": "Download the update from the Dorsett Controls Customer Portal by selecting the InfoScan Update tile and follow the instructions listed on the portal.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Locate Control Systems Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Dorsett Controls InfoScan System Vulnerability",
+    "affected_products": [
+        "InfoScan system v1.38 or earlier"
+    ]
+}

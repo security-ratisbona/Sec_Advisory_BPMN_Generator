@@ -1,0 +1,71 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Ensure Proper Access Control",
+            "description": "Implement a defense-in-depth strategy for manufacturing networks by maintaining proper access control.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Adhere to Kepware Secure Deployment Guide",
+            "description": "Follow the Kepware Secure Deployment Guide for accurate configuration and use of the product to minimize threats.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure control system devices and systems are not accessible from the internet by minimizing network exposure.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment before deploying defensive measures.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Implement ICS Cybersecurity Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed in CISA's resources.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "PTC Manufacturing Network Vulnerability",
+    "affected_products": null
+}

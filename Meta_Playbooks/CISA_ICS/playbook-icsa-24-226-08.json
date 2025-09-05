@@ -1,0 +1,81 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Dream Report to Version 23.3.18952.0523",
+            "description": "Ocean Data Systems recommends updating Dream Report to version 23.3.18952.0523 to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Upgrade AVEVA Reports for Operations",
+            "description": "AVEVA recommends upgrading to AVEVA Reports for Operations 2023 R2 or later and applying the corresponding security update.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Ensure control system devices and systems are not accessible from the internet by minimizing network exposure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Recommended Cybersecurity Strategies",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed in CISA's resources.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Dream Report and AVEVA Reports Vulnerabilities",
+    "affected_products": null
+}

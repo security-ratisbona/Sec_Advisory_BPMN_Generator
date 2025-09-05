@@ -1,0 +1,73 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Ensure Physical Security of Devices",
+            "description": "Ensure the physical security of the affected devices to prevent unauthorized access, following Siemens' operational guidelines for Industrial Security.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Locate Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-921449",
+    "affected_products": null
+}
