@@ -1,0 +1,118 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update Firmware for Affected Products",
+            "description": "Update the firmware of affected Mitsubishi Electric products to the specified versions to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Use Firewall and VPN",
+            "description": "Implement a firewall and virtual private network (VPN) to prevent unauthorized access when Internet access is required.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Install Anti-Virus Software",
+            "description": "Install anti-virus software on the PC that can access the product to protect against malware.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Restrict Network Access",
+            "description": "Use LAN and block access from untrusted networks and hosts through firewalls to secure the network.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Restrict Physical Access",
+            "description": "Restrict physical access to the affected product and the LAN to which the product is connected to prevent unauthorized physical access.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use IP Filter Function",
+            "description": "Use the IP filter function to block access from untrusted hosts. Refer to the product manuals for detailed instructions.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets. Refer to CISA's ICS webpage for guidance.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to CISA's guidance on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Mitsubishi Electric Vulnerability Mitigation",
+    "affected_products": [
+        "M800VW (BND-2051W000-**): Update to B2 or later",
+        "M800VS (BND-2052W000-**): Update to B2 or later",
+        "M80V (BND-2053W000-**): Update to B2 or later",
+        "M80VW (BND-2054W000-**): Update to B2 or later",
+        "M800W (BND-2005W000-**): Update to FJ or later",
+        "M800S (BND-2006W000-**): Update to FJ or later",
+        "M80 (BND-2007W000-**): Update to FJ or later",
+        "M80W (BND-2008W000-**): Update to FJ or later",
+        "E80 (BND-2009W000-**): Update to FJ or later"
+    ]
+}

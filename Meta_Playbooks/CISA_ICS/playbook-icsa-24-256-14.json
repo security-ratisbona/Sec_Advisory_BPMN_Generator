@@ -1,0 +1,99 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product is in use?",
+            "cases": {
+                "SIMATIC WinCC V7.5": 2,
+                "SIMATIC WinCC V8.0": 3,
+                "SIMATIC PCS 7": 4,
+                "SIMATIC PCS 7 V9.1": 4
+            },
+            "default": 5
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update SIMATIC WinCC V7.5",
+            "description": "Update SIMATIC WinCC V7.5 to V7.5 SP2 Update 18 or later version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update SIMATIC WinCC V8.0",
+            "description": "Update SIMATIC WinCC V8.0 to V8.0 Update 5 or later version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update SIMATIC PCS 7",
+            "description": "Update SIMATIC PCS 7 WinCC to V7.5 SP2 Update 18 or later version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms as a general security measure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Configure Protected IT Environment",
+            "description": "Configure the IT environment according to Siemens' operational guidelines for industrial security and follow recommendations in the product manuals.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Siemens Security Advisory SSA-629254",
+    "affected_products": [
+        "SIMATIC WinCC V7.5",
+        "SIMATIC WinCC V8.0",
+        "SIMATIC PCS 7",
+        "SIMATIC PCS 7 V9.1"
+    ]
+}

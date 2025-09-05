@@ -1,0 +1,125 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update SIMATIC RF1140R and RF1170R",
+            "description": "Update SIMATIC RF1140R (6GT2831-6CB00) and SIMATIC RF1170R (6GT2831-6BB00) to version V1.1 or later.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update SIMATIC RF166C, RF185C, RF186C, RF186CI, RF188C, RF188CI",
+            "description": "Update SIMATIC RF166C (6GT2002-0EE20), RF185C (6GT2002-0JE10), RF186C (6GT2002-0JE20), RF186CI (6GT2002-0JE50), RF188C (6GT2002-0JE40), RF188CI (6GT2002-0JE60) to version V2.2 or later.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update SIMATIC RF360R",
+            "description": "Update SIMATIC RF360R (6GT2801-5BA30) to version V2.2 or later.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update SIMATIC Reader RF610R, RF615R, RF650R, RF680R, RF685R",
+            "description": "Update SIMATIC Reader RF610R, RF615R, RF650R, RF680R, RF685R to version V4.2 or later.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs. Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-765405",
+    "affected_products": [
+        "SIMATIC RF1140R (6GT2831-6CB00)",
+        "SIMATIC RF1170R (6GT2831-6BB00)",
+        "SIMATIC RF166C (6GT2002-0EE20)",
+        "SIMATIC RF185C (6GT2002-0JE10)",
+        "SIMATIC RF186C (6GT2002-0JE20)",
+        "SIMATIC RF186CI (6GT2002-0JE50)",
+        "SIMATIC RF188C (6GT2002-0JE40)",
+        "SIMATIC RF188CI (6GT2002-0JE60)",
+        "SIMATIC RF360R (6GT2801-5BA30)",
+        "SIMATIC Reader RF610R CMIIT (6GT2811-6BC10-2AA0)",
+        "SIMATIC Reader RF610R ETSI (6GT2811-6BC10-0AA0)",
+        "SIMATIC Reader RF610R FCC (6GT2811-6BC10-1AA0)",
+        "SIMATIC Reader RF615R CMIIT (6GT2811-6CC10-2AA0)",
+        "SIMATIC Reader RF615R ETSI (6GT2811-6CC10-0AA0)",
+        "SIMATIC Reader RF615R FCC (6GT2811-6CC10-1AA0)",
+        "SIMATIC Reader RF650R ARIB (6GT2811-6AB20-4AA0)",
+        "SIMATIC Reader RF650R CMIIT (6GT2811-6AB20-2AA0)",
+        "SIMATIC Reader RF650R ETSI (6GT2811-6AB20-0AA0)",
+        "SIMATIC Reader RF650R FCC (6GT2811-6AB20-1AA0)",
+        "SIMATIC Reader RF680R ARIB (6GT2811-6AA10-4AA0)",
+        "SIMATIC Reader RF680R CMIIT (6GT2811-6AA10-2AA0)",
+        "SIMATIC Reader RF680R ETSI (6GT2811-6AA10-0AA0)",
+        "SIMATIC Reader RF680R FCC (6GT2811-6AA10-1AA0)",
+        "SIMATIC Reader RF685R ARIB (6GT2811-6CA10-4AA0)",
+        "SIMATIC Reader RF685R CMIIT (6GT2811-6CA10-2AA0)",
+        "SIMATIC Reader RF685R ETSI (6GT2811-6CA10-0AA0)",
+        "SIMATIC Reader RF685R FCC (6GT2811-6CA10-1AA0)"
+    ]
+}

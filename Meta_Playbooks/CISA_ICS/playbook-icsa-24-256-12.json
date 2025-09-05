@@ -1,0 +1,103 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version of Tecnomatix Plant Simulation is in use?",
+            "cases": {
+                "V2302": 2,
+                "V2404": 3
+            },
+            "default": 4
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Tecnomatix Plant Simulation V2302",
+            "description": "Update Tecnomatix Plant Simulation to version V2302.0015 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Tecnomatix Plant Simulation V2404",
+            "description": "Update Tecnomatix Plant Simulation to version V2404.0004 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Do not open untrusted SPP files",
+            "description": "Avoid opening untrusted SPP files in affected applications to reduce risk.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Protect network access",
+            "description": "Protect network access to devices with appropriate mechanisms as a general security measure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Configure IT environment according to Siemens guidelines",
+            "description": "Operate devices in a protected IT environment by configuring according to Siemens' operational guidelines for industrial security and product manuals.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize network exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use secure remote access methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Perform impact analysis and risk assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Report suspected malicious activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-427715",
+    "affected_products": [
+        "Tecnomatix Plant Simulation V2302",
+        "Tecnomatix Plant Simulation V2404"
+    ]
+}

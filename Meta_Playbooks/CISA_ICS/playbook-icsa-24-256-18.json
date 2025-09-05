@@ -1,0 +1,93 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Check if the system is affected by retrieving the installed version of the Rockwell Automation products.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is the system running an affected version?",
+            "next_step": 3,
+            "else_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which mitigation approach to apply?",
+            "cases": {
+                "Upgrade to Corrected Version": 4,
+                "Disable CIP Security": 5,
+                "Implement Security Best Practices": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Upgrade to Corrected Version",
+            "description": "Upgrade the system to the corrected versions: CompactLogix 5380, CompactLogix 5380 Process, Compact GuardLogix 5380 SIL 2, Compact GuardLogix 5380 SIL 3, CompactLogix 5480, ControlLogix 5580, ControlLogix 5580 Process, GuardLogix 5580 to v33.017, v34.014, v35.013, v36.011 and later; 1756-EN4 to v6.001 and later.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable CIP Security",
+            "description": "Disable CIP Security feature per device if not using it, as described in Chapter 2 of 'CIP Security with Rockwell Automation Products' (publication SECURE-AT001).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Secure Remote Access",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rockwell Automation Vulnerability",
+    "affected_products": [
+        "CompactLogix 5380",
+        "CompactLogix 5380 Process",
+        "Compact GuardLogix 5380 SIL 2",
+        "Compact GuardLogix 5380 SIL 3",
+        "CompactLogix 5480",
+        "ControlLogix 5580",
+        "ControlLogix 5580 Process",
+        "GuardLogix 5580",
+        "1756-EN4"
+    ]
+}

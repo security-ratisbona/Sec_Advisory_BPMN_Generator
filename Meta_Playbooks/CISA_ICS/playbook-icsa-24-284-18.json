@@ -1,0 +1,119 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update CompactLogix 5380",
+            "description": "Update CompactLogix 5380 to version 33.015 and later for versions 33, or to version 34.011 and later.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Compact GuardLogix 5380",
+            "description": "Update Compact GuardLogix 5380 to version 33.015 and later for versions 33, or to version 34.011 and later.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update CompactLogix 5480",
+            "description": "Update CompactLogix 5480 to version 33.015 and later for versions 33, or to version 34.011 and later.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update ControlLogix 5580",
+            "description": "Update ControlLogix 5580 to version 33.015 and later for versions 33, or to version 34.011 and later.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update GuardLogix 5580",
+            "description": "Update GuardLogix 5580 to version 33.015 and later for versions 33, or to version 34.011 and later.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update 1756-EN4TR",
+            "description": "Update 1756-EN4TR to version 4.001 and later.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Are users unable to upgrade to the corrected versions?",
+            "next_step": 8,
+            "else_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                9,
+                10,
+                11
+            ],
+            "next_step": 12
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rockwell Automation Vulnerability",
+    "affected_products": [
+        "CompactLogix 5380",
+        "Compact GuardLogix 5380",
+        "CompactLogix 5480",
+        "ControlLogix 5580",
+        "GuardLogix 5580",
+        "1756-EN4TR"
+    ]
+}

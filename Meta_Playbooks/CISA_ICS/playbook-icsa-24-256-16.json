@@ -1,0 +1,82 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update SICAM SCC",
+            "description": "Update SICAM SCC to version V10.0 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update ETI5 Ethernet Int. 1x100TX IEC61850",
+            "description": "Update ETI5 Ethernet Int. 1x100TX IEC61850 to version V05.30 or later. The firmware ETI5 V5.30 is included in the 'CP-8031/CP-8050 Package' V5.30.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Security Updates Using Siemens Tooling",
+            "description": "Apply the provided security updates using the corresponding tooling and documented procedures made available with the product. Consider using automated means if supported by the product.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Validate Security Updates",
+            "description": "Perform prior validation of any security update before applying it, and ensure supervision by trained staff during the update process in the target environment.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access with appropriate mechanisms such as firewalls, segmentation, and VPN.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Configure Environment According to Operational Guidelines",
+            "description": "Configure the environment according to Siemens' operational guidelines to run devices in a protected IT environment.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed in CISA's resources.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Siemens Security Advisory SSA-673996",
+    "affected_products": [
+        "SICAM SCC",
+        "ETI5 Ethernet Int. 1x100TX IEC61850"
+    ]
+}

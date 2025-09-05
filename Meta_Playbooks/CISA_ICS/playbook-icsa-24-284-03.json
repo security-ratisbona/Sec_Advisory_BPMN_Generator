@@ -1,0 +1,129 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update JT2Go",
+            "description": "Update JT2Go to version V2406.0003 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version of Teamcenter Visualization is installed?",
+            "cases": {
+                "V14.2": 3,
+                "V14.3": 4,
+                "V2312": 5,
+                "V2406": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Teamcenter Visualization V14.2",
+            "description": "Update Teamcenter Visualization V14.2 to version V14.2.0.13 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Teamcenter Visualization V14.3",
+            "description": "Update Teamcenter Visualization V14.3 to version V14.3.0.11 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Teamcenter Visualization V2312",
+            "description": "Update Teamcenter Visualization V2312 to version V2312.0008 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update Teamcenter Visualization V2406",
+            "description": "Update Teamcenter Visualization V2406 to version V2406.0003 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Avoid Opening Untrusted XML Files",
+            "description": "Do not open untrusted XML files in affected applications to reduce risk of exploitation for CVE-2024-37996 and CVE-2024-37997.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Avoid Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to resources on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2024-37996, CVE-2024-37997",
+    "affected_products": [
+        "JT2Go",
+        "Teamcenter Visualization V14.2",
+        "Teamcenter Visualization V14.3",
+        "Teamcenter Visualization V2312",
+        "Teamcenter Visualization V2406"
+    ]
+}

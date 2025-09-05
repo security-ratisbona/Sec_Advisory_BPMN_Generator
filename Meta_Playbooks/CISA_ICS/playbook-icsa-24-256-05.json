@@ -1,0 +1,125 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which Mendix Runtime version is in use?",
+            "cases": {
+                "Mendix Runtime V8": 2,
+                "Mendix Runtime V9": 3,
+                "Mendix Runtime V10": 4,
+                "Mendix Runtime V10.6": 5,
+                "Mendix Runtime V10.12": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Monitor for Updates for Mendix Runtime V8",
+            "description": "Currently, no fix is available for Mendix Runtime V8. Monitor for updates and apply them when available.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update Mendix Runtime V9",
+            "description": "Update Mendix Runtime V9 to version 9.24.26 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Mendix Runtime V10",
+            "description": "Update Mendix Runtime V10 to version 10.14.0 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update Mendix Runtime V10.6",
+            "description": "Update Mendix Runtime V10.6 to version 10.6.12 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update Mendix Runtime V10.12",
+            "description": "Update Mendix Runtime V10.12 to version 10.12.2 or later to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": 12
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Alternative Authentication",
+            "description": "Do not use basic authentication. Set up an alternative authentication module such as SAML, MendixSSO, or your own Identity Provider (IDP).",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as Virtual Private Networks (VPNs), ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-097435",
+    "affected_products": [
+        "Mendix Runtime V8",
+        "Mendix Runtime V9",
+        "Mendix Runtime V10",
+        "Mendix Runtime V10.6",
+        "Mendix Runtime V10.12"
+    ]
+}

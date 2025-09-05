@@ -1,0 +1,88 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update to Version 1.38",
+            "description": "Update Rockwell Automation software to version 1.38 to address the vulnerability.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": 6
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Apply Risk Mitigations",
+            "description": "Apply risk mitigations as suggested by Rockwell Automation to minimize the risk of vulnerability exploitation.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Security Best Practices",
+            "description": "Implement suggested security best practices, such as maintaining mappings to prevent exploitation and manually removing previously mapped users if necessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "CONDITION",
+            "condition": "Is remote access required?",
+            "next_step": 7,
+            "else_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "Use secure methods for remote access, such as virtual private networks (VPNs), ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Implement measures to protect against social engineering attacks, such as not clicking web links or opening attachments in unsolicited email messages.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Rockwell Automation Vulnerability",
+    "affected_products": null
+}

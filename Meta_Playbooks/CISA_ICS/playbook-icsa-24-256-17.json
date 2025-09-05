@@ -1,0 +1,50 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "CONDITION",
+            "condition": "Is the system using H2-DM1E?",
+            "next_step": 2,
+            "else_step": null
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Upgrade to BRX platform",
+            "description": "Transition to the BRX platform as it meets current security standards and is actively maintained within AutomationDirect's secure development lifecycle.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Implement Network Segmentation and Air Gapping",
+            "description": "Isolate the H2-DM1E from the broader network to reduce exposure to external threats and minimize the impact of security vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Deploy StrideLinx Secure VPN Platform",
+            "description": "Place the system behind a StrideLinx VPN platform to enhance security.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "H2-DM1E Vulnerability Mitigations",
+    "affected_products": [
+        "H2-DM1E"
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product and version is in use?",
+            "cases": {
+                "SIMATIC PCS neo V4.1": 2,
+                "SINEC NMS": 3,
+                "Totally Integrated Automation Portal (TIA Portal) V17": 4,
+                "Totally Integrated Automation Portal (TIA Portal) V18": 5,
+                "Totally Integrated Automation Portal (TIA Portal) V19": 5
+            },
+            "default": 6
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update SIMATIC PCS neo V4.1",
+            "description": "Update SIMATIC PCS neo V4.1 to V4.1 Update 2 or later version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update SINEC NMS",
+            "description": "Update UMC to V2.11.6 to mitigate the vulnerability in SINEC NMS.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update TIA Portal V17",
+            "description": "Update TIA Portal V17 to Update 8 or later version to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update UMC for TIA Portal V18 and V19",
+            "description": "Update UMC to V2.13.1 as delivered via TIA Portal V17 Update 8 to mitigate the vulnerability.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Filter Ports 4002 and 4004",
+            "description": "Filter the ports 4002 and 4004 to only accept connections to/from the IP addresses of machines that run UMC and are part of the UMC network, e.g., with an external firewall. If no RT server machines are used, port 4004 can be filtered completely.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-039007",
+    "affected_products": [
+        "SIMATIC Information Server 2022",
+        "SIMATIC Information Server 2024",
+        "SIMATIC PCS neo V4.0",
+        "SIMATIC PCS neo V4.1",
+        "SIMATIC PCS neo V5.0",
+        "SINEC NMS",
+        "Totally Integrated Automation Portal (TIA Portal) V16",
+        "Totally Integrated Automation Portal (TIA Portal) V17",
+        "Totally Integrated Automation Portal (TIA Portal) V18",
+        "Totally Integrated Automation Portal (TIA Portal) V19"
+    ]
+}

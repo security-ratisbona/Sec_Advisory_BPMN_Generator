@@ -1,0 +1,118 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update AI Model Deployer",
+            "description": "Update AI Model Deployer to V1.1 or later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Update Data Flow Monitoring Industrial Edge Device User Interface",
+            "description": "Update Data Flow Monitoring Industrial Edge Device User Interface (DFM IED UI) to V0.0.6 or later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update LiveTwin Industrial Edge app",
+            "description": "Update LiveTwin Industrial Edge app (6AV2170-0BL00-0AA0) to V2.4 or later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update SIMATIC PCS neo",
+            "description": "Update SIMATIC PCS neo V4.1 to V4.1 Update 2 or later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update TIA Administrator",
+            "description": "Update TIA Administrator to V3.0 SP3 or later version to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 6
+        },
+        {
+            "step_number": 6,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms as a general security measure.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Configure IT Environment According to Siemens Guidelines",
+            "description": "Operate devices in a protected IT environment by configuring according to Siemens' operational guidelines for industrial security and product manuals.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "CONDITION",
+            "condition": "Is remote access required?",
+            "next_step": 11,
+            "else_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as virtual private networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-773256",
+    "affected_products": [
+        "AI Model Deployer",
+        "Data Flow Monitoring Industrial Edge Device User Interface (DFM IED UI)",
+        "LiveTwin Industrial Edge app (6AV2170-0BL00-0AA0)",
+        "SIMATIC PCS neo V4.1",
+        "TIA Administrator"
+    ]
+}

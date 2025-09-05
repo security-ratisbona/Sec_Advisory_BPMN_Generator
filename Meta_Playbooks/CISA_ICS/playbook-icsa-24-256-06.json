@@ -1,0 +1,121 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which version of Automation License Manager is in use?",
+            "cases": {
+                "V5": 2,
+                "V6.0": 3,
+                "V6.2": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "No Fix Available for Automation License Manager V5",
+            "description": "Currently, there is no fix planned for Automation License Manager V5. Follow general security measures.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "No Fix Available for Automation License Manager V6.0",
+            "description": "Currently, there is no fix planned for Automation License Manager V6.0. Follow general security measures.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update Automation License Manager V6.2",
+            "description": "Update Automation License Manager to V6.2 Upd3 or later version.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7
+            ],
+            "next_step": 9
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Disable 'Allow Remote Connections'",
+            "description": "On the Automation License Manager settings menu, disable 'Allow Remote Connections' to enhance security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "CONDITION",
+            "condition": "Is remote access needed?",
+            "next_step": 8,
+            "else_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Limit Remote Access to Trusted Systems",
+            "description": "Limit remote access to port 4410/tcp to trusted systems only if remote connections are necessary.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                10,
+                11,
+                12,
+                13
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), and ensure they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-103653",
+    "affected_products": [
+        "Automation License Manager V5",
+        "Automation License Manager V6.0",
+        "Automation License Manager V6.2"
+    ]
+}

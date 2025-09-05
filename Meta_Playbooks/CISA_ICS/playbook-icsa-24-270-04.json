@@ -1,0 +1,126 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Update goTenna Android Pro and iOS Pro",
+            "description": "Update goTenna Android Pro and iOS Pro applications to version 2.0.3 or greater to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "next_step": 7
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Use Discreet Callsigns and Key Names",
+            "description": "Choose callsigns and key names that do not disclose sensitive information, such as location, team size, or team name.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Secure End-User Devices",
+            "description": "Implement strong security measures on all end-user devices, including the use of encryption and ensuring regular software updates.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Follow Key Rotation Best Practices",
+            "description": "Regularly rotate encryption keys according to industry best practices to maintain ongoing security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": 12
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Locate Control System Networks Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Share Encryption Keys via QR Code",
+            "description": "Utilize QR codes for the secure exchange of encryption keys, similar to ATAK.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Secure Broadcasting",
+            "description": "Ensure secure broadcasting by transmitting keys at a reduced power of 0.5 Watts in a secured area.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                13,
+                14
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Leverage Layered Encryption",
+            "description": "Implement layered encryption keys to securely manage communications with individuals or teams.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "goTenna Vulnerabilities",
+    "affected_products": null
+}

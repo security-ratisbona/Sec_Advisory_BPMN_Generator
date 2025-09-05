@@ -1,0 +1,141 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Identify Affected System and Version",
+            "description": "Determine if the system is affected by checking the installed version of SINUMERIK.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which SINUMERIK version is installed?",
+            "cases": {
+                "SINUMERIK 828D V4": 3,
+                "SINUMERIK 840D sl V4": 4,
+                "SINUMERIK ONE prior to V6.23": 5,
+                "SINUMERIK ONE prior to V6.15 SP4": 6
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update SINUMERIK 828D V4",
+            "description": "Update SINUMERIK 828D V4 to V4.95 SP3 or later version.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update SINUMERIK 840D sl V4",
+            "description": "Update SINUMERIK 840D sl V4 to V4.95 SP3 or later version.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Update SINUMERIK ONE to V6.23",
+            "description": "Update SINUMERIK ONE to V6.23 or later version.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Update SINUMERIK ONE to V6.15 SP4",
+            "description": "Update SINUMERIK ONE to V6.15 SP4 or later version.",
+            "commands": null,
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                8,
+                9,
+                10,
+                11
+            ],
+            "next_step": 12
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Delete Trace Files on NCU",
+            "description": "Manually delete the trace file on an NCU: /card/user/sinumerik/hmi/log/sltrc/uptrace.out.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Delete Trace Files on IPC",
+            "description": "Manually delete the trace file on an IPC: C:\\ProgramData\\Siemens\\MotionControl\\user\\sinumerik\\hmi\\log\\sltrc\\uptrace.out and the corresponding backup file uptrace.out.bak.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Replace Trace Configuration",
+            "description": "Replace trace configuration to switch off trace for the future.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms and configure the environment according to Siemens' operational guidelines for industrial security.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 12,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                13,
+                14,
+                15
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 13,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 14,
+            "type": "ACTION",
+            "title": "Locate Control Systems Behind Firewalls",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods such as Virtual Private Networks (VPNs), ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Siemens SINUMERIK Vulnerability",
+    "affected_products": [
+        "SINUMERIK 828D V4",
+        "SINUMERIK 840D sl V4",
+        "SINUMERIK ONE prior to V6.23",
+        "SINUMERIK ONE prior to V6.15 SP4"
+    ]
+}

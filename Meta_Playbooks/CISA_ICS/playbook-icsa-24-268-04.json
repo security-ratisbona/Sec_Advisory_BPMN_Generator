@@ -1,0 +1,88 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Install Software Update 4.19.10",
+            "description": "Install the new software update version 4.19.10 for the MagLink LX console through DFS's authorized service organizations in North America.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Install MagLink Consoles Behind Firewalls",
+            "description": "Ensure that MagLink consoles are installed behind firewalls for enhanced security.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Monitor and Install Updates Timely",
+            "description": "Regularly monitor and install updates for MagLink products to ensure they are up-to-date.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Contact DFS Customer Support",
+            "description": "Reach out to DFS customer support for any questions about operations or updates of MagLink software. North American users can call 877-679-8324.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "CONDITION",
+            "condition": "Is the MagLink operating offline or disconnected from a network?",
+            "next_step": 6,
+            "else_step": 7
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Access DFS Proprietary Portal",
+            "description": "Registered MagLink customers should access technical information, updates, and technical bulletins via the DFS proprietary portal.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct proper impact analysis and risk assessment prior to deploying defensive measures as recommended by CISA.",
+            "commands": null,
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Implement Defensive Measures for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets as per CISA guidelines.",
+            "commands": null,
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity to CISA",
+            "description": "Follow established internal procedures to report suspected malicious activity to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to CISA guidelines on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "MagLink LX Console Vulnerabilities",
+    "affected_products": [
+        "MagLink LX Console"
+    ]
+}

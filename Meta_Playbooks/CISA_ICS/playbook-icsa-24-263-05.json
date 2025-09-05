@@ -1,0 +1,39 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Conduct a thorough impact analysis and risk assessment before deploying any defensive measures.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "ACTION",
+            "title": "Review CISA's ICS Security Recommended Practices",
+            "description": "Visit the ICS webpage on cisa.gov/ics to review control systems security recommended practices and other resources.",
+            "commands": null,
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Implement Cybersecurity Strategies for ICS",
+            "description": "Implement recommended cybersecurity strategies for proactive defense of ICS assets, as detailed in CISA's resources.",
+            "commands": null,
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Monitor for Suspected Malicious Activity",
+            "description": "Observe and monitor for any suspected malicious activity and follow established internal procedures to report findings to CISA.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "Kastle Systems Configuration Vulnerabilities",
+    "affected_products": null
+}

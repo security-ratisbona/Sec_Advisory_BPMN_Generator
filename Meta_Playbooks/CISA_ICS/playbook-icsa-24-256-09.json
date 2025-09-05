@@ -1,0 +1,117 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Disable Web Server",
+            "description": "Disable the web server of the affected system to reduce risk.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "SWITCH_CONDITION",
+            "condition": "Which product version is installed?",
+            "cases": {
+                "SIPLUS TIM 1531 IRC (6AG1543-1MX00-7XE0) or TIM 1531 IRC (6GK7543-1MX00-0XE0)": 3,
+                "SIMATIC CP 1242-7 V2, SIMATIC CP 1243-1, SIMATIC CP 1243-1 DNP3, SIMATIC CP 1243-1 IEC, SIMATIC CP 1243-7 LTE, SIMATIC CP 1243-8 IRC (6GK7243-8RX30-0XE0)": 4
+            },
+            "default": null
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to V2.4.8 or Later",
+            "description": "Update the system to version V2.4.8 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 4,
+            "type": "ACTION",
+            "title": "Update to V3.5.20 or Later",
+            "description": "Update the system to version V3.5.20 or later to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": 5
+        },
+        {
+            "step_number": 5,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "next_step": 10
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Protect Network Access",
+            "description": "Protect network access to devices with appropriate mechanisms.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Configure Protected IT Environment",
+            "description": "Configure the environment according to Siemens' operational guidelines for industrial security and follow recommendations in the product manuals.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs). Ensure VPNs are updated to the most recent version available.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Perform Impact Analysis and Risk Assessment",
+            "description": "Perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+            "commands": null,
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "type": "ACTION",
+            "title": "Report Suspected Malicious Activity",
+            "description": "Follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+            "commands": null,
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "type": "ACTION",
+            "title": "Protect Against Social Engineering Attacks",
+            "description": "Do not click web links or open attachments in unsolicited email messages. Refer to resources on avoiding email scams and social engineering attacks.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "SSA-423808",
+    "affected_products": [
+        "SIPLUS TIM 1531 IRC (6AG1543-1MX00-7XE0)",
+        "TIM 1531 IRC (6GK7543-1MX00-0XE0)",
+        "SIMATIC CP 1242-7 V2",
+        "SIMATIC CP 1243-1",
+        "SIMATIC CP 1243-1 DNP3",
+        "SIMATIC CP 1243-1 IEC",
+        "SIMATIC CP 1243-7 LTE",
+        "SIMATIC CP 1243-8 IRC (6GK7243-8RX30-0XE0)"
+    ]
+}

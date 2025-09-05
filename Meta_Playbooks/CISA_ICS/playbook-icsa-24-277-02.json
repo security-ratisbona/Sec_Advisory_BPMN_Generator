@@ -1,0 +1,93 @@
+{
+    "extracted_playbook": [
+        {
+            "step_number": 1,
+            "type": "ACTION",
+            "title": "Check Current Version of PowerSYSTEM Center",
+            "description": "Access the PowerSYSTEM Center and navigate to Settings > Overview > Version to check the current version.",
+            "commands": null,
+            "next_step": 2
+        },
+        {
+            "step_number": 2,
+            "type": "CONDITION",
+            "condition": "Is PowerSYSTEM Center updated to 2020 Update 22?",
+            "next_step": 3,
+            "else_step": 4
+        },
+        {
+            "step_number": 3,
+            "type": "ACTION",
+            "title": "Update to PowerSYSTEM Center 2020 Update 22",
+            "description": "Update the PowerSYSTEM Center to the latest version 2020 Update 22.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 4,
+            "type": "PARALLEL",
+            "parallel_steps": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "next_step": null
+        },
+        {
+            "step_number": 5,
+            "type": "ACTION",
+            "title": "Disable Previous UI Extensions",
+            "description": "Disable usage of previous UI extensions to mitigate vulnerabilities.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 6,
+            "type": "ACTION",
+            "title": "Limit Outbound Connection Requests",
+            "description": "Limit outbound connection requests from the PowerSYSTEM Center security zone to external websites for CVE-2020-28168 and CVE-2023-45857.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 7,
+            "type": "ACTION",
+            "title": "Disable Developer Tools Access",
+            "description": "Disable PowerSYSTEM Center Client Access Server user's ability to access the browser's F12 Developer Tools for CVE-2023-45857 and CVE-2021-3749.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 8,
+            "type": "ACTION",
+            "title": "Minimize Network Exposure",
+            "description": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 9,
+            "type": "ACTION",
+            "title": "Isolate Control System Networks",
+            "description": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+            "commands": null,
+            "next_step": null
+        },
+        {
+            "step_number": 10,
+            "type": "ACTION",
+            "title": "Use Secure Remote Access Methods",
+            "description": "When remote access is required, use secure methods such as VPNs, ensuring they are updated to the most current version available.",
+            "commands": null,
+            "next_step": null
+        }
+    ],
+    "start_step_number": 1,
+    "cve_id": "CVE-2020-28168, CVE-2023-45857, CVE-2021-3749",
+    "affected_products": [
+        "PowerSYSTEM Center"
+    ]
+}
