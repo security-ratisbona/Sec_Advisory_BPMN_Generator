@@ -3,18 +3,18 @@ This is the official repository of our research paper "Generating semi-automated
 It includes the full code of the developed prototypical implementation of the architecture. It also includes the full set of generated playbooks, generated within the JSON meta-model.
 
 ## Structure of the Repository
-1. Generator (Prototype)
-2. BPMN_Parser (Prototype)
+1. Playbook Generator 
+2. BPMN_Parser 
 3. Datasets
 4. BPMN_Playbooks
 5. Meta_Playbooks
 
 
-### 1. Prototype
-coming soon. (Currently adding documentation)
+### 1. Playbook Generator
+The code of our orchestration Prototype, enriched with additional files, e.g. generated error codes as csv.
 
 ### 2. BPMN Parser
-coming soon. (Currently adding documentation)
+The python-based prototype, that transforms the meta-playbooks into a bpmn-file, which can be visualized within a BPMN tool, e.g. Camunda Modeler.
 
 ### 3. Datasets
 csv files of the playbook steps classified into OpenC2 actions, within the second LLM Layer
