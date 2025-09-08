@@ -1,0 +1,59 @@
+{{
+	"extracted_playbook": [		
+		{{
+			"step_number":1,
+			"type":"ACTION",
+			"title":"Identify Affected System and Version",
+			"description":"Check if the system is affected by the CVE by retrieving the installed firmware version and configurations.",
+			"commands":null,
+			"next_step":2
+		}},
+		
+		{{
+			"step_number":2,
+			"type":"CONDITION",
+			"condition":"Is the system affected by the CVE?",
+			"next_step":3,
+			"else_step":null
+		}},
+		
+		{{
+			"step_number":3,
+			"type":"PARALLEL",
+			"parallel_steps":[4,5],
+			"next_step":6
+		}},
+		
+		{{
+			"step_number":4,
+			"type":"ACTION",
+			"title":"Change standard password",
+			"description":"Change the standard password in the web-based management to prevent unauthorized access, as attackers need valid credentials to exploit the system.",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":5,
+			"type":"ACTION",
+			"title":"Review and restrict user accounts",
+			"description":"Check existing user accounts for unauthorized access. Disable or remove unnecessary accounts and enforce least privilege principles.",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":6,
+			"type":"ACTION",
+			"title":"Update firmware",
+			"description":"Apply the latest security patch by updating the firmware to at least version 27.",
+			"commands":null,
+			"next_step":null
+		}}
+		
+		
+	],
+	"start_step_number":1,
+	"cve_id":"CVE-2023-6357",
+	"affected_products":["Edge Controller 0752-8303/8000-0002:::< 4.5.10 (FW27)", "CC100 0751/9x01:< 04.06.03 (70)"]	
+}}

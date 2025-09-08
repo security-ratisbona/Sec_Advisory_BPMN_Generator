@@ -1,0 +1,83 @@
+{{
+	"extracted_playbook": [
+		{{
+			"step_number":1,
+			"type":"ACTION",
+			"title":"Identify Affected System and Version",
+			"description":"Check if the system is affected by the CVE by retrieving the installed firmware version and configurations.",
+			"commands":null,
+			"next_step":2
+		}},
+		
+		{{
+			"step_number":2,
+			"type":"CONDITION",
+			"condition":"Is the system affected by the CVE?",
+			"next_step":3,
+			"else_step":null
+		}},
+		
+		{{
+			"step_number":3,
+			"type":"SWITCH_CONDITION",
+			"condition":"Which system version?",
+			"cases": {{
+				"Windows":4,
+				"RM Shell":5
+			}},
+			"default":null
+		}},
+		
+		{{
+			"step_number":4,
+			"type":"ACTION",
+			"title":"Apply '2024-08 Cumulative Update'",
+			"description":"Download and install the '2024-08 Cumulative Update' from Microsoft to patch security vulnerabilities.",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":5,
+			"type":"SWITCH_CONDITION",
+			"condition":"Which RM Shell version?",
+			"cases": {{
+				"RM Shell 5 based on Windows 10 LTSB 2016":6,
+				"RM Shell 5 based on Windows 10 LTSC 2019":7,
+				"RM Shell 6 based on Windows 10 LTSC 2021":8
+			}},
+			"default":null
+		}},
+		
+		{{
+			"step_number":6,
+			"type":"ACTION",
+			"title":"Apply Security Patch '18-33624T' (Windows - 2024-08)",
+			"description":"Install the '18-33624T Windows Cumulative Security Patch - 2024-08' to mitigate identified security risks.",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":7,
+			"type":"ACTION",
+			"title":"Apply Security Patch '18-34182G' (Windows - 2024-08)",
+			"description":"Install the '18-34182G Windows Cumulative Security Patch - 2024-08' to mitigate identified security risks.",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":8,
+			"type":"ACTION",
+			"title":"Apply Security Patch '18-34927A' (RM Image - Windows - 2024-08)",
+			"description":"Install the '18-34927A RM Image Security Patch - Windows Cumulative Security Patch 2024-08' to mitigate identified security risks.",
+			"commands":null,
+			"next_step":null
+		}}
+	
+	],
+	"start_step_number":1,
+	"cve_id":"CVE-2024-38063",
+	"affected_products":["Image <= 118-0241B: Native Windows installed on PC82****-*:Version Windows 10 IoT Enterprise LTSB 2016 < KB5041773"]
+}}

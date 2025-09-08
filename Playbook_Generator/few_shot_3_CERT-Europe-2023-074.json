@@ -1,0 +1,122 @@
+{{
+	"extracted_playbook": [
+		{{
+			"step_number":1,
+			"type":"ACTION",
+			"title":"HTTP/2 check",
+			"description":"Testing if HTTP/2 is enabled by using Openssl and Nmap Commands.",
+			"commands":["echo 1 | openssl s_client -alpn h2 -connect google.com:443 -status 2>&1 | grep 'ALPN'", "nmap -p 443 --script=tls-nextprotoneg <www.google.com>"],
+			"next_step":2
+		}},
+		
+		{{
+			"step_number":2,
+			"type":"SWITCH_CONDITION",
+			"condition":"Which system patch is suitable?",
+			"cases": {{
+				"Nginx":3,
+				"Microsoft IIS and MsQuic":4,
+				"Netscaler":5
+			}},
+			"default":6
+		}},
+	
+		{{
+			"step_number":3,
+			"type":"ACTION",
+			"title":"Ensure Secure HTTP/2 Configuration in NGINX",
+			"description":"Ensure recommended default values for 'keepalive_requests' and 'http2_max_concurrent_streams' are maintained. Additionally, apply 'limit_conn' and 'limit_req' directives to mitigate excessive client requests.",
+			"commands":[
+				"keepalive_requests 1000;",
+				"http2_max_concurrent_streams 128;",
+				"limit_conn zone_name N;", 
+				"limit_req zone=zone_name burst=N;"
+			],
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":4,
+			"type":"CONDITION",
+			"condition":"Is the organization able to install the latest Microsoft security update?",
+			"next_step":7,
+			"else_step":8
+		}},
+		
+		{{
+			"step_number":7,
+			"type":"ACTION",
+			"title":"Install the Latest Microsoft Security Update",
+			"description":"Apply the latest Microsoft security update to mitigate the identified vulnerability",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":8,
+			"type":"ACTION",
+			"title":"Apply Microsoft Workaround for Vulnerability Mitigation",
+			"description":"Implement Microsoft's recommended workaround as an alternative mitigation measure.",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":5,
+			"type":"ACTION",
+			"title":"Apply Netscaler Load Reduction Measures",
+			"description":"Implement Netscaler's recommended configurations to reduce backend server load in load balancing and content switching environments.",
+			"commands":null,
+			"next_step":null
+		}},
+		
+		{{
+			"step_number":6,
+			"type":"ACTION",
+			"title":"Monitor Connection Statistics for Abusive Patterns",
+			"description":"Track connection statistics to detect abnormal or abusive behavior. Identify clients that exceed normal usage patterns to prevent resource exhaustion attacks.",
+			"commands":null,
+			"next_step":9
+		}},
+		
+		{{
+			"step_number":9,
+			"type":"ACTION",
+			"title":"Terminate Connections Exceeding Stream Limits",
+			"description":"Close connections that exceed the configured concurrent stream limit, either immediately or after detecting repeated violations.",
+			"commands":null,
+			"next_step":10
+		}},
+		
+		{{
+			"step_number":10,
+			"type":"ACTION",
+			"title":"Enforce GOAWAY Frames to Restrict New Streams",
+			"description":"Implement forceful GOAWAY frames to immediately prevent further stream creation from abusive clients.",
+			"commands":null,
+			"next_step":11
+		}},
+		
+		{{
+			"step_number":11,
+			"type":"CONDITION",
+			"condition":"Have the previous mitigation steps failed to reduce the attack impact?",
+			"next_step":12,
+			"else_step":null
+		}},
+		
+		
+		{{
+			"step_number":12,
+			"type":"ACTION",
+			"title":"Disable HTTP/2 and HTTP/3 to Mitigate the Threat",
+			"description":"As a last resort, disable HTTP/2 and HTTP/3 to mitigate attack risks. Be aware that this may impact performance and compatibility with some clients.",
+			"commands":null,
+			"next_step":null
+		}}
+		
+	],
+	"start_step_number":1,
+	"cve_id":"CVE-2023-44487",
+	"affected_products":["Kong Gateway Enterprise: 2.8.4.4, 3.1.1.6, 3.2.2.5, 3.3.1.1, 3.4.1.1", "Kong Gateway OSS: 3.4.2", "Kong Mesh: 2.0.8, 2.1.7, 2.2.5, 2.3.3, 2.4.3", "Apache Tomcat: version 8.5.0 to version 8.5.93"]	
+}}
