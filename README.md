@@ -18,8 +18,8 @@ and
 calculate_coordinates.py: It includes additional functions, that improve the quality of the drawings.
 
 ### 2. BPMN Playbooks
-|-- Action Playbooks: It contains the set of playbooks, that include steps classified further by the second layer like OpenC2 classes.
-|
+|-- Action Playbooks: It contains the set of playbooks, that include steps classified further by the second layer like OpenC2 classes. \
+| \
 |-- Playbooks: An additional demonstrating set of playbooks, that were used to test the BPMN Parser
 
 ### 3. Classification Layer
